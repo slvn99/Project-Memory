@@ -23,7 +23,10 @@ namespace WindowsFormsApp1
                 x.Visible = false;
             }
 
-
+            foreach (Button Button in ButtonGrid)
+            {
+                Button.Text = "[=]";
+            }
 
 
 
@@ -46,11 +49,6 @@ namespace WindowsFormsApp1
             {
                 x.Visible = true;
                 PlayButton.Visible = false;
-            }
-
-            foreach (Button Button in ButtonGrid)
-            {
-                Button.Text = "[=]";
             }
 
         }
