@@ -63,6 +63,7 @@
             this.GridButton1.Name = "GridButton1";
             this.GridButton1.Size = new System.Drawing.Size(75, 52);
             this.GridButton1.TabIndex = 1;
+            this.GridButton1.Tag = "1";
             this.GridButton1.Text = "button1";
             this.GridButton1.UseVisualStyleBackColor = true;
             this.GridButton1.Click += new System.EventHandler(this.GridButton1_Click);
@@ -73,6 +74,7 @@
             this.GridButton1Dup.Name = "GridButton1Dup";
             this.GridButton1Dup.Size = new System.Drawing.Size(75, 52);
             this.GridButton1Dup.TabIndex = 2;
+            this.GridButton1Dup.Tag = "1";
             this.GridButton1Dup.Text = "button2";
             this.GridButton1Dup.UseVisualStyleBackColor = true;
             this.GridButton1Dup.Click += new System.EventHandler(this.GridButton1Dup_Click);
@@ -83,6 +85,7 @@
             this.GridButton2.Name = "GridButton2";
             this.GridButton2.Size = new System.Drawing.Size(75, 52);
             this.GridButton2.TabIndex = 3;
+            this.GridButton2.Tag = "2";
             this.GridButton2.Text = "button3";
             this.GridButton2.UseVisualStyleBackColor = true;
             this.GridButton2.Click += new System.EventHandler(this.GridButton2_Click);
@@ -93,6 +96,7 @@
             this.GridButton2Dup.Name = "GridButton2Dup";
             this.GridButton2Dup.Size = new System.Drawing.Size(75, 52);
             this.GridButton2Dup.TabIndex = 4;
+            this.GridButton2Dup.Tag = "2";
             this.GridButton2Dup.Text = "button4";
             this.GridButton2Dup.UseVisualStyleBackColor = true;
             this.GridButton2Dup.Click += new System.EventHandler(this.GridButton2Dub_Click);
@@ -103,6 +107,7 @@
             this.GridButton3.Name = "GridButton3";
             this.GridButton3.Size = new System.Drawing.Size(75, 52);
             this.GridButton3.TabIndex = 5;
+            this.GridButton3.Tag = "3";
             this.GridButton3.Text = "button5";
             this.GridButton3.UseVisualStyleBackColor = true;
             this.GridButton3.Click += new System.EventHandler(this.GridButton3_Click);
@@ -113,6 +118,7 @@
             this.GridButton3Dup.Name = "GridButton3Dup";
             this.GridButton3Dup.Size = new System.Drawing.Size(75, 52);
             this.GridButton3Dup.TabIndex = 6;
+            this.GridButton3Dup.Tag = "3";
             this.GridButton3Dup.Text = "button6";
             this.GridButton3Dup.UseVisualStyleBackColor = true;
             this.GridButton3Dup.Click += new System.EventHandler(this.GridButton3Dub_Click);
@@ -123,6 +129,7 @@
             this.GridButton4.Name = "GridButton4";
             this.GridButton4.Size = new System.Drawing.Size(75, 52);
             this.GridButton4.TabIndex = 7;
+            this.GridButton4.Tag = "4";
             this.GridButton4.Text = "button7";
             this.GridButton4.UseVisualStyleBackColor = true;
             this.GridButton4.Click += new System.EventHandler(this.GridButton4_Click);
@@ -133,6 +140,7 @@
             this.GridButton4Dup.Name = "GridButton4Dup";
             this.GridButton4Dup.Size = new System.Drawing.Size(75, 52);
             this.GridButton4Dup.TabIndex = 8;
+            this.GridButton4Dup.Tag = "4";
             this.GridButton4Dup.Text = "button8";
             this.GridButton4Dup.UseVisualStyleBackColor = true;
             this.GridButton4Dup.Click += new System.EventHandler(this.GridButton4Dub_Click);
@@ -143,6 +151,7 @@
             this.GridButton5.Name = "GridButton5";
             this.GridButton5.Size = new System.Drawing.Size(75, 52);
             this.GridButton5.TabIndex = 9;
+            this.GridButton5.Tag = "5";
             this.GridButton5.Text = "button9";
             this.GridButton5.UseVisualStyleBackColor = true;
             this.GridButton5.Click += new System.EventHandler(this.GridButton5_Click);
@@ -153,6 +162,7 @@
             this.GridButton5Dup.Name = "GridButton5Dup";
             this.GridButton5Dup.Size = new System.Drawing.Size(75, 52);
             this.GridButton5Dup.TabIndex = 10;
+            this.GridButton5Dup.Tag = "5";
             this.GridButton5Dup.Text = "button10";
             this.GridButton5Dup.UseVisualStyleBackColor = true;
             this.GridButton5Dup.Click += new System.EventHandler(this.GridButton5Dub_Click);
@@ -163,6 +173,7 @@
             this.GridButton6.Name = "GridButton6";
             this.GridButton6.Size = new System.Drawing.Size(75, 52);
             this.GridButton6.TabIndex = 11;
+            this.GridButton6.Tag = "6";
             this.GridButton6.Text = "button11";
             this.GridButton6.UseVisualStyleBackColor = true;
             this.GridButton6.Click += new System.EventHandler(this.GridButton6_Click);
@@ -173,6 +184,7 @@
             this.GridButton6Dup.Name = "GridButton6Dup";
             this.GridButton6Dup.Size = new System.Drawing.Size(75, 52);
             this.GridButton6Dup.TabIndex = 12;
+            this.GridButton6Dup.Tag = "6";
             this.GridButton6Dup.Text = "button12";
             this.GridButton6Dup.UseVisualStyleBackColor = true;
             this.GridButton6Dup.Click += new System.EventHandler(this.GridButton6Dub_Click);
@@ -183,6 +195,7 @@
             this.GridButton7.Name = "GridButton7";
             this.GridButton7.Size = new System.Drawing.Size(75, 52);
             this.GridButton7.TabIndex = 13;
+            this.GridButton7.Tag = "7";
             this.GridButton7.Text = "button13";
             this.GridButton7.UseVisualStyleBackColor = true;
             this.GridButton7.Click += new System.EventHandler(this.GridButton7_Click);
@@ -193,6 +206,7 @@
             this.GridButton7Dup.Name = "GridButton7Dup";
             this.GridButton7Dup.Size = new System.Drawing.Size(75, 51);
             this.GridButton7Dup.TabIndex = 14;
+            this.GridButton7Dup.Tag = "7";
             this.GridButton7Dup.Text = "button14";
             this.GridButton7Dup.UseVisualStyleBackColor = true;
             this.GridButton7Dup.Click += new System.EventHandler(this.GridButton7Dup_Click);
@@ -203,6 +217,7 @@
             this.GridButton8.Name = "GridButton8";
             this.GridButton8.Size = new System.Drawing.Size(75, 51);
             this.GridButton8.TabIndex = 15;
+            this.GridButton8.Tag = "8";
             this.GridButton8.Text = "button15";
             this.GridButton8.UseVisualStyleBackColor = true;
             this.GridButton8.Click += new System.EventHandler(this.GridButton8_Click);
@@ -213,6 +228,7 @@
             this.GridButton8Dup.Name = "GridButton8Dup";
             this.GridButton8Dup.Size = new System.Drawing.Size(75, 51);
             this.GridButton8Dup.TabIndex = 16;
+            this.GridButton8Dup.Tag = "8";
             this.GridButton8Dup.Text = "button16";
             this.GridButton8Dup.UseVisualStyleBackColor = true;
             this.GridButton8Dup.Click += new System.EventHandler(this.GridButton8Dup_Click);

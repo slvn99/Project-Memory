@@ -12,10 +12,11 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        Button Kaart1Select, Kaart2Select;
+
         public Form1()
         {
             InitializeComponent();
-
             Button[] ButtonGrid = {GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
             foreach (var x in ButtonGrid)
@@ -27,10 +28,6 @@ namespace WindowsFormsApp1
             {
                 Button.Text = "[=]";
             }
-
-
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -52,10 +49,44 @@ namespace WindowsFormsApp1
             }
 
         }
-        #region kaarten
+
+        private void Check_kaart(Button Buttonclick)
+        {
+            if (Kaart1Select == null)
+            {
+                Kaart1Select = Buttonclick;
+            }
+            else if (Kaart1Select != null && Kaart2Select == null)
+            {
+                Kaart2Select = Buttonclick;
+            }
+
+            if (Kaart1Select != null && Kaart2Select != null)
+            {
+                if (Kaart1Select.Tag == Kaart2Select.Tag)
+                {
+
+                }
+                else if (Kaart1Select.Tag != Kaart2Select.Tag)
+                {
+                    System.Threading.Thread.Sleep(3000);
+                    Kaart1Select.Text = "[=]";
+                    Kaart2Select.Text = "[=]";
+                    Kaart1Select = null;
+                    Kaart2Select = null;
+                }
+            }
+
+            
+
+
+
+        }
+        
         private void GridButton1_Click(object sender, EventArgs e)
         {
             GridButton1.Text = "A";
+            Check_kaart(GridButton1);
         }
 
         private void GridButton1Dup_Click(object sender, EventArgs e)
@@ -66,6 +97,7 @@ namespace WindowsFormsApp1
         private void GridButton2_Click(object sender, EventArgs e)
         {
             GridButton2.Text = "B";
+            Check_kaart(GridButton2);
         }
 
         private void GridButton2Dub_Click(object sender, EventArgs e)
@@ -132,6 +164,6 @@ namespace WindowsFormsApp1
         {
             GridButton8Dup.Text = "H";
         }
-        #endregion
+        
     }
 }
