@@ -2,9 +2,9 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace Save
+namespace Opslaan
 {
-    public class Program
+    public class Save
     {
         // Struct
         [Serializable]
@@ -24,12 +24,12 @@ namespace Save
             }
         }
 
-        static void Main(string[] args)
+        public static void Main()
         {
+            Save save = new Save();
             //invoer van naam + lege turn + lege score
-            Console.WriteLine("Vul hier je naam in");
-            string name = Console.ReadLine();
             int icounter = 0, score = 0;
+            string speler_1 = "Sam";
             GameData gameData = new GameData(Name, icounter, score);
 
             //omzetten naar bytes
@@ -46,7 +46,7 @@ namespace Save
 
             //Writen van de variabelen
             value.Text = deserialized.Naam1 + "/n" + deserialized.TurnCounter + "/n" + deserialized.Score;
-            zdrt67
+            
         }
 
         private static byte[] Serialize(GameData data)

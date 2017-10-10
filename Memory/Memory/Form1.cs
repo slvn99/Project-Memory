@@ -6,7 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
+
 
 namespace WindowsFormsApp1
 {
@@ -17,7 +20,7 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            Button[] ButtonGrid = {GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
             foreach (var x in ButtonGrid)
             {
@@ -41,7 +44,7 @@ namespace WindowsFormsApp1
 
         private void Play_Game()
         {
-            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup};
+            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
             foreach (var x in ButtonGrid)
             {
                 x.Visible = true;
@@ -87,12 +90,12 @@ namespace WindowsFormsApp1
                 }
             }
 
-            
+
 
 
 
         }
-        
+
         private void GridButton1_Click(object sender, EventArgs e)
         {
             GridButton1.Text = "A";
@@ -190,7 +193,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void saveclass_Click(object sender, EventArgs e)
+        public void saveclass_Click(object sender, EventArgs e)
         {
             
         }
