@@ -190,6 +190,11 @@ namespace WindowsFormsApp1
 
         }
 
+        private void saveclass_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void GridButton8Dup_Click(object sender, EventArgs e)
         {
             GridButton8Dup.Text = "H";
