@@ -17,6 +17,8 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         Button Kaart1Select, Kaart2Select;
+        string player1, player2, PlayerBeurt;
+        int PuntenPlayer1, PuntenPlayer2;
 
         public Form1()
         {
@@ -52,20 +54,27 @@ namespace WindowsFormsApp1
                 PlayButton.Visible = false;
             }
 
+            PuntenPlayer1 = 0;
+            PuntenPlayer2 = 0;
+            Points1.Text = Convert.ToString(PuntenPlayer1);
+            Points2.Text = Convert.ToString(PuntenPlayer2);
             Player1Label.Visible = false;
             Player1Textbox.Visible = false;
             Player2Label.Visible = false;
             Player2Textbox.Visible = false;
             Player1LabelInvoer.Visible = true;
             Player2LabelInvoer.Visible = true;
+            Points1.Visible = true;
+            Points2.Visible = true;
+            BeurtLabel.Visible = true;
 
+            Player1LabelInvoer.Text = Player1Textbox.Text;
+            Player2LabelInvoer.Text = Player2Textbox.Text;
 
-
-            Player1LabelInvoer.Text = "Speler 1: " + Player1Textbox.Text;
-            Player2LabelInvoer.Text = "Speler 2: " + Player2Textbox.Text;
-
-            string player1 = Player1LabelInvoer.Text;
-            string player2 = Player2LabelInvoer.Text;
+            player1 = Player1LabelInvoer.Text;
+            player2 = Player2LabelInvoer.Text;
+            PlayerBeurt = player1;
+            BeurtLabel.Text = PlayerBeurt;
         }
 
         private void Click_kaart(Button Buttonclick)
@@ -89,15 +98,44 @@ namespace WindowsFormsApp1
                     MessageBox.Show("match");
                     Kaart1Select = null;
                     Kaart2Select = null;
+                    Point_Add();
                 }
                 else
                 {
-                    await Task.Delay(3000);
+                    await Task.Delay(1500);
                     Kaart1Select.Text = "[=]";
                     Kaart2Select.Text = "[=]";
                     Kaart1Select = null;
                     Kaart2Select = null;
+                    Change_Beurt();
                 }
+            }
+        }
+
+        private void Change_Beurt()
+        {
+            if (PlayerBeurt == player1)
+            {
+                PlayerBeurt = player2;
+            }
+            else
+            {
+                PlayerBeurt = player1;
+            }
+            BeurtLabel.Text = PlayerBeurt;
+        }
+
+        private void Point_Add()
+        {
+            if (PlayerBeurt == player1)
+            {
+                PuntenPlayer1++;
+                Points1.Text = Convert.ToString(PuntenPlayer1);
+            }
+            else
+            {
+                PuntenPlayer2++;
+                Points2.Text = Convert.ToString(PuntenPlayer2);
             }
         }
 

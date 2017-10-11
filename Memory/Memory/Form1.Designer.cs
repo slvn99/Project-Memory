@@ -53,6 +53,12 @@
             this.Saveclass = new System.Windows.Forms.Button();
             this.Player1LabelInvoer = new System.Windows.Forms.Label();
             this.Player2LabelInvoer = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BeurtLabel = new System.Windows.Forms.Label();
+            this.Points1 = new System.Windows.Forms.Label();
+            this.Points2 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PlayButton
@@ -298,28 +304,91 @@
             // Player1LabelInvoer
             // 
             this.Player1LabelInvoer.AutoSize = true;
-            this.Player1LabelInvoer.Location = new System.Drawing.Point(376, 12);
+            this.Player1LabelInvoer.Location = new System.Drawing.Point(429, 12);
             this.Player1LabelInvoer.Name = "Player1LabelInvoer";
-            this.Player1LabelInvoer.Size = new System.Drawing.Size(35, 13);
+            this.Player1LabelInvoer.Size = new System.Drawing.Size(73, 13);
             this.Player1LabelInvoer.TabIndex = 25;
-            this.Player1LabelInvoer.Text = "label1";
+            this.Player1LabelInvoer.Text = ":__________:";
             this.Player1LabelInvoer.Visible = false;
             // 
             // Player2LabelInvoer
             // 
             this.Player2LabelInvoer.AutoSize = true;
-            this.Player2LabelInvoer.Location = new System.Drawing.Point(376, 32);
+            this.Player2LabelInvoer.Location = new System.Drawing.Point(429, 32);
             this.Player2LabelInvoer.Name = "Player2LabelInvoer";
-            this.Player2LabelInvoer.Size = new System.Drawing.Size(35, 13);
+            this.Player2LabelInvoer.Size = new System.Drawing.Size(73, 13);
             this.Player2LabelInvoer.TabIndex = 26;
-            this.Player2LabelInvoer.Text = "label2";
+            this.Player2LabelInvoer.Text = ":__________:";
             this.Player2LabelInvoer.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(376, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Beurt van:";
+            // 
+            // BeurtLabel
+            // 
+            this.BeurtLabel.AutoSize = true;
+            this.BeurtLabel.Location = new System.Drawing.Point(429, 70);
+            this.BeurtLabel.Name = "BeurtLabel";
+            this.BeurtLabel.Size = new System.Drawing.Size(35, 13);
+            this.BeurtLabel.TabIndex = 28;
+            this.BeurtLabel.Text = "Naam";
+            this.BeurtLabel.Visible = false;
+            // 
+            // Points1
+            // 
+            this.Points1.AutoSize = true;
+            this.Points1.Location = new System.Drawing.Point(508, 12);
+            this.Points1.Name = "Points1";
+            this.Points1.Size = new System.Drawing.Size(41, 13);
+            this.Points1.TabIndex = 29;
+            this.Points1.Text = "Punten";
+            this.Points1.Visible = false;
+            // 
+            // Points2
+            // 
+            this.Points2.AutoSize = true;
+            this.Points2.Location = new System.Drawing.Point(508, 32);
+            this.Points2.Name = "Points2";
+            this.Points2.Size = new System.Drawing.Size(41, 13);
+            this.Points2.TabIndex = 30;
+            this.Points2.Text = "Punten";
+            this.Points2.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(376, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Player 1:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(376, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Player 2:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 326);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Points2);
+            this.Controls.Add(this.Points1);
+            this.Controls.Add(this.BeurtLabel);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Saveclass);
             this.Controls.Add(this.Player2LabelInvoer);
             this.Controls.Add(this.Player1LabelInvoer);
@@ -380,6 +449,12 @@
         public System.Windows.Forms.Label value;
         private System.Windows.Forms.Label Player1LabelInvoer;
         private System.Windows.Forms.Label Player2LabelInvoer;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label BeurtLabel;
+        private System.Windows.Forms.Label Points1;
+        private System.Windows.Forms.Label Points2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
