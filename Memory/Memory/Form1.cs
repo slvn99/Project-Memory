@@ -164,7 +164,6 @@ namespace WindowsFormsApp1
             GridButton8.Text = "H";
         }
 
-<<<<<<< HEAD
         private void Player1label_Click(object sender, EventArgs e)
         {
 
@@ -190,8 +189,7 @@ namespace WindowsFormsApp1
             Save.SaveData();
         }
 
-=======
->>>>>>> parent of 9b77a4b... Player select
+
         private void GridButton8Dup_Click(object sender, EventArgs e)
         {
             GridButton8Dup.Text = "H";

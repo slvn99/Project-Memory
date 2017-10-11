@@ -45,7 +45,7 @@
             this.GridButton7Dup = new System.Windows.Forms.Button();
             this.GridButton8 = new System.Windows.Forms.Button();
             this.GridButton8Dup = new System.Windows.Forms.Button();
-<<<<<<< HEAD
+
             this.Player1Label = new System.Windows.Forms.Label();
             this.Player2Label = new System.Windows.Forms.Label();
             this.Player1LabelInvoer = new System.Windows.Forms.Label();
@@ -54,8 +54,7 @@
             this.Player1Textbox = new System.Windows.Forms.TextBox();
             this.value = new System.Windows.Forms.Label();
             this.saveclass = new System.Windows.Forms.Button();
-=======
->>>>>>> parent of 9b77a4b... Player select
+
             this.SuspendLayout();
             // 
             // PlayButton
@@ -244,7 +243,6 @@
             this.GridButton8Dup.UseVisualStyleBackColor = true;
             this.GridButton8Dup.Click += new System.EventHandler(this.GridButton8Dup_Click);
             // 
-<<<<<<< HEAD
             // Player1Label
             // 
             this.Player1Label.AutoSize = true;
@@ -322,13 +320,10 @@
             this.saveclass.UseVisualStyleBackColor = true;
             this.saveclass.Click += new System.EventHandler(this.saveclass_Click);
             // 
-=======
->>>>>>> parent of 9b77a4b... Player select
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(564, 326);
             this.Controls.Add(this.saveclass);
             this.Controls.Add(this.value);
@@ -338,9 +333,6 @@
             this.Controls.Add(this.Player1LabelInvoer);
             this.Controls.Add(this.Player2Label);
             this.Controls.Add(this.Player1Label);
-=======
-            this.ClientSize = new System.Drawing.Size(431, 326);
->>>>>>> parent of 9b77a4b... Player select
             this.Controls.Add(this.GridButton8Dup);
             this.Controls.Add(this.GridButton8);
             this.Controls.Add(this.GridButton7Dup);
@@ -384,7 +376,6 @@
         private System.Windows.Forms.Button GridButton7Dup;
         private System.Windows.Forms.Button GridButton8;
         private System.Windows.Forms.Button GridButton8Dup;
-<<<<<<< HEAD
         private System.Windows.Forms.Label Player1Label;
         private System.Windows.Forms.Label Player2Label;
         private System.Windows.Forms.Label Player1LabelInvoer;
@@ -393,8 +384,6 @@
         private System.Windows.Forms.TextBox Player1Textbox;
         private System.Windows.Forms.Button saveclass;
         public System.Windows.Forms.Label value;
-=======
->>>>>>> parent of 9b77a4b... Player select
     }
 }
 
