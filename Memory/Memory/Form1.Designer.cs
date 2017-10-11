@@ -45,7 +45,6 @@
             this.GridButton7Dup = new System.Windows.Forms.Button();
             this.GridButton8 = new System.Windows.Forms.Button();
             this.GridButton8Dup = new System.Windows.Forms.Button();
-
             this.Player1Label = new System.Windows.Forms.Label();
             this.Player2Label = new System.Windows.Forms.Label();
             this.Player1LabelInvoer = new System.Windows.Forms.Label();
@@ -54,7 +53,6 @@
             this.Player1Textbox = new System.Windows.Forms.TextBox();
             this.value = new System.Windows.Forms.Label();
             this.saveclass = new System.Windows.Forms.Button();
-
             this.SuspendLayout();
             // 
             // PlayButton
@@ -246,7 +244,7 @@
             // Player1Label
             // 
             this.Player1Label.AutoSize = true;
-            this.Player1Label.Location = new System.Drawing.Point(396, 12);
+            this.Player1Label.Location = new System.Drawing.Point(395, 12);
             this.Player1Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Player1Label.Name = "Player1Label";
             this.Player1Label.Size = new System.Drawing.Size(107, 13);
@@ -257,7 +255,7 @@
             // Player2Label
             // 
             this.Player2Label.AutoSize = true;
-            this.Player2Label.Location = new System.Drawing.Point(399, 42);
+            this.Player2Label.Location = new System.Drawing.Point(395, 32);
             this.Player2Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Player2Label.Name = "Player2Label";
             this.Player2Label.Size = new System.Drawing.Size(104, 13);
@@ -286,7 +284,7 @@
             // 
             // Player2Textbox
             // 
-            this.Player2Textbox.Location = new System.Drawing.Point(398, 104);
+            this.Player2Textbox.Location = new System.Drawing.Point(398, 71);
             this.Player2Textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Player2Textbox.Name = "Player2Textbox";
             this.Player2Textbox.Size = new System.Drawing.Size(76, 20);
@@ -295,7 +293,7 @@
             // 
             // Player1Textbox
             // 
-            this.Player1Textbox.Location = new System.Drawing.Point(401, 70);
+            this.Player1Textbox.Location = new System.Drawing.Point(398, 47);
             this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Player1Textbox.Name = "Player1Textbox";
             this.Player1Textbox.Size = new System.Drawing.Size(76, 20);
@@ -307,8 +305,9 @@
             this.value.AutoSize = true;
             this.value.Location = new System.Drawing.Point(13, 252);
             this.value.Name = "value";
-            this.value.Size = new System.Drawing.Size(0, 13);
+            this.value.Size = new System.Drawing.Size(25, 13);
             this.value.TabIndex = 23;
+            this.value.Text = "kak";
             // 
             // saveclass
             // 
@@ -354,6 +353,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

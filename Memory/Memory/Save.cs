@@ -27,9 +27,9 @@ namespace WindowsFormsApp1
         
 
         
-        public static void SaveData()
+        public static string SaveData()
         {
-
+            string output = "";
             Save save = new Save();
             //invoer van naam + lege turn + lege score
             int icounter = 0, score = 0;
@@ -48,8 +48,8 @@ namespace WindowsFormsApp1
             GameData deserialized = Deserialize(bytes);
 
             //Writen van de variabelen
-           Form1.value = deserialized.Naam1 + "/n" + deserialized.TurnCounter + "/n" + deserialized.Score;
-            
+            output = deserialized.Naam1 + "/n" + deserialized.TurnCounter + "/n" + deserialized.Score;
+            return (output);
         }
 
         private static byte[] Serialize(int data1,int data2, string data3)
@@ -60,7 +60,9 @@ namespace WindowsFormsApp1
             {
                 //We maken een binary formatter aan en zeggen dat hij de data moet serializen (output wordt in de memory stream gezet).
                 BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(stream, data1, data2, data3);
+                formatter.Serialize(stream, data1);
+                formatter.Serialize(stream, data2);
+                formatter.Serialize(stream, data3);
 
                 //Return
                 return stream.ToArray();
