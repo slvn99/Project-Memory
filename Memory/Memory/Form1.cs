@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
+using Memory;
 
 
 namespace WindowsFormsApp1
@@ -185,7 +186,7 @@ namespace WindowsFormsApp1
 
         private void Player1Textbox_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Player2textbox_TextChanged(object sender, EventArgs e)
@@ -195,7 +196,7 @@ namespace WindowsFormsApp1
 
         public void saveclass_Click(object sender, EventArgs e)
         {
-            
+            Save.SaveData();
         }
 
         private void GridButton8Dup_Click(object sender, EventArgs e)

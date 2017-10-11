@@ -2,38 +2,41 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace Opslaan
+
+namespace WindowsFormsApp1
 {
+    [Serializable]
     public class Save
     {
-        // Struct
-        [Serializable]
         public struct GameData
         {
             public string Naam1;
             public int TurnCounter;
             public int Score;
 
-            //De constructor.
-            public GameData(string speler_1, int turn, int score)
+            //de constructor
+            public GameData (string speler_1, int turn, int score)
             {
-                naam1 = speler_1;
+                Naam1 = speler_1;
                 TurnCounter = turn;
                 Score = score;
-                
             }
         }
+        
 
-        public static void Main()
+        
+
+        
+        public static void SaveData()
         {
+
             Save save = new Save();
             //invoer van naam + lege turn + lege score
             int icounter = 0, score = 0;
             string speler_1 = "Sam";
-            GameData gameData = new GameData(Name, icounter, score);
 
             //omzetten naar bytes
-            byte[] serialized = Serialize(gameData);
+            byte[] serialized = Serialize(icounter,score,speler_1);
 
             WriteToFile(@"C:\Users\svnoo\Documents\GitHub\Project-Memory\Memory\Memory\Savegames", serialized);
 
@@ -45,11 +48,11 @@ namespace Opslaan
             GameData deserialized = Deserialize(bytes);
 
             //Writen van de variabelen
-            value.Text = deserialized.Naam1 + "/n" + deserialized.TurnCounter + "/n" + deserialized.Score;
+           Form1.value = deserialized.Naam1 + "/n" + deserialized.TurnCounter + "/n" + deserialized.Score;
             
         }
 
-        private static byte[] Serialize(GameData data)
+        private static byte[] Serialize(int data1,int data2, string data3)
         {
             //Maak een nieuwe memory stream aan, die wordt gebruikt door de binary formatter.
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
@@ -57,7 +60,7 @@ namespace Opslaan
             {
                 //We maken een binary formatter aan en zeggen dat hij de data moet serializen (output wordt in de memory stream gezet).
                 BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(stream, data);
+                formatter.Serialize(stream, data1, data2, data3);
 
                 //Return
                 return stream.ToArray();

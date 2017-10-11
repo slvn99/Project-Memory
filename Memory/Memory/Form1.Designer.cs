@@ -285,7 +285,7 @@
             // Player2Textbox
             // 
             this.Player2Textbox.Location = new System.Drawing.Point(398, 104);
-            this.Player2Textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Player2Textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Player2Textbox.Name = "Player2Textbox";
             this.Player2Textbox.Size = new System.Drawing.Size(76, 20);
             this.Player2Textbox.TabIndex = 21;
@@ -294,7 +294,7 @@
             // Player1Textbox
             // 
             this.Player1Textbox.Location = new System.Drawing.Point(401, 70);
-            this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Player1Textbox.Name = "Player1Textbox";
             this.Player1Textbox.Size = new System.Drawing.Size(76, 20);
             this.Player1Textbox.TabIndex = 22;
@@ -381,8 +381,8 @@
         private System.Windows.Forms.Label Player2LabelInvoer;
         private System.Windows.Forms.TextBox Player2Textbox;
         private System.Windows.Forms.TextBox Player1Textbox;
-        private System.Windows.Forms.Label value;
         private System.Windows.Forms.Button saveclass;
+        public System.Windows.Forms.Label value;
     }
 }
 
