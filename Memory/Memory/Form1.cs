@@ -52,16 +52,6 @@ namespace WindowsFormsApp1
                 PlayButton.Visible = false;
             }
 
-            Player1Label.Visible = false;
-            Player1Textbox.Visible = false;
-            Player2Label.Visible = false;
-            Player2Textbox.Visible = false;
-
-            Player1LabelInvoer.Text = "Speler 1: " + Player1Textbox.Text;
-            Player2LabelInvoer.Text = "Speler 2: " + Player2Textbox.Text;
-
-            string player1 = Player1LabelInvoer.Text;
-            string player2 = Player2LabelInvoer.Text;
         }
 
         private void Check_kaart(Button Buttonclick)
@@ -174,6 +164,7 @@ namespace WindowsFormsApp1
             GridButton8.Text = "H";
         }
 
+<<<<<<< HEAD
         private void Player1label_Click(object sender, EventArgs e)
         {
 
@@ -199,6 +190,8 @@ namespace WindowsFormsApp1
             Save.SaveData();
         }
 
+=======
+>>>>>>> parent of 9b77a4b... Player select
         private void GridButton8Dup_Click(object sender, EventArgs e)
         {
             GridButton8Dup.Text = "H";
