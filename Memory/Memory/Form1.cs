@@ -211,7 +211,7 @@ namespace WindowsFormsApp1
 
         public void saveclass_Click(object sender, EventArgs e)
         {
-            Save.SaveData();
+            value.Text =  Save.SaveData();
         }   
     }
 }
