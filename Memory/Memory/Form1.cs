@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
             Player2Label.Visible = false;
             Player2Textbox.Visible = false;
             Player1LabelInvoer.Visible = true;
-            Player1LabelInvoer.Visible = true;
+            Player2LabelInvoer.Visible = true;
 
 
 
