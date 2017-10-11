@@ -70,7 +70,7 @@ namespace WindowsFormsApp1
 
             Player1LabelInvoer.Text = Player1Textbox.Text;
             Player2LabelInvoer.Text = Player2Textbox.Text;
-
+            
             player1 = Player1LabelInvoer.Text;
             player2 = Player2LabelInvoer.Text;
             PlayerBeurt = player1;
@@ -253,7 +253,10 @@ namespace WindowsFormsApp1
 
         public void Saveclass_Click(object sender, EventArgs e)
         {
-            value.Text =  Save.SaveData();
+            //click van deze button saved alle huidige data in .sav
+            Save.SaveData(player1, player2, PuntenPlayer1, PuntenPlayer2, PlayerBeurt);
+
+            //een load button moet nog gemaakt, maar de caller is er wel al in de save.cs
         }   
     }
 }

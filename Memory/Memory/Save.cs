@@ -22,25 +22,22 @@ namespace WindowsFormsApp1
                 Score = score;
             }
         }
-        
-
-        
-
-        
-        public static string SaveData()
+                
+//-------------------------------------------------------------------------------//
+        //Caller write
+        public static void SaveData(string player1, string player2, int score1, int score2, string playerbeurt)
         {
-            
-            Save save = new Save();
-            //invoer van naam + lege turn + lege score
-            int icounter = 0, score = 0;
-            string speler_1 = "Sam";
-
             //omzetten naar bytes
-            byte[] serialized = Serialize(icounter,score,speler_1);
+            byte[] serialized = Serialize(player1, player2, score1, score2, playerbeurt);
 
+            //deze bytes writen
             WriteToFile(@"C:\Users\svnoo\Documents\GitHub\Project-Memory\Memory\Memory\Savegames\game.sav", serialized);
 
+        }
 
+        //Caller read
+        public static string LoadData()
+        {
             //het ophalen van de bytes uit de .sav
             byte[] bytes = ReadFromFile(@"C:\Users\svnoo\Documents\GitHub\Project-Memory\Memory\Memory\Savegames\game.sav");
 
@@ -51,7 +48,9 @@ namespace WindowsFormsApp1
             return (opslag);
         }
 
-        private static byte[] Serialize(int data1,int data2, string data3)
+        //------------------------------------------------------------------------------//
+        //Methods
+        public static byte[] Serialize(string player1,string player2, int score1,int score2,string playerbeurt)
         {
             //Nieuwe memory stream aanmaken die wordt gebruikt door de formatter
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
@@ -59,9 +58,11 @@ namespace WindowsFormsApp1
             {
                 //Binary formatter die de data serialized, en dit in de stream zet
                 BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(stream, data1);
-                formatter.Serialize(stream, data2);
-                formatter.Serialize(stream, data3);
+                formatter.Serialize(stream, player1);
+                formatter.Serialize(stream, player2);
+                formatter.Serialize(stream, score1);
+                formatter.Serialize(stream, score2);
+                formatter.Serialize(stream, playerbeurt);
 
                 //Return
                 return stream.ToArray();
@@ -82,16 +83,21 @@ namespace WindowsFormsApp1
                 var d1 = formatter.Deserialize(stream);
                 var d2 = formatter.Deserialize(stream);
                 var d3 = formatter.Deserialize(stream);
-                string buf1,buf2,buf3,opslag;
+                var d4 = formatter.Deserialize(stream);
+                var d5 = formatter.Deserialize(stream);
+
+                string buf1,buf2,buf3,buf4,buf5,opslag;
                 buf1 = Convert.ToString(d1);
                 buf2 = Convert.ToString(d2);
                 buf3 = Convert.ToString(d3);
-                opslag = (buf1 + "\n" + buf2 + "\n" + buf3);
+                buf4 = Convert.ToString(d4);
+                buf5 = Convert.ToString(d5);
+                opslag = (buf1 + "\n" + buf2 + "\n" + buf3 + "\n" + buf4 + "\n" + buf5);
                 return opslag;
             }
         }
 
-        private static void WriteToFile(string file, byte[] data)
+        public static void WriteToFile(string file, byte[] data)
         {
             //Try catch block om eventuele errors op te vangen.
             try
