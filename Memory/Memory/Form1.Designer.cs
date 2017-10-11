@@ -47,12 +47,12 @@
             this.GridButton8Dup = new System.Windows.Forms.Button();
             this.Player1Label = new System.Windows.Forms.Label();
             this.Player2Label = new System.Windows.Forms.Label();
-            this.Player1LabelInvoer = new System.Windows.Forms.Label();
-            this.Player2LabelInvoer = new System.Windows.Forms.Label();
             this.Player2Textbox = new System.Windows.Forms.TextBox();
             this.Player1Textbox = new System.Windows.Forms.TextBox();
             this.value = new System.Windows.Forms.Label();
             this.saveclass = new System.Windows.Forms.Button();
+            this.Player1LabelInvoer = new System.Windows.Forms.Label();
+            this.Player2LabelInvoer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PlayButton
@@ -244,7 +244,7 @@
             // Player1Label
             // 
             this.Player1Label.AutoSize = true;
-            this.Player1Label.Location = new System.Drawing.Point(395, 12);
+            this.Player1Label.Location = new System.Drawing.Point(156, 112);
             this.Player1Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Player1Label.Name = "Player1Label";
             this.Player1Label.Size = new System.Drawing.Size(107, 13);
@@ -254,46 +254,27 @@
             // Player2Label
             // 
             this.Player2Label.AutoSize = true;
-            this.Player2Label.Location = new System.Drawing.Point(395, 32);
+            this.Player2Label.Location = new System.Drawing.Point(156, 149);
             this.Player2Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Player2Label.Name = "Player2Label";
             this.Player2Label.Size = new System.Drawing.Size(104, 13);
             this.Player2Label.TabIndex = 18;
             this.Player2Label.Text = "Geef naam Speler 2:";
             // 
-            // Player1LabelInvoer
-            // 
-            this.Player1LabelInvoer.AutoSize = true;
-            this.Player1LabelInvoer.Location = new System.Drawing.Point(396, 148);
-            this.Player1LabelInvoer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Player1LabelInvoer.Name = "Player1LabelInvoer";
-            this.Player1LabelInvoer.Size = new System.Drawing.Size(0, 13);
-            this.Player1LabelInvoer.TabIndex = 19;
-            // 
-            // Player2LabelInvoer
-            // 
-            this.Player2LabelInvoer.AutoSize = true;
-            this.Player2LabelInvoer.Location = new System.Drawing.Point(486, 148);
-            this.Player2LabelInvoer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Player2LabelInvoer.Name = "Player2LabelInvoer";
-            this.Player2LabelInvoer.Size = new System.Drawing.Size(0, 16);
-            this.Player2LabelInvoer.TabIndex = 20;
-            this.Player2LabelInvoer.UseCompatibleTextRendering = true;
-            // 
             // Player2Textbox
             // 
-            this.Player2Textbox.Location = new System.Drawing.Point(398, 71);
+            this.Player2Textbox.Location = new System.Drawing.Point(159, 164);
             this.Player2Textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Player2Textbox.Name = "Player2Textbox";
-            this.Player2Textbox.Size = new System.Drawing.Size(76, 20);
+            this.Player2Textbox.Size = new System.Drawing.Size(104, 20);
             this.Player2Textbox.TabIndex = 21;
             // 
             // Player1Textbox
             // 
-            this.Player1Textbox.Location = new System.Drawing.Point(398, 47);
+            this.Player1Textbox.Location = new System.Drawing.Point(159, 127);
             this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Player1Textbox.Name = "Player1Textbox";
-            this.Player1Textbox.Size = new System.Drawing.Size(76, 20);
+            this.Player1Textbox.Size = new System.Drawing.Size(104, 20);
             this.Player1Textbox.TabIndex = 22;
             // 
             // value
@@ -314,17 +295,37 @@
             this.saveclass.UseVisualStyleBackColor = true;
             this.saveclass.Click += new System.EventHandler(this.saveclass_Click);
             // 
+            // Player1LabelInvoer
+            // 
+            this.Player1LabelInvoer.AutoSize = true;
+            this.Player1LabelInvoer.Location = new System.Drawing.Point(376, 12);
+            this.Player1LabelInvoer.Name = "Player1LabelInvoer";
+            this.Player1LabelInvoer.Size = new System.Drawing.Size(35, 13);
+            this.Player1LabelInvoer.TabIndex = 25;
+            this.Player1LabelInvoer.Text = "label1";
+            this.Player1LabelInvoer.Visible = false;
+            // 
+            // Player2LabelInvoer
+            // 
+            this.Player2LabelInvoer.AutoSize = true;
+            this.Player2LabelInvoer.Location = new System.Drawing.Point(376, 32);
+            this.Player2LabelInvoer.Name = "Player2LabelInvoer";
+            this.Player2LabelInvoer.Size = new System.Drawing.Size(35, 13);
+            this.Player2LabelInvoer.TabIndex = 26;
+            this.Player2LabelInvoer.Text = "label2";
+            this.Player2LabelInvoer.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 326);
+            this.Controls.Add(this.Player2LabelInvoer);
+            this.Controls.Add(this.Player1LabelInvoer);
             this.Controls.Add(this.saveclass);
             this.Controls.Add(this.value);
             this.Controls.Add(this.Player1Textbox);
             this.Controls.Add(this.Player2Textbox);
-            this.Controls.Add(this.Player2LabelInvoer);
-            this.Controls.Add(this.Player1LabelInvoer);
             this.Controls.Add(this.Player2Label);
             this.Controls.Add(this.Player1Label);
             this.Controls.Add(this.GridButton8Dup);
@@ -373,12 +374,12 @@
         private System.Windows.Forms.Button GridButton8Dup;
         private System.Windows.Forms.Label Player1Label;
         private System.Windows.Forms.Label Player2Label;
-        private System.Windows.Forms.Label Player1LabelInvoer;
-        private System.Windows.Forms.Label Player2LabelInvoer;
         private System.Windows.Forms.TextBox Player2Textbox;
         private System.Windows.Forms.TextBox Player1Textbox;
         private System.Windows.Forms.Button saveclass;
         public System.Windows.Forms.Label value;
+        private System.Windows.Forms.Label Player1LabelInvoer;
+        private System.Windows.Forms.Label Player2LabelInvoer;
     }
 }
 
