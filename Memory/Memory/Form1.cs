@@ -209,7 +209,7 @@ namespace WindowsFormsApp1
             Check_kaart();
         }
 
-        public void saveclass_Click(object sender, EventArgs e)
+        public void Saveclass_Click(object sender, EventArgs e)
         {
             value.Text =  Save.SaveData();
         }   

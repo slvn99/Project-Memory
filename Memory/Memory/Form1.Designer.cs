@@ -52,7 +52,7 @@
             this.Player2Textbox = new System.Windows.Forms.TextBox();
             this.Player1Textbox = new System.Windows.Forms.TextBox();
             this.value = new System.Windows.Forms.Label();
-            this.saveclass = new System.Windows.Forms.Button();
+            this.Saveclass = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PlayButton
@@ -304,22 +304,22 @@
             this.value.Size = new System.Drawing.Size(0, 13);
             this.value.TabIndex = 23;
             // 
-            // saveclass
+            // Saveclass
             // 
-            this.saveclass.Location = new System.Drawing.Point(340, 267);
-            this.saveclass.Name = "saveclass";
-            this.saveclass.Size = new System.Drawing.Size(75, 23);
-            this.saveclass.TabIndex = 24;
-            this.saveclass.Text = "kutsave";
-            this.saveclass.UseVisualStyleBackColor = true;
-            this.saveclass.Click += new System.EventHandler(this.saveclass_Click);
+            this.Saveclass.Location = new System.Drawing.Point(340, 267);
+            this.Saveclass.Name = "Saveclass";
+            this.Saveclass.Size = new System.Drawing.Size(75, 23);
+            this.Saveclass.TabIndex = 24;
+            this.Saveclass.Text = "kutsave";
+            this.Saveclass.UseVisualStyleBackColor = true;
+            this.Saveclass.Click += new System.EventHandler(this.Saveclass_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 326);
-            this.Controls.Add(this.saveclass);
+            this.Controls.Add(this.Saveclass);
             this.Controls.Add(this.value);
             this.Controls.Add(this.Player1Textbox);
             this.Controls.Add(this.Player2Textbox);
@@ -377,7 +377,7 @@
         private System.Windows.Forms.Label Player2LabelInvoer;
         private System.Windows.Forms.TextBox Player2Textbox;
         private System.Windows.Forms.TextBox Player1Textbox;
-        private System.Windows.Forms.Button saveclass;
+        private System.Windows.Forms.Button Saveclass;
         public System.Windows.Forms.Label value;
     }
 }
