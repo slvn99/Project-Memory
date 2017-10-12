@@ -104,21 +104,28 @@ namespace WindowsFormsApp1
             {
                 if (Kaart1Select.Tag == Kaart2Select.Tag)
                 {
-                    foreach (var x in ButtonGrid)
+                    if (Kaart1Select.Name == Kaart2Select.Name)
                     {
-                        x.Enabled = false;
+                        Kaart2Select = null;
                     }
-                    
-                    await Task.Delay(1000);
-                    Kaart1Select.Visible = false;
-                    Kaart2Select.Visible = false;
-                    Kaart1Select = null;
-                    Kaart2Select = null;
-                    Point_Add();
-
-                    foreach (var x in ButtonGrid)
+                    else
                     {
-                        x.Enabled = true;
+                        foreach (var x in ButtonGrid)
+                        {
+                            x.Enabled = false;
+                        }
+
+                        await Task.Delay(1000);
+                        Kaart1Select.Visible = false;
+                        Kaart2Select.Visible = false;
+                        Kaart1Select = null;
+                        Kaart2Select = null;
+                        Point_Add();
+
+                        foreach (var x in ButtonGrid)
+                        {
+                            x.Enabled = true;
+                        }
                     }
                 }
                 else
