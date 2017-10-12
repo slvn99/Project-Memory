@@ -59,15 +59,5 @@ namespace Memory.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        public static byte[] game {
-            get {
-                object obj = ResourceManager.GetObject("game", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }

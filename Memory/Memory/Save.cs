@@ -14,23 +14,28 @@ namespace WindowsFormsApp1
         //Caller write
         public static void SaveData(string player1, string player2, int score1, int score2, string playerbeurt)
         {
+            //hier benoem ik path tot de locatie van de .exe
+            var path = AppDomain.CurrentDomain.BaseDirectory;
 
             //omzetten naar bytes
             byte[] serialized = Serialize(player1, player2, score1, score2, playerbeurt);
 
             //deze bytes writen
-            IResourceWriter write = new ResourceWriter("game.sav");
-            write.AddResource("save1", serialized);
-            write.Close();
-
+            WriteToFile(@"" + path + "Savegames\\game.sav", serialized);
 
         }
 
         //Caller read
         public static string LoadData()
         {
+            //hier benoem ik path tot de locatie van de .exe
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+
+            //het ophalen van de bytes uit de .sav
+            byte[] bytes = ReadFromFile(@""+ path + "Savegames\\game.sav");
+
             //Terugzetten van bytes naar data
-            string opslag = Deserialize(Resources.game);
+            string opslag = Deserialize(bytes);
 
             //variabelen teruggeven aan button die een label aanpast
             return (opslag);
@@ -44,7 +49,6 @@ namespace WindowsFormsApp1
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
             using (MemoryStream stream = new MemoryStream())
             {
-
                 //Binary formatter die de data serialized, en dit in de stream zet
                 BinaryFormatter formatter = new BinaryFormatter();
                 formatter.Serialize(stream, player1);
@@ -60,9 +64,6 @@ namespace WindowsFormsApp1
 
         private static string Deserialize(byte[] data)
         {
-            IResourceReader read = new ResourceReader("game.sav");
-            
-            read.Close();
 
             //Nieuwe memory stream aanmaken die wordt gebruikt door de formatter
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
@@ -91,6 +92,40 @@ namespace WindowsFormsApp1
         }
 
 
-    }
-}
+             private static void WriteToFile(string file, byte[] data)
+            {
+                //Try catch block om eventuele errors af te vangen.
+                try
+                {
+                    //Schrijf all bytes naar het opgegeven path.
+                    File.WriteAllBytes(file, data);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Could not write file due: " + e.Message);
+                }
+            }
+
+            private static byte[] ReadFromFile(string file)
+            {
+                //Try catch block om eventuele errors af te vangen.
+                try
+                {
+                    //Alle bytes uitlezen uit een bestand en deze returnen.
+                    byte[] bytes = File.ReadAllBytes(file);
+                    return bytes;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Could not read file due: " + e.Message);
+                }
+
+                return null;
+            }
+
+     }
+
+
+ }
+
        
