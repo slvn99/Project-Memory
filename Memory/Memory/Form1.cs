@@ -230,10 +230,6 @@ namespace WindowsFormsApp1
             Check_kaart();
         }
 
-        private void Loadclass_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void GridButton7Dup_Click(object sender, EventArgs e)
         {
@@ -260,8 +256,13 @@ namespace WindowsFormsApp1
         {
             //click van deze button saved alle huidige data in .sav
             Save.SaveData(player1, player2, PuntenPlayer1, PuntenPlayer2, PlayerBeurt);
+        }
 
-            //een load button moet nog gemaakt, maar de caller is er wel al in de save.cs
-        }   
+        public void Loadclass_Click(object sender, EventArgs e)
+        {
+            //click van deze button load alle huidige data uit .sav
+            //en zet deze in het label value
+            value.Text = Save.LoadData();
+        }
     }
 }

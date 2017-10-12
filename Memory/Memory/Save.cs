@@ -1,48 +1,37 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Memory.Properties;
 
 
 namespace WindowsFormsApp1
 {
     [Serializable]
     public class Save
-    {
-        public struct GameData
-        {
-            public string Naam1;
-            public int TurnCounter;
-            public int Score;
-
-            //de constructor
-            public GameData (string speler_1, int turn, int score)
-            {
-                Naam1 = speler_1;
-                TurnCounter = turn;
-                Score = score;
-            }
-        }
-                
+    {                 
 //-------------------------------------------------------------------------------//
         //Caller write
         public static void SaveData(string player1, string player2, int score1, int score2, string playerbeurt)
         {
+            var path = @"Savegames\game.sav";
+
             //omzetten naar bytes
             byte[] serialized = Serialize(player1, player2, score1, score2, playerbeurt);
 
             //deze bytes writen
-            WriteToFile(@"C:\Users\svnoo\Documents\GitHub\Project-Memory\Memory\Memory\Savegames\game.sav", serialized);
+            WriteToFile(path, serialized);
 
         }
 
         //Caller read
         public static string LoadData()
         {
+            var path = Resources.game;
             //het ophalen van de bytes uit de .sav
-            byte[] bytes = ReadFromFile(@"C:\Users\svnoo\Documents\GitHub\Project-Memory\Memory\Memory\Savegames\game.sav");
+            //byte[] bytes = ReadFromFile(Resources.game);
 
             //Terugzetten van bytes naar data
-            string opslag = Deserialize(bytes);
+            string opslag = Deserialize(Resources.game);
 
             //variabelen teruggeven aan button die een label aanpast
             return (opslag);
