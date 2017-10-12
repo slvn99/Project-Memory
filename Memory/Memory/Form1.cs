@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
-using Memory;
+using Memory.Properties;
 
 
 namespace WindowsFormsApp1
