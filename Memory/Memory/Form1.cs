@@ -230,6 +230,11 @@ namespace WindowsFormsApp1
             Check_kaart();
         }
 
+        private void Loadclass_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void GridButton7Dup_Click(object sender, EventArgs e)
         {
             GridButton7Dup.Text = "G";
