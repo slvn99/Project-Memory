@@ -19,6 +19,8 @@ namespace WindowsFormsApp1
         Button Kaart1Select, Kaart2Select;
         string player1, player2, PlayerBeurt;
         int PuntenPlayer1, PuntenPlayer2;
+        List<Point> punten = new List<Point>();
+        Random ButtonLocatie = new Random();
 
         public Form1()
         {
@@ -28,10 +30,15 @@ namespace WindowsFormsApp1
             foreach (var x in ButtonGrid)
             {
                 x.Visible = false;
+                punten.Add(x.Location);
             }
 
             foreach (Button Button in ButtonGrid)
             {
+                int next = ButtonLocatie.Next(punten.Count);
+                Point p = punten[next];
+                Button.Location = p;
+                punten.Remove(p);
                 Button.Text = "[=]";
             }
         }
@@ -55,12 +62,13 @@ namespace WindowsFormsApp1
             else
             {
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+                
+
                 foreach (var x in ButtonGrid)
                 {
                     x.Visible = true;
-                    PlayButton.Visible = false;
                 }
-
+                
                 PuntenPlayer1 = 0;
                 PuntenPlayer2 = 0;
                 Points1.Text = Convert.ToString(PuntenPlayer1);
