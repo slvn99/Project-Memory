@@ -74,13 +74,15 @@
             // 
             // GridButton1
             // 
+            this.GridButton1.BackColor = System.Drawing.Color.Transparent;
+            this.GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.GridButton1.Location = new System.Drawing.Point(52, 12);
             this.GridButton1.Name = "GridButton1";
             this.GridButton1.Size = new System.Drawing.Size(75, 52);
             this.GridButton1.TabIndex = 1;
             this.GridButton1.Tag = "1";
             this.GridButton1.Text = "button1";
-            this.GridButton1.UseVisualStyleBackColor = true;
+            this.GridButton1.UseVisualStyleBackColor = false;
             this.GridButton1.Click += new System.EventHandler(this.GridButton1_Click);
             // 
             // GridButton1Dup

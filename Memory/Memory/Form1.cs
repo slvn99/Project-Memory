@@ -47,34 +47,42 @@ namespace WindowsFormsApp1
 
         private void Play_Game()
         {
-            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
-            foreach (var x in ButtonGrid)
+            if (Player1Textbox.Text == "" || Player2Textbox.Text == "")
             {
-                x.Visible = true;
-                PlayButton.Visible = false;
+                MessageBox.Show("Je moet een naam invullen!");
             }
 
-            PuntenPlayer1 = 0;
-            PuntenPlayer2 = 0;
-            Points1.Text = Convert.ToString(PuntenPlayer1);
-            Points2.Text = Convert.ToString(PuntenPlayer2);
-            Player1Label.Visible = false;
-            Player1Textbox.Visible = false;
-            Player2Label.Visible = false;
-            Player2Textbox.Visible = false;
-            Player1LabelInvoer.Visible = true;
-            Player2LabelInvoer.Visible = true;
-            Points1.Visible = true;
-            Points2.Visible = true;
-            BeurtLabel.Visible = true;
+            else
+            {
+                Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+                foreach (var x in ButtonGrid)
+                {
+                    x.Visible = true;
+                    PlayButton.Visible = false;
+                }
 
-            Player1LabelInvoer.Text = Player1Textbox.Text;
-            Player2LabelInvoer.Text = Player2Textbox.Text;
-            
-            player1 = Player1LabelInvoer.Text;
-            player2 = Player2LabelInvoer.Text;
-            PlayerBeurt = player1;
-            BeurtLabel.Text = PlayerBeurt;
+                PuntenPlayer1 = 0;
+                PuntenPlayer2 = 0;
+                Points1.Text = Convert.ToString(PuntenPlayer1);
+                Points2.Text = Convert.ToString(PuntenPlayer2);
+                Player1Label.Visible = false;
+                Player1Textbox.Visible = false;
+                Player2Label.Visible = false;
+                Player2Textbox.Visible = false;
+                Player1LabelInvoer.Visible = true;
+                Player2LabelInvoer.Visible = true;
+                Points1.Visible = true;
+                Points2.Visible = true;
+                BeurtLabel.Visible = true;
+
+                Player1LabelInvoer.Text = Player1Textbox.Text;
+                Player2LabelInvoer.Text = Player2Textbox.Text;
+
+                player1 = Player1LabelInvoer.Text;
+                player2 = Player2LabelInvoer.Text;
+                PlayerBeurt = player1;
+                BeurtLabel.Text = PlayerBeurt;
+            }
         }
 
         private void Click_kaart(Button Buttonclick)
@@ -91,23 +99,46 @@ namespace WindowsFormsApp1
 
         private async void Check_kaart()
         {
+            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
             if (Kaart1Select != null && Kaart2Select != null)
             {
                 if (Kaart1Select.Tag == Kaart2Select.Tag)
                 {
-                    MessageBox.Show("match");
+                    foreach (var x in ButtonGrid)
+                    {
+                        x.Enabled = false;
+                    }
+                    
+                    await Task.Delay(1000);
+                    Kaart1Select.Visible = false;
+                    Kaart2Select.Visible = false;
                     Kaart1Select = null;
                     Kaart2Select = null;
                     Point_Add();
+
+                    foreach (var x in ButtonGrid)
+                    {
+                        x.Enabled = true;
+                    }
                 }
                 else
                 {
-                    await Task.Delay(1500);
+                    foreach (var x in ButtonGrid)
+                    {
+                        x.Enabled = false;
+                    }
+
+                    await Task.Delay(1000);
                     Kaart1Select.Text = "[=]";
                     Kaart2Select.Text = "[=]";
                     Kaart1Select = null;
                     Kaart2Select = null;
                     Change_Beurt();
+
+                    foreach (var x in ButtonGrid)
+                    {
+                        x.Enabled = true;
+                    }
                 }
             }
         }
