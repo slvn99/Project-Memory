@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Resources;
 using System.Runtime.Serialization.Formatters.Binary;
 using Memory.Properties;
 
@@ -8,28 +9,26 @@ namespace WindowsFormsApp1
 {
     [Serializable]
     public class Save
-    {                 
-//-------------------------------------------------------------------------------//
+    {
+        //-------------------------------------------------------------------------------//
         //Caller write
         public static void SaveData(string player1, string player2, int score1, int score2, string playerbeurt)
         {
-            var path = @"Savegames\game.sav";
 
             //omzetten naar bytes
             byte[] serialized = Serialize(player1, player2, score1, score2, playerbeurt);
 
             //deze bytes writen
-            WriteToFile(path, serialized);
+            IResourceWriter write = new ResourceWriter("game.sav");
+            write.AddResource("save1", serialized);
+            write.Close();
+
 
         }
 
         //Caller read
         public static string LoadData()
         {
-            var path = Resources.game;
-            //het ophalen van de bytes uit de .sav
-            //byte[] bytes = ReadFromFile(Resources.game);
-
             //Terugzetten van bytes naar data
             string opslag = Deserialize(Resources.game);
 
@@ -39,12 +38,13 @@ namespace WindowsFormsApp1
 
         //------------------------------------------------------------------------------//
         //Methods
-        public static byte[] Serialize(string player1,string player2, int score1,int score2,string playerbeurt)
+        public static byte[] Serialize(string player1, string player2, int score1, int score2, string playerbeurt)
         {
             //Nieuwe memory stream aanmaken die wordt gebruikt door de formatter
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
             using (MemoryStream stream = new MemoryStream())
             {
+
                 //Binary formatter die de data serialized, en dit in de stream zet
                 BinaryFormatter formatter = new BinaryFormatter();
                 formatter.Serialize(stream, player1);
@@ -60,6 +60,10 @@ namespace WindowsFormsApp1
 
         private static string Deserialize(byte[] data)
         {
+            IResourceReader read = new ResourceReader("game.sav");
+            
+            read.Close();
+
             //Nieuwe memory stream aanmaken die wordt gebruikt door de formatter
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
             //De data uit de .sav wordt in de stream gezet
@@ -75,7 +79,7 @@ namespace WindowsFormsApp1
                 var d4 = formatter.Deserialize(stream);
                 var d5 = formatter.Deserialize(stream);
 
-                string buf1,buf2,buf3,buf4,buf5,opslag;
+                string buf1, buf2, buf3, buf4, buf5, opslag;
                 buf1 = Convert.ToString(d1);
                 buf2 = Convert.ToString(d2);
                 buf3 = Convert.ToString(d3);
@@ -86,35 +90,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        public static void WriteToFile(string file, byte[] data)
-        {
-            //Try catch block om eventuele errors op te vangen.
-            try
-            {
-                //Write van bytes naar opgegeven path
-                File.WriteAllBytes(file, data);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Could not write file due: " + e.Message);
-            }
-        }
 
-        private static byte[] ReadFromFile(string file)
-        {
-            //Try catch block om eventuele errors af te vangen.
-            try
-            {
-                //Read van bytes vanuit opgegeven path
-                byte[] bytes = File.ReadAllBytes(file);
-                return bytes;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Could not read file due: " + e.Message);
-            }
-
-            return null;
-        }
     }
 }
+       
