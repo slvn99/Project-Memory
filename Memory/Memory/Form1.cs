@@ -188,7 +188,7 @@ namespace WindowsFormsApp1
 
         private void GridButton1_Click(object sender, EventArgs e)
         {
-            Image myimage = Resources.Tyfusding;
+            Image myimage = Resources.Steam;
             GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton1.BackgroundImage = myimage;
             GridButton1.Text = "";
@@ -198,7 +198,7 @@ namespace WindowsFormsApp1
 
         private void GridButton1Dup_Click(object sender, EventArgs e)
         {
-            Image myimage = Resources.Tyfusding;
+            Image myimage = Resources.Steam;
             GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton1Dup.BackgroundImage = myimage;
             GridButton1Dup.Text = "";
