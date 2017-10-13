@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         int PuntenPlayer1, PuntenPlayer2;
         List<Point> punten = new List<Point>();
         Random ButtonLocatie = new Random();
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -63,7 +63,6 @@ namespace WindowsFormsApp1
             {
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
                 
-
                 foreach (var x in ButtonGrid)
                 {
                     x.Visible = true;
@@ -284,6 +283,20 @@ namespace WindowsFormsApp1
             Check_kaart();
         }
 
+        private void GridButton8_Click(object sender, EventArgs e)
+        {
+            GridButton8.Text = "H";
+            Click_kaart(GridButton8);
+            Check_kaart();
+        }
+
+        private void GridButton8Dup_Click(object sender, EventArgs e)
+        {
+            GridButton8Dup.Text = "H";
+            Click_kaart(GridButton8Dup);
+            Check_kaart();
+        }
+
         private void ResetButton_Click(object sender, EventArgs e)
         {
             DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -311,8 +324,6 @@ namespace WindowsFormsApp1
                 Player1LabelInvoer.Visible = false;
                 Player2LabelInvoer.Visible = false;
 
-
-
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
                 foreach (var x in ButtonGrid)
@@ -325,20 +336,13 @@ namespace WindowsFormsApp1
                     x.Text = "[=]";
 
                 }
-
-
-
             }
-
 
             else if (ResetGame == DialogResult.No)
-            {
-
+            { 
                 //Niks
-
             }
-        
-    }
+        }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
@@ -361,23 +365,18 @@ namespace WindowsFormsApp1
 
 
                     // show hoofdmenu Form (HoofdmenuForm.Show (); )
-
-
-
-
                 }
                 else if (GameOpslaan == DialogResult.No)
                 {
                     //Terug naar hoofdmenu
-                    // (HoofdmenuForm.Show ();                
-
-
+                    // (HoofdmenuForm.Show ();
                 }
                 else if (ExitGame == DialogResult.No)
                 {
                     //Ga door met spel
                 }
             }
+<<<<<<< HEAD
         
     }
 
@@ -397,6 +396,8 @@ namespace WindowsFormsApp1
             GridButton8Dup.Text = "H";
             Click_kaart(GridButton8Dup);
             Check_kaart();
+=======
+>>>>>>> 607715b3f2f4824823b516b8a0d73f6ff75e7298
         }
 
         public void Saveclass_Click(object sender, EventArgs e)
