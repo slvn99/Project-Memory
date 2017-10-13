@@ -64,6 +64,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -74,9 +75,48 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\9gag" />
+    <None Include="Resources\Reddit" />
+    <None Include="Resources\YouTube" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tyfusding.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Twitch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwitchLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Achterkant.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-of-memory-cards.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Snapchat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Google.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reddit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9gag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Twitter.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

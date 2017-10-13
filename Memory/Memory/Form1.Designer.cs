@@ -63,7 +63,7 @@
             // 
             // PlayButton
             // 
-            this.PlayButton.Location = new System.Drawing.Point(133, 252);
+            this.PlayButton.Location = new System.Drawing.Point(836, 349);
             this.PlayButton.Name = "PlayButton";
             this.PlayButton.Size = new System.Drawing.Size(156, 39);
             this.PlayButton.TabIndex = 0;
@@ -73,9 +73,11 @@
             // 
             // GridButton1
             // 
+            this.GridButton1.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton1.Location = new System.Drawing.Point(52, 12);
             this.GridButton1.Name = "GridButton1";
-            this.GridButton1.Size = new System.Drawing.Size(75, 52);
+            this.GridButton1.Size = new System.Drawing.Size(130, 130);
             this.GridButton1.TabIndex = 1;
             this.GridButton1.Tag = "1";
             this.GridButton1.Text = "button1";
@@ -84,9 +86,11 @@
             // 
             // GridButton1Dup
             // 
-            this.GridButton1Dup.Location = new System.Drawing.Point(133, 12);
+            this.GridButton1Dup.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton1Dup.Location = new System.Drawing.Point(253, 12);
             this.GridButton1Dup.Name = "GridButton1Dup";
-            this.GridButton1Dup.Size = new System.Drawing.Size(75, 52);
+            this.GridButton1Dup.Size = new System.Drawing.Size(130, 130);
             this.GridButton1Dup.TabIndex = 2;
             this.GridButton1Dup.Tag = "1";
             this.GridButton1Dup.Text = "button2";
@@ -95,9 +99,11 @@
             // 
             // GridButton2
             // 
-            this.GridButton2.Location = new System.Drawing.Point(214, 12);
+            this.GridButton2.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton2.Location = new System.Drawing.Point(457, 11);
             this.GridButton2.Name = "GridButton2";
-            this.GridButton2.Size = new System.Drawing.Size(75, 52);
+            this.GridButton2.Size = new System.Drawing.Size(130, 130);
             this.GridButton2.TabIndex = 3;
             this.GridButton2.Tag = "2";
             this.GridButton2.Text = "button3";
@@ -106,9 +112,11 @@
             // 
             // GridButton2Dup
             // 
-            this.GridButton2Dup.Location = new System.Drawing.Point(295, 12);
+            this.GridButton2Dup.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton2Dup.Location = new System.Drawing.Point(655, 12);
             this.GridButton2Dup.Name = "GridButton2Dup";
-            this.GridButton2Dup.Size = new System.Drawing.Size(75, 52);
+            this.GridButton2Dup.Size = new System.Drawing.Size(130, 130);
             this.GridButton2Dup.TabIndex = 4;
             this.GridButton2Dup.Tag = "2";
             this.GridButton2Dup.Text = "button4";
@@ -117,9 +125,11 @@
             // 
             // GridButton3
             // 
-            this.GridButton3.Location = new System.Drawing.Point(52, 70);
+            this.GridButton3.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton3.Location = new System.Drawing.Point(52, 148);
             this.GridButton3.Name = "GridButton3";
-            this.GridButton3.Size = new System.Drawing.Size(75, 52);
+            this.GridButton3.Size = new System.Drawing.Size(130, 130);
             this.GridButton3.TabIndex = 5;
             this.GridButton3.Tag = "3";
             this.GridButton3.Text = "button5";
@@ -128,9 +138,11 @@
             // 
             // GridButton3Dup
             // 
-            this.GridButton3Dup.Location = new System.Drawing.Point(133, 70);
+            this.GridButton3Dup.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton3Dup.Location = new System.Drawing.Point(253, 148);
             this.GridButton3Dup.Name = "GridButton3Dup";
-            this.GridButton3Dup.Size = new System.Drawing.Size(75, 52);
+            this.GridButton3Dup.Size = new System.Drawing.Size(130, 130);
             this.GridButton3Dup.TabIndex = 6;
             this.GridButton3Dup.Tag = "3";
             this.GridButton3Dup.Text = "button6";
@@ -139,9 +151,11 @@
             // 
             // GridButton4
             // 
-            this.GridButton4.Location = new System.Drawing.Point(214, 70);
+            this.GridButton4.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton4.Location = new System.Drawing.Point(457, 147);
             this.GridButton4.Name = "GridButton4";
-            this.GridButton4.Size = new System.Drawing.Size(75, 52);
+            this.GridButton4.Size = new System.Drawing.Size(130, 130);
             this.GridButton4.TabIndex = 7;
             this.GridButton4.Tag = "4";
             this.GridButton4.Text = "button7";
@@ -150,9 +164,11 @@
             // 
             // GridButton4Dup
             // 
-            this.GridButton4Dup.Location = new System.Drawing.Point(295, 70);
+            this.GridButton4Dup.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton4Dup.Location = new System.Drawing.Point(655, 148);
             this.GridButton4Dup.Name = "GridButton4Dup";
-            this.GridButton4Dup.Size = new System.Drawing.Size(75, 52);
+            this.GridButton4Dup.Size = new System.Drawing.Size(130, 130);
             this.GridButton4Dup.TabIndex = 8;
             this.GridButton4Dup.Tag = "4";
             this.GridButton4Dup.Text = "button8";
@@ -161,9 +177,11 @@
             // 
             // GridButton5
             // 
-            this.GridButton5.Location = new System.Drawing.Point(52, 128);
+            this.GridButton5.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton5.Location = new System.Drawing.Point(52, 284);
             this.GridButton5.Name = "GridButton5";
-            this.GridButton5.Size = new System.Drawing.Size(75, 52);
+            this.GridButton5.Size = new System.Drawing.Size(130, 130);
             this.GridButton5.TabIndex = 9;
             this.GridButton5.Tag = "5";
             this.GridButton5.Text = "button9";
@@ -172,9 +190,11 @@
             // 
             // GridButton5Dup
             // 
-            this.GridButton5Dup.Location = new System.Drawing.Point(133, 128);
+            this.GridButton5Dup.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton5Dup.Location = new System.Drawing.Point(253, 284);
             this.GridButton5Dup.Name = "GridButton5Dup";
-            this.GridButton5Dup.Size = new System.Drawing.Size(75, 52);
+            this.GridButton5Dup.Size = new System.Drawing.Size(130, 130);
             this.GridButton5Dup.TabIndex = 10;
             this.GridButton5Dup.Tag = "5";
             this.GridButton5Dup.Text = "button10";
@@ -183,9 +203,11 @@
             // 
             // GridButton6
             // 
-            this.GridButton6.Location = new System.Drawing.Point(214, 128);
+            this.GridButton6.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton6.Location = new System.Drawing.Point(457, 420);
             this.GridButton6.Name = "GridButton6";
-            this.GridButton6.Size = new System.Drawing.Size(75, 52);
+            this.GridButton6.Size = new System.Drawing.Size(130, 130);
             this.GridButton6.TabIndex = 11;
             this.GridButton6.Tag = "6";
             this.GridButton6.Text = "button11";
@@ -194,9 +216,11 @@
             // 
             // GridButton6Dup
             // 
-            this.GridButton6Dup.Location = new System.Drawing.Point(295, 128);
+            this.GridButton6Dup.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton6Dup.Location = new System.Drawing.Point(655, 284);
             this.GridButton6Dup.Name = "GridButton6Dup";
-            this.GridButton6Dup.Size = new System.Drawing.Size(75, 52);
+            this.GridButton6Dup.Size = new System.Drawing.Size(130, 130);
             this.GridButton6Dup.TabIndex = 12;
             this.GridButton6Dup.Tag = "6";
             this.GridButton6Dup.Text = "button12";
@@ -205,9 +229,11 @@
             // 
             // GridButton7
             // 
-            this.GridButton7.Location = new System.Drawing.Point(52, 186);
+            this.GridButton7.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton7.Location = new System.Drawing.Point(52, 420);
             this.GridButton7.Name = "GridButton7";
-            this.GridButton7.Size = new System.Drawing.Size(75, 52);
+            this.GridButton7.Size = new System.Drawing.Size(130, 130);
             this.GridButton7.TabIndex = 13;
             this.GridButton7.Tag = "7";
             this.GridButton7.Text = "button13";
@@ -216,9 +242,11 @@
             // 
             // GridButton7Dup
             // 
-            this.GridButton7Dup.Location = new System.Drawing.Point(133, 186);
+            this.GridButton7Dup.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton7Dup.Location = new System.Drawing.Point(253, 416);
             this.GridButton7Dup.Name = "GridButton7Dup";
-            this.GridButton7Dup.Size = new System.Drawing.Size(75, 51);
+            this.GridButton7Dup.Size = new System.Drawing.Size(130, 130);
             this.GridButton7Dup.TabIndex = 14;
             this.GridButton7Dup.Tag = "7";
             this.GridButton7Dup.Text = "button14";
@@ -227,9 +255,11 @@
             // 
             // GridButton8
             // 
-            this.GridButton8.Location = new System.Drawing.Point(214, 186);
+            this.GridButton8.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton8.Location = new System.Drawing.Point(457, 284);
             this.GridButton8.Name = "GridButton8";
-            this.GridButton8.Size = new System.Drawing.Size(75, 51);
+            this.GridButton8.Size = new System.Drawing.Size(130, 130);
             this.GridButton8.TabIndex = 15;
             this.GridButton8.Tag = "8";
             this.GridButton8.Text = "button15";
@@ -238,9 +268,11 @@
             // 
             // GridButton8Dup
             // 
-            this.GridButton8Dup.Location = new System.Drawing.Point(295, 186);
+            this.GridButton8Dup.BackgroundImage = global::Memory.Properties.Resources.back_of_memory_cards;
+            this.GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton8Dup.Location = new System.Drawing.Point(655, 420);
             this.GridButton8Dup.Name = "GridButton8Dup";
-            this.GridButton8Dup.Size = new System.Drawing.Size(75, 51);
+            this.GridButton8Dup.Size = new System.Drawing.Size(130, 130);
             this.GridButton8Dup.TabIndex = 16;
             this.GridButton8Dup.Tag = "8";
             this.GridButton8Dup.Text = "button16";
@@ -250,7 +282,7 @@
             // Player1Label
             // 
             this.Player1Label.AutoSize = true;
-            this.Player1Label.Location = new System.Drawing.Point(156, 112);
+            this.Player1Label.Location = new System.Drawing.Point(366, 230);
             this.Player1Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Player1Label.Name = "Player1Label";
             this.Player1Label.Size = new System.Drawing.Size(107, 13);
@@ -260,7 +292,7 @@
             // Player2Label
             // 
             this.Player2Label.AutoSize = true;
-            this.Player2Label.Location = new System.Drawing.Point(156, 149);
+            this.Player2Label.Location = new System.Drawing.Point(366, 281);
             this.Player2Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Player2Label.Name = "Player2Label";
             this.Player2Label.Size = new System.Drawing.Size(104, 13);
@@ -269,7 +301,7 @@
             // 
             // Player2Textbox
             // 
-            this.Player2Textbox.Location = new System.Drawing.Point(159, 164);
+            this.Player2Textbox.Location = new System.Drawing.Point(366, 296);
             this.Player2Textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Player2Textbox.Name = "Player2Textbox";
             this.Player2Textbox.Size = new System.Drawing.Size(104, 20);
@@ -277,7 +309,7 @@
             // 
             // Player1Textbox
             // 
-            this.Player1Textbox.Location = new System.Drawing.Point(159, 127);
+            this.Player1Textbox.Location = new System.Drawing.Point(366, 245);
             this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Player1Textbox.Name = "Player1Textbox";
             this.Player1Textbox.Size = new System.Drawing.Size(104, 20);
@@ -293,9 +325,9 @@
             // 
             // Saveclass
             // 
-            this.Saveclass.Location = new System.Drawing.Point(340, 267);
+            this.Saveclass.Location = new System.Drawing.Point(863, 406);
             this.Saveclass.Name = "Saveclass";
-            this.Saveclass.Size = new System.Drawing.Size(75, 23);
+            this.Saveclass.Size = new System.Drawing.Size(97, 23);
             this.Saveclass.TabIndex = 24;
             this.Saveclass.Text = "kutsave";
             this.Saveclass.UseVisualStyleBackColor = true;
@@ -304,7 +336,7 @@
             // Player1LabelInvoer
             // 
             this.Player1LabelInvoer.AutoSize = true;
-            this.Player1LabelInvoer.Location = new System.Drawing.Point(429, 12);
+            this.Player1LabelInvoer.Location = new System.Drawing.Point(887, 12);
             this.Player1LabelInvoer.Name = "Player1LabelInvoer";
             this.Player1LabelInvoer.Size = new System.Drawing.Size(73, 13);
             this.Player1LabelInvoer.TabIndex = 25;
@@ -314,7 +346,7 @@
             // Player2LabelInvoer
             // 
             this.Player2LabelInvoer.AutoSize = true;
-            this.Player2LabelInvoer.Location = new System.Drawing.Point(429, 32);
+            this.Player2LabelInvoer.Location = new System.Drawing.Point(887, 41);
             this.Player2LabelInvoer.Name = "Player2LabelInvoer";
             this.Player2LabelInvoer.Size = new System.Drawing.Size(73, 13);
             this.Player2LabelInvoer.TabIndex = 26;
@@ -324,7 +356,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(376, 70);
+            this.label1.Location = new System.Drawing.Point(833, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 27;
@@ -333,7 +365,7 @@
             // BeurtLabel
             // 
             this.BeurtLabel.AutoSize = true;
-            this.BeurtLabel.Location = new System.Drawing.Point(429, 70);
+            this.BeurtLabel.Location = new System.Drawing.Point(895, 81);
             this.BeurtLabel.Name = "BeurtLabel";
             this.BeurtLabel.Size = new System.Drawing.Size(35, 13);
             this.BeurtLabel.TabIndex = 28;
@@ -343,7 +375,7 @@
             // Points1
             // 
             this.Points1.AutoSize = true;
-            this.Points1.Location = new System.Drawing.Point(508, 12);
+            this.Points1.Location = new System.Drawing.Point(966, 12);
             this.Points1.Name = "Points1";
             this.Points1.Size = new System.Drawing.Size(41, 13);
             this.Points1.TabIndex = 29;
@@ -353,7 +385,7 @@
             // Points2
             // 
             this.Points2.AutoSize = true;
-            this.Points2.Location = new System.Drawing.Point(508, 32);
+            this.Points2.Location = new System.Drawing.Point(966, 41);
             this.Points2.Name = "Points2";
             this.Points2.Size = new System.Drawing.Size(41, 13);
             this.Points2.TabIndex = 30;
@@ -363,7 +395,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(376, 12);
+            this.label2.Location = new System.Drawing.Point(833, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 31;
@@ -372,7 +404,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(376, 32);
+            this.label3.Location = new System.Drawing.Point(833, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 32;
@@ -382,7 +414,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 326);
+            this.ClientSize = new System.Drawing.Size(1024, 566);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Points2);
