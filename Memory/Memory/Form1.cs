@@ -284,6 +284,103 @@ namespace WindowsFormsApp1
             Check_kaart();
         }
 
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (ResetGame == DialogResult.Yes)
+            {
+                //Ga terug naar begin spel                
+                PuntenPlayer1 = 0;
+                PuntenPlayer2 = 0;
+                Points1.Text = "0";
+                Points2.Text = "0";
+                Points1.Visible = false;
+                Points2.Visible = false;
+                PlayerBeurt = null;
+                BeurtLabel.Text = string.Empty;
+                PlayButton.Visible = true;
+                Kaart1Select = null;
+                Kaart2Select = null;
+                PlayButton.Visible = true;
+                Player1Label.Visible = true;
+                Player1Textbox.Visible = true;
+                Player1Textbox.Text = string.Empty;
+                Player2Label.Visible = true;
+                Player2Textbox.Visible = true;
+                Player2Textbox.Text = string.Empty;
+                Player1LabelInvoer.Visible = false;
+                Player2LabelInvoer.Visible = false;
+
+
+
+                Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+
+                foreach (var x in ButtonGrid)
+                {
+                    x.Visible = false;
+
+                }
+                foreach (var x in ButtonGrid)
+                {
+                    x.Text = "[=]";
+
+                }
+
+
+
+            }
+
+
+            else if (ResetGame == DialogResult.No)
+            {
+
+                //Niks
+
+            }
+        
+    }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            DialogResult ExitGame = MessageBox.Show("Weet u zeker dat u terug wilt keren naar het hoofdmenu", "Exit", MessageBoxButtons.YesNo);
+
+            if (ExitGame == DialogResult.Yes)
+            {
+                DialogResult GameOpslaan = MessageBox.Show("Wilt u uw huidige spel ook opslaan? ", "Opslaan", MessageBoxButtons.YesNo);
+
+                if (GameOpslaan == DialogResult.Yes)
+                {
+                    //Game Opslaan en terug naar hoofdmenu
+
+
+                    // Terug naar Hoofdmenu (terug naar de HoofdmenuForm
+
+                    //Form2 HoofdmenuForm = new Form2();
+                    // Hide();
+                    // HoofdmenuForm.Show();
+
+
+                    // show hoofdmenu Form (HoofdmenuForm.Show (); )
+
+
+
+
+                }
+                else if (GameOpslaan == DialogResult.No)
+                {
+                    //Terug naar hoofdmenu
+                    // (HoofdmenuForm.Show ();                
+
+
+                }
+                else if (ExitGame == DialogResult.No)
+                {
+                    //Ga door met spel
+                }
+            }
+        
+    }
+
         private void GridButton8_Click(object sender, EventArgs e)
         {
             GridButton8.Text = "H";
