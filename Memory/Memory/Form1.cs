@@ -390,5 +390,10 @@ namespace WindowsFormsApp1
             //en zet deze in het label value
             value.Text = Save.LoadData();
         }
+
+        private void Loadclass_MouseHover(object sender, EventArgs e)
+        {
+            value.Text = Save.LoadData();
+        }
     }
 }
