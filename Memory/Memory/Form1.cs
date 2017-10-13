@@ -18,8 +18,9 @@ namespace WindowsFormsApp1
     {
         Button Kaart1Select, Kaart2Select;
         string player1, player2, PlayerBeurt;
-        int PuntenPlayer1, PuntenPlayer2, TotaalMatches;
+        int PuntenPlayer1, PuntenPlayer2, TotaalMatches,lengte;
         List<Point> punten = new List<Point>();
+        List<string> matchlist = new List<string>();
         Random ButtonLocatie = new Random();
         
         public Form1()
@@ -70,6 +71,7 @@ namespace WindowsFormsApp1
                 
                 PuntenPlayer1 = 0;
                 PuntenPlayer2 = 0;
+                TotaalMatches = 0;
                 Points1.Text = Convert.ToString(PuntenPlayer1);
                 Points2.Text = Convert.ToString(PuntenPlayer2);
                 Player1Label.Visible = false;
@@ -120,6 +122,13 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
+                        
+                        
+                        matchlist.Add(Kaart1Select.Name);
+                        matchlist.Add(Kaart2Select.Name);
+                        lengte += 2;
+                        
+
                         foreach (var x in ButtonGrid)
                         {
                             x.Enabled = false;
@@ -255,6 +264,7 @@ namespace WindowsFormsApp1
             }
         }
 
+        #region kaarten
         private void GridButton1_Click(object sender, EventArgs e)
         {
             GridButton1.Text = "A";
@@ -367,6 +377,7 @@ namespace WindowsFormsApp1
             Click_kaart(GridButton8Dup);
             Check_kaart();
         }
+    #endregion
 
         private void ResetButton_Click(object sender, EventArgs e)
         {
@@ -417,8 +428,11 @@ namespace WindowsFormsApp1
         
         public void Saveclass_Click(object sender, EventArgs e)
         {
+            string[] matcharray = new string[15];
+            matchlist.CopyTo(matcharray);
+
             //click van deze button saved alle huidige data in .sav
-            Save.SaveData(player1, player2, PuntenPlayer1, PuntenPlayer2, PlayerBeurt);
+            Save.SaveData(player1, player2, PuntenPlayer1, PuntenPlayer2, PlayerBeurt, TotaalMatches, matcharray,lengte);
         }
 
         public void Loadclass_Click(object sender, EventArgs e)
@@ -426,7 +440,7 @@ namespace WindowsFormsApp1
             //click van deze button load alle huidige data uit .sav
             //en zet deze in save string
             string save = Save.LoadData();
-            if (save == "Er is nog geen\nsave file aanwezig")
+            if (save == "Er is nog geen\nsave file\naanwezig")
             { }
             else
             {
@@ -439,7 +453,7 @@ namespace WindowsFormsApp1
                 player2 = savearray[1];
                 PlayerBeurt = savearray[4];
                 Player1Textbox.Text = player1;
-                Player2Textbox.Text = player2;
+                Player2Textbox.Text = player2;                
 
                 //aanroeping van play game
                 Play_Game();
@@ -447,8 +461,79 @@ namespace WindowsFormsApp1
                 //Score setter
                 PuntenPlayer1 = int.Parse(savearray[2]);
                 PuntenPlayer2 = int.Parse(savearray[3]);
+                TotaalMatches = int.Parse(savearray[5]);
                 Points1.Text = Convert.ToString(PuntenPlayer1);
                 Points2.Text = Convert.ToString(PuntenPlayer2);
+                //hier was je mee bezig met autistisch alles intypen in if statements
+                int i = 0;
+                int x = int.Parse(savearray[6]);
+                while (i<x)
+                    {                                        
+                        if (GridButton1.Name == savearray[i])
+                        {
+                            GridButton1.Visible = false;
+                        }
+                        if (GridButton1Dup.Name == savearray[i])
+                        {
+                            GridButton1Dup.Visible = false;
+                        }
+                        if (GridButton2.Name == savearray[i])
+                        {
+                            GridButton2.Visible = false;
+                        }
+                        if (GridButton2Dup.Name == savearray[i])
+                        {
+                            GridButton2Dup.Visible = false;
+                        }
+                        if (GridButton3.Name == savearray[i])
+                        {
+                            GridButton3.Visible = false;
+                        }
+                        if (GridButton3Dup.Name == savearray[i])
+                        {
+                            GridButton3Dup.Visible = false;
+                        }
+                        if (GridButton4.Name == savearray[i])
+                        {
+                            GridButton4.Visible = false;
+                        }
+                        if (GridButton4Dup.Name == savearray[i])
+                        {
+                            GridButton4Dup.Visible = false;
+                        }
+                        if (GridButton5.Name == savearray[i])
+                        {
+                            GridButton5.Visible = false;
+                        }
+                        if (GridButton5Dup.Name == savearray[i])
+                        {
+                            GridButton5Dup.Visible = false;
+                        }
+                        if (GridButton6.Name == savearray[i])
+                        {
+                            GridButton6.Visible = false;
+                        }
+                        if (GridButton6Dup.Name == savearray[i])
+                        {
+                            GridButton6Dup.Visible = false;
+                        }
+                        if (GridButton7.Name == savearray[i])
+                        {
+                            GridButton7.Visible = false;
+                        }
+                        if (GridButton7Dup.Name == savearray[i])
+                        {
+                            GridButton7Dup.Visible = false;
+                        }
+                        if (GridButton8.Name == savearray[i])
+                        {
+                            GridButton8.Visible = false;
+                        }
+                        if (GridButton8Dup.Name == savearray[i])
+                        {
+                            GridButton8Dup.Visible = false;
+                        }                                        
+                    }
             }
         }
 
