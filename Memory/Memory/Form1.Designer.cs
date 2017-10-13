@@ -63,6 +63,7 @@
             this.ResetButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.Variablen_save = new System.Windows.Forms.Label();
+            this.Exceptionbox = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PlayButton
@@ -428,11 +429,21 @@
             this.Variablen_save.Text = "Player1:\r\nPlayer2:\r\nScore1:\r\nScore2: \r\nBeurt:";
             this.Variablen_save.Visible = false;
             // 
+            // Exceptionbox
+            // 
+            this.Exceptionbox.AutoSize = true;
+            this.Exceptionbox.Location = new System.Drawing.Point(432, 290);
+            this.Exceptionbox.Name = "Exceptionbox";
+            this.Exceptionbox.Size = new System.Drawing.Size(0, 13);
+            this.Exceptionbox.TabIndex = 37;
+            this.Exceptionbox.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 326);
+            this.Controls.Add(this.Exceptionbox);
             this.Controls.Add(this.Variablen_save);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.ResetButton);
@@ -513,6 +524,7 @@
         private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Label Variablen_save;
+        private System.Windows.Forms.Label Exceptionbox;
     }
 }
 

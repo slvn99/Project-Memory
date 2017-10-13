@@ -64,31 +64,41 @@ namespace WindowsFormsApp1
 
         private static string Deserialize(byte[] data)
         {
+            string buf1, buf2, buf3, buf4, buf5, opslag = "";
 
             //Nieuwe memory stream aanmaken die wordt gebruikt door de formatter
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
             //De data uit de .sav wordt in de stream gezet
-            using (MemoryStream stream = new MemoryStream(data))
+            try
             {
-                //Binary formatter die de data deserialized, en dit in de stream zet
-                BinaryFormatter formatter = new BinaryFormatter();
+                using (MemoryStream stream = new MemoryStream(data))
+                {
+                    //Binary formatter die de data deserialized, en dit in de stream zet
+                    BinaryFormatter formatter = new BinaryFormatter();
 
-                //Return de game data.
-                var d1 = formatter.Deserialize(stream);
-                var d2 = formatter.Deserialize(stream);
-                var d3 = formatter.Deserialize(stream);
-                var d4 = formatter.Deserialize(stream);
-                var d5 = formatter.Deserialize(stream);
+                    //Return de game data.
+                    var d1 = formatter.Deserialize(stream);
+                    var d2 = formatter.Deserialize(stream);
+                    var d3 = formatter.Deserialize(stream);
+                    var d4 = formatter.Deserialize(stream);
+                    var d5 = formatter.Deserialize(stream);
 
-                string buf1, buf2, buf3, buf4, buf5, opslag;
-                buf1 = Convert.ToString(d1);
-                buf2 = Convert.ToString(d2);
-                buf3 = Convert.ToString(d3);
-                buf4 = Convert.ToString(d4);
-                buf5 = Convert.ToString(d5);
-                opslag = (buf1 + "\n" + buf2 + "\n" + buf3 + "\n" + buf4 + "\n" + buf5);
-                return opslag;
+                    
+                    buf1 = Convert.ToString(d1);
+                    buf2 = Convert.ToString(d2);
+                    buf3 = Convert.ToString(d3);
+                    buf4 = Convert.ToString(d4);
+                    buf5 = Convert.ToString(d5);
+                    opslag = (buf1 + "\n" + buf2 + "\n" + buf3 + "\n" + buf4 + "\n" + buf5);
+                    return opslag;
+                }
             }
+            catch (Exception)
+            {
+                string message = "Er is nog geen\nsave file aanwezig";
+                return message;
+            }
+            
         }
 
 
