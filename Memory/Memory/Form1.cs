@@ -381,6 +381,8 @@ namespace WindowsFormsApp1
         
     }
 
+       
+
         private void GridButton8_Click(object sender, EventArgs e)
         {
             GridButton8.Text = "H";
@@ -405,6 +407,11 @@ namespace WindowsFormsApp1
         {
             //click van deze button load alle huidige data uit .sav
             //en zet deze in het label value
+            value.Text = Save.LoadData();
+        }
+
+        private void Loadclass_MouseHover(object sender, EventArgs e)
+        {
             value.Text = Save.LoadData();
         }
     }
