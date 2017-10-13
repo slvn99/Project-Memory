@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
     {
         Button Kaart1Select, Kaart2Select;
         string player1, player2, PlayerBeurt;
-        int PuntenPlayer1, PuntenPlayer2;
+        int PuntenPlayer1, PuntenPlayer2, TotaalMatches;
         List<Point> punten = new List<Point>();
         Random ButtonLocatie = new Random();
         
@@ -81,6 +81,9 @@ namespace WindowsFormsApp1
                 Points1.Visible = true;
                 Points2.Visible = true;
                 BeurtLabel.Visible = true;
+                ResetButton.Visible = true;
+                ExitButton.Visible = true;
+                Saveclass.Visible = true;
 
                 Player1LabelInvoer.Text = Player1Textbox.Text;
                 Player2LabelInvoer.Text = Player2Textbox.Text;
@@ -175,12 +178,80 @@ namespace WindowsFormsApp1
             if (PlayerBeurt == player1)
             {
                 PuntenPlayer1++;
+                TotaalMatches++;
                 Points1.Text = Convert.ToString(PuntenPlayer1);
+                EndGame_Check();
             }
             else
             {
                 PuntenPlayer2++;
+                TotaalMatches++;
                 Points2.Text = Convert.ToString(PuntenPlayer2);
+                EndGame_Check();
+            }
+        }
+
+        private void Reset_Function()
+        {
+            //Ga terug naar begin spel                
+            PuntenPlayer1 = 0;
+            PuntenPlayer2 = 0;
+            Points1.Text = "0";
+            Points2.Text = "0";
+            Points1.Visible = false;
+            Points2.Visible = false;
+            PlayerBeurt = null;
+            BeurtLabel.Text = string.Empty;
+            PlayButton.Visible = true;
+            Kaart1Select = null;
+            Kaart2Select = null;
+            Player1Label.Visible = true;
+            Player1Textbox.Visible = true;
+            Player1Textbox.Text = string.Empty;
+            Player2Label.Visible = true;
+            Player2Textbox.Visible = true;
+            Player2Textbox.Text = string.Empty;
+            Player1LabelInvoer.Visible = false;
+            Player2LabelInvoer.Visible = false;
+
+            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+
+            foreach (var x in ButtonGrid)
+            {
+                x.Visible = false;
+            }
+            foreach (var x in ButtonGrid)
+            {
+                x.Text = "[=]";
+            }
+        }
+
+        private void EndGame_Check()
+        {
+            if (TotaalMatches == 8)
+            {
+                if (PuntenPlayer1 > PuntenPlayer2)
+                {
+                    MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
+                }
+                else if (PuntenPlayer1 == PuntenPlayer2)
+                {
+                    MessageBox.Show("WOW, " + player1 + " heeft gelijk gespeeld met " + player2 + "!" , "Einde Spel", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Gefeliciteerd " + player2 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
+                }
+
+                DialogResult ResetGame = MessageBox.Show("Willen jullie een nieuw spel spelen?", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (ResetGame == DialogResult.Yes)
+                {
+                    Reset_Function();
+                }
+                else
+                {
+                    //exit hoofdmenu
+                }
             }
         }
 
@@ -302,45 +373,11 @@ namespace WindowsFormsApp1
             DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (ResetGame == DialogResult.Yes)
             {
-                //Ga terug naar begin spel                
-                PuntenPlayer1 = 0;
-                PuntenPlayer2 = 0;
-                Points1.Text = "0";
-                Points2.Text = "0";
-                Points1.Visible = false;
-                Points2.Visible = false;
-                PlayerBeurt = null;
-                BeurtLabel.Text = string.Empty;
-                PlayButton.Visible = true;
-                Kaart1Select = null;
-                Kaart2Select = null;
-                PlayButton.Visible = true;
-                Player1Label.Visible = true;
-                Player1Textbox.Visible = true;
-                Player1Textbox.Text = string.Empty;
-                Player2Label.Visible = true;
-                Player2Textbox.Visible = true;
-                Player2Textbox.Text = string.Empty;
-                Player1LabelInvoer.Visible = false;
-                Player2LabelInvoer.Visible = false;
-
-                Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
-
-                foreach (var x in ButtonGrid)
-                {
-                    x.Visible = false;
-
-                }
-                foreach (var x in ButtonGrid)
-                {
-                    x.Text = "[=]";
-
-                }
+                Reset_Function();
             }
-
-            else if (ResetGame == DialogResult.No)
-            { 
-                //Niks
+            else
+            {
+                //return hoofdmenu.
             }
         }
 
@@ -375,13 +412,9 @@ namespace WindowsFormsApp1
                 {
                     //Ga door met spel
                 }
-            }        
+            }
         }
-
-       
-
-       
-
+        
         public void Saveclass_Click(object sender, EventArgs e)
         {
             //click van deze button saved alle huidige data in .sav
