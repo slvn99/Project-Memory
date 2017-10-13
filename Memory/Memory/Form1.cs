@@ -424,18 +424,39 @@ namespace WindowsFormsApp1
         public void Loadclass_Click(object sender, EventArgs e)
         {
             //click van deze button load alle huidige data uit .sav
-            //en zet deze in het label value
-            value.Text = Save.LoadData();
+            //en zet deze in save string
+            string save = Save.LoadData();
+
+            //save string wordt gesplit op \n en in string array gezet
+            string[] savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+            //toekennen van waarden uit array aan variabelen
+            player1 = savearray[0];
+            player2 = savearray[1];
+            PlayerBeurt = savearray[4];
+            Player1Textbox.Text = player1;
+            Player2Textbox.Text = player2;
+
+            //aanroeping van play game
+            Play_Game();
+
+            //Score setter
+            PuntenPlayer1 = int.Parse(savearray[2]);
+            PuntenPlayer2 = int.Parse(savearray[3]);
+            Points1.Text = Convert.ToString(PuntenPlayer1);
+            Points2.Text = Convert.ToString(PuntenPlayer2);
         }
 
         private void Loadclass_MouseHover(object sender, EventArgs e)
         {
+            //laten zien van wat er in de save staat
             Variablen_save.Visible = true;
             value.Text = Save.LoadData();
         }
 
         private void Loadclass_MouseLeave(object sender, EventArgs e)
         {
+            //idem
             Variablen_save.Visible = false;
             value.Text = "";
         }
