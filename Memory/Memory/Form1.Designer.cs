@@ -62,6 +62,7 @@
             this.Loadclass = new System.Windows.Forms.Button();
             this.ResetButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.Variablen_save = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PlayButton
@@ -291,7 +292,7 @@
             // value
             // 
             this.value.AutoSize = true;
-            this.value.Location = new System.Drawing.Point(13, 252);
+            this.value.Location = new System.Drawing.Point(49, 252);
             this.value.Name = "value";
             this.value.Size = new System.Drawing.Size(0, 13);
             this.value.TabIndex = 23;
@@ -392,6 +393,7 @@
             this.Loadclass.Text = "Laden";
             this.Loadclass.UseVisualStyleBackColor = true;
             this.Loadclass.Click += new System.EventHandler(this.Loadclass_Click);
+            this.Loadclass.MouseLeave += new System.EventHandler(this.Loadclass_MouseLeave);
             this.Loadclass.MouseHover += new System.EventHandler(this.Loadclass_MouseHover);
             // 
             // ResetButton
@@ -416,11 +418,22 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // Variablen_save
+            // 
+            this.Variablen_save.AutoSize = true;
+            this.Variablen_save.Location = new System.Drawing.Point(2, 252);
+            this.Variablen_save.Name = "Variablen_save";
+            this.Variablen_save.Size = new System.Drawing.Size(47, 65);
+            this.Variablen_save.TabIndex = 36;
+            this.Variablen_save.Text = "Player1:\r\nPlayer2:\r\nScore1:\r\nScore2: \r\nBeurt:";
+            this.Variablen_save.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 326);
+            this.Controls.Add(this.Variablen_save);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.Loadclass);
@@ -499,6 +512,7 @@
         public System.Windows.Forms.Button Loadclass;
         private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Label Variablen_save;
     }
 }
 

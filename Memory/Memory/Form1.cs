@@ -390,6 +390,8 @@ namespace WindowsFormsApp1
             Check_kaart();
         }
 
+        
+
         private void GridButton8Dup_Click(object sender, EventArgs e)
         {
             GridButton8Dup.Text = "H";
@@ -412,7 +414,14 @@ namespace WindowsFormsApp1
 
         private void Loadclass_MouseHover(object sender, EventArgs e)
         {
+            Variablen_save.Visible = true;
             value.Text = Save.LoadData();
+        }
+
+        private void Loadclass_MouseLeave(object sender, EventArgs e)
+        {
+            Variablen_save.Visible = false;
+            value.Text = "";
         }
     }
 }

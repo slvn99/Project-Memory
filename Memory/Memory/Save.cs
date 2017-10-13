@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
             byte[] serialized = Serialize(player1, player2, score1, score2, playerbeurt);
 
             //deze bytes writen
-            WriteToFile(@"" + path + "Savegames\\game.sav", serialized);
+            WriteToFile(@"" + path + "game.sav", serialized);
 
         }
 
@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
             var path = AppDomain.CurrentDomain.BaseDirectory;
 
             //het ophalen van de bytes uit de .sav
-            byte[] bytes = ReadFromFile(@""+ path + "Savegames\\game.sav");
+            byte[] bytes = ReadFromFile(@""+ path + "game.sav");
 
             //Terugzetten van bytes naar data
             string opslag = Deserialize(bytes);
