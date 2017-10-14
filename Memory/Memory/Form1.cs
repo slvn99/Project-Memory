@@ -428,7 +428,7 @@ namespace WindowsFormsApp1
         
         public void Saveclass_Click(object sender, EventArgs e)
         {
-            string[] matcharray = new string[15];
+            string[] matcharray = new string[20];
             matchlist.CopyTo(matcharray);
 
             //click van deze button saved alle huidige data in .sav
