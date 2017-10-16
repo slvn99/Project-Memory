@@ -11,7 +11,6 @@ namespace WindowsFormsApp1
     [Serializable]
     public class Save
     {
-  
         public static int lengte = 0 ;
 
         //-------------------------------------------------------------------------------//
@@ -48,8 +47,6 @@ namespace WindowsFormsApp1
         //Methods
         public static byte[] Serialize(string player1, string player2, int score1, int score2, string playerbeurt, int matches, string[] matcharray, int lengte)
         {
-
-            
             //Nieuwe memory stream aanmaken die wordt gebruikt door de formatter
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
             using (MemoryStream stream = new MemoryStream())
@@ -133,7 +130,6 @@ namespace WindowsFormsApp1
                 return message;
             }
         }
-
 
         private static void WriteToFile(string file, byte[] data)
         {
