@@ -38,7 +38,7 @@ namespace Memory
             cat.Controls.Add(Memory);
             Memory.BackColor = Color.Transparent;
 
-            axWindowsMediaPlayer1.URL = "Chiper.wav";
+            axWindowsMediaPlayer1.URL = "chiper.wav";
 
         }
 

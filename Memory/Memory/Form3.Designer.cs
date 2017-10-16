@@ -84,6 +84,7 @@
             this.Memory.Size = new System.Drawing.Size(535, 241);
             this.Memory.TabIndex = 6;
             this.Memory.TabStop = false;
+            this.Memory.Click += new System.EventHandler(this.Memory_Click);
             // 
             // Play
             // 

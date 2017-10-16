@@ -106,5 +106,10 @@ namespace Memory
         {
 
         }
+
+        private void Memory_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
