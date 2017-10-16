@@ -38,8 +38,6 @@ namespace Memory
             cat.Controls.Add(Memory);
             Memory.BackColor = Color.Transparent;
 
-            axWindowsMediaPlayer1.URL = "chiper.wav";
-
         }
 
         private void cat_Click(object sender, EventArgs e)

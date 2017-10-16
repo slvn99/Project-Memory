@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.Play = new System.Windows.Forms.PictureBox();
             this.Highscore = new System.Windows.Forms.PictureBox();
             this.Settings = new System.Windows.Forms.PictureBox();
@@ -38,7 +37,6 @@
             this.Exit = new System.Windows.Forms.PictureBox();
             this.Memory = new System.Windows.Forms.PictureBox();
             this.cat = new System.Windows.Forms.PictureBox();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.Play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Highscore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Settings)).BeginInit();
@@ -48,7 +46,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Memory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // Play
@@ -157,22 +154,11 @@
             this.cat.TabStop = false;
             this.cat.Click += new System.EventHandler(this.cat_Click);
             // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(129, 105);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(75, 23);
-            this.axWindowsMediaPlayer1.TabIndex = 10;
-            this.axWindowsMediaPlayer1.Visible = false;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1365, 697);
-            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.Play);
             this.Controls.Add(this.Highscore);
             this.Controls.Add(this.Settings);
@@ -195,7 +181,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Memory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,6 +196,5 @@
         private System.Windows.Forms.PictureBox Settings;
         private System.Windows.Forms.PictureBox Highscore;
         private System.Windows.Forms.PictureBox Play;
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }
 }
