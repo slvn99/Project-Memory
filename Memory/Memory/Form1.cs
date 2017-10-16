@@ -316,6 +316,11 @@ namespace WindowsFormsApp1
             Check_kaart();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void GridButton7Dup_Click(object sender, EventArgs e)
         {
             Image myimage = Resources.Youtube;
