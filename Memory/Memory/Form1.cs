@@ -48,6 +48,7 @@ namespace WindowsFormsApp1
         {
 
         }
+
         private void PlayButton_Click(object sender, EventArgs e)
         {
             Play_Game();
@@ -122,13 +123,10 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
-                        
-                        
                         matchlist.Add(Kaart1Select.Name);
                         matchlist.Add(Kaart2Select.Name);
                         lengte += 2;
                         
-
                         foreach (var x in ButtonGrid)
                         {
                             x.Enabled = false;
@@ -444,7 +442,6 @@ namespace WindowsFormsApp1
             { }
             else
             {
-
                 //save string wordt gesplit op \n en in string array gezet
                 string[] savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -464,11 +461,17 @@ namespace WindowsFormsApp1
                 TotaalMatches = int.Parse(savearray[5]);
                 Points1.Text = Convert.ToString(PuntenPlayer1);
                 Points2.Text = Convert.ToString(PuntenPlayer2);
-                //hier was je mee bezig met autistisch alles intypen in if statements
-                int i = 0;
-                int x = int.Parse(savearray[6]);
-                while (i<x)
-                    {                                        
+                int i = 7;
+                int x = int.Parse(savearray[6] + 6);
+                //Button TempButton = new Button;
+
+                foreach (string xy in savearray)
+                {
+                    if (xy.Contains("GridButton"))
+                    {
+                        matchlist.Add(savearray[i]);
+                        lengte++;
+
                         if (GridButton1.Name == savearray[i])
                         {
                             GridButton1.Visible = false;
@@ -532,8 +535,10 @@ namespace WindowsFormsApp1
                         if (GridButton8Dup.Name == savearray[i])
                         {
                             GridButton8Dup.Visible = false;
-                        }                                        
+                        }
+                        i++;
                     }
+                }
             }
         }
 

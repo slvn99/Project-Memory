@@ -26,7 +26,6 @@ namespace WindowsFormsApp1
 
             //deze bytes writen
             WriteToFile(@"" + path + "game.sav", serialized);
-
         }
 
         //Caller read
@@ -73,9 +72,6 @@ namespace WindowsFormsApp1
                     i++;
                     //arrayint moet overgedragen worden naar deserialise somehow
                 }
-                
-
-                
 
                 //Return
                 return stream.ToArray();
@@ -136,44 +132,40 @@ namespace WindowsFormsApp1
                 string message = "Er is nog geen\nsave file\naanwezig";
                 return message;
             }
-            
         }
 
 
-             private static void WriteToFile(string file, byte[] data)
+        private static void WriteToFile(string file, byte[] data)
+        {
+            //Try catch block om eventuele errors af te vangen.
+            try
             {
-                //Try catch block om eventuele errors af te vangen.
-                try
-                {
-                    //Schrijf all bytes naar het opgegeven path.
-                    File.WriteAllBytes(file, data);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Could not write file due: " + e.Message);
-                }
+                //Schrijf all bytes naar het opgegeven path.
+                File.WriteAllBytes(file, data);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Could not write file due: " + e.Message);
+            }
+        }
+
+        private static byte[] ReadFromFile(string file)
+        {
+            //Try catch block om eventuele errors af te vangen.
+            try
+            {
+                //Alle bytes uitlezen uit een bestand en deze returnen.
+                byte[] bytes = File.ReadAllBytes(file);
+                return bytes;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Could not read file due: " + e.Message);
             }
 
-            private static byte[] ReadFromFile(string file)
-            {
-                //Try catch block om eventuele errors af te vangen.
-                try
-                {
-                    //Alle bytes uitlezen uit een bestand en deze returnen.
-                    byte[] bytes = File.ReadAllBytes(file);
-                    return bytes;
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Could not read file due: " + e.Message);
-                }
-
-                return null;
-            }
-
-     }
-
-
- }
+            return null;
+        }
+    }
+}
 
        
