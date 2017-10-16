@@ -113,5 +113,10 @@
   <ItemGroup>
     <Folder Include="AxWMPLib\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="chiper.wav" />
+    <Content Include="click.wav" />
+    <Content Include="ping.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
