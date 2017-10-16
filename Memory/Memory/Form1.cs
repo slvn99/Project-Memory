@@ -237,9 +237,11 @@ namespace WindowsFormsApp1
         {
             if (TotaalMatches == 8)
             {
+                
                 if (PuntenPlayer1 > PuntenPlayer2)
                 {
                     MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
+                    Memory.Highscores_save.SaveData(player1, PuntenPlayer1);
                 }
                 else if (PuntenPlayer1 == PuntenPlayer2)
                 {
@@ -248,6 +250,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("Gefeliciteerd " + player2 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
+                    Memory.Highscores_save.SaveData(player2, PuntenPlayer2);
                 }
 
                 DialogResult ResetGame = MessageBox.Show("Willen jullie een nieuw spel spelen?", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
