@@ -117,4 +117,92 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="minimize_window1600" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize_window1600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MuteButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MuteButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Naamloos-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Naamloos-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coollogo_com-11864820" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coollogo_com-11864820.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maximize_window1600" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximize_window1600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TwitchLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TwitchLogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back_of_memory_cards" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back-of-memory-cards.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExitButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ExitButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tyfusding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tyfusding.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RankingButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RankingButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SettingsButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SettingsButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_9gag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9gag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reddit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reddit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Youtube" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Youtube.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Snapchat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snapchat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Twitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zwart balkje" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zwart balkje.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nice.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlayButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExitButtonGoede" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ExitButtonGoede.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maximize_window1600_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximize_window1600_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExitButtonGoede1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ExitButtonGoede1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Google" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Google.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="149fced2b9a4c8a69ba4bd0715c7668c.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\149fced2b9a4c8a69ba4bd0715c7668c.jpg.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Naamloos-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Naamloos-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue-wallpaper-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue-wallpaper-7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
