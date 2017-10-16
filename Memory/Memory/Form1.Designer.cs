@@ -307,7 +307,7 @@
             // Player2Textbox
             // 
             this.Player2Textbox.Location = new System.Drawing.Point(366, 296);
-            this.Player2Textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Player2Textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Player2Textbox.Name = "Player2Textbox";
             this.Player2Textbox.Size = new System.Drawing.Size(104, 20);
             this.Player2Textbox.TabIndex = 21;
@@ -315,7 +315,7 @@
             // Player1Textbox
             // 
             this.Player1Textbox.Location = new System.Drawing.Point(366, 245);
-            this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Player1Textbox.Name = "Player1Textbox";
             this.Player1Textbox.Size = new System.Drawing.Size(104, 20);
             this.Player1Textbox.TabIndex = 22;
@@ -418,7 +418,7 @@
             // Loadclass
             // 
             this.Loadclass.Location = new System.Drawing.Point(863, 317);
-            this.Loadclass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Loadclass.Margin = new System.Windows.Forms.Padding(2);
             this.Loadclass.Name = "Loadclass";
             this.Loadclass.Size = new System.Drawing.Size(97, 19);
             this.Loadclass.TabIndex = 33;
@@ -512,7 +512,7 @@
             this.Controls.Add(this.GridButton1Dup);
             this.Controls.Add(this.GridButton1);
             this.Controls.Add(this.PlayButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
