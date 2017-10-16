@@ -444,35 +444,11 @@ namespace WindowsFormsApp1
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            DialogResult ExitGame = MessageBox.Show("Weet u zeker dat u terug wilt keren naar het hoofdmenu", "Exit", MessageBoxButtons.YesNo);
+            DialogResult ExitGame = MessageBox.Show("Weet u zeker dat u het spel wil verlaten? Onopgeslagen progressie zal verloren gaan! ", "Exit", MessageBoxButtons.YesNo); 
 
             if (ExitGame == DialogResult.Yes)
             {
-                DialogResult GameOpslaan = MessageBox.Show("Wilt u uw huidige spel ook opslaan? ", "Opslaan", MessageBoxButtons.YesNo);
-
-                if (GameOpslaan == DialogResult.Yes)
-                {
-                    //Game Opslaan en terug naar hoofdmenu
-
-
-                    // Terug naar Hoofdmenu (terug naar de HoofdmenuForm
-
-                    //Form2 HoofdmenuForm = new Form2();
-                    // Hide();
-                    // HoofdmenuForm.Show();
-
-
-                    // show hoofdmenu Form (HoofdmenuForm.Show (); )
-                }
-                else if (GameOpslaan == DialogResult.No)
-                {
-                    //Terug naar hoofdmenu
-                    // (HoofdmenuForm.Show ();
-                }
-                else if (ExitGame == DialogResult.No)
-                {
-                    //Ga door met spel
-                }
+                this.Close();
             }
         }
         
