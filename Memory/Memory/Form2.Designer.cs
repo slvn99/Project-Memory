@@ -192,7 +192,9 @@
         private System.Windows.Forms.PictureBox Fullscreen;
         private System.Windows.Forms.PictureBox bar;
         private System.Windows.Forms.PictureBox Exit;
+#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
         private System.Windows.Forms.PictureBox Load;
+#pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         private System.Windows.Forms.PictureBox Settings;
         private System.Windows.Forms.PictureBox Highscore;
         private System.Windows.Forms.PictureBox Play;

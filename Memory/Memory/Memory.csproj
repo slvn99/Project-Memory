@@ -74,6 +74,7 @@
     <Compile Include="HighscorePage.Designer.cs">
       <DependentUpon>HighscorePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Highscores_save.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Save.cs" />
