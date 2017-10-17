@@ -9,22 +9,17 @@ namespace Memory
     [Serializable]
     class Highscores_save
     {
+        public static int lengte = 0;
 
         //-------------------------------------------------------------------------------//
         //Caller write
-        public static void SaveData(string naam, int score, int lengte)
+        public static void SaveData(string naam, int score)
         {
             //hier benoem ik path tot de locatie van de .exe
             var path = AppDomain.CurrentDomain.BaseDirectory;
 
-            string save = LoadData();
-
-            string[] savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
-
-            lengte = int.Parse(savearray[0]);
-            
             //omzetten naar bytes
-            byte[] serialized = Serialize(lengte,savearray);
+            byte[] serialized = Serialize(naam,score);
 
             //deze bytes writen
             WriteToFile(@"" + path + "highscores.sav", serialized);
@@ -48,7 +43,7 @@ namespace Memory
 
         //------------------------------------------------------------------------------//
         //Methods
-        public static byte[] Serialize(int lengte, string[]savearray)
+        public static byte[] Serialize(string naam, int score)
         {
             //Nieuwe memory stream aanmaken die wordt gebruikt door de formatter
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
@@ -57,6 +52,7 @@ namespace Memory
                 //Binary formatter die de data serialized, en dit in de stream zet
                 BinaryFormatter formatter = new BinaryFormatter();
                 formatter.Serialize(stream, lengte);
+                formatter.Serialize(stream, naam);
 
                 int i = 0;
 
