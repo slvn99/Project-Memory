@@ -21,6 +21,7 @@ namespace Memory
             var path = AppDomain.CurrentDomain.BaseDirectory;
             //declareren van verschillende variabelen
             string[] savearray = new string[12];
+            string[] newsavearray = new string[12];
             int lengte = 0;
 
             //proberen van laden van savedata if aanwezig, anders doet hij niks
@@ -30,11 +31,14 @@ namespace Memory
             else
             {
                 savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
-                lengte = int.Parse(savearray[0]);
+                lengte = LengteLoad(@""+path+"lengte.sav");
             }
-            
+
             //lengte +1 ivm 1 extra entry
-            lengte = lengte + 1;
+            if (lengte < 11)
+            {
+                lengte = lengte + 1;
+            }
             //koppelen van score en naam, score vooraan ivm sorteren
             string koppel = score +" punten gehaald door: "+ naam;
 
@@ -42,35 +46,32 @@ namespace Memory
             {
                 //lege list op basis van niks
                 List<string> scorelist = new List<string>();
-                scorelist.Add(Convert.ToString(lengte));
-                scorelist.Add(koppel);
-                scorelist.CopyTo(savearray);
+                scorelist.Add(koppel);              
+                scorelist.CopyTo(newsavearray);
             }
             else
             {
                 //list aanmaken op basis van savearray
                 List<string> scorelist = new List<string>(savearray);
                 scorelist.Add(koppel);
-                scorelist.CopyTo(savearray);
+                scorelist.CopyTo(newsavearray);
             }
             
-            if (lengte < 11)
-            {
-                //zorgen dat de lengte van de array max 10 wordt
-                //zodat nummer 11 op highscore niet wordt opgeslagen
-                savearray[0] = Convert.ToString(lengte);
-            }
+
 
             //reverse comparer initialiseren
             IComparer revComparer = new ReverseComparer();
             //de array omgekeerd sorteren op basis van ASCII oid.
-            Array.Sort(savearray, revComparer);
+            Array.Sort(newsavearray, revComparer);
 
             //omzetten naar bytes
-            byte[] serialized = Serialize(lengte,savearray);
+            byte[] serialized = Serialize(lengte,newsavearray);
 
             //deze bytes writen
             WriteToFile(@"" + path + "highscores.sav", serialized);
+
+            //lengte writen
+            LengteWrite(@"" + path + "lengte.sav", lengte);
         }
 
         //Caller read
@@ -81,9 +82,11 @@ namespace Memory
 
             //het ophalen van de bytes uit de .sav
             byte[] bytes = ReadFromFile(@"" + path + "highscores.sav");
+            int buf = LengteLoad(@"" + path + "lengte.sav");
+            string opslag = Convert.ToString(buf);
 
             //Terugzetten van bytes naar data
-            string opslag = Deserialize(bytes);
+            opslag = opslag + "\n" + Deserialize(bytes);
 
             //variabelen teruggeven aan button die een label aanpast
             return (opslag);
@@ -124,13 +127,13 @@ namespace Memory
             {
                 using (MemoryStream stream = new MemoryStream(data))
                 {
+                    var path = AppDomain.CurrentDomain.BaseDirectory;
+
                     //Binary formatter die de data deserialized, en dit in de stream zet
                     BinaryFormatter formatter = new BinaryFormatter();
 
                     //load het getal welke aangeeft hoeveel entry's de array had
-                    var l = formatter.Deserialize(stream);
-                    string l1 = Convert.ToString(l);
-                    int l2 = int.Parse(l1);
+                    int l2 = LengteLoad(@"" + path + "lengte.sav");
 
                     //Return de game data.
                     int i = 0;
@@ -160,9 +163,8 @@ namespace Memory
                 //Schrijf all bytes naar het opgegeven path.
                 File.WriteAllBytes(file, data);
             }
-            catch (Exception e)
+            catch (Exception )
             {
-                Console.WriteLine("Could not write file due: " + e.Message);
             }
         }
 
@@ -175,12 +177,40 @@ namespace Memory
                 byte[] bytes = File.ReadAllBytes(file);
                 return bytes;
             }
-            catch (Exception e)
+            catch (Exception )
             {
-                Console.WriteLine("Could not read file due: " + e.Message);
             }
 
             return null;
+        }
+
+        private static void LengteWrite(string file, int data)
+        {
+            //Try catch block om eventuele errors af te vangen.
+            try
+            {
+                string lengte = Convert.ToString(data);
+                //Schrijf all bytes naar het opgegeven path.
+                File.WriteAllText(file, lengte);
+            }
+            catch (Exception )
+            {                
+            }
+        }
+        private static int LengteLoad(string file)
+        {
+            //Try catch block om eventuele errors af te vangen.
+            try
+            {
+                //Alle bytes uitlezen uit een bestand en deze returnen.
+                string buf = File.ReadAllText(file);
+                lengte = int.Parse(buf);
+                return lengte;
+            }
+            catch (Exception)
+            {
+                return lengte = 0;
+            }
         }
 
         public class ReverseComparer : IComparer
