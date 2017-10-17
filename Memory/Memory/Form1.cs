@@ -96,6 +96,9 @@ namespace WindowsFormsApp1
                 Points2.Visible = true;
                 BeurtLabel.Visible = true;               
                 Saveclass.Visible = true;
+				play.Visible = false;
+				Exit.Visible = false;
+				Reset.Visible = false;
 
                 Player1LabelInvoer.Text = Player1Textbox.Text;
                 Player2LabelInvoer.Text = Player2Textbox.Text;
