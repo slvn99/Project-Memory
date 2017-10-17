@@ -22,5 +22,20 @@ namespace Memory
             pictureBox1.Controls.Add(tableLayoutPanel2);
             tableLayoutPanel2.BackColor = Color.Transparent;
         }
+
+        private void PlayButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SettingButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RankButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
