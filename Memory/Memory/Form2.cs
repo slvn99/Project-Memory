@@ -80,12 +80,7 @@ namespace Memory
             this.WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false;
         }
-<<<<<<< HEAD
-
-        private async void Settings_Click(object sender, EventArgs e)
-=======
 		private async void Settings_Click(object sender, EventArgs e)
->>>>>>> 4a9e9de93595d383cffedf0fa3feed085ee8881f
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
@@ -95,10 +90,6 @@ namespace Memory
 			this.WindowState = FormWindowState.Minimized;
 			this.ShowInTaskbar = false;
 		}
-<<<<<<< HEAD
-
-=======
->>>>>>> 4a9e9de93595d383cffedf0fa3feed085ee8881f
         private async void Highscore_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
