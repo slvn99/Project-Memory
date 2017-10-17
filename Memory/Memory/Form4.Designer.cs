@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
 			this.label1 = new System.Windows.Forms.Label();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -68,7 +69,7 @@
 			// 
 			this.Loading_bar.BackColor = System.Drawing.Color.Transparent;
 			this.Loading_bar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.Loading_bar.Image = global::Memory.Properties.Resources._149fced2b9a4c8a69ba4bd0715c7668c_jpg;
+			this.Loading_bar.Image = ((System.Drawing.Image)(resources.GetObject("Loading_bar.Image")));
 			this.Loading_bar.Location = new System.Drawing.Point(-1, -2);
 			this.Loading_bar.Margin = new System.Windows.Forms.Padding(2);
 			this.Loading_bar.Name = "Loading_bar";
