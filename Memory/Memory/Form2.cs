@@ -81,11 +81,7 @@ namespace Memory
             this.ShowInTaskbar = false;
         }
 
-<<<<<<< HEAD
 		private async void Settings_Click(object sender, EventArgs e)
-=======
-        private async void Settings_Click(object sender, EventArgs e)
->>>>>>> df3536daeaa75bae77a8375496e60d5b54c664b4
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
@@ -96,7 +92,6 @@ namespace Memory
 			this.ShowInTaskbar = false;
 		}
 
-<<<<<<< HEAD
         private async void Highscore_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -107,21 +102,6 @@ namespace Memory
 			this.WindowState = FormWindowState.Minimized;
 			this.ShowInTaskbar = false;
 		}
-=======
-		private void Load_Click(object sender, EventArgs e)
-        {
-            player.SoundLocation = "click.wav";
-            player.Play();
-            //naar form van opgeslagen spellen
-        }
-
-        private void Highscore_Click(object sender, EventArgs e)
-        {
-            player.SoundLocation = "click.wav";
-            player.Play();
-            //naar form van highscores
-        }
->>>>>>> df3536daeaa75bae77a8375496e60d5b54c664b4
 
     }
 }
