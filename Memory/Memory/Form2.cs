@@ -81,16 +81,17 @@ namespace Memory
             this.ShowInTaskbar = false;
         }
 
-        private async void Settings_Click(object sender, EventArgs e)
+        private void Settings_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
             player.Play();
-			Memory.SettingsPage f6 = new Memory.SettingsPage();
-			f6.Show();
-			await Task.Delay(100);
-			this.WindowState = FormWindowState.Minimized;
-			this.ShowInTaskbar = false;
-		}
+            //this.IsMdiContainer = true;
+            //settings s = new settings();
+            //s.MdiParent = this;
+            //s.Show();
+            //s.BringToFront();
+            //timer4.Start();
+        }
 
         private void Load_Click(object sender, EventArgs e)
         {

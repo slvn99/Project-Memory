@@ -98,10 +98,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <None Include="bin\Debug\game.sav" />
-    <None Include="bin\Debug\highscores.sav" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,13 +130,9 @@
     <None Include="Resources\Memory.png" />
     <None Include="Resources\buttons_PNG32211.png" />
     <None Include="Resources\buttons_PNG322222.png" />
-    <None Include="Resources\zwart balkje.png" />
-    <None Include="Resources\Naamloos-2.png" />
-    <None Include="Resources\Naamloos-1.png" />
-    <None Include="Resources\coollogo_com-11864820.png" />
-    <None Include="Resources\blue-wallpaper-7.jpg" />
-    <None Include="Resources\149fced2b9a4c8a69ba4bd0715c7668c.jpg.gif" />
-    <None Include="Resources\SpeakerButton.png" />
+    <None Include="Resources\buttons_PNG322.png" />
+    <None Include="Resources\buttons_PNG32.png" />
+    <None Include="Resources\buttons_PNG321.png" />
     <None Include="Resources\play2.png" />
     <None Include="Resources\play1.png" />
     <None Include="Resources\play.png" />

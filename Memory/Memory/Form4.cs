@@ -34,63 +34,33 @@ namespace Memory
             if (a == 1)
             {
                 label1.Text = "Randomizing cards";
-				label1.Font = new Font("Arial", 18, FontStyle.Bold);
-				label1.ForeColor = System.Drawing.Color.Black;
-				label1.AutoSize = false;
-				label1.TextAlign = ContentAlignment.MiddleCenter;
-				label1.Dock = DockStyle.Fill;
-			}
+            }
 
 
             else if (a == 2)
             {
-				label1.Text = "Finishing the last preparations";
-				label1.Font = new Font("Arial", 18, FontStyle.Bold);
-				label1.ForeColor = System.Drawing.Color.Black;
-				label1.AutoSize = false;
-				label1.TextAlign = ContentAlignment.MiddleCenter;
-				label1.Dock = DockStyle.Fill;
-			}
+                label1.Text = "Finishing the last preparations";
+            }
 
             else if (a == 3)
             {
                 label1.Text = "Showing an extremly useless loading screen";
-				label1.Font = new Font("Arial", 18, FontStyle.Bold);
-				label1.ForeColor = System.Drawing.Color.Black;
-				label1.AutoSize = false;
-				label1.TextAlign = ContentAlignment.MiddleCenter;
-				label1.Dock = DockStyle.Fill;
-			}
+            }
 
             else if (a == 4)
             {
                 label1.Text = "Giving you some time to mentally prepare";
-				label1.Font = new Font("Arial", 18, FontStyle.Bold);
-				label1.ForeColor = System.Drawing.Color.Black;
-				label1.AutoSize = false;
-				label1.TextAlign = ContentAlignment.MiddleCenter;
-				label1.Dock = DockStyle.Fill;
-			}
+            }
 
             else if (a == 5)
             {
                 label1.Text = "Wasting valuable time";
-				label1.Font = new Font("Arial", 18, FontStyle.Bold);
-				label1.ForeColor = System.Drawing.Color.Black;
-				label1.AutoSize = false;
-				label1.TextAlign = ContentAlignment.MiddleCenter;
-				label1.Dock = DockStyle.Fill;
-			}
+            }
 
             else if (a == 6)
             {
-				label1.Text = "Testing players for hacks";
-			    label1.Font = new Font("Arial", 18, FontStyle.Bold);
-				label1.ForeColor = System.Drawing.Color.Black;
-				label1.AutoSize = false;
-				label1.TextAlign = ContentAlignment.MiddleCenter; 
-				label1.Dock = DockStyle.Fill; 
-			}
+                label1.Text = "Testing players for hacks";
+            }
         }
 
         void ChangeCursor()
@@ -117,6 +87,11 @@ namespace Memory
         {
             player.SoundLocation = "ping.wav";
             player.Play();
+        }
+
+        private void Loading_bar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

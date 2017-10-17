@@ -199,10 +199,6 @@
         private System.Windows.Forms.PictureBox bar;
         private System.Windows.Forms.PictureBox Play;
         private System.Windows.Forms.PictureBox Memory;
-<<<<<<< HEAD
-=======
-        private new System.Windows.Forms.PictureBox Load;
->>>>>>> 2904815a03d040240e895a701d6d6d694f091bda
         private System.Windows.Forms.PictureBox Minimize;
         private System.Windows.Forms.PictureBox zwart;
         private System.Windows.Forms.PictureBox Exit;
