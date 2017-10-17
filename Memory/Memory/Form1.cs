@@ -250,6 +250,11 @@ namespace WindowsFormsApp1
                 if (PuntenPlayer1 > PuntenPlayer2)
                 {
                     MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> d7eeaeb00b6cdd4c33f489c8a2dd548b8aae7bbc
                     Memory.Highscores_save.SaveData(player1, PuntenPlayer1);
                 }
                 else if (PuntenPlayer1 == PuntenPlayer2)
@@ -259,6 +264,11 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("Gefeliciteerd " + player2 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> d7eeaeb00b6cdd4c33f489c8a2dd548b8aae7bbc
                     Memory.Highscores_save.SaveData(player2, PuntenPlayer2);
                 }
 
