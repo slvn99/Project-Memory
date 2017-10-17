@@ -38,7 +38,7 @@ namespace Memory
             //koppelen van score en naam, score vooraan ivm sorteren
             string koppel = score +" punten gehaald door: "+ naam;
 
-<<<<<<< HEAD
+
             if (savearray[0] == null)
             {
                 //lege list op basis van niks
@@ -67,10 +67,8 @@ namespace Memory
             //de array omgekeerd sorteren op basis van ASCII oid.
             Array.Sort(savearray, revComparer);
 
-=======
->>>>>>> d7eeaeb00b6cdd4c33f489c8a2dd548b8aae7bbc
             //omzetten naar bytes
-            byte[] serialized = Serialize(naam,score);
+            byte[] serialized = Serialize(lengte, savearray);
 
             //deze bytes writen
             WriteToFile(@"" + path + "highscores.sav", serialized);
@@ -94,7 +92,7 @@ namespace Memory
 
         //------------------------------------------------------------------------------//
         //Methods
-        public static byte[] Serialize(string naam, int score)
+        public static byte[] Serialize(int lengte, string[] savearray)
         {
             //Nieuwe memory stream aanmaken die wordt gebruikt door de formatter
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
@@ -102,12 +100,6 @@ namespace Memory
             {
                 //Binary formatter die de data serialized, en dit in de stream zet
                 BinaryFormatter formatter = new BinaryFormatter();
-<<<<<<< HEAD
-                
-=======
-                formatter.Serialize(stream, lengte);
-                formatter.Serialize(stream, naam);
->>>>>>> d7eeaeb00b6cdd4c33f489c8a2dd548b8aae7bbc
 
                 int i = 0;
 
