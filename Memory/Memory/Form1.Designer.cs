@@ -528,9 +528,9 @@
             this.Reset.BackColor = System.Drawing.Color.Transparent;
             this.Reset.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG32;
             this.Reset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Reset.Location = new System.Drawing.Point(1179, 291);
+            this.Reset.Location = new System.Drawing.Point(1151, 283);
             this.Reset.Name = "Reset";
-            this.Reset.Size = new System.Drawing.Size(100, 33);
+            this.Reset.Size = new System.Drawing.Size(128, 41);
             this.Reset.TabIndex = 40;
             this.Reset.TabStop = false;
             this.Reset.Click += new System.EventHandler(this.Reset_Click);
