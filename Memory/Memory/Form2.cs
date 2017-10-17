@@ -81,7 +81,6 @@ namespace Memory
             this.ShowInTaskbar = false;
         }
 
-<<<<<<< HEAD
 		private async void Settings_Click(object sender, EventArgs e)
 		{
 			player.SoundLocation = "click.wav";
@@ -93,36 +92,16 @@ namespace Memory
 			this.ShowInTaskbar = false;
 		}
 
-		private void Load_Click(object sender, EventArgs e)
-=======
-        private void Settings_Click(object sender, EventArgs e)
+        private async void Highscore_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
             player.Play();
-            Memory.HomePage f5 = new Memory.HomePage();
-            f5.Show();
-            //this.IsMdiContainer = true;
-            //settings s = new settings();
-            //s.MdiParent = this;
-            //s.Show();
-            //s.BringToFront();
-            //timer4.Start();
-        }
-
-        private void Load_Click(object sender, EventArgs e)
->>>>>>> ee381eac566bee06452908a65436c75d7f44fad5
-        {
-            player.SoundLocation = "click.wav";
-            player.Play();
-            //naar form van opgeslagen spellen
-        }
-
-        private void Highscore_Click(object sender, EventArgs e)
-        {
-            player.SoundLocation = "click.wav";
-            player.Play();
-            //naar form van highscores
-        }
+			Memory.HighscorePage f7 = new Memory.HighscorePage();
+			f7.Show();
+			await Task.Delay(100);
+			this.WindowState = FormWindowState.Minimized;
+			this.ShowInTaskbar = false;
+		}
 
     }
 }
