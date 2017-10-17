@@ -145,6 +145,7 @@
     <Content Include="chiper.wav" />
     <Content Include="click.wav" />
     <Content Include="ping.wav" />
+    <None Include="Resources\transparent-square-tiles.png" />
     <None Include="Resources\SpeakerButton.png" />
     <None Include="Resources\zwart balkje.png" />
     <None Include="Resources\Naamloos-2.png" />

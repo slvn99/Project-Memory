@@ -16,6 +16,8 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
         Button Kaart1Select, Kaart2Select;
         string player1, player2, PlayerBeurt;
         int PuntenPlayer1, PuntenPlayer2, TotaalMatches,lengte;
@@ -94,6 +96,9 @@ namespace WindowsFormsApp1
                 Points2.Visible = true;
                 BeurtLabel.Visible = true;               
                 Saveclass.Visible = true;
+				play.Visible = false;
+				Exit.Visible = false;
+				Reset.Visible = false;
 
                 Player1LabelInvoer.Text = Player1Textbox.Text;
                 Player2LabelInvoer.Text = Player2Textbox.Text;
@@ -440,16 +445,22 @@ namespace WindowsFormsApp1
 
         private void play_Click_1(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
             Play_Game();
         }
 
         private void Exit_Click(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
             Application.Exit();
         }
 
         private void Reset_Click(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
             DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (ResetGame == DialogResult.Yes)
             {
