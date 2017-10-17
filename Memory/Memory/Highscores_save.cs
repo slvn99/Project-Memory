@@ -3,6 +3,8 @@ using System.IO;
 using System.Resources;
 using System.Runtime.Serialization.Formatters.Binary;
 using Memory.Properties;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace Memory
 {
@@ -17,9 +19,56 @@ namespace Memory
         {
             //hier benoem ik path tot de locatie van de .exe
             var path = AppDomain.CurrentDomain.BaseDirectory;
+            //declareren van verschillende variabelen
+            string[] savearray = new string[12];
+            int lengte = 0;
+
+            //proberen van laden van savedata if aanwezig, anders doet hij niks
+                string save = LoadData();
+            if (save == "Er is nog geen\nsave file\naanwezig")
+            { }
+            else
+            {
+                savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+                lengte = int.Parse(savearray[0]);
+            }
+            
+            //lengte +1 ivm 1 extra entry
+            lengte = lengte + 1;
+            //koppelen van score en naam, score vooraan ivm sorteren
+            string koppel = score +" punten gehaald door: "+ naam;
+
+
+            if (savearray[0] == null)
+            {
+                //lege list op basis van niks
+                List<string> scorelist = new List<string>();
+                scorelist.Add(Convert.ToString(lengte));
+                scorelist.Add(koppel);
+                scorelist.CopyTo(savearray);
+            }
+            else
+            {
+                //list aanmaken op basis van savearray
+                List<string> scorelist = new List<string>(savearray);
+                scorelist.Add(koppel);
+                scorelist.CopyTo(savearray);
+            }
+            
+            if (lengte < 11)
+            {
+                //zorgen dat de lengte van de array max 10 wordt
+                //zodat nummer 11 op highscore niet wordt opgeslagen
+                savearray[0] = Convert.ToString(lengte);
+            }
+
+            //reverse comparer initialiseren
+            IComparer revComparer = new ReverseComparer();
+            //de array omgekeerd sorteren op basis van ASCII oid.
+            Array.Sort(savearray, revComparer);
 
             //omzetten naar bytes
-            byte[] serialized = Serialize(naam,score);
+            byte[] serialized = Serialize(lengte, savearray);
 
             //deze bytes writen
             WriteToFile(@"" + path + "highscores.sav", serialized);
@@ -43,7 +92,7 @@ namespace Memory
 
         //------------------------------------------------------------------------------//
         //Methods
-        public static byte[] Serialize(string naam, int score)
+        public static byte[] Serialize(int lengte, string[] savearray)
         {
             //Nieuwe memory stream aanmaken die wordt gebruikt door de formatter
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
@@ -51,14 +100,12 @@ namespace Memory
             {
                 //Binary formatter die de data serialized, en dit in de stream zet
                 BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(stream, lengte);
-                formatter.Serialize(stream, naam);
 
                 int i = 0;
 
                 while (i < lengte)
                 {
-                    //formatter.Serialize(stream, array[i]);
+                    formatter.Serialize(stream, savearray[i]);
                     i++;
                 }
 
@@ -69,7 +116,7 @@ namespace Memory
 
         private static string Deserialize(byte[] data)
         {
-            string buf8, opslag = "";
+            string opslag = "";
 
             //Nieuwe memory stream aanmaken die wordt gebruikt door de formatter
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
@@ -87,10 +134,6 @@ namespace Memory
                     int l2 = int.Parse(l1);
 
                     //Return de game data.
-
-                    buf8 = l1;
-
-
                     int i = 0;
                     while (i < l2)
                     {
@@ -140,6 +183,16 @@ namespace Memory
 
             return null;
         }
+
+        public class ReverseComparer : IComparer
+        {
+            // Call CaseInsensitiveComparer.Compare with the parameters reversed.
+            public int Compare(Object x, Object y)
+            {
+                return (new CaseInsensitiveComparer()).Compare(y, x);
+            }
+        }
+
     }
 }
 
