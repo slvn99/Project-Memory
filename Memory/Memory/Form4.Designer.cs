@@ -70,9 +70,9 @@
 			this.Loading_bar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.Loading_bar.Image = global::Memory.Properties.Resources._149fced2b9a4c8a69ba4bd0715c7668c_jpg;
 			this.Loading_bar.Location = new System.Drawing.Point(-1, -2);
-			this.Loading_bar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Loading_bar.Margin = new System.Windows.Forms.Padding(2);
 			this.Loading_bar.Name = "Loading_bar";
-			this.Loading_bar.Size = new System.Drawing.Size(1025, 568);
+			this.Loading_bar.Size = new System.Drawing.Size(1080, 630);
 			this.Loading_bar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.Loading_bar.TabIndex = 0;
 			this.Loading_bar.TabStop = false;
@@ -85,7 +85,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.Loading_bar);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "Form4";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form4";
