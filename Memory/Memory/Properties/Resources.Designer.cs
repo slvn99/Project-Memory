@@ -65,7 +65,7 @@ namespace Memory.Properties {
         /// </summary>
         public static System.Drawing.Bitmap _149fced2b9a4c8a69ba4bd0715c7668c_jpg {
             get {
-                object obj = ResourceManager.GetObject("149fced2b9a4c8a69ba4bd0715c7668c.jpg", resourceCulture);
+                object obj = ResourceManager.GetObject("_149fced2b9a4c8a69ba4bd0715c7668c_jpg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +95,7 @@ namespace Memory.Properties {
         /// </summary>
         public static System.Drawing.Bitmap background_game {
             get {
-                object obj = ResourceManager.GetObject("background game", resourceCulture);
+                object obj = ResourceManager.GetObject("background_game", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,7 +105,7 @@ namespace Memory.Properties {
         /// </summary>
         public static System.Drawing.Bitmap blue_wallpaper_7 {
             get {
-                object obj = ResourceManager.GetObject("blue-wallpaper-7", resourceCulture);
+                object obj = ResourceManager.GetObject("blue_wallpaper_7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -135,7 +135,7 @@ namespace Memory.Properties {
         /// </summary>
         public static System.Drawing.Bitmap coollogo_com_11864820 {
             get {
-                object obj = ResourceManager.GetObject("coollogo_com-11864820", resourceCulture);
+                object obj = ResourceManager.GetObject("coollogo_com_11864820", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -245,7 +245,7 @@ namespace Memory.Properties {
         /// </summary>
         public static System.Drawing.Bitmap Naamloos_1 {
             get {
-                object obj = ResourceManager.GetObject("Naamloos-1", resourceCulture);
+                object obj = ResourceManager.GetObject("Naamloos_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -255,7 +255,7 @@ namespace Memory.Properties {
         /// </summary>
         public static System.Drawing.Bitmap Naamloos_2 {
             get {
-                object obj = ResourceManager.GetObject("Naamloos-2", resourceCulture);
+                object obj = ResourceManager.GetObject("Naamloos_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,6 +363,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap SpeakerButton {
+            get {
+                object obj = ResourceManager.GetObject("SpeakerButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Steam {
             get {
                 object obj = ResourceManager.GetObject("Steam", resourceCulture);
@@ -415,7 +425,7 @@ namespace Memory.Properties {
         /// </summary>
         public static System.Drawing.Bitmap zwart_balkje {
             get {
-                object obj = ResourceManager.GetObject("zwart balkje", resourceCulture);
+                object obj = ResourceManager.GetObject("zwart_balkje", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

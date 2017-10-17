@@ -28,6 +28,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
+            ChangeCursor();
+
             foreach (var x in ButtonGrid)
             {
                 x.Visible = false;
@@ -42,6 +44,13 @@ namespace WindowsFormsApp1
                 punten.Remove(p);
                 Button.Text = "[=]";
             }
+        }
+
+        void ChangeCursor()
+        {
+            Bitmap bmp = new Bitmap (Resources.mouse_xs);
+            Cursor c = new Cursor(bmp.GetHicon());
+            this.Cursor = c;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -241,8 +250,11 @@ namespace WindowsFormsApp1
                 if (PuntenPlayer1 > PuntenPlayer2)
                 {
                     MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d7eeaeb00b6cdd4c33f489c8a2dd548b8aae7bbc
                     Memory.Highscores_save.SaveData(player1, PuntenPlayer1);
                 }
                 else if (PuntenPlayer1 == PuntenPlayer2)
@@ -252,8 +264,11 @@ namespace WindowsFormsApp1
                 else
                 {
                     MessageBox.Show("Gefeliciteerd " + player2 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d7eeaeb00b6cdd4c33f489c8a2dd548b8aae7bbc
                     Memory.Highscores_save.SaveData(player2, PuntenPlayer2);
                 }
 
@@ -436,14 +451,14 @@ namespace WindowsFormsApp1
         }
         #endregion
 
+        private void play_Click_1(object sender, EventArgs e)
+        {
+            Play_Game();
+        }
+
         private void Exit_Click(object sender, EventArgs e)
         {
-            DialogResult ExitGame = MessageBox.Show("Weet u zeker dat u het spel wil verlaten? Onopgeslagen progressie zal verloren gaan! ", "Exit", MessageBoxButtons.YesNo);
-
-            if (ExitGame == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            Application.Exit();
         }
 
         private void Reset_Click(object sender, EventArgs e)
@@ -453,15 +468,6 @@ namespace WindowsFormsApp1
             {
                 Reset_Function();
             }
-            else
-            {
-                //return hoofdmenu.
-            }
-        }
-
-        private void play_Click(object sender, EventArgs e)
-        {
-            Play_Game();
         }
 
         private void ResetButton_Click(object sender, EventArgs e)
@@ -483,7 +489,7 @@ namespace WindowsFormsApp1
 
             if (ExitGame == DialogResult.Yes)
             {
-                this.Close();
+                Application.Exit();
             }
         }
         
