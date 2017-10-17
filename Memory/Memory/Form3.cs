@@ -42,8 +42,17 @@ namespace Memory
             Minimize.BackColor = Color.Transparent;
 
             bar.Controls.Add(zwart);
-            zwart.BackColor = Color.Transparent; 
+            zwart.BackColor = Color.Transparent;
 
+            ChangeCursor();
+
+        }
+
+        void ChangeCursor()
+        {
+            Bitmap bmp = new Bitmap(Properties.Resources.mouse_xs);
+            Cursor c = new Cursor(bmp.GetHicon());
+            this.Cursor = c;
         }
 
         private void Form3_Load(object sender, EventArgs e)

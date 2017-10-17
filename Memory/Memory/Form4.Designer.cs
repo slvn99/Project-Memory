@@ -73,6 +73,7 @@
             this.Loading_bar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Loading_bar.TabIndex = 0;
             this.Loading_bar.TabStop = false;
+            this.Loading_bar.Click += new System.EventHandler(this.Loading_bar_Click);
             // 
             // Form4
             // 

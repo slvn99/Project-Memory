@@ -26,6 +26,8 @@ namespace Memory
             timer2.Start();
             timer3.Start();
 
+            ChangeCursor();
+
             Random rand = new Random();
             double a = rand.Next(1, 7);
 
@@ -61,6 +63,13 @@ namespace Memory
             }
         }
 
+        void ChangeCursor()
+        {
+            Bitmap bmp = new Bitmap(Properties.Resources.mouse_xs);
+            Cursor c = new Cursor(bmp.GetHicon());
+            this.Cursor = c;
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             WindowsFormsApp1.Form1  f1 = new WindowsFormsApp1.Form1();
@@ -78,6 +87,11 @@ namespace Memory
         {
             player.SoundLocation = "ping.wav";
             player.Play();
+        }
+
+        private void Loading_bar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

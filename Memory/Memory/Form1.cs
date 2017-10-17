@@ -28,6 +28,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
+            ChangeCursor();
+
             foreach (var x in ButtonGrid)
             {
                 x.Visible = false;
@@ -42,6 +44,13 @@ namespace WindowsFormsApp1
                 punten.Remove(p);
                 Button.Text = "[=]";
             }
+        }
+
+        void ChangeCursor()
+        {
+            Bitmap bmp = new Bitmap (Resources.mouse_xs);
+            Cursor c = new Cursor(bmp.GetHicon());
+            this.Cursor = c;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -430,7 +439,26 @@ namespace WindowsFormsApp1
             Click_kaart(GridButton8Dup);
             Check_kaart();
         }
-    #endregion
+        #endregion
+
+        private void play_Click_1(object sender, EventArgs e)
+        {
+            Play_Game();
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (ResetGame == DialogResult.Yes)
+            {
+                Reset_Function();
+            }
+        }
 
         private void ResetButton_Click(object sender, EventArgs e)
         {
@@ -451,7 +479,7 @@ namespace WindowsFormsApp1
 
             if (ExitGame == DialogResult.Yes)
             {
-                this.Close();
+                Application.Exit();
             }
         }
         

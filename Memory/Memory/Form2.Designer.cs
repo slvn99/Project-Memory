@@ -168,6 +168,7 @@
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Memory);
             this.Controls.Add(this.cat);
+            this.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

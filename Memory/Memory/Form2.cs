@@ -12,7 +12,7 @@ namespace Memory
     public partial class Form2 : Form
     {
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-
+        //System.Windows.Forms.Cursor.Current = 
         public Form2()
         {
 
@@ -38,8 +38,15 @@ namespace Memory
             cat.Controls.Add(Memory);
             Memory.BackColor = Color.Transparent;
 
+            ChangeCursor();
         }
 
+        void ChangeCursor()
+        {
+            Bitmap bmp = new Bitmap(Properties.Resources.mouse_xs);
+            Cursor c = new Cursor(bmp.GetHicon());
+            this.Cursor = c;
+        }
         private void cat_Click(object sender, EventArgs e)
         {
             //niets

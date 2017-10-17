@@ -64,6 +64,12 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.Variablen_save = new System.Windows.Forms.Label();
             this.Exceptionbox = new System.Windows.Forms.Label();
+            this.play = new System.Windows.Forms.PictureBox();
+            this.Exit = new System.Windows.Forms.PictureBox();
+            this.Reset = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.play)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Reset)).BeginInit();
             this.SuspendLayout();
             // 
             // PlayButton
@@ -494,6 +500,41 @@
             this.Exceptionbox.TabIndex = 37;
             this.Exceptionbox.Visible = false;
             // 
+            // play
+            // 
+            this.play.BackColor = System.Drawing.Color.Transparent;
+            this.play.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG321;
+            this.play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.play.Location = new System.Drawing.Point(1151, 346);
+            this.play.Name = "play";
+            this.play.Size = new System.Drawing.Size(129, 39);
+            this.play.TabIndex = 38;
+            this.play.TabStop = false;
+            this.play.Click += new System.EventHandler(this.play_Click_1);
+            // 
+            // Exit
+            // 
+            this.Exit.BackColor = System.Drawing.Color.Transparent;
+            this.Exit.BackgroundImage = global::Memory.Properties.Resources.play2;
+            this.Exit.Location = new System.Drawing.Point(1291, 182);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(100, 50);
+            this.Exit.TabIndex = 39;
+            this.Exit.TabStop = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // Reset
+            // 
+            this.Reset.BackColor = System.Drawing.Color.Transparent;
+            this.Reset.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG32;
+            this.Reset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Reset.Location = new System.Drawing.Point(1179, 291);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(100, 33);
+            this.Reset.TabIndex = 40;
+            this.Reset.TabStop = false;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -501,6 +542,9 @@
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1417, 730);
+            this.Controls.Add(this.Reset);
+            this.Controls.Add(this.Exit);
+            this.Controls.Add(this.play);
             this.Controls.Add(this.Exceptionbox);
             this.Controls.Add(this.Variablen_save);
             this.Controls.Add(this.ExitButton);
@@ -543,6 +587,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.play)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Reset)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -586,6 +633,9 @@
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Label Variablen_save;
         private System.Windows.Forms.Label Exceptionbox;
+        private System.Windows.Forms.PictureBox play;
+        private System.Windows.Forms.PictureBox Exit;
+        private System.Windows.Forms.PictureBox Reset;
     }
 }
 

@@ -127,6 +127,14 @@
     <Content Include="chiper.wav" />
     <Content Include="click.wav" />
     <Content Include="ping.wav" />
+    <None Include="Resources\buttons_PNG32.png" />
+    <None Include="Resources\buttons_PNG321.png" />
+    <None Include="Resources\play2.png" />
+    <None Include="Resources\play1.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\mouse_xs.png" />
+    <None Include="Resources\mouse.png" />
+    <None Include="Resources\cursor.bmp" />
     <None Include="Resources\background game.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
