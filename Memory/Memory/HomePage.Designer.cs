@@ -126,7 +126,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox5.Image = global::Memory.Properties.Resources.coollogo_com_11864820;
+            this.pictureBox5.Image = global::Memory.Properties.Resources.Memory;
             this.pictureBox5.Location = new System.Drawing.Point(0, 0);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox5.Name = "pictureBox5";
