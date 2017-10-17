@@ -85,6 +85,8 @@ namespace Memory
         {
             player.SoundLocation = "click.wav";
             player.Play();
+            Memory.HomePage f5 = new Memory.HomePage();
+            f5.Show();
             //this.IsMdiContainer = true;
             //settings s = new settings();
             //s.MdiParent = this;
