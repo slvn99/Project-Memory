@@ -93,8 +93,8 @@ namespace WindowsFormsApp1
                 Points1.Visible = true;
                 Points2.Visible = true;
                 BeurtLabel.Visible = true;
-                ResetButton.Visible = true;
-                ExitButton.Visible = true;
+                //ResetButton.Visible = true;
+                //ExitButton.Visible = true;
                 Saveclass.Visible = true;
 
                 Player1LabelInvoer.Text = Player1Textbox.Text;
@@ -218,7 +218,7 @@ namespace WindowsFormsApp1
             Points2.Visible = false;
             PlayerBeurt = null;
             BeurtLabel.Text = string.Empty;
-            PlayButton.Visible = true;
+            //PlayButton.Visible = true;
             Kaart1Select = null;
             Kaart2Select = null;
             Player1Label.Visible = true;

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PlayButton = new System.Windows.Forms.Button();
             this.GridButton1 = new System.Windows.Forms.Button();
             this.GridButton1Dup = new System.Windows.Forms.Button();
             this.GridButton2 = new System.Windows.Forms.Button();
@@ -60,8 +59,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Loadclass = new System.Windows.Forms.Button();
-            this.ResetButton = new System.Windows.Forms.Button();
-            this.ExitButton = new System.Windows.Forms.Button();
             this.Variablen_save = new System.Windows.Forms.Label();
             this.Exceptionbox = new System.Windows.Forms.Label();
             this.play = new System.Windows.Forms.PictureBox();
@@ -71,17 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Reset)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PlayButton
-            // 
-            this.PlayButton.Location = new System.Drawing.Point(1115, 430);
-            this.PlayButton.Margin = new System.Windows.Forms.Padding(4);
-            this.PlayButton.Name = "PlayButton";
-            this.PlayButton.Size = new System.Drawing.Size(208, 48);
-            this.PlayButton.TabIndex = 0;
-            this.PlayButton.Text = "Play";
-            this.PlayButton.UseVisualStyleBackColor = true;
-            this.PlayButton.Click += new System.EventHandler(this.PlayButton_Click);
             // 
             // GridButton1
             // 
@@ -459,28 +445,6 @@
             this.Loadclass.MouseLeave += new System.EventHandler(this.Loadclass_MouseLeave);
             this.Loadclass.MouseHover += new System.EventHandler(this.Loadclass_MouseHover);
             // 
-            // ResetButton
-            // 
-            this.ResetButton.Location = new System.Drawing.Point(1329, 430);
-            this.ResetButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(83, 48);
-            this.ResetButton.TabIndex = 34;
-            this.ResetButton.Text = "Reset";
-            this.ResetButton.UseVisualStyleBackColor = true;
-            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
-            // 
-            // ExitButton
-            // 
-            this.ExitButton.Location = new System.Drawing.Point(1329, 379);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(83, 44);
-            this.ExitButton.TabIndex = 35;
-            this.ExitButton.Text = "Exit";
-            this.ExitButton.UseVisualStyleBackColor = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
             // Variablen_save
             // 
             this.Variablen_save.AutoSize = true;
@@ -505,9 +469,9 @@
             this.play.BackColor = System.Drawing.Color.Transparent;
             this.play.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG321;
             this.play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.play.Location = new System.Drawing.Point(1151, 346);
+            this.play.Location = new System.Drawing.Point(1115, 182);
             this.play.Name = "play";
-            this.play.Size = new System.Drawing.Size(129, 39);
+            this.play.Size = new System.Drawing.Size(165, 82);
             this.play.TabIndex = 38;
             this.play.TabStop = false;
             this.play.Click += new System.EventHandler(this.play_Click_1);
@@ -515,10 +479,11 @@
             // Exit
             // 
             this.Exit.BackColor = System.Drawing.Color.Transparent;
-            this.Exit.BackgroundImage = global::Memory.Properties.Resources.play2;
-            this.Exit.Location = new System.Drawing.Point(1291, 182);
+            this.Exit.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG32211;
+            this.Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Exit.Location = new System.Drawing.Point(1115, 302);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(100, 50);
+            this.Exit.Size = new System.Drawing.Size(165, 83);
             this.Exit.TabIndex = 39;
             this.Exit.TabStop = false;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
@@ -526,11 +491,11 @@
             // Reset
             // 
             this.Reset.BackColor = System.Drawing.Color.Transparent;
-            this.Reset.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG32;
+            this.Reset.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG322222;
             this.Reset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Reset.Location = new System.Drawing.Point(1151, 283);
+            this.Reset.Location = new System.Drawing.Point(1114, 253);
             this.Reset.Name = "Reset";
-            this.Reset.Size = new System.Drawing.Size(128, 41);
+            this.Reset.Size = new System.Drawing.Size(164, 54);
             this.Reset.TabIndex = 40;
             this.Reset.TabStop = false;
             this.Reset.Click += new System.EventHandler(this.Reset_Click);
@@ -547,8 +512,6 @@
             this.Controls.Add(this.play);
             this.Controls.Add(this.Exceptionbox);
             this.Controls.Add(this.Variablen_save);
-            this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.Loadclass);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -580,7 +543,6 @@
             this.Controls.Add(this.GridButton2);
             this.Controls.Add(this.GridButton1Dup);
             this.Controls.Add(this.GridButton1);
-            this.Controls.Add(this.PlayButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
@@ -596,8 +558,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button PlayButton;
         private System.Windows.Forms.Button GridButton1;
         private System.Windows.Forms.Button GridButton1Dup;
         private System.Windows.Forms.Button GridButton2;
@@ -629,8 +589,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Button Loadclass;
-        private System.Windows.Forms.Button ResetButton;
-        private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Label Variablen_save;
         private System.Windows.Forms.Label Exceptionbox;
         private System.Windows.Forms.PictureBox play;

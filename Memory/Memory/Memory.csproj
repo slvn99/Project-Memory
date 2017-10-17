@@ -127,6 +127,10 @@
     <Content Include="chiper.wav" />
     <Content Include="click.wav" />
     <Content Include="ping.wav" />
+    <None Include="Resources\Memory.png" />
+    <None Include="Resources\buttons_PNG32211.png" />
+    <None Include="Resources\buttons_PNG322222.png" />
+    <None Include="Resources\buttons_PNG322.png" />
     <None Include="Resources\buttons_PNG32.png" />
     <None Include="Resources\buttons_PNG321.png" />
     <None Include="Resources\play2.png" />

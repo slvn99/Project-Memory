@@ -133,6 +133,36 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap buttons_PNG322 {
+            get {
+                object obj = ResourceManager.GetObject("buttons_PNG322", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap buttons_PNG32211 {
+            get {
+                object obj = ResourceManager.GetObject("buttons_PNG32211", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap buttons_PNG322222 {
+            get {
+                object obj = ResourceManager.GetObject("buttons_PNG322222", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap coollogo_com_11864820 {
             get {
                 object obj = ResourceManager.GetObject("coollogo_com-11864820", resourceCulture);
@@ -206,6 +236,16 @@ namespace Memory.Properties {
         public static System.Drawing.Bitmap maximize_window1600_2 {
             get {
                 object obj = ResourceManager.GetObject("maximize_window1600_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Memory {
+            get {
+                object obj = ResourceManager.GetObject("Memory", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
