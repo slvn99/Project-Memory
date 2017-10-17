@@ -124,9 +124,6 @@
   <data name="MuteButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MuteButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Naamloos-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Naamloos-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="buttons_PNG322222" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttons_PNG322222.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -141,9 +138,6 @@
   </data>
   <data name="TwitchLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TwitchLogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="coollogo_com-11864820" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coollogo_com-11864820.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttons_PNG32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttons_PNG32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,9 +181,6 @@
   <data name="Twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Twitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zwart balkje" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zwart balkje.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Nice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nice.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,9 +202,6 @@
   <data name="buttons_PNG321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttons_PNG321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="background game" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background game.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="mouse_xs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mouse_xs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,19 +211,28 @@
   <data name="SaveButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SaveButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blue-wallpaper-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blue-wallpaper-7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="149fced2b9a4c8a69ba4bd0715c7668c.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\149fced2b9a4c8a69ba4bd0715c7668c.jpg.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Naamloos-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Naamloos-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Memory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Memory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background_game" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background game.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_wallpaper_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue-wallpaper-7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Naamloos_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Naamloos-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Naamloos_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Naamloos-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zwart_balkje" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zwart balkje.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_149fced2b9a4c8a69ba4bd0715c7668c_jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\149fced2b9a4c8a69ba4bd0715c7668c.jpg.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
