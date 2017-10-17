@@ -11,7 +11,6 @@ namespace WindowsFormsApp1
     [Serializable]
     public class Save
     {
-        public static int lengte = 0 ;
 
         //-------------------------------------------------------------------------------//
         //Caller write
