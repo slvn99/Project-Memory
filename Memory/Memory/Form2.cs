@@ -26,9 +26,6 @@ namespace Memory
             cat.Controls.Add(Highscore);
             Highscore.BackColor = Color.Transparent;
 
-            cat.Controls.Add(Load);
-            Load.BackColor = Color.Transparent;
-
             cat.Controls.Add(Settings);
             Settings.BackColor = Color.Transparent;
 

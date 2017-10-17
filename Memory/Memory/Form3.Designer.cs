@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.Minimize = new System.Windows.Forms.PictureBox();
-            this.Load = new System.Windows.Forms.PictureBox();
             this.Memory = new System.Windows.Forms.PictureBox();
             this.Play = new System.Windows.Forms.PictureBox();
             this.bar = new System.Windows.Forms.PictureBox();
@@ -39,7 +38,6 @@
             this.zwart = new System.Windows.Forms.PictureBox();
             this.Exit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Minimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Load)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Memory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar)).BeginInit();
@@ -61,18 +59,6 @@
             this.Minimize.TabIndex = 9;
             this.Minimize.TabStop = false;
             this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
-            // 
-            // Load
-            // 
-            this.Load.BackColor = System.Drawing.Color.Transparent;
-            this.Load.BackgroundImage = global::Memory.Properties.Resources.SaveButton;
-            this.Load.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Load.Location = new System.Drawing.Point(787, 641);
-            this.Load.Name = "Load";
-            this.Load.Size = new System.Drawing.Size(373, 378);
-            this.Load.TabIndex = 8;
-            this.Load.TabStop = false;
-            this.Load.Click += new System.EventHandler(this.Load_Click);
             // 
             // Memory
             // 
@@ -180,7 +166,6 @@
             this.ClientSize = new System.Drawing.Size(1914, 1045);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Minimize);
-            this.Controls.Add(this.Load);
             this.Controls.Add(this.Memory);
             this.Controls.Add(this.Play);
             this.Controls.Add(this.bar);
@@ -194,7 +179,6 @@
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.Minimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Load)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Memory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Play)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar)).EndInit();
@@ -215,7 +199,6 @@
         private System.Windows.Forms.PictureBox bar;
         private System.Windows.Forms.PictureBox Play;
         private System.Windows.Forms.PictureBox Memory;
-        private System.Windows.Forms.PictureBox Load;
         private System.Windows.Forms.PictureBox Minimize;
         private System.Windows.Forms.PictureBox zwart;
         private System.Windows.Forms.PictureBox Exit;

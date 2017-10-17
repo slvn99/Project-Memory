@@ -31,7 +31,6 @@
             this.Play = new System.Windows.Forms.PictureBox();
             this.Highscore = new System.Windows.Forms.PictureBox();
             this.Settings = new System.Windows.Forms.PictureBox();
-            this.Load = new System.Windows.Forms.PictureBox();
             this.bar = new System.Windows.Forms.PictureBox();
             this.Fullscreen = new System.Windows.Forms.PictureBox();
             this.Exit = new System.Windows.Forms.PictureBox();
@@ -40,7 +39,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Highscore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Settings)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Load)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fullscreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
@@ -53,9 +51,9 @@
             this.Play.BackColor = System.Drawing.Color.Transparent;
             this.Play.BackgroundImage = global::Memory.Properties.Resources.PlayButton;
             this.Play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Play.Location = new System.Drawing.Point(608, 191);
+            this.Play.Location = new System.Drawing.Point(529, 350);
             this.Play.Name = "Play";
-            this.Play.Size = new System.Drawing.Size(214, 216);
+            this.Play.Size = new System.Drawing.Size(309, 319);
             this.Play.TabIndex = 8;
             this.Play.TabStop = false;
             this.Play.Click += new System.EventHandler(this.Play_Click);
@@ -65,9 +63,9 @@
             this.Highscore.BackColor = System.Drawing.Color.Transparent;
             this.Highscore.BackgroundImage = global::Memory.Properties.Resources.RankingButton;
             this.Highscore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Highscore.Location = new System.Drawing.Point(100, 471);
+            this.Highscore.Location = new System.Drawing.Point(165, 384);
             this.Highscore.Name = "Highscore";
-            this.Highscore.Size = new System.Drawing.Size(226, 214);
+            this.Highscore.Size = new System.Drawing.Size(255, 250);
             this.Highscore.TabIndex = 7;
             this.Highscore.TabStop = false;
             this.Highscore.Click += new System.EventHandler(this.Highscore_Click);
@@ -77,24 +75,12 @@
             this.Settings.BackColor = System.Drawing.Color.Transparent;
             this.Settings.BackgroundImage = global::Memory.Properties.Resources.SettingsButton;
             this.Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Settings.Location = new System.Drawing.Point(1049, 471);
+            this.Settings.Location = new System.Drawing.Point(956, 384);
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(226, 214);
+            this.Settings.Size = new System.Drawing.Size(248, 250);
             this.Settings.TabIndex = 6;
             this.Settings.TabStop = false;
             this.Settings.Click += new System.EventHandler(this.Settings_Click);
-            // 
-            // Load
-            // 
-            this.Load.BackColor = System.Drawing.Color.Transparent;
-            this.Load.BackgroundImage = global::Memory.Properties.Resources.SaveButton;
-            this.Load.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Load.Location = new System.Drawing.Point(608, 471);
-            this.Load.Name = "Load";
-            this.Load.Size = new System.Drawing.Size(214, 214);
-            this.Load.TabIndex = 5;
-            this.Load.TabStop = false;
-            this.Load.Click += new System.EventHandler(this.Load_Click);
             // 
             // bar
             // 
@@ -134,11 +120,11 @@
             // Memory
             // 
             this.Memory.BackColor = System.Drawing.Color.Transparent;
-            this.Memory.BackgroundImage = global::Memory.Properties.Resources.coollogo_com_11864820;
+            this.Memory.BackgroundImage = global::Memory.Properties.Resources.Memory;
             this.Memory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Memory.Location = new System.Drawing.Point(486, 27);
+            this.Memory.Location = new System.Drawing.Point(376, 96);
             this.Memory.Name = "Memory";
-            this.Memory.Size = new System.Drawing.Size(464, 158);
+            this.Memory.Size = new System.Drawing.Size(615, 175);
             this.Memory.TabIndex = 1;
             this.Memory.TabStop = false;
             // 
@@ -162,7 +148,6 @@
             this.Controls.Add(this.Play);
             this.Controls.Add(this.Highscore);
             this.Controls.Add(this.Settings);
-            this.Controls.Add(this.Load);
             this.Controls.Add(this.bar);
             this.Controls.Add(this.Fullscreen);
             this.Controls.Add(this.Exit);
@@ -176,7 +161,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Play)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Highscore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Settings)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Load)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fullscreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
@@ -194,7 +178,6 @@
         private System.Windows.Forms.PictureBox bar;
         private System.Windows.Forms.PictureBox Exit;
 #pragma warning disable CS0108 // Member hides inherited member; missing new keyword
-        private System.Windows.Forms.PictureBox Load;
 #pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         private System.Windows.Forms.PictureBox Settings;
         private System.Windows.Forms.PictureBox Highscore;

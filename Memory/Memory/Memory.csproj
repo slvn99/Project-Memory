@@ -136,6 +136,15 @@
     <Content Include="chiper.wav" />
     <Content Include="click.wav" />
     <Content Include="ping.wav" />
+    <None Include="Resources\zwart balkje.png" />
+    <None Include="Resources\Naamloos-2.png" />
+    <None Include="Resources\Naamloos-1.png" />
+    <None Include="Resources\blue-wallpaper-7.jpg" />
+    <None Include="Resources\149fced2b9a4c8a69ba4bd0715c7668c.jpg.gif" />
+    <None Include="Resources\Memory.png" />
+    <None Include="Resources\buttons_PNG32211.png" />
+    <None Include="Resources\buttons_PNG322222.png" />
+    <None Include="Resources\buttons_PNG322.png" />
     <None Include="Resources\buttons_PNG32.png" />
     <None Include="Resources\buttons_PNG321.png" />
     <None Include="Resources\play2.png" />
