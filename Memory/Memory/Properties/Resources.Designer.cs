@@ -393,6 +393,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap SpeakerButton {
+            get {
+                object obj = ResourceManager.GetObject("SpeakerButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Steam {
             get {
                 object obj = ResourceManager.GetObject("Steam", resourceCulture);

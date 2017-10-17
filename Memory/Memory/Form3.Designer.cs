@@ -63,7 +63,7 @@
             // Memory
             // 
             this.Memory.BackColor = System.Drawing.Color.Transparent;
-            this.Memory.BackgroundImage = global::Memory.Properties.Resources.coollogo_com_11864820;
+            this.Memory.BackgroundImage = global::Memory.Properties.Resources.Memory;
             this.Memory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Memory.Location = new System.Drawing.Point(700, 0);
             this.Memory.Name = "Memory";
