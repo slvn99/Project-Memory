@@ -82,6 +82,7 @@
 			this.MuteButton.Size = new System.Drawing.Size(75, 65);
 			this.MuteButton.TabIndex = 4;
 			this.MuteButton.UseVisualStyleBackColor = false;
+			this.MuteButton.Click += new System.EventHandler(this.MuteButton_Click);
 			// 
 			// SpeakerButton
 			// 
@@ -93,6 +94,7 @@
 			this.SpeakerButton.Size = new System.Drawing.Size(72, 65);
 			this.SpeakerButton.TabIndex = 5;
 			this.SpeakerButton.UseVisualStyleBackColor = false;
+			this.SpeakerButton.Click += new System.EventHandler(this.SpeakerButton_Click);
 			// 
 			// ThemaBox
 			// 
@@ -105,6 +107,7 @@
 			this.ThemaBox.Name = "ThemaBox";
 			this.ThemaBox.Size = new System.Drawing.Size(121, 21);
 			this.ThemaBox.TabIndex = 6;
+			this.ThemaBox.SelectedIndexChanged += new System.EventHandler(this.ThemaBox_SelectedIndexChanged);
 			// 
 			// HomeButton
 			// 

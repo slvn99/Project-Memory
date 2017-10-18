@@ -113,7 +113,8 @@ namespace Memory
         {
 
         }
-		private async void HomeButton_Click(object sender, EventArgs e)
+
+		private async void Home_Click(object sender, EventArgs e)
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
