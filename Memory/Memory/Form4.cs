@@ -31,6 +31,7 @@ namespace Memory
             Random rand = new Random();
             double a = rand.Next(1, 8);
 
+
 			if (a == 1)
 			{
 				label1.Text = "Randomizing cards";
@@ -92,15 +93,18 @@ namespace Memory
 				label1.Dock = DockStyle.Fill;
 			}
 
-			else if (a == 1)
+			else if (a == 7)
 			{
 				label1.Text = "The ting goes skraa";
+				player.SoundLocation = "THE_TING_GO_SKRRA.wav";
+				player.Play();
 				label1.Font = new Font("Arial", 18, FontStyle.Bold);
 				label1.ForeColor = System.Drawing.Color.Black;
 				label1.AutoSize = false;
 				label1.TextAlign = ContentAlignment.MiddleCenter;
 				label1.Dock = DockStyle.Fill;
 			}
+
 
 		}
 

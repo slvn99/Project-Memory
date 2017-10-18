@@ -14,18 +14,18 @@ using Memory.Properties;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form 
     {
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-
         Button Kaart1Select, Kaart2Select;
         string player1, player2, PlayerBeurt;
         int PuntenPlayer1, PuntenPlayer2, TotaalMatches,lengte;
         List<Point> punten = new List<Point>();
         List<string> matchlist = new List<string>();
         Random ButtonLocatie = new Random();
-        
-        public Form1()
+
+		public Memory.SettingsPage SettingsPage = new Memory.SettingsPage();
+		public Form1()
         {
             InitializeComponent();
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
@@ -57,8 +57,8 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
+			TestLabel.Text = Memory.SettingsPage.SetValueForComboBox; 
+		}
 
         private void PlayButton_Click(object sender, EventArgs e)
         {
@@ -458,8 +458,8 @@ namespace WindowsFormsApp1
         {
             player.SoundLocation = "click.wav";
             player.Play();
-            Memory.Form2 f2 = new Memory.Form2();
-            f2.Show();
+            //Memory.HomePage f12 = new Memory.HomePage();
+            //f12.Show();
             await Task.Delay(100);
             this.Close();
             this.ShowInTaskbar = false;

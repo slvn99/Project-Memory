@@ -19,7 +19,7 @@ namespace Memory
 			InitializeComponent();
 		}
 
-		private void ThemaBox_SelectedIndexChanged(object sender, EventArgs e)
+		public void ThemaBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (ThemaBox.SelectedText == "Thema 1")
 			{
@@ -54,13 +54,14 @@ namespace Memory
 			Memory.HomePage f2 = new Memory.HomePage();
 			f2.Show();
 			await Task.Delay(100);
-			this.Close();
+			this.WindowState = FormWindowState.Minimized;
 			this.ShowInTaskbar = false;
 		}
 
-		private void button3_Click(object sender, EventArgs e)
+		public void Apply_Click(object sender, EventArgs e)
 		{
 			SetValueForComboBox = ThemaBox.SelectedText;
+			MessageBox.Show(SetValueForComboBox);
 		}
 	}
 }
