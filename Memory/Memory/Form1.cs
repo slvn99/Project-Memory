@@ -631,6 +631,7 @@ namespace WindowsFormsApp1
                         i++;
                     }
                 }
+                WindowsFormsApp1.Save.Encrypt();
             }
         }
 
