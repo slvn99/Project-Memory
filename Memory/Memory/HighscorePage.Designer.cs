@@ -38,14 +38,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.Home = new System.Windows.Forms.Button();
             this.Bronze = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Highscores = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Bronze)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Highscores)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -168,17 +169,6 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Nummer 10";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.label11.Location = new System.Drawing.Point(544, 11);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(302, 48);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "HIGHSCORES";
-            // 
             // Home
             // 
             this.Home.BackColor = System.Drawing.Color.Transparent;
@@ -225,6 +215,17 @@
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             // 
+            // Highscores
+            // 
+            this.Highscores.BackColor = System.Drawing.Color.Transparent;
+            this.Highscores.BackgroundImage = global::Memory.Properties.Resources.highscores;
+            this.Highscores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Highscores.Location = new System.Drawing.Point(451, 21);
+            this.Highscores.Name = "Highscores";
+            this.Highscores.Size = new System.Drawing.Size(571, 110);
+            this.Highscores.TabIndex = 24;
+            this.Highscores.TabStop = false;
+            // 
             // HighscorePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -232,10 +233,10 @@
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1417, 730);
+            this.Controls.Add(this.Highscores);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Bronze);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -254,6 +255,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Bronze)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Highscores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,12 +273,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label Positielabel;
         private System.Windows.Forms.Label Gamemode_Label;
 		private System.Windows.Forms.Button Home;
         private System.Windows.Forms.PictureBox Bronze;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox Highscores;
     }
 }

@@ -16,6 +16,9 @@ namespace Memory
 		public HighscorePage()
         {
             InitializeComponent();
+
+            Controls.Add(Home);
+            Home.BackColor = Color.Transparent;
         }
 
 		private async void Home_Click(object sender, EventArgs e)
