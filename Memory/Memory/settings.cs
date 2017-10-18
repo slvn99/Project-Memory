@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Memory
 {
-	public partial class SettingsPage : Form
-	{
-		public SettingsPage()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class settings : Form
+    {
+        public settings()
+        {
+            
+        }
+
+        private void settings_Load(object sender, EventArgs e)
+        {
+            
+        }
+    }
 }
