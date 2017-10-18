@@ -123,6 +123,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Bronze_trophy {
+            get {
+                object obj = ResourceManager.GetObject("Bronze_trophy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap buttons_PNG32 {
             get {
                 object obj = ResourceManager.GetObject("buttons_PNG32", resourceCulture);
@@ -213,9 +223,29 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Gold_trophy {
+            get {
+                object obj = ResourceManager.GetObject("Gold_trophy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Google {
             get {
                 object obj = ResourceManager.GetObject("Google", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap highscores {
+            get {
+                object obj = ResourceManager.GetObject("highscores", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -416,6 +446,16 @@ namespace Memory.Properties {
         public static System.Drawing.Bitmap SettingsButton {
             get {
                 object obj = ResourceManager.GetObject("SettingsButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Silver_trophy {
+            get {
+                object obj = ResourceManager.GetObject("Silver_trophy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

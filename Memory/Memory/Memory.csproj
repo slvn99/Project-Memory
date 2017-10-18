@@ -145,6 +145,10 @@
     <Content Include="chiper.wav" />
     <Content Include="click.wav" />
     <Content Include="ping.wav" />
+    <None Include="Resources\highscores.png" />
+    <None Include="Resources\Silver trophy.png" />
+    <None Include="Resources\Gold trophy.png" />
+    <None Include="Resources\Bronze trophy.png" />
     <None Include="Resources\HomeButton.png" />
     <None Include="Resources\player 1 beste versie.png" />
     <None Include="Resources\player 1 test.png" />

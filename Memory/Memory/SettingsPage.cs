@@ -12,6 +12,7 @@ namespace Memory
 {
 	public partial class SettingsPage : Form
 	{
+		public static string SetValueForComboBox = "";
 		System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 		public SettingsPage()
 		{
@@ -20,19 +21,19 @@ namespace Memory
 
 		private void ThemaBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (ThemaBox.SelectedItem == "Thema 1" )
+			if (ThemaBox.SelectedText == "Thema 1")
 			{
-				
+				// Als thema 1 gepickt wordt, dan moet het thema 1 gebruiken als cards
 			}
 
-			if (ThemaBox.SelectedItem == "Thema 2")
+			if (ThemaBox.SelectedText == "Thema 2")
 			{
-
+				// Als thema 2 gepickt wordt, dan moet het thema 2 gebruiken als cards
 			}
 
-			if (ThemaBox.SelectedItem == "Thema 3")
+			if (ThemaBox.SelectedText == "Thema 3")
 			{
-
+				// Als thema 3 gepickt wordt, dan moet het thema 3 gebruiken als cards
 			}
 		}
 
@@ -50,11 +51,16 @@ namespace Memory
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
-			Memory.Form2 f2 = new Memory.Form2();
+			Memory.HomePage f2 = new Memory.HomePage();
 			f2.Show();
 			await Task.Delay(100);
 			this.Close();
 			this.ShowInTaskbar = false;
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			SetValueForComboBox = ThemaBox.SelectedText;
 		}
 	}
 }

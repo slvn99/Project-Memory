@@ -16,13 +16,23 @@ namespace Memory
 		public HighscorePage()
         {
             InitializeComponent();
+
+            ChangeCursor();
         }
 
-		private async void Home_Click(object sender, EventArgs e)
+        void ChangeCursor()
+        {
+            Bitmap bmp = new Bitmap(Properties.Resources.mouse_xs);
+            Cursor c = new Cursor(bmp.GetHicon());
+            this.Cursor = c;
+
+        }
+
+            private async void Home_Click(object sender, EventArgs e)
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
-			Memory.Form2 f2 = new Memory.Form2();
+			Memory.HomePage f2 = new Memory.HomePage();
 			f2.Show();
 			await Task.Delay(100);
 			this.Close();
