@@ -94,8 +94,11 @@ namespace WindowsFormsApp1
                 Player2LabelInvoer.Visible = true;
                 Points1.Visible = true;
                 Points2.Visible = true;
-                BeurtLabel.Visible = true;               
+                BeurtLabel.Visible = true;
+                Beurt.Visible = true;
                 Saveclass.Visible = true;
+                Speler1.Visible = true;
+                Speler2.Visible = true;
 
                 Player1LabelInvoer.Text = Player1Textbox.Text;
                 Player2LabelInvoer.Text = Player2Textbox.Text;
@@ -228,6 +231,8 @@ namespace WindowsFormsApp1
             Player2Textbox.Text = string.Empty;
             Player1LabelInvoer.Visible = false;
             Player2LabelInvoer.Visible = false;
+            Speler1.Visible = true;
+            Speler2.Visible = true;
 
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
@@ -478,6 +483,21 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void ExitButton_Click(object sender, EventArgs e)
         {
             DialogResult ExitGame = MessageBox.Show("Weet u zeker dat u het spel wil verlaten? Onopgeslagen progressie zal verloren gaan! ", "Exit", MessageBoxButtons.YesNo); 
@@ -619,5 +639,6 @@ namespace WindowsFormsApp1
             Variablen_save.Visible = false;
             value.Text = "";
         }
+
     }
 }

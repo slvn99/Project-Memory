@@ -103,6 +103,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Beurt1 {
+            get {
+                object obj = ResourceManager.GetObject("Beurt1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap blue_wallpaper_7 {
             get {
                 object obj = ResourceManager.GetObject("blue_wallpaper_7", resourceCulture);
@@ -343,6 +353,26 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap player_1_beste_versie {
+            get {
+                object obj = ResourceManager.GetObject("player_1_beste_versie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap player_22 {
+            get {
+                object obj = ResourceManager.GetObject("player_22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap RankingButton {
             get {
                 object obj = ResourceManager.GetObject("RankingButton", resourceCulture);
@@ -396,6 +426,26 @@ namespace Memory.Properties {
         public static System.Drawing.Bitmap SpeakerButton {
             get {
                 object obj = ResourceManager.GetObject("SpeakerButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap speler_1 {
+            get {
+                object obj = ResourceManager.GetObject("speler_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap speler_2 {
+            get {
+                object obj = ResourceManager.GetObject("speler_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

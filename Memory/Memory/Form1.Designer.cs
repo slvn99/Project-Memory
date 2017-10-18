@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp1
+﻿using System;
+
+namespace WindowsFormsApp1
 {
     partial class Form1
     {
@@ -20,6 +22,8 @@
             base.Dispose(disposing);
         }
 
+        
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -28,6 +32,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.GridButton1 = new System.Windows.Forms.Button();
             this.GridButton1Dup = new System.Windows.Forms.Button();
             this.GridButton2 = new System.Windows.Forms.Button();
@@ -64,9 +69,19 @@
             this.play = new System.Windows.Forms.PictureBox();
             this.Exit = new System.Windows.Forms.PictureBox();
             this.Reset = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Beurt = new System.Windows.Forms.PictureBox();
+            this.Speler1 = new System.Windows.Forms.PictureBox();
+            this.Speler2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Reset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Beurt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Speler1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Speler2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // GridButton1
@@ -500,6 +515,63 @@
             this.Reset.TabStop = false;
             this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(487, 263);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 37);
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Beurt
+            // 
+            this.Beurt.BackColor = System.Drawing.Color.Transparent;
+            this.Beurt.BackgroundImage = global::Memory.Properties.Resources.Beurt1;
+            this.Beurt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Beurt.Location = new System.Drawing.Point(1065, 78);
+            this.Beurt.Name = "Beurt";
+            this.Beurt.Size = new System.Drawing.Size(121, 49);
+            this.Beurt.TabIndex = 42;
+            this.Beurt.TabStop = false;
+            // 
+            // Speler1
+            // 
+            this.Speler1.BackColor = System.Drawing.Color.Transparent;
+            this.Speler1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Speler1.BackgroundImage")));
+            this.Speler1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Speler1.Location = new System.Drawing.Point(1075, 3);
+            this.Speler1.Name = "Speler1";
+            this.Speler1.Size = new System.Drawing.Size(100, 36);
+            this.Speler1.TabIndex = 43;
+            this.Speler1.TabStop = false;
+            // 
+            // Speler2
+            // 
+            this.Speler2.BackColor = System.Drawing.Color.Transparent;
+            this.Speler2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Speler2.BackgroundImage")));
+            this.Speler2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Speler2.Location = new System.Drawing.Point(1075, 35);
+            this.Speler2.Name = "Speler2";
+            this.Speler2.Size = new System.Drawing.Size(100, 37);
+            this.Speler2.TabIndex = 44;
+            this.Speler2.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(487, 321);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(144, 42);
+            this.pictureBox2.TabIndex = 45;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -507,6 +579,11 @@
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1417, 730);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.Speler2);
+            this.Controls.Add(this.Speler1);
+            this.Controls.Add(this.Beurt);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Reset);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.play);
@@ -548,10 +625,16 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.play)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Reset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Beurt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Speler1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Speler2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -594,6 +677,11 @@
         private System.Windows.Forms.PictureBox play;
         private System.Windows.Forms.PictureBox Exit;
         private System.Windows.Forms.PictureBox Reset;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Beurt;
+        private System.Windows.Forms.PictureBox Speler1;
+        private System.Windows.Forms.PictureBox Speler2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
