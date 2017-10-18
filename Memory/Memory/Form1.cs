@@ -23,13 +23,21 @@ namespace WindowsFormsApp1
         List<Point> punten = new List<Point>();
         List<string> matchlist = new List<string>();
         Random ButtonLocatie = new Random();
+        string thema = Memory.SettingsPage_Save.LoadData();
 
-		public Memory.SettingsPage SettingsPage = new Memory.SettingsPage();
 		public Form1()
         {
             InitializeComponent();
-            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
+            if (thema == "Er is nog geen\nsave file\naanwezig")
+            { }
+            else
+            {
+                //vul hier thema case statement ofzo in idk wtf to do zoek het uit morgen fuckbooiiiissss enjoy your free .ini feature cunts
+            }
+
+            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+            
             ChangeCursor();
 
             foreach (var x in ButtonGrid)
@@ -639,7 +647,21 @@ namespace WindowsFormsApp1
         {
             //laten zien van wat er in de save staat
             Variablen_save.Visible = true;
-            value.Text = Save.LoadData();
+            string buffer = Save.LoadData();
+            string buffer2 = "";
+            if (buffer == "Er is nog geen\nsave file\naanwezig")
+            {
+                value.Text = buffer;
+            }
+            else
+            {
+                string[] savearray = buffer.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+                for (int i = 0; i < 5; i++)
+                {
+                    buffer2 = (buffer2 + savearray[i] +"n");
+                }
+                value.Text = buffer2;
+            }
         }
 
         private void Loadclass_MouseLeave(object sender, EventArgs e)

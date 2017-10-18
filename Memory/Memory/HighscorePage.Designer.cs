@@ -273,8 +273,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label Positielabel;
-        private System.Windows.Forms.Label Gamemode_Label;
 		private System.Windows.Forms.Button Home;
         private System.Windows.Forms.PictureBox Bronze;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -89,15 +89,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Save.cs" />
-    <Compile Include="Settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="SettingsPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SettingsPage.Designer.cs">
       <DependentUpon>SettingsPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsPage_Save.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,7 +122,6 @@
     <EmbeddedResource Include="SettingsPage.resx">
       <DependentUpon>SettingsPage.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bin\Debug\game.sav" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -143,9 +140,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\THE_TING_GO_SKRRA.wav" />
-    <Content Include="chiper.wav" />
-    <Content Include="click.wav" />
-    <Content Include="ping.wav" />
+    <Content Include="bin\Debug\chiper.wav" />
+    <Content Include="bin\Debug\click.wav" />
+    <Content Include="bin\Debug\ping.wav" />
     <None Include="Resources\highscores.png" />
     <None Include="Resources\Silver trophy.png" />
     <None Include="Resources\Gold trophy.png" />
