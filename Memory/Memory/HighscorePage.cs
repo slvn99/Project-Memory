@@ -12,9 +12,21 @@ namespace Memory
 {
     public partial class HighscorePage : Form
     {
-        public HighscorePage()
+		System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+		public HighscorePage()
         {
             InitializeComponent();
         }
-    }
+
+		private async void Home_Click(object sender, EventArgs e)
+		{
+			player.SoundLocation = "click.wav";
+			player.Play();
+			Memory.Form2 f2 = new Memory.Form2();
+			f2.Show();
+			await Task.Delay(100);
+			this.Close();
+			this.ShowInTaskbar = false;
+		}
+	}
 }

@@ -39,12 +39,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+			this.Home = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -155,61 +150,19 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(248, 39);
             this.label11.TabIndex = 10;
-            this.label11.Text = "HIGHSCORES";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(266, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Classic";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(349, 60);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Gamemode2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(430, 60);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Gamemode3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(511, 60);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Gamemode4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(592, 60);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Gamemode5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(673, 60);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "Gamemode6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.label11.Text = "HIGHSCORES";          
+			//
+			// Home
+			// 
+			this.Home.BackColor = System.Drawing.Color.Transparent;
+			this.Home.BackgroundImage = global::Memory.Properties.Resources.HomeButton;
+			this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.Home.Location = new System.Drawing.Point(979, 515);
+			this.Home.Name = "Home";
+			this.Home.Size = new System.Drawing.Size(88, 88);
+			this.Home.TabIndex = 19;
+			this.Home.UseVisualStyleBackColor = false;
+			this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // HighscorePage
             // 
@@ -218,12 +171,6 @@
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1063, 593);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -235,18 +182,18 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+			this.Controls.Add(this.Home);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "HighscorePage";
             this.Text = "HighscorePage";
             this.ResumeLayout(false);
             this.PerformLayout();
 
+		}
 
-        }
+		#endregion
 
-        #endregion
-
-        private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -257,11 +204,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label Positielabel;
+        private System.Windows.Forms.Label Gamemode_Label;
+		private System.Windows.Forms.Button Home;
     }
 }

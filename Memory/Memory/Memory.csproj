@@ -145,6 +145,7 @@
     <Content Include="chiper.wav" />
     <Content Include="click.wav" />
     <Content Include="ping.wav" />
+    <None Include="Resources\HomeButton.png" />
     <None Include="Resources\player 1 beste versie.png" />
     <None Include="Resources\player 1 test.png" />
     <None Include="Resources\player 1 test 1.png" />

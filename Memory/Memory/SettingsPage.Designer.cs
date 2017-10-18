@@ -33,7 +33,8 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.ThemaBox = new System.Windows.Forms.ComboBox();
+			this.HomeButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -69,36 +70,48 @@
 			// 
 			// button1
 			// 
-			this.button1.BackgroundImage = global::Memory.Properties.Resources.MuteButton;
+			this.button1.BackColor = System.Drawing.Color.Transparent;
+			this.button1.BackgroundImage = global::Memory.Properties.Resources.SpeakerButton;
 			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-			this.button1.Location = new System.Drawing.Point(468, 157);
+			this.button1.Location = new System.Drawing.Point(508, 159);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 65);
-			this.button1.TabIndex = 4;
-			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Size = new System.Drawing.Size(75, 75);
+			this.button1.TabIndex = 2;
+			this.button1.UseVisualStyleBackColor = false;
 			// 
 			// button2
 			// 
-			this.button2.BackgroundImage = global::Memory.Properties.Resources.SpeakerButton;
+			this.button2.BackColor = System.Drawing.Color.Transparent;
+			this.button2.BackgroundImage = global::Memory.Properties.Resources.MuteButton;
 			this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button2.Location = new System.Drawing.Point(540, 157);
+			this.button2.Location = new System.Drawing.Point(436, 159);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(72, 65);
-			this.button2.TabIndex = 5;
-			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Size = new System.Drawing.Size(75, 75);
+			this.button2.TabIndex = 1;
+			this.button2.UseVisualStyleBackColor = false;
 			// 
-			// comboBox1
+			// ThemaBox
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Items.AddRange(new object[] {
+			this.ThemaBox.Items.AddRange(new object[] {
             "Thema 1",
             "Thema 2",
             "Thema 3"});
-			this.comboBox1.Location = new System.Drawing.Point(468, 265);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(121, 21);
-			this.comboBox1.TabIndex = 6;
+			this.ThemaBox.Location = new System.Drawing.Point(436, 265);
+			this.ThemaBox.Name = "ThemaBox";
+			this.ThemaBox.Size = new System.Drawing.Size(121, 21);
+			this.ThemaBox.TabIndex = 0;
+			// 
+			// HomeButton
+			// 
+			this.HomeButton.BackColor = System.Drawing.Color.Transparent;
+			this.HomeButton.BackgroundImage = global::Memory.Properties.Resources.HomeButton;
+			this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.HomeButton.Location = new System.Drawing.Point(976, 505);
+			this.HomeButton.Name = "HomeButton";
+			this.HomeButton.Size = new System.Drawing.Size(88, 88);
+			this.HomeButton.TabIndex = 3;
+			this.HomeButton.UseVisualStyleBackColor = false;
+			this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click_1);
 			// 
 			// SettingsPage
 			// 
@@ -107,7 +120,8 @@
 			this.BackgroundImage = global::Memory.Properties.Resources.background_game;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1063, 593);
-			this.Controls.Add(this.comboBox1);
+			this.Controls.Add(this.HomeButton);
+			this.Controls.Add(this.ThemaBox);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label3);
@@ -115,6 +129,7 @@
 			this.Controls.Add(this.label1);
 			this.Name = "SettingsPage";
 			this.ShowInTaskbar = false;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "SettingsPage";
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -128,6 +143,7 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox ThemaBox;
+		private System.Windows.Forms.Button HomeButton;
 	}
 }
