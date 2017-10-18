@@ -30,7 +30,6 @@ namespace Memory
             else
             {
                 savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
-                lengte = int.Parse(savearray[0]);
             }
             
             //lengte +1 ivm 1 extra entry
