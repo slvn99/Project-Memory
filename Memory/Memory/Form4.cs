@@ -96,7 +96,7 @@ namespace Memory
 			else if (a == 7)
 			{
 				label1.Text = "The ting goes skraa";
-				player.SoundLocation = "THE_TING_GO_SKRAA.wav";
+				player.SoundLocation = "THE_TING_GO_SKRRA.wav";
 				player.Play();
 				label1.Font = new Font("Arial", 18, FontStyle.Bold);
 				label1.ForeColor = System.Drawing.Color.Black;
