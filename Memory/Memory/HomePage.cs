@@ -65,5 +65,10 @@ namespace Memory
             this.WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false;
         }
+
+        private void HomePage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

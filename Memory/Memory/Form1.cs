@@ -452,11 +452,16 @@ namespace WindowsFormsApp1
             Play_Game();
         }
 
-        private void Exit_Click(object sender, EventArgs e)
+        private async void Exit_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
             player.Play();
-            Application.Exit();
+            Memory.Form2 f2 = new Memory.Form2();
+            f2.Show();
+            await Task.Delay(100);
+            this.Close();
+            this.ShowInTaskbar = false;
+
         }
 
         private void Reset_Click(object sender, EventArgs e)
@@ -493,9 +498,10 @@ namespace WindowsFormsApp1
 
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private async void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Memory.HomePage f2 = new Memory.HomePage();
+            f2.Show();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
