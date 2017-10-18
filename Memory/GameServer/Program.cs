@@ -24,7 +24,7 @@ namespace GameServer
         private static void SetupServer()
         {
             Console.WriteLine("Setting up server....");
-            serverSocket.Bind(new IPEndPoint(IPAddress.Any, 500)); //bind serverSocet aan elk beschikbaar local interfaces
+            serverSocket.Bind(new IPEndPoint(IPAddress.Any, 9899)); //bind serverSocet aan elk beschikbaar local interfaces
             serverSocket.Listen(2); // hoeveel pending connections de server aan kan.
             serverSocket.BeginAccept(new AsyncCallback(AcceptCallback), null); //kijkt of er connections pending zijn.
 
