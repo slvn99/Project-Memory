@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
             using (MemoryStream stream = new MemoryStream())
             {
-                //Binary formatter die de data serialized vanuit de stream
+                //Binary formatter die de data serialized, en dit in de stream zet
                 BinaryFormatter formatter = new BinaryFormatter();
                 formatter.Serialize(stream, lengte);
                 formatter.Serialize(stream, player1);
@@ -61,13 +61,15 @@ namespace WindowsFormsApp1
                 formatter.Serialize(stream, playerbeurt);
                 formatter.Serialize(stream, matches);
 
-                int i = 0;               
+                int i = 0;
+                
                 while(i < lengte)
                 {
                     formatter.Serialize(stream, matcharray[i]);
                     i++;
                     //arrayint moet overgedragen worden naar deserialise somehow
                 }
+
                 //Return
                 return stream.ToArray();
             }
@@ -76,6 +78,7 @@ namespace WindowsFormsApp1
         private static string Deserialize(byte[] data)
         {
             string buf1, buf2, buf3, buf4, buf5, buf6,buf8, opslag = "";
+
             //Nieuwe memory stream aanmaken die wordt gebruikt door de formatter
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
             //De data uit de .sav wordt in de stream gezet
@@ -83,7 +86,7 @@ namespace WindowsFormsApp1
             {
                 using (MemoryStream stream = new MemoryStream(data))
                 {
-                    //Binary formatter die de data deserialized vanuit de stream
+                    //Binary formatter die de data deserialized, en dit in de stream zet
                     BinaryFormatter formatter = new BinaryFormatter();
 
                     //load het getal welke aangeeft hoeveel entry's de array had
@@ -117,6 +120,7 @@ namespace WindowsFormsApp1
                         opslag = (opslag + "\n" + buf7);
                         i++;
                     }
+
                     return opslag;
                 }
             }
@@ -154,6 +158,7 @@ namespace WindowsFormsApp1
             {
                 Console.WriteLine("Could not read file due: " + e.Message);
             }
+
             return null;
         }
     }
