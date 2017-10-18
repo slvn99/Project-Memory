@@ -40,7 +40,7 @@ namespace Memory
             player.Play();
             Memory.Form4 f5 = new Memory.Form4();
             f5.Show();
-            await Task.Delay(1000);
+            await Task.Delay(100);
             this.Hide();
         }
 
