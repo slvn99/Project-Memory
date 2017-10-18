@@ -31,7 +31,7 @@ namespace Memory
             else
             {
                 savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
-                lengte = LengteLoad(@""+path+"lengte.sav");
+                lengte = LengteLoad(@""+path+"lengte.ini");
             }
 
             //lengte +1 ivm 1 extra entry
@@ -71,7 +71,7 @@ namespace Memory
             WriteToFile(@"" + path + "highscores.sav", serialized);
 
             //lengte writen
-            LengteWrite(@"" + path + "lengte.sav", lengte);
+            LengteWrite(@"" + path + "lengte.ini", lengte);
         }
 
         //Caller read
@@ -82,11 +82,11 @@ namespace Memory
 
             //het ophalen van de bytes uit de .sav
             byte[] bytes = ReadFromFile(@"" + path + "highscores.sav");
-            int buf = LengteLoad(@"" + path + "lengte.sav");
-            string opslag = Convert.ToString(buf);
 
-            //Terugzetten van bytes naar data
-            opslag = opslag + "\n" + Deserialize(bytes);
+
+                
+            string opslag =Deserialize(bytes);
+                
 
             //variabelen teruggeven aan button die een label aanpast
             return (opslag);
@@ -133,7 +133,7 @@ namespace Memory
                     BinaryFormatter formatter = new BinaryFormatter();
 
                     //load het getal welke aangeeft hoeveel entry's de array had
-                    int l2 = LengteLoad(@"" + path + "lengte.sav");
+                    int l2 = LengteLoad(@"" + path + "lengte.ini");
 
                     //Return de game data.
                     int i = 0;

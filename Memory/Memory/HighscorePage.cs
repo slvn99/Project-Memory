@@ -26,9 +26,17 @@ namespace Memory
                 //toekennen van waarden uit array aan variabelen
                 try
                 {
+                    if (savearray[0] != null)
+                    {
+                        label1.Text = savearray[0];
+                    }
+                }
+                catch (Exception) { }
+                try
+                {
                     if (savearray[1] != null)
                     {
-                        label1.Text = savearray[1];
+                        label2.Text = savearray[1];
                     }
                 }
                 catch (Exception) { }
@@ -36,7 +44,7 @@ namespace Memory
                 {
                     if (savearray[2] != null)
                     {
-                        label2.Text = savearray[2];
+                        label3.Text = savearray[2];
                     }
                 }
                 catch (Exception) { }
@@ -44,7 +52,7 @@ namespace Memory
                 {
                     if (savearray[3] != null)
                     {
-                        label3.Text = savearray[3];
+                        label4.Text = savearray[3];
                     }
                 }
                 catch (Exception) { }
@@ -52,7 +60,7 @@ namespace Memory
                 {
                     if (savearray[4] != null)
                     {
-                        label4.Text = savearray[4];
+                        label5.Text = savearray[4];
                     }
                 }
                 catch (Exception) { }
@@ -60,7 +68,7 @@ namespace Memory
                 {
                     if (savearray[5] != null)
                     {
-                        label5.Text = savearray[5];
+                        label6.Text = savearray[5];
                     }
                 }
                 catch (Exception) { }
@@ -68,7 +76,7 @@ namespace Memory
                 {
                     if (savearray[6] != null)
                     {
-                        label6.Text = savearray[6];
+                        label7.Text = savearray[6];
                     }
                 }
                 catch (Exception) { }
@@ -76,7 +84,7 @@ namespace Memory
                 {
                     if (savearray[7] != null)
                     {
-                        label7.Text = savearray[7];
+                        label8.Text = savearray[7];
                     }
                 }
                 catch (Exception) { }
@@ -84,7 +92,7 @@ namespace Memory
                 {
                     if (savearray[8] != null)
                     {
-                        label8.Text = savearray[8];
+                        label9.Text = savearray[8];
                     }
                 }
                 catch (Exception) { }
@@ -92,15 +100,7 @@ namespace Memory
                 {
                     if (savearray[9] != null)
                     {
-                        label9.Text = savearray[9];
-                    }
-                }
-                catch (Exception) { }
-                try
-                {
-                    if (savearray[10] != null)
-                    {
-                        label10.Text = savearray[10];
+                        label10.Text = savearray[9];
                     }
                 }
                 catch (Exception) { }
