@@ -500,7 +500,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private async void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Memory.HomePage f2 = new Memory.HomePage();
             f2.Show();

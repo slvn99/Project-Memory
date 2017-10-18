@@ -35,6 +35,7 @@
 			this.button2 = new System.Windows.Forms.Button();
 			this.ThemaBox = new System.Windows.Forms.ComboBox();
 			this.HomeButton = new System.Windows.Forms.Button();
+			this.button3 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -113,6 +114,17 @@
 			this.HomeButton.UseVisualStyleBackColor = false;
 			this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click_1);
 			// 
+			// button3
+			// 
+			this.button3.Font = new System.Drawing.Font("Arial", 13F);
+			this.button3.Location = new System.Drawing.Point(447, 467);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(81, 32);
+			this.button3.TabIndex = 4;
+			this.button3.Text = "Apply";
+			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
+			// 
 			// SettingsPage
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,6 +132,7 @@
 			this.BackgroundImage = global::Memory.Properties.Resources.background_game;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1063, 593);
+			this.Controls.Add(this.button3);
 			this.Controls.Add(this.HomeButton);
 			this.Controls.Add(this.ThemaBox);
 			this.Controls.Add(this.button2);
@@ -145,5 +158,6 @@
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.ComboBox ThemaBox;
 		private System.Windows.Forms.Button HomeButton;
+		private System.Windows.Forms.Button button3;
 	}
 }
