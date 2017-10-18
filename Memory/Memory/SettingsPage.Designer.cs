@@ -36,11 +36,11 @@
 			this.ThemaBox = new System.Windows.Forms.ComboBox();
 			this.HomeButton = new System.Windows.Forms.Button();
 			this.Apply = new System.Windows.Forms.Button();
+			this.button3 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
 			// 
-			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Arial", 40F);
 			this.label1.Location = new System.Drawing.Point(462, 51);
 			this.label1.Name = "label1";
@@ -52,6 +52,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
+			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Arial", 20F);
 			this.label2.Location = new System.Drawing.Point(261, 168);
 			this.label2.Name = "label2";
@@ -62,6 +63,7 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.Color.Transparent;
 			this.label3.Font = new System.Drawing.Font("Arial", 20F);
 			this.label3.Location = new System.Drawing.Point(261, 265);
 			this.label3.Name = "label3";
@@ -125,6 +127,15 @@
 			this.Apply.UseVisualStyleBackColor = true;
 			this.Apply.Click += new System.EventHandler(this.Apply_Click);
 			// 
+			// button3
+			// 
+			this.button3.Location = new System.Drawing.Point(767, 314);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(75, 23);
+			this.button3.TabIndex = 5;
+			this.button3.Text = "vOOR JORDEN";
+			this.button3.UseVisualStyleBackColor = true;
+			// 
 			// SettingsPage
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,6 +143,7 @@
 			this.BackgroundImage = global::Memory.Properties.Resources.background_game;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1063, 593);
+			this.Controls.Add(this.button3);
 			this.Controls.Add(this.Apply);
 			this.Controls.Add(this.HomeButton);
 			this.Controls.Add(this.ThemaBox);
@@ -159,5 +171,6 @@
 		private System.Windows.Forms.ComboBox ThemaBox;
 		private System.Windows.Forms.Button HomeButton;
 		private System.Windows.Forms.Button Apply;
+		private System.Windows.Forms.Button button3;
 	}
 }
