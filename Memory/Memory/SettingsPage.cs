@@ -58,9 +58,10 @@ namespace Memory
 			this.ShowInTaskbar = false;
 		}
 
-		public void button3_Click(object sender, EventArgs e)
+		public void Apply_Click(object sender, EventArgs e)
 		{
 			SetValueForComboBox = ThemaBox.SelectedText;
+			MessageBox.Show(SetValueForComboBox);
 		}
 	}
 }

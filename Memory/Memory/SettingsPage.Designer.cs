@@ -123,7 +123,7 @@
 			this.Apply.TabIndex = 4;
 			this.Apply.Text = "Apply";
 			this.Apply.UseVisualStyleBackColor = true;
-			this.Apply.Click += new System.EventHandler(this.button3_Click);
+			this.Apply.Click += new System.EventHandler(this.Apply_Click);
 			// 
 			// SettingsPage
 			// 
