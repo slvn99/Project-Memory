@@ -3,6 +3,7 @@ using System.IO;
 using System.Resources;
 using System.Runtime.Serialization.Formatters.Binary;
 using Memory.Properties;
+using System.Security.Cryptography;
 
 
 namespace WindowsFormsApp1
@@ -25,6 +26,55 @@ namespace WindowsFormsApp1
 
             //deze bytes writen
             WriteToFile(@"" + path + "game.sav", serialized);
+
+            Encrypt();
+
+        }
+
+        //caller encrypt
+        public static void Encrypt()
+        {
+            try
+            {
+                var path = AppDomain.CurrentDomain.BaseDirectory;
+                //Create a new instance of the RijndaelManaged class  
+                // and encrypt the stream.  
+                RijndaelManaged RMCrypto = new RijndaelManaged();
+
+                byte[] Key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+                byte[] IV = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+                byte[] encrypted;
+
+                using (Rijndael rijAlg = Rijndael.Create())
+                {
+
+                    // Create an encryptor to perform the stream transform.
+                    ICryptoTransform encryptor = rijAlg.CreateEncryptor(Key, IV);
+
+                    // Create the streams used for encryption.
+                    using (MemoryStream msEncrypt = new MemoryStream())
+                    {
+                        using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                        {
+                            using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                            {                               
+                                //maak een filestream 
+                                FileStream FStream = new FileStream(@"" + path + "game.sav", FileMode.Open, FileAccess.ReadWrite, FileShare.None);
+                                //Write to the stream.  
+                                swEncrypt.WriteLine(FStream);
+                                FStream.Close();
+                            }
+                            encrypted = msEncrypt.ToArray();
+                        }
+                    }
+                }
+                WriteToFile(@"" + path + "game.sav", encrypted);
+            }
+            catch (Exception )
+            {
+                //Inform the user that an exception was raised.  
+                Console.WriteLine("Encrypten is mislukt.");
+            }
         }
 
         //Caller read
@@ -33,6 +83,8 @@ namespace WindowsFormsApp1
             //hier benoem ik path tot de locatie van de .exe
             var path = AppDomain.CurrentDomain.BaseDirectory;
 
+            Decrypt();
+
             //het ophalen van de bytes uit de .sav
             byte[] bytes = ReadFromFile(@""+ path + "game.sav");
 
@@ -40,7 +92,40 @@ namespace WindowsFormsApp1
             string opslag = Deserialize(bytes);
 
             //variabelen teruggeven aan button die een label aanpast
-            return (opslag);
+            return (opslag);           
+        }
+
+        //caller decrypt
+        public static void Decrypt()
+        {
+            //The key and IV must be the same values that were used  
+            //to encrypt the stream.    
+            byte[] Key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+            byte[] IV = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+            try
+            {
+                var path = AppDomain.CurrentDomain.BaseDirectory;
+                //maak een filestream 
+                FileStream FStream = new FileStream(@"" + path + "game.sav", FileMode.Open, FileAccess.ReadWrite, FileShare.None);
+
+                //Create a new instance of the RijndaelManaged class  
+                // and decrypt the stream.  
+                RijndaelManaged RMCrypto = new RijndaelManaged();
+
+                //Create a CryptoStream, pass it the NetworkStream, and decrypt   
+                //it with the Rijndael class using the key and IV.  
+                CryptoStream CryptStream = new CryptoStream(FStream,
+                   RMCrypto.CreateDecryptor(Key, IV),
+                   CryptoStreamMode.Write);
+
+                //Close the streams.  
+                FStream.Close();
+            }
+            //Catch any exceptions.   
+            catch
+            {
+                Console.WriteLine("Decrypten is mislukt.");
+            }
         }
 
         //------------------------------------------------------------------------------//
