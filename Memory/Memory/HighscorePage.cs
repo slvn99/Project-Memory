@@ -107,5 +107,10 @@ namespace Memory
 
             }
         }
+
+        private void HighscorePage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
