@@ -92,7 +92,7 @@ namespace Memory
 				label1.Dock = DockStyle.Fill;
 			}
 
-			else if (a == 1)
+			else if (a == 7)
 			{
 				label1.Text = "The ting goes skraa";
 				label1.Font = new Font("Arial", 18, FontStyle.Bold);

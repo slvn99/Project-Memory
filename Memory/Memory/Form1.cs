@@ -458,8 +458,8 @@ namespace WindowsFormsApp1
         {
             player.SoundLocation = "click.wav";
             player.Play();
-            Memory.Form2 f2 = new Memory.Form2();
-            f2.Show();
+            //Memory.HomePage f12 = new Memory.HomePage();
+            //f12.Show();
             await Task.Delay(100);
             this.Close();
             this.ShowInTaskbar = false;
