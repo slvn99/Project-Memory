@@ -46,7 +46,7 @@ namespace Server_Client
                 try
                 {
                     attempts++;
-                    clientSocket.Connect(IPAddress.Loopback, 500);
+                    clientSocket.Connect(IPAddress.Loopback, 9899);
                 }
                 catch (SocketException)
                 {
