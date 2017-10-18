@@ -99,6 +99,8 @@ namespace WindowsFormsApp1
                 Saveclass.Visible = true;
                 Speler1.Visible = true;
                 Speler2.Visible = true;
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
 
                 Player1LabelInvoer.Text = Player1Textbox.Text;
                 Player2LabelInvoer.Text = Player2Textbox.Text;
