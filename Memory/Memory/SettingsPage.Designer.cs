@@ -111,9 +111,9 @@
 			this.HomeButton.BackColor = System.Drawing.Color.Transparent;
 			this.HomeButton.BackgroundImage = global::Memory.Properties.Resources.HomeButton;
 			this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.HomeButton.Location = new System.Drawing.Point(976, 516);
+			this.HomeButton.Location = new System.Drawing.Point(975, 506);
 			this.HomeButton.Name = "HomeButton";
-			this.HomeButton.Size = new System.Drawing.Size(87, 78);
+			this.HomeButton.Size = new System.Drawing.Size(88, 88);
 			this.HomeButton.TabIndex = 7;
 			this.HomeButton.UseVisualStyleBackColor = false;
 			this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
@@ -134,6 +134,7 @@
 			this.Controls.Add(this.label1);
 			this.Name = "SettingsPage";
 			this.ShowInTaskbar = false;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "SettingsPage";
 			this.ResumeLayout(false);
 			this.PerformLayout();
