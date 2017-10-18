@@ -17,9 +17,18 @@ namespace Memory
 		public SettingsPage()
 		{
 			InitializeComponent();
+
+            ChangeCursor();
 		}
 
-		public void ThemaBox_SelectedIndexChanged(object sender, EventArgs e)
+        void ChangeCursor()
+        {
+            Bitmap bmp = new Bitmap(Properties.Resources.mouse_xs);
+            Cursor c = new Cursor(bmp.GetHicon());
+            this.Cursor = c;
+        }
+
+        public void ThemaBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (ThemaBox.SelectedText == "Thema 1")
 			{
