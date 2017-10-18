@@ -89,9 +89,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Save.cs" />
-    <Compile Include="Settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="SettingsPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +139,7 @@
     <Folder Include="AxWMPLib\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\sources images.txt" />
     <Content Include="chiper.wav" />
     <Content Include="click.wav" />
     <Content Include="ping.wav" />
