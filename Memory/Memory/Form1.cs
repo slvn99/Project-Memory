@@ -231,8 +231,11 @@ namespace WindowsFormsApp1
             Player2Textbox.Text = string.Empty;
             Player1LabelInvoer.Visible = false;
             Player2LabelInvoer.Visible = false;
+			play.Visible = true;
+			Exit.Visible = true;
+			Reset.Visible = true;
 
-            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+			Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
             foreach (var x in ButtonGrid)
             {
@@ -468,7 +471,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void ResetButton_Click(object sender, EventArgs e)
+		private void ResetButton_Click(object sender, EventArgs e)
         {
             DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (ResetGame == DialogResult.Yes)

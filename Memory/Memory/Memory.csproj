@@ -89,9 +89,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Save.cs" />
-    <Compile Include="Settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="SettingsPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +142,7 @@
     <Content Include="chiper.wav" />
     <Content Include="click.wav" />
     <Content Include="ping.wav" />
+    <None Include="Resources\HomeButton.png" />
     <None Include="Resources\transparent-square-tiles.png" />
     <None Include="Resources\SpeakerButton.png" />
     <None Include="Resources\zwart balkje.png" />
