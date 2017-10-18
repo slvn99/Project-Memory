@@ -12,6 +12,7 @@ namespace Memory
 {
 	public partial class SettingsPage : Form
 	{
+		public static string SetValueForComboBox = "";
 		System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 		public SettingsPage()
 		{
@@ -50,11 +51,16 @@ namespace Memory
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
-			Memory.Form2 f2 = new Memory.Form2();
+			Memory.HomePage f2 = new Memory.HomePage();
 			f2.Show();
 			await Task.Delay(100);
 			this.Close();
 			this.ShowInTaskbar = false;
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			SetValueForComboBox = ThemaBox.SelectedText;
 		}
 	}
 }

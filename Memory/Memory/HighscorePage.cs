@@ -25,7 +25,7 @@ namespace Memory
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
-			Memory.Form2 f2 = new Memory.Form2();
+			Memory.HomePage f2 = new Memory.HomePage();
 			f2.Show();
 			await Task.Delay(100);
 			this.Close();
