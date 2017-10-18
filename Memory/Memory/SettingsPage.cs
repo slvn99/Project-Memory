@@ -20,19 +20,19 @@ namespace Memory
 
 		private void ThemaBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (ThemaBox.SelectedItem == "Thema 1" )
+			if (ThemaBox.SelectedText == "Thema 1")
 			{
-				
+				// Als thema 1 gepickt wordt, dan moet het thema 1 gebruiken als cards
 			}
 
-			if (ThemaBox.SelectedItem == "Thema 2")
+			if (ThemaBox.SelectedText == "Thema 2")
 			{
-
+				// Als thema 2 gepickt wordt, dan moet het thema 2 gebruiken als cards
 			}
 
-			if (ThemaBox.SelectedItem == "Thema 3")
+			if (ThemaBox.SelectedText == "Thema 3")
 			{
-
+				// Als thema 3 gepickt wordt, dan moet het thema 3 gebruiken als cards
 			}
 		}
 
