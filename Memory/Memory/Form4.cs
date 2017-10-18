@@ -29,7 +29,7 @@ namespace Memory
             ChangeCursor();
 
             Random rand = new Random();
-            double a = rand.Next(1, 7);
+            double a = rand.Next(1, 8);
 
 			if (a == 1)
 			{
@@ -85,6 +85,15 @@ namespace Memory
 			else if (a == 6)
 			{
 				label1.Text = "Testing players for hacks";
+				label1.Font = new Font("Arial", 18, FontStyle.Bold);
+				label1.ForeColor = System.Drawing.Color.Black;
+				label1.AutoSize = false;
+				label1.TextAlign = ContentAlignment.MiddleCenter;
+				label1.Dock = DockStyle.Fill;
+			}
+			else if (a == 7)
+			{
+				label1.Text = "The ting goes skraaa";
 				label1.Font = new Font("Arial", 18, FontStyle.Bold);
 				label1.ForeColor = System.Drawing.Color.Black;
 				label1.AutoSize = false;

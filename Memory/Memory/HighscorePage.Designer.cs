@@ -195,7 +195,6 @@
             this.Load += new System.EventHandler(this.HighscorePage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -213,5 +212,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label Positielabel;
         private System.Windows.Forms.Label Gamemode_Label;
-    }
+		private System.Windows.Forms.Button HomeButton;
+	}
 }
