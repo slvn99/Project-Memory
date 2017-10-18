@@ -4,6 +4,7 @@ using System.Resources;
 using System.Runtime.Serialization.Formatters.Binary;
 using Memory.Properties;
 using System.Security.Cryptography;
+using System.Text;
 
 
 namespace WindowsFormsApp1
@@ -44,6 +45,9 @@ namespace WindowsFormsApp1
                 byte[] Key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
                 byte[] IV = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
                 byte[] encrypted;
+                byte[] raw;
+                raw = ReadFromFile(@"" + path + "game.sav");
+                string edited = Encoding.ASCII.GetString(raw);
 
                 using (Rijndael rijAlg = Rijndael.Create())
                 {
@@ -57,12 +61,9 @@ namespace WindowsFormsApp1
                         using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
                         {
                             using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
-                            {                               
-                                //maak een filestream 
-                                FileStream FStream = new FileStream(@"" + path + "game.sav", FileMode.Open, FileAccess.ReadWrite, FileShare.None);
+                            {                                                               
                                 //Write to the stream.  
-                                swEncrypt.WriteLine(FStream);
-                                FStream.Close();
+                                swEncrypt.Write(edited);
                             }
                             encrypted = msEncrypt.ToArray();
                         }
@@ -98,32 +99,41 @@ namespace WindowsFormsApp1
         //caller decrypt
         public static void Decrypt()
         {
-            //The key and IV must be the same values that were used  
-            //to encrypt the stream.    
-            byte[] Key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
-            byte[] IV = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
             try
             {
                 var path = AppDomain.CurrentDomain.BaseDirectory;
-                //maak een filestream 
-                FileStream FStream = new FileStream(@"" + path + "game.sav", FileMode.Open, FileAccess.ReadWrite, FileShare.None);
-
                 //Create a new instance of the RijndaelManaged class  
-                // and decrypt the stream.  
+                // and encrypt the stream.  
                 RijndaelManaged RMCrypto = new RijndaelManaged();
 
-                //Create a CryptoStream, pass it the NetworkStream, and decrypt   
-                //it with the Rijndael class using the key and IV.  
-                CryptoStream CryptStream = new CryptoStream(FStream,
-                   RMCrypto.CreateDecryptor(Key, IV),
-                   CryptoStreamMode.Write);
+                byte[] Key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+                byte[] IV = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+                string buffer;
 
-                //Close the streams.  
-                FStream.Close();
+                using (Rijndael rijAlg = Rijndael.Create())
+                {
+
+                    // Create an encryptor to perform the stream transform.
+                    ICryptoTransform decryptor = rijAlg.CreateDecryptor(Key, IV);
+                    byte[] bytes = ReadFromFile(@"" + path + "game.sav");
+                    // Create the streams used for encryption.
+                    using (MemoryStream msDecrypt = new MemoryStream(bytes))
+                    {
+                        using (CryptoStream csDecrypt = new CryptoStream(msDecrypt,decryptor, CryptoStreamMode.Read))
+                        {
+                            using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                            {
+                                buffer = srDecrypt.ReadToEnd();
+                                byte[] decrypted = Encoding.ASCII.GetBytes(buffer);
+                                WriteToFile(@"" + path + "game.sav", decrypted);
+                            }                           
+                        }
+                    }
+                }                
             }
-            //Catch any exceptions.   
-            catch
+            catch (Exception e)
             {
+                //Inform the user that an exception was raised.  
                 Console.WriteLine("Decrypten is mislukt.");
             }
         }
