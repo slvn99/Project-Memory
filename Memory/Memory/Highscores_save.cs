@@ -12,7 +12,6 @@ namespace Memory
     class Highscores_save
     {
         public static int lengte = 0;
-
         //-------------------------------------------------------------------------------//
         //Caller write
         public static void SaveData(string naam, int score)
@@ -57,8 +56,6 @@ namespace Memory
                 scorelist.CopyTo(newsavearray);
             }
             
-
-
             //reverse comparer initialiseren
             IComparer revComparer = new ReverseComparer();
             //de array omgekeerd sorteren op basis van ASCII oid.
@@ -81,13 +78,9 @@ namespace Memory
             var path = AppDomain.CurrentDomain.BaseDirectory;
 
             //het ophalen van de bytes uit de .sav
-            byte[] bytes = ReadFromFile(@"" + path + "highscores.sav");
-
-
-                
+            byte[] bytes = ReadFromFile(@"" + path + "highscores.sav");               
             string opslag =Deserialize(bytes);
                 
-
             //variabelen teruggeven aan button die een label aanpast
             return (opslag);
         }
@@ -100,11 +93,11 @@ namespace Memory
             //De 'using' zorgt er voor dat de memory stream altijd correct wordt afgesloten.
             using (MemoryStream stream = new MemoryStream())
             {
-                //Binary formatter die de data serialized, en dit in de stream zet
+                //Binary formatter die de data serialized welke in de memory stream staat
                 BinaryFormatter formatter = new BinaryFormatter();
 
-                int i = 0;
-
+                //loop gebasseerd op lengte van array
+                int i = 0;                
                 while (i < lengte)
                 {
                     formatter.Serialize(stream, savearray[i]);
@@ -129,7 +122,7 @@ namespace Memory
                 {
                     var path = AppDomain.CurrentDomain.BaseDirectory;
 
-                    //Binary formatter die de data deserialized, en dit in de stream zet
+                    //Binary formatter die de data deserialized uit de stream
                     BinaryFormatter formatter = new BinaryFormatter();
 
                     //load het getal welke aangeeft hoeveel entry's de array had
@@ -144,12 +137,12 @@ namespace Memory
                         opslag = (opslag  + buf7 + "\n");
                         i++;
                     }
-
                     return opslag;
                 }
             }
             catch (ArgumentNullException)
             {
+                //wanneer .sav niet bestaat deze message returnen
                 string message = "Er is nog geen\nsave file\naanwezig";
                 return message;
             }
@@ -180,7 +173,6 @@ namespace Memory
             catch (Exception )
             {
             }
-
             return null;
         }
 
@@ -202,7 +194,7 @@ namespace Memory
             //Try catch block om eventuele errors af te vangen.
             try
             {
-                //Alle bytes uitlezen uit een bestand en deze returnen.
+                //Alles uitlezen uit een bestand en deze returnen.
                 string buf = File.ReadAllText(file);
                 lengte = int.Parse(buf);
                 return lengte;
