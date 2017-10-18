@@ -17,11 +17,18 @@ namespace Memory
         {
             InitializeComponent();
 
-            Controls.Add(Home);
-            Home.BackColor = Color.Transparent;
+            ChangeCursor();
         }
 
-		private async void Home_Click(object sender, EventArgs e)
+        void ChangeCursor()
+        {
+            Bitmap bmp = new Bitmap(Properties.Resources.mouse_xs);
+            Cursor c = new Cursor(bmp.GetHicon());
+            this.Cursor = c;
+
+        }
+
+            private async void Home_Click(object sender, EventArgs e)
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
