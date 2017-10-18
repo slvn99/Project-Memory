@@ -31,16 +31,16 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
-			this.MuteButton = new System.Windows.Forms.Button();
-			this.SpeakerButton = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
 			this.ThemaBox = new System.Windows.Forms.ComboBox();
 			this.HomeButton = new System.Windows.Forms.Button();
+			this.button3 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Arial", 40F);
 			this.label1.Location = new System.Drawing.Point(462, 51);
 			this.label1.Name = "label1";
@@ -52,7 +52,6 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Arial", 20F);
 			this.label2.Location = new System.Drawing.Point(261, 168);
 			this.label2.Name = "label2";
@@ -63,7 +62,6 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.BackColor = System.Drawing.Color.Transparent;
 			this.label3.Font = new System.Drawing.Font("Arial", 20F);
 			this.label3.Location = new System.Drawing.Point(261, 265);
 			this.label3.Name = "label3";
@@ -71,52 +69,61 @@
 			this.label3.TabIndex = 2;
 			this.label3.Text = "Thema\'s";
 			// 
-			// MuteButton
+			// button1
 			// 
-			this.MuteButton.BackColor = System.Drawing.Color.Transparent;
-			this.MuteButton.BackgroundImage = global::Memory.Properties.Resources.MuteButton;
-			this.MuteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.MuteButton.ForeColor = System.Drawing.Color.Transparent;
-			this.MuteButton.Location = new System.Drawing.Point(468, 157);
-			this.MuteButton.Name = "MuteButton";
-			this.MuteButton.Size = new System.Drawing.Size(75, 65);
-			this.MuteButton.TabIndex = 4;
-			this.MuteButton.UseVisualStyleBackColor = false;
+			this.button1.BackColor = System.Drawing.Color.Transparent;
+			this.button1.BackgroundImage = global::Memory.Properties.Resources.SpeakerButton;
+			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.button1.Location = new System.Drawing.Point(508, 159);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 75);
+			this.button1.TabIndex = 2;
+			this.button1.UseVisualStyleBackColor = false;
 			// 
-			// SpeakerButton
+			// button2
 			// 
-			this.SpeakerButton.BackColor = System.Drawing.Color.Transparent;
-			this.SpeakerButton.BackgroundImage = global::Memory.Properties.Resources.SpeakerButton;
-			this.SpeakerButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.SpeakerButton.Location = new System.Drawing.Point(540, 157);
-			this.SpeakerButton.Name = "SpeakerButton";
-			this.SpeakerButton.Size = new System.Drawing.Size(72, 65);
-			this.SpeakerButton.TabIndex = 5;
-			this.SpeakerButton.UseVisualStyleBackColor = false;
+			this.button2.BackColor = System.Drawing.Color.Transparent;
+			this.button2.BackgroundImage = global::Memory.Properties.Resources.MuteButton;
+			this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.button2.Location = new System.Drawing.Point(436, 159);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(75, 75);
+			this.button2.TabIndex = 1;
+			this.button2.UseVisualStyleBackColor = false;
 			// 
 			// ThemaBox
 			// 
-			this.ThemaBox.FormattingEnabled = true;
 			this.ThemaBox.Items.AddRange(new object[] {
             "Thema 1",
             "Thema 2",
             "Thema 3"});
-			this.ThemaBox.Location = new System.Drawing.Point(468, 265);
+			this.ThemaBox.Location = new System.Drawing.Point(436, 265);
 			this.ThemaBox.Name = "ThemaBox";
 			this.ThemaBox.Size = new System.Drawing.Size(121, 21);
-			this.ThemaBox.TabIndex = 6;
+			this.ThemaBox.TabIndex = 0;
 			// 
 			// HomeButton
 			// 
 			this.HomeButton.BackColor = System.Drawing.Color.Transparent;
 			this.HomeButton.BackgroundImage = global::Memory.Properties.Resources.HomeButton;
 			this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.HomeButton.Location = new System.Drawing.Point(975, 506);
+			this.HomeButton.Location = new System.Drawing.Point(976, 505);
 			this.HomeButton.Name = "HomeButton";
 			this.HomeButton.Size = new System.Drawing.Size(88, 88);
-			this.HomeButton.TabIndex = 7;
+			this.HomeButton.TabIndex = 3;
 			this.HomeButton.UseVisualStyleBackColor = false;
-			this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+			this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click_1);
+			// 
+			// button3
+			// 
+			this.button3.Font = new System.Drawing.Font("Arial", 13F);
+			this.button3.Location = new System.Drawing.Point(447, 467);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(81, 32);
+			this.button3.TabIndex = 4;
+			this.button3.Text = "Apply";
+			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// SettingsPage
 			// 
@@ -125,10 +132,11 @@
 			this.BackgroundImage = global::Memory.Properties.Resources.background_game;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1063, 593);
+			this.Controls.Add(this.button3);
 			this.Controls.Add(this.HomeButton);
 			this.Controls.Add(this.ThemaBox);
-			this.Controls.Add(this.SpeakerButton);
-			this.Controls.Add(this.MuteButton);
+			this.Controls.Add(this.button2);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -146,9 +154,10 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Button MuteButton;
-		private System.Windows.Forms.Button SpeakerButton;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.ComboBox ThemaBox;
 		private System.Windows.Forms.Button HomeButton;
+		private System.Windows.Forms.Button button3;
 	}
 }

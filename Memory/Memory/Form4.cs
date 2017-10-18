@@ -91,15 +91,17 @@ namespace Memory
 				label1.TextAlign = ContentAlignment.MiddleCenter;
 				label1.Dock = DockStyle.Fill;
 			}
-			else if (a == 7)
+
+			else if (a == 1)
 			{
-				label1.Text = "The ting goes skraaa";
+				label1.Text = "The ting goes skraa";
 				label1.Font = new Font("Arial", 18, FontStyle.Bold);
 				label1.ForeColor = System.Drawing.Color.Black;
 				label1.AutoSize = false;
 				label1.TextAlign = ContentAlignment.MiddleCenter;
 				label1.Dock = DockStyle.Fill;
 			}
+
 		}
 
 		void ChangeCursor()

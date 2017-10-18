@@ -99,10 +99,8 @@ namespace WindowsFormsApp1
                 Saveclass.Visible = true;
                 Speler1.Visible = true;
                 Speler2.Visible = true;
-				play.Visible = false;
-				Exit.Visible = false;
-				Reset.Visible = false;
-
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
 
                 Player1LabelInvoer.Text = Player1Textbox.Text;
                 Player2LabelInvoer.Text = Player2Textbox.Text;
@@ -237,11 +235,8 @@ namespace WindowsFormsApp1
             Player2LabelInvoer.Visible = false;
             Speler1.Visible = true;
             Speler2.Visible = true;
-			play.Visible = true;
-			Exit.Visible = true;
-			Reset.Visible = true;
 
-			Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
             foreach (var x in ButtonGrid)
             {
@@ -461,14 +456,15 @@ namespace WindowsFormsApp1
 
         private async void Exit_Click(object sender, EventArgs e)
         {
-			player.SoundLocation = "click.wav";
-			player.Play();
-			Memory.Form2 f2 = new Memory.Form2();
-			f2.Show();
-			await Task.Delay(100);
-			this.Close();
-			this.ShowInTaskbar = false;
-		}
+            player.SoundLocation = "click.wav";
+            player.Play();
+            Memory.Form2 f2 = new Memory.Form2();
+            f2.Show();
+            await Task.Delay(100);
+            this.Close();
+            this.ShowInTaskbar = false;
+
+        }
 
         private void Reset_Click(object sender, EventArgs e)
         {
@@ -481,7 +477,7 @@ namespace WindowsFormsApp1
             }
         }
 
-		private void ResetButton_Click(object sender, EventArgs e)
+        private void ResetButton_Click(object sender, EventArgs e)
         {
             DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (ResetGame == DialogResult.Yes)
@@ -506,7 +502,8 @@ namespace WindowsFormsApp1
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Memory.HomePage f2 = new Memory.HomePage();
+            f2.Show();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
