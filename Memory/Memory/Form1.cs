@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-			TestLabel.Text = Memory.SettingsPage.SetValueForComboBox; 
+			
 		}
 
         private void PlayButton_Click(object sender, EventArgs e)
@@ -466,18 +466,6 @@ namespace WindowsFormsApp1
             Play_Game();
         }
 
-        private async void Exit_Click(object sender, EventArgs e)
-        {
-            player.SoundLocation = "click.wav";
-            player.Play();
-            //Memory.HomePage f12 = new Memory.HomePage();
-            //f12.Show();
-            await Task.Delay(100);
-            this.Close();
-            this.ShowInTaskbar = false;
-
-        }
-
         private void Reset_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -510,6 +498,16 @@ namespace WindowsFormsApp1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private async void pictureBox3_Click(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
+            this.Close();
+            this.ShowInTaskbar = false;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

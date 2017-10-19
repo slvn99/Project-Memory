@@ -84,5 +84,15 @@ namespace Memory
 		{
 
 		}
-	}
+
+        private async void Home_Click(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
+            this.Close();
+            this.ShowInTaskbar = false;
+        }
+    }
 }

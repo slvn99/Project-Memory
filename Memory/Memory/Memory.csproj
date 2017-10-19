@@ -139,6 +139,7 @@
     <Folder Include="AxWMPLib\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Settings.png" />
     <None Include="Resources\VolumeDownButton.png" />
     <None Include="bin\Debug\THE_TING_GO_SKRRA.wav" />
     <Content Include="bin\Debug\chiper.wav" />
