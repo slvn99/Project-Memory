@@ -118,12 +118,14 @@ namespace Memory
             WindowsFormsApp1.Form1  f1 = new WindowsFormsApp1.Form1();
             f1.Show();
             this.Close();
+            timer1.Stop();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             Memory.Form3 f6 = new Memory.Form3();
             f6.Close();
+            timer2.Stop();
         }
 
         private async void timer3_Tick(object sender, EventArgs e)
@@ -132,6 +134,7 @@ namespace Memory
 			player.Play();
 			await Task.Delay(2000);
 			player.Stop();
+            timer3.Stop();
 		}
 
         private void Loading_bar_Click(object sender, EventArgs e)
