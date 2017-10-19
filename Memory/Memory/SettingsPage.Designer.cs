@@ -37,9 +37,11 @@
 			this.VolumeUp = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.VolumeDown = new System.Windows.Forms.PictureBox();
+			this.MuteButton = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.VolumeUp)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.VolumeDown)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.MuteButton)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -113,7 +115,7 @@
 			this.VolumeUp.BackColor = System.Drawing.Color.Transparent;
 			this.VolumeUp.BackgroundImage = global::Memory.Properties.Resources.SpeakerButton;
 			this.VolumeUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.VolumeUp.Location = new System.Drawing.Point(521, 159);
+			this.VolumeUp.Location = new System.Drawing.Point(624, 159);
 			this.VolumeUp.Name = "VolumeUp";
 			this.VolumeUp.Size = new System.Drawing.Size(88, 88);
 			this.VolumeUp.TabIndex = 5;
@@ -133,12 +135,23 @@
 			this.VolumeDown.BackColor = System.Drawing.Color.Transparent;
 			this.VolumeDown.BackgroundImage = global::Memory.Properties.Resources.VolumeDownButton;
 			this.VolumeDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.VolumeDown.Location = new System.Drawing.Point(436, 159);
+			this.VolumeDown.Location = new System.Drawing.Point(530, 159);
 			this.VolumeDown.Name = "VolumeDown";
 			this.VolumeDown.Size = new System.Drawing.Size(88, 88);
 			this.VolumeDown.TabIndex = 7;
 			this.VolumeDown.TabStop = false;
 			this.VolumeDown.Click += new System.EventHandler(this.VolumeDown_Click);
+			// 
+			// MuteButton
+			// 
+			this.MuteButton.BackColor = System.Drawing.Color.Transparent;
+			this.MuteButton.BackgroundImage = global::Memory.Properties.Resources.MuteButton;
+			this.MuteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.MuteButton.Location = new System.Drawing.Point(436, 159);
+			this.MuteButton.Name = "MuteButton";
+			this.MuteButton.Size = new System.Drawing.Size(88, 88);
+			this.MuteButton.TabIndex = 8;
+			this.MuteButton.TabStop = false;
 			// 
 			// SettingsPage
 			// 
@@ -147,6 +160,7 @@
 			this.BackgroundImage = global::Memory.Properties.Resources.background_game;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1063, 593);
+			this.Controls.Add(this.MuteButton);
 			this.Controls.Add(this.VolumeDown);
 			this.Controls.Add(this.pictureBox2);
 			this.Controls.Add(this.VolumeUp);
@@ -164,6 +178,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.VolumeUp)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.VolumeDown)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.MuteButton)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -180,5 +195,6 @@
 		private System.Windows.Forms.PictureBox VolumeUp;
 		private System.Windows.Forms.PictureBox pictureBox2;
 		private System.Windows.Forms.PictureBox VolumeDown;
+		private System.Windows.Forms.PictureBox MuteButton;
 	}
 }
