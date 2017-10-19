@@ -94,9 +94,7 @@ namespace WindowsFormsApp1
                 TotaalMatches = 0;
                 Points1.Text = Convert.ToString(PuntenPlayer1);
                 Points2.Text = Convert.ToString(PuntenPlayer2);
-                Player1Label.Visible = false;
                 Player1Textbox.Visible = false;
-                Player2Label.Visible = false;
                 Player2Textbox.Visible = false;
                 Player1LabelInvoer.Visible = true;
                 Player2LabelInvoer.Visible = true;
@@ -109,6 +107,10 @@ namespace WindowsFormsApp1
                 Speler2.Visible = true;
                 pictureBox1.Visible = false;
                 pictureBox2.Visible = false;
+				Speler1.Visible = true;
+				Speler2.Visible = true;
+				Beurt.Visible = true;
+				play.Visible = false;
 
                 Player1LabelInvoer.Text = Player1Textbox.Text;
                 Player2LabelInvoer.Text = Player2Textbox.Text;
@@ -233,18 +235,20 @@ namespace WindowsFormsApp1
             BeurtLabel.Text = string.Empty;
             Kaart1Select = null;
             Kaart2Select = null;
-            Player1Label.Visible = true;
             Player1Textbox.Visible = true;
             Player1Textbox.Text = string.Empty;
-            Player2Label.Visible = true;
             Player2Textbox.Visible = true;
             Player2Textbox.Text = string.Empty;
             Player1LabelInvoer.Visible = false;
             Player2LabelInvoer.Visible = false;
-            Speler1.Visible = true;
-            Speler2.Visible = true;
+            Speler1.Visible = false;
+            Speler2.Visible = false;
+			Beurt.Visible = false;
+			play.Visible = true;
+			pictureBox1.Visible = true;
+			pictureBox2.Visible = true;
 
-            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+			Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
             foreach (var x in ButtonGrid)
             {

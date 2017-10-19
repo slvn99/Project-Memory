@@ -46,30 +46,43 @@ namespace Memory
 			}
 		}
 
-		private void MuteButton_Click(object sender, EventArgs e)
-		{
-			//Jorden maar ff doen ofzo geen idee hoe het met de music zit
-		}
-
-		private void SpeakerButton_Click(object sender, EventArgs e)
-		{
-			//Jorden maar ff doen ofzo geen idee hoe het met de music zit
-		}
-
 		private async void HomeButton_Click_1(object sender, EventArgs e)
+		{
+			player.SoundLocation = "click.wav";
+			player.Play();
+			await Task.Delay(300);
+			player.Stop();
+			this.Close();
+			this.ShowInTaskbar = false;
+		}
+
+		public async void Apply_Click(object sender, EventArgs e)
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
 			Memory.HomePage f2 = new Memory.HomePage();
 			f2.Show();
-			await Task.Delay(100);
-			this.WindowState = FormWindowState.Minimized;
-			this.ShowInTaskbar = false;
+			await Task.Delay(300);
+			player.Stop();
+			Memory.SettingsPage_Save.SaveData(ThemaBox.SelectedText);
 		}
 
-		public void Apply_Click(object sender, EventArgs e)
+		private async void SettingsPage_FormClosed(object sender, FormClosedEventArgs e)
 		{
-            Memory.SettingsPage_Save.SaveData(ThemaBox.SelectedText);
+			Memory.HomePage f13 = new Memory.HomePage();
+			f13.Show();
+			await Task.Delay(100);
+			this.Close();
+		}
+
+		private void VolumeDown_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void VolumeUp_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

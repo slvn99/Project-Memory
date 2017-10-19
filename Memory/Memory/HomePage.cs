@@ -40,8 +40,9 @@ namespace Memory
             player.Play();
             Memory.Form4 f5 = new Memory.Form4();
             f5.Show();
-            await Task.Delay(100);
-            this.Hide();
+            await Task.Delay(300);
+			player.Stop();
+			this.Hide();
         }
 
         private async void SettingButton_Click(object sender, EventArgs e)
@@ -50,7 +51,8 @@ namespace Memory
             player.Play();
             Memory.SettingsPage f6 = new Memory.SettingsPage();
             f6.Show();
-            await Task.Delay(100);
+            await Task.Delay(300);
+			player.Stop();
             this.WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false;
         }
@@ -61,8 +63,9 @@ namespace Memory
             player.Play();
             Memory.HighscorePage f7 = new Memory.HighscorePage();
             f7.Show();
-            await Task.Delay(100);
-            this.WindowState = FormWindowState.Minimized;
+            await Task.Delay(300);
+			player.Stop();
+			this.WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false;
         }
 

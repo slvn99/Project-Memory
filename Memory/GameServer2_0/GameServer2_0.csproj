@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3567B304-2205-4267-8A23-455082FFC391}</ProjectGuid>
+    <ProjectGuid>{42CC22C8-E582-4EA1-9530-29FFA69536D9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Server_Client</RootNamespace>
-    <AssemblyName>Server Client</AssemblyName>
+    <RootNamespace>GameServer2_0</RootNamespace>
+    <AssemblyName>GameServer2_0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MemoryClient.cs" />
+    <Compile Include="MemoryServer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

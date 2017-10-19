@@ -553,6 +553,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap VolumeDownButton {
+            get {
+                object obj = ResourceManager.GetObject("VolumeDownButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Youtube {
             get {
                 object obj = ResourceManager.GetObject("Youtube", resourceCulture);
