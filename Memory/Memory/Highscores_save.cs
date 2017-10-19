@@ -26,10 +26,10 @@ namespace Memory
 
             //proberen van laden van savedata if aanwezig, anders doet hij niks
             string message = Decrypt();
-            if (message == "Er is nog geen\nsave file\naanwezig")
-            { }
-            else
-            {
+            //if (message == "Decrypten is mislukt.")
+            //{ }
+            //else
+            //{
                 string save = LoadData();
                 if (save == "Er is nog geen\nsave file\naanwezig")
                 { }
@@ -73,7 +73,7 @@ namespace Memory
                 //lengte writen
                 LengteWrite(@"" + path + "lengte.ini", lengte);
                 Encrypt();
-            }
+            //}
         }
 
         //Caller read
