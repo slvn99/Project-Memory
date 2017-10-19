@@ -128,11 +128,13 @@ namespace Memory
             f6.Close();
         }
 
-        private void timer3_Tick(object sender, EventArgs e)
+        private async void timer3_Tick(object sender, EventArgs e)
         {
             player.SoundLocation = "ping.wav";
             player.Play();
-        }
+			await Task.Delay(2000);
+			player.Stop();
+		}
 
         private void Loading_bar_Click(object sender, EventArgs e)
         {

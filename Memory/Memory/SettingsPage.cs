@@ -60,16 +60,29 @@ namespace Memory
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
-			Memory.HomePage f2 = new Memory.HomePage();
-			f2.Show();
-			await Task.Delay(100);
-			this.WindowState = FormWindowState.Minimized;
+			await Task.Delay(300);
+			player.Stop();
+			this.Close();
 			this.ShowInTaskbar = false;
 		}
 
-		public void Apply_Click(object sender, EventArgs e)
+		public async void Apply_Click(object sender, EventArgs e)
 		{
-            Memory.SettingsPage_Save.SaveData(ThemaBox.SelectedText);
+			player.SoundLocation = "click.wav";
+			player.Play();
+			Memory.HomePage f2 = new Memory.HomePage();
+			f2.Show();
+			await Task.Delay(300);
+			player.Stop();
+			Memory.SettingsPage_Save.SaveData(ThemaBox.SelectedText);
+		}
+
+		private async void SettingsPage_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Memory.HomePage f13 = new Memory.HomePage();
+			f13.Show();
+			await Task.Delay(100);
+			this.Close();
 		}
 	}
 }

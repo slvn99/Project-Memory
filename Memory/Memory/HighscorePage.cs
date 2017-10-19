@@ -178,12 +178,15 @@ namespace Memory
             {
                 player.SoundLocation = "click.wav";
                 player.Play();
-                Memory.HomePage f2 = new Memory.HomePage();
-                f2.Show();
                 await Task.Delay(100);
-                this.Close();
+				this.Close();
                 this.ShowInTaskbar = false;
             }
-        
-    }
+
+		private void HighscorePage_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Memory.HomePage f2 = new Memory.HomePage();
+			f2.Show();
+		}
+	}
 }
