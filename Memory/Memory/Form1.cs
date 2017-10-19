@@ -25,7 +25,6 @@ namespace WindowsFormsApp1
         Random ButtonLocatie = new Random();
 
 		public Memory.SettingsPage SettingsPage = new Memory.SettingsPage();
-
 		public Form1()
         {
             InitializeComponent();
@@ -87,7 +86,9 @@ namespace WindowsFormsApp1
                 TotaalMatches = 0;
                 Points1.Text = Convert.ToString(PuntenPlayer1);
                 Points2.Text = Convert.ToString(PuntenPlayer2);
+                Player1Label.Visible = false;
                 Player1Textbox.Visible = false;
+                Player2Label.Visible = false;
                 Player2Textbox.Visible = false;
                 Player1LabelInvoer.Visible = true;
                 Player2LabelInvoer.Visible = true;
@@ -100,9 +101,6 @@ namespace WindowsFormsApp1
                 Speler2.Visible = true;
                 pictureBox1.Visible = false;
                 pictureBox2.Visible = false;
-                Beurt.Visible = true;
-                Speler1.Visible = true;
-                Speler2.Visible = true;
 
                 Player1LabelInvoer.Text = Player1Textbox.Text;
                 Player2LabelInvoer.Text = Player2Textbox.Text;
@@ -227,20 +225,16 @@ namespace WindowsFormsApp1
             BeurtLabel.Text = string.Empty;
             Kaart1Select = null;
             Kaart2Select = null;
+            Player1Label.Visible = true;
             Player1Textbox.Visible = true;
             Player1Textbox.Text = string.Empty;
+            Player2Label.Visible = true;
             Player2Textbox.Visible = true;
             Player2Textbox.Text = string.Empty;
             Player1LabelInvoer.Visible = false;
             Player2LabelInvoer.Visible = false;
             Speler1.Visible = true;
             Speler2.Visible = true;
-            Beurt.Visible = false;
-            Speler1.Visible = false;
-            Speler2.Visible = false;
-            pictureBox1.Visible = true;
-            pictureBox2.Visible = true;
-
 
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
@@ -453,12 +447,10 @@ namespace WindowsFormsApp1
         }
         #endregion
 
-        private async void play_Click_1(object sender, EventArgs e)
+        private void play_Click_1(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
             player.Play();
-            await Task.Delay(300);
-            player.Stop();
             Play_Game();
         }
 
@@ -468,19 +460,16 @@ namespace WindowsFormsApp1
             player.Play();
             //Memory.HomePage f12 = new Memory.HomePage();
             //f12.Show();
-            await Task.Delay(300);
-            player.Stop();
+            await Task.Delay(100);
             this.Close();
             this.ShowInTaskbar = false;
 
         }
 
-        private async void Reset_Click(object sender, EventArgs e)
+        private void Reset_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
             player.Play();
-            await Task.Delay(300);
-            player.Stop();
             DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (ResetGame == DialogResult.Yes)
             {

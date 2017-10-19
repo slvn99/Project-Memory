@@ -40,8 +40,7 @@ namespace Memory
             player.Play();
             Memory.Form4 f5 = new Memory.Form4();
             f5.Show();
-            await Task.Delay(300);
-            player.Stop();
+            await Task.Delay(100);
             this.Hide();
         }
 
@@ -51,8 +50,7 @@ namespace Memory
             player.Play();
             Memory.SettingsPage f6 = new Memory.SettingsPage();
             f6.Show();
-            await Task.Delay(300);
-            player.Stop();
+            await Task.Delay(100);
             this.WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false;
         }
@@ -63,8 +61,7 @@ namespace Memory
             player.Play();
             Memory.HighscorePage f7 = new Memory.HighscorePage();
             f7.Show();
-            await Task.Delay(300);
-            player.Stop();
+            await Task.Delay(100);
             this.WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false;
         }

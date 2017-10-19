@@ -104,6 +104,8 @@ namespace Memory
 				label1.TextAlign = ContentAlignment.MiddleCenter;
 				label1.Dock = DockStyle.Fill;
 			}
+
+
 		}
 
 		void ChangeCursor()
@@ -126,12 +128,10 @@ namespace Memory
             f6.Close();
         }
 
-        private async void timer3_Tick(object sender, EventArgs e)
+        private void timer3_Tick(object sender, EventArgs e)
         {
             player.SoundLocation = "ping.wav";
             player.Play();
-            await Task.Delay(1000);
-            player.Stop();
         }
 
         private void Loading_bar_Click(object sender, EventArgs e)
