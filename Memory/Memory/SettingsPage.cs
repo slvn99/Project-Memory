@@ -7,13 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Memory
 {
 	public partial class SettingsPage : Form
 	{
-		public static string SetValueForComboBox = "";
+        private const int APPCOMMAND_VOLUME_MUTE = 0x80000;
+        private const int APPCOMMAND_VOLUME_UP = 0xA0000;
+        private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
+        private const int WM_APPCOMMAND = 0x319;
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr SendMessageW(IntPtr hWnd, int Msg,
+        IntPtr wParam, IntPtr lParam);
+
+        public static string SetValueForComboBox = "";
+
 		System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
 		public SettingsPage()
 		{
 			InitializeComponent();
@@ -46,31 +58,52 @@ namespace Memory
 			}
 		}
 
-		private void MuteButton_Click(object sender, EventArgs e)
-		{
-			//Jorden maar ff doen ofzo geen idee hoe het met de music zit
-		}
-
-		private void SpeakerButton_Click(object sender, EventArgs e)
-		{
-			//Jorden maar ff doen ofzo geen idee hoe het met de music zit
-		}
-
 		private async void HomeButton_Click_1(object sender, EventArgs e)
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
 			Memory.HomePage f2 = new Memory.HomePage();
 			f2.Show();
-			await Task.Delay(100);
-			this.WindowState = FormWindowState.Minimized;
-			this.ShowInTaskbar = false;
+			await Task.Delay(300);
+            player.Stop();
+            this.Close();
 		}
 
-		public void Apply_Click(object sender, EventArgs e)
+		public async void Apply_Click(object sender, EventArgs e)
 		{
-			SetValueForComboBox = ThemaBox.SelectedText;
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
+            SetValueForComboBox = ThemaBox.SelectedText;
 			MessageBox.Show(SetValueForComboBox);
 		}
-	}
+
+        private async void SettingsPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Memory.HomePage f2 = new Memory.HomePage();
+            f2.Show();
+            await Task.Delay(100);
+            this.Close();
+        }
+
+        private async void Homepicture_Click(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
+            this.Close();
+        }
+
+        private async void MuteVolume_Click(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
+            (IntPtr)APPCOMMAND_VOLUME_MUTE);
+            await Task.Delay(300);
+            player.Stop();
+        }
+    }
 }

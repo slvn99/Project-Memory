@@ -38,15 +38,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.Home = new System.Windows.Forms.Button();
             this.Bronze = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Highscores = new System.Windows.Forms.PictureBox();
+            this.HomePicture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Bronze)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Highscores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -169,19 +170,6 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Nummer 10";
             // 
-            // Home
-            // 
-            this.Home.BackColor = System.Drawing.Color.Transparent;
-            this.Home.BackgroundImage = global::Memory.Properties.Resources.HomeButton;
-            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Home.Location = new System.Drawing.Point(1305, 634);
-            this.Home.Margin = new System.Windows.Forms.Padding(4);
-            this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(117, 108);
-            this.Home.TabIndex = 19;
-            this.Home.UseVisualStyleBackColor = false;
-            this.Home.Click += new System.EventHandler(this.Home_Click);
-            // 
             // Bronze
             // 
             this.Bronze.BackColor = System.Drawing.Color.Transparent;
@@ -220,11 +208,23 @@
             this.Highscores.BackColor = System.Drawing.Color.Transparent;
             this.Highscores.BackgroundImage = global::Memory.Properties.Resources.highscores;
             this.Highscores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Highscores.Location = new System.Drawing.Point(451, 21);
+            this.Highscores.Location = new System.Drawing.Point(432, 21);
             this.Highscores.Name = "Highscores";
             this.Highscores.Size = new System.Drawing.Size(571, 110);
             this.Highscores.TabIndex = 24;
             this.Highscores.TabStop = false;
+            // 
+            // HomePicture
+            // 
+            this.HomePicture.BackColor = System.Drawing.Color.Transparent;
+            this.HomePicture.BackgroundImage = global::Memory.Properties.Resources.HomeButton;
+            this.HomePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.HomePicture.Location = new System.Drawing.Point(1317, 630);
+            this.HomePicture.Name = "HomePicture";
+            this.HomePicture.Size = new System.Drawing.Size(100, 100);
+            this.HomePicture.TabIndex = 25;
+            this.HomePicture.TabStop = false;
+            this.HomePicture.Click += new System.EventHandler(this.HomePicture_Click);
             // 
             // HighscorePage
             // 
@@ -233,6 +233,7 @@
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1417, 730);
+            this.Controls.Add(this.HomePicture);
             this.Controls.Add(this.Highscores);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -247,15 +248,17 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Home);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HighscorePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HighscorePage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HighscorePage_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.Bronze)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Highscores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,10 +278,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label Positielabel;
         private System.Windows.Forms.Label Gamemode_Label;
-		private System.Windows.Forms.Button Home;
         private System.Windows.Forms.PictureBox Bronze;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox Highscores;
+        private System.Windows.Forms.PictureBox HomePicture;
     }
 }

@@ -182,8 +182,22 @@ namespace Memory
                 f2.Show();
                 await Task.Delay(100);
                 this.Close();
-                this.ShowInTaskbar = false;
             }
-        
+
+        private async void HighscorePage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Memory.HomePage f2 = new Memory.HomePage();
+            f2.Show();
+            await Task.Delay(100);
+            this.Close();
+        }
+
+        private async void HomePicture_Click(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(100);
+            this.Close();
+        }
     }
 }
