@@ -31,52 +31,7 @@ namespace WindowsFormsApp1
             Encrypt();
 
         }
-
-        //caller encrypt
-        public static void Encrypt()
-        {
-            try
-            {
-                var path = AppDomain.CurrentDomain.BaseDirectory;
-                //Create a new instance of the RijndaelManaged class  
-                // and encrypt the stream.  
-                RijndaelManaged RMCrypto = new RijndaelManaged();
-
-                byte[] Key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
-                byte[] IV = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
-                byte[] encrypted;
-                byte[] raw;
-                raw = ReadFromFile(@"" + path + "game.sav");
-                string edited = Encoding.ASCII.GetString(raw);
-
-                using (Rijndael rijAlg = Rijndael.Create())
-                {
-
-                    // Create an encryptor to perform the stream transform.
-                    ICryptoTransform encryptor = rijAlg.CreateEncryptor(Key, IV);
-
-                    // Create the streams used for encryption.
-                    using (MemoryStream msEncrypt = new MemoryStream())
-                    {
-                        using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
-                        {
-                            using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
-                            {                                                               
-                                //Write to the stream.  
-                                swEncrypt.Write(edited);
-                            }
-                            encrypted = msEncrypt.ToArray();
-                        }
-                    }
-                }
-                WriteToFile(@"" + path + "game.sav", encrypted);
-            }
-            catch (Exception )
-            {
-                //Inform the user that an exception was raised.  
-                Console.WriteLine("Encrypten is mislukt.");
-            }
-        }
+       
 
         //Caller read
         public static string LoadData()
@@ -96,47 +51,7 @@ namespace WindowsFormsApp1
             return (opslag);           
         }
 
-        //caller decrypt
-        public static void Decrypt()
-        {
-            try
-            {
-                var path = AppDomain.CurrentDomain.BaseDirectory;
-                //Create a new instance of the RijndaelManaged class  
-                // and encrypt the stream.  
-                RijndaelManaged RMCrypto = new RijndaelManaged();
-
-                byte[] Key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
-                byte[] IV = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
-                string buffer;
-
-                using (Rijndael rijAlg = Rijndael.Create())
-                {
-
-                    // Create an encryptor to perform the stream transform.
-                    ICryptoTransform decryptor = rijAlg.CreateDecryptor(Key, IV);
-                    byte[] bytes = ReadFromFile(@"" + path + "game.sav");
-                    // Create the streams used for encryption.
-                    using (MemoryStream msDecrypt = new MemoryStream(bytes))
-                    {
-                        using (CryptoStream csDecrypt = new CryptoStream(msDecrypt,decryptor, CryptoStreamMode.Read))
-                        {
-                            using (StreamReader srDecrypt = new StreamReader(csDecrypt))
-                            {
-                                buffer = srDecrypt.ReadToEnd();
-                                byte[] decrypted = Encoding.ASCII.GetBytes(buffer);
-                                WriteToFile(@"" + path + "game.sav", decrypted);
-                            }                           
-                        }
-                    }
-                }                
-            }
-            catch (Exception)
-            {
-                //Inform the user that an exception was raised.  
-                Console.WriteLine("Decrypten is mislukt.");
-            }
-        }
+        
 
         //------------------------------------------------------------------------------//
         //Methods
@@ -256,6 +171,95 @@ namespace WindowsFormsApp1
 
             return null;
         }
+
+        //encrypt
+        public static void Encrypt()
+        {
+            try
+            {
+                var path = AppDomain.CurrentDomain.BaseDirectory;
+                //Create a new instance of the RijndaelManaged class  
+                // and encrypt the stream.  
+                RijndaelManaged RMCrypto = new RijndaelManaged();
+
+                byte[] Key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+                byte[] IV = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+                byte[] encrypted;
+                byte[] raw;
+                raw = ReadFromFile(@"" + path + "game.sav");
+                string edited = Encoding.ASCII.GetString(raw);
+
+                using (Rijndael rijAlg = Rijndael.Create())
+                {
+
+                    // Create an encryptor to perform the stream transform.
+                    ICryptoTransform encryptor = rijAlg.CreateEncryptor(Key, IV);
+
+                    // Create the streams used for encryption.
+                    using (MemoryStream msEncrypt = new MemoryStream())
+                    {
+                        using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                        {
+                            using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                            {
+                                //Write to the stream.  
+                                swEncrypt.Write(edited);
+                            }
+                            encrypted = msEncrypt.ToArray();
+                        }
+                    }
+                }
+                WriteToFile(@"" + path + "game.sav", encrypted);
+            }
+            catch (Exception)
+            {
+                //Inform the user that an exception was raised.  
+                Console.WriteLine("Encrypten is mislukt.");
+            }
+        }
+
+        //decrypt
+        public static void Decrypt()
+        {
+            try
+            {
+                var path = AppDomain.CurrentDomain.BaseDirectory;
+                //Create a new instance of the RijndaelManaged class  
+                // and encrypt the stream.  
+                RijndaelManaged RMCrypto = new RijndaelManaged();
+
+                byte[] Key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+                byte[] IV = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+                string buffer;
+
+                using (Rijndael rijAlg = Rijndael.Create())
+                {
+
+                    // Create an encryptor to perform the stream transform.
+                    ICryptoTransform decryptor = rijAlg.CreateDecryptor(Key, IV);
+                    byte[] bytes = ReadFromFile(@"" + path + "game.sav");
+                    // Create the streams used for encryption.
+                    using (MemoryStream msDecrypt = new MemoryStream(bytes))
+                    {
+                        using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                        {
+                            using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                            {
+                                buffer = srDecrypt.ReadToEnd();
+                                byte[] decrypted = Encoding.ASCII.GetBytes(buffer);
+                                WriteToFile(@"" + path + "game.sav", decrypted);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                //Inform the user that an exception was raised.  
+                Console.WriteLine("Decrypten is mislukt.");
+            }
+        }
+
     }
 }
 
