@@ -46,16 +46,6 @@ namespace Memory
 			}
 		}
 
-		private void MuteButton_Click(object sender, EventArgs e)
-		{
-			//Jorden maar ff doen ofzo geen idee hoe het met de music zit
-		}
-
-		private void SpeakerButton_Click(object sender, EventArgs e)
-		{
-			//Jorden maar ff doen ofzo geen idee hoe het met de music zit
-		}
-
 		private async void HomeButton_Click_1(object sender, EventArgs e)
 		{
 			player.SoundLocation = "click.wav";
@@ -83,6 +73,16 @@ namespace Memory
 			f13.Show();
 			await Task.Delay(100);
 			this.Close();
+		}
+
+		private void VolumeDown_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void VolumeUp_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
