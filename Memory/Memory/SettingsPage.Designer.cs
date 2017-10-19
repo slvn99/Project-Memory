@@ -141,6 +141,17 @@
             this.MuteButton.TabIndex = 8;
             this.MuteButton.TabStop = false;
             // 
+            // Settings
+            // 
+            this.Settings.BackColor = System.Drawing.Color.Transparent;
+            this.Settings.BackgroundImage = global::Memory.Properties.Resources.Settings;
+            this.Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Settings.Location = new System.Drawing.Point(479, 23);
+            this.Settings.Name = "Settings";
+            this.Settings.Size = new System.Drawing.Size(477, 129);
+            this.Settings.TabIndex = 11;
+            this.Settings.TabStop = false;
+            // 
             // Home
             // 
             this.Home.BackColor = System.Drawing.Color.Transparent;
