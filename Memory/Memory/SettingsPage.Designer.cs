@@ -140,6 +140,7 @@
             this.MuteButton.Size = new System.Drawing.Size(117, 108);
             this.MuteButton.TabIndex = 8;
             this.MuteButton.TabStop = false;
+            this.MuteButton.Click += new System.EventHandler(this.MuteButton_Click);
             // 
             // Settings
             // 

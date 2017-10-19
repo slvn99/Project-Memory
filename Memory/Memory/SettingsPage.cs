@@ -7,12 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Memory
 {
 	public partial class SettingsPage : Form
 	{
-		public static string SetValueForComboBox = "";
+        private const int APPCOMMAND_VOLUME_MUTE = 0x80000;
+        private const int APPCOMMAND_VOLUME_UP = 0xA0000;
+        private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
+        private const int WM_APPCOMMAND = 0x319;
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr SendMessageW(IntPtr hWnd, int Msg,
+            IntPtr wParam, IntPtr lParam);
+
+
+        public static string SetValueForComboBox = "";
 		System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 		public SettingsPage()
 		{
@@ -77,13 +88,16 @@ namespace Memory
 
 		private void VolumeDown_Click(object sender, EventArgs e)
 		{
+            SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
+                (IntPtr)APPCOMMAND_VOLUME_DOWN);
 
-		}
+        }
 
-		private void VolumeUp_Click(object sender, EventArgs e)
+        private void VolumeUp_Click(object sender, EventArgs e)
 		{
-
-		}
+            SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
+                (IntPtr)APPCOMMAND_VOLUME_UP);
+        }
 
         private async void Home_Click(object sender, EventArgs e)
         {
@@ -93,6 +107,13 @@ namespace Memory
             player.Stop();
             this.Close();
             this.ShowInTaskbar = false;
+        }
+
+        private void MuteButton_Click(object sender, EventArgs e)
+        {
+            SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
+                (IntPtr)APPCOMMAND_VOLUME_MUTE);
+
         }
     }
 }
