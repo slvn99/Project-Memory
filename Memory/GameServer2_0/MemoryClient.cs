@@ -14,7 +14,7 @@ namespace GameServer2_0
 
         public static void StartClient()
         {
-            Client = new TcpClient("141.252.225.170", 8984);
+            Client = new TcpClient("141.252.237.44", 8984);
 
         }
 
