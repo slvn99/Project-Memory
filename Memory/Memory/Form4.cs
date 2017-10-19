@@ -12,9 +12,6 @@ namespace Memory
 {
     public partial class Form4 : Form
     {
-        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-
-
         public Form4()
         {
             InitializeComponent();
@@ -96,7 +93,8 @@ namespace Memory
 			else if (a == 7)
 			{
 				label1.Text = "The ting goes skraa";
-				player.SoundLocation = "THE_TING_GO_SKRRA.wav";
+				System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+				player.SoundLocation = @"C:\Users\DeJong\Desktop\MemoryProject\Project-Memory\Memory\Memory\bin\Debug\THE_TING_GO_SKRRA.wav";
 				player.Play();
 				label1.Font = new Font("Arial", 18, FontStyle.Bold);
 				label1.ForeColor = System.Drawing.Color.Black;
@@ -130,10 +128,10 @@ namespace Memory
 
         private async void timer3_Tick(object sender, EventArgs e)
         {
-            player.SoundLocation = "ping.wav";
-            player.Play();
-			await Task.Delay(2000);
-			player.Stop();
+			//player.SoundLocation = "ping.wav";
+			//player.Play();
+			//await Task.Delay(2000);
+			//player.Stop();
 		}
 
         private void Loading_bar_Click(object sender, EventArgs e)
