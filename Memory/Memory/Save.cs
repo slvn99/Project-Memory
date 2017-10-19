@@ -131,7 +131,7 @@ namespace WindowsFormsApp1
                     }
                 }                
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 //Inform the user that an exception was raised.  
                 Console.WriteLine("Decrypten is mislukt.");

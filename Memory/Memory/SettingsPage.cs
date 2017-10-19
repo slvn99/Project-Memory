@@ -69,8 +69,7 @@ namespace Memory
 
 		public void Apply_Click(object sender, EventArgs e)
 		{
-			SetValueForComboBox = ThemaBox.SelectedText;
-			MessageBox.Show(SetValueForComboBox);
+            Memory.SettingsPage_Save.SaveData(ThemaBox.SelectedText);
 		}
 	}
 }
