@@ -163,6 +163,17 @@ namespace WindowsFormsApp1
                 punten.Remove(p);
                 Button.Text = "[=]";
             }
+
+            Player1LabelInvoer.Font = new Font("Arial", 8, FontStyle.Bold);
+            Player1LabelInvoer.ForeColor = System.Drawing.Color.White;
+            Player2LabelInvoer.Font = new Font("Arial", 8, FontStyle.Bold);
+            Player2LabelInvoer.ForeColor = System.Drawing.Color.White;
+            BeurtLabel.Font = new Font("Arial", 8, FontStyle.Bold);
+            BeurtLabel.ForeColor = System.Drawing.Color.White;
+            Points1.Font = new Font("Arial", 8, FontStyle.Bold);
+            Points1.ForeColor = System.Drawing.Color.White;
+            Points2.Font = new Font("Arial", 8, FontStyle.Bold);
+            Points2.ForeColor = System.Drawing.Color.White;
         }
 
         void ChangeCursor()
@@ -356,6 +367,7 @@ namespace WindowsFormsApp1
 			play.Visible = true;
 			pictureBox1.Visible = true;
 			pictureBox2.Visible = true;
+            GridButton1.Visible = true;
 
 			Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 

@@ -571,7 +571,6 @@ namespace WindowsFormsApp1
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
         }
 
         #endregion

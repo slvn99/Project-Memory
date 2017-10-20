@@ -173,6 +173,18 @@ namespace Memory
                 Cursor c = new Cursor(bmp.GetHicon());
                 this.Cursor = c;
             }
+
+            label1.ForeColor = System.Drawing.Color.White;
+            label2.ForeColor = System.Drawing.Color.White;
+            label3.ForeColor = System.Drawing.Color.White;
+            label4.ForeColor = System.Drawing.Color.White;
+            label5.ForeColor = System.Drawing.Color.White;
+            label6.ForeColor = System.Drawing.Color.White;
+            label7.ForeColor = System.Drawing.Color.White;
+            label8.ForeColor = System.Drawing.Color.White;
+            label9.ForeColor = System.Drawing.Color.White;
+            label10.ForeColor = System.Drawing.Color.White;
+
         }
             private async void Home_Click(object sender, EventArgs e)
             {
@@ -188,5 +200,14 @@ namespace Memory
 			Memory.HomePage f2 = new Memory.HomePage();
 			f2.Show();
 		}
-	}
+
+        private async void HomeButton_Click(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
+            this.Close();
+        }
+    }
 }
