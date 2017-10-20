@@ -25,7 +25,6 @@ namespace Memory
             label1.BackColor = Color.Transparent;
 
             timer1.Start();
-            timer2.Start();
             timer3.Start();
 
             ChangeCursor();
@@ -127,17 +126,11 @@ namespace Memory
         private void timer1_Tick(object sender, EventArgs e)
         {
             WindowsFormsApp1.Form1  f1 = new WindowsFormsApp1.Form1();
-            f1.Show();
-            this.Close();
+            f1.Show();            
             timer1.Stop();
+            Sluiten();
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            Memory.Form3 f6 = new Memory.Form3();
-            f6.Close();
-            timer2.Stop();
-        }
 
         private async void timer3_Tick(object sender, EventArgs e)
         {
@@ -148,5 +141,11 @@ namespace Memory
 			player.Stop();
             timer3.Stop();
 		}
+        public void Sluiten()
+        {
+            Close();
+            Dispose();
+            GC.Collect();
+        }
     }
 }

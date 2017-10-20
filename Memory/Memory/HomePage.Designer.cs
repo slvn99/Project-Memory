@@ -69,11 +69,10 @@
             this.tableLayoutPanel2.Controls.Add(this.pictureBox5, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1417, 212);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1063, 172);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // pictureBox5
@@ -83,7 +82,7 @@
             this.pictureBox5.Location = new System.Drawing.Point(0, 0);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(1417, 212);
+            this.pictureBox5.Size = new System.Drawing.Size(1063, 172);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
@@ -98,12 +97,11 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 505);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 410);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1417, 225);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1063, 183);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // tableLayoutPanel5
@@ -116,12 +114,12 @@
             this.tableLayoutPanel5.Controls.Add(this.pictureBox7, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.SettingButton, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(944, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(708, 0);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(473, 225);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(355, 183);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
             // pictureBox6
@@ -131,7 +129,7 @@
             this.pictureBox6.Location = new System.Drawing.Point(0, 0);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(80, 225);
+            this.pictureBox6.Size = new System.Drawing.Size(60, 183);
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
             // 
@@ -139,10 +137,10 @@
             // 
             this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox7.Image = global::Memory.Properties.Resources.transparent_square_tiles;
-            this.pictureBox7.Location = new System.Drawing.Point(392, 0);
+            this.pictureBox7.Location = new System.Drawing.Point(294, 0);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(81, 225);
+            this.pictureBox7.Size = new System.Drawing.Size(61, 183);
             this.pictureBox7.TabIndex = 1;
             this.pictureBox7.TabStop = false;
             // 
@@ -150,10 +148,10 @@
             // 
             this.SettingButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SettingButton.Image = global::Memory.Properties.Resources.SettingsButton;
-            this.SettingButton.Location = new System.Drawing.Point(80, 0);
+            this.SettingButton.Location = new System.Drawing.Point(60, 0);
             this.SettingButton.Margin = new System.Windows.Forms.Padding(0);
             this.SettingButton.Name = "SettingButton";
-            this.SettingButton.Size = new System.Drawing.Size(312, 225);
+            this.SettingButton.Size = new System.Drawing.Size(234, 183);
             this.SettingButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SettingButton.TabIndex = 2;
             this.SettingButton.TabStop = false;
@@ -174,7 +172,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(472, 225);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(354, 183);
             this.tableLayoutPanel4.TabIndex = 6;
             // 
             // pictureBox2
@@ -184,7 +182,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 225);
+            this.pictureBox2.Size = new System.Drawing.Size(60, 183);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -192,10 +190,10 @@
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Image = global::Memory.Properties.Resources.transparent_square_tiles;
-            this.pictureBox4.Location = new System.Drawing.Point(391, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(293, 0);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(81, 225);
+            this.pictureBox4.Size = new System.Drawing.Size(61, 183);
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
             // 
@@ -203,10 +201,10 @@
             // 
             this.RankButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RankButton.Image = global::Memory.Properties.Resources.RankingButton;
-            this.RankButton.Location = new System.Drawing.Point(80, 0);
+            this.RankButton.Location = new System.Drawing.Point(60, 0);
             this.RankButton.Margin = new System.Windows.Forms.Padding(0);
             this.RankButton.Name = "RankButton";
-            this.RankButton.Size = new System.Drawing.Size(311, 225);
+            this.RankButton.Size = new System.Drawing.Size(233, 183);
             this.RankButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.RankButton.TabIndex = 2;
             this.RankButton.TabStop = false;
@@ -222,12 +220,12 @@
             this.tableLayoutPanel3.Controls.Add(this.pictureBox8, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.PlayButton, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(472, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(354, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(472, 225);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(354, 183);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
             // pictureBox3
@@ -237,7 +235,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(80, 225);
+            this.pictureBox3.Size = new System.Drawing.Size(60, 183);
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
@@ -245,10 +243,10 @@
             // 
             this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox8.Image = global::Memory.Properties.Resources.transparent_square_tiles;
-            this.pictureBox8.Location = new System.Drawing.Point(391, 0);
+            this.pictureBox8.Location = new System.Drawing.Point(293, 0);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(81, 225);
+            this.pictureBox8.Size = new System.Drawing.Size(61, 183);
             this.pictureBox8.TabIndex = 1;
             this.pictureBox8.TabStop = false;
             // 
@@ -256,10 +254,10 @@
             // 
             this.PlayButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PlayButton.Image = global::Memory.Properties.Resources.PlayButton;
-            this.PlayButton.Location = new System.Drawing.Point(80, 0);
+            this.PlayButton.Location = new System.Drawing.Point(60, 0);
             this.PlayButton.Margin = new System.Windows.Forms.Padding(0);
             this.PlayButton.Name = "PlayButton";
-            this.PlayButton.Size = new System.Drawing.Size(311, 225);
+            this.PlayButton.Size = new System.Drawing.Size(233, 183);
             this.PlayButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PlayButton.TabIndex = 2;
             this.PlayButton.TabStop = false;
@@ -272,24 +270,23 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1417, 730);
+            this.pictureBox1.Size = new System.Drawing.Size(1063, 593);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1417, 730);
+            this.ClientSize = new System.Drawing.Size(1063, 593);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomePage_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HomePage_FormClosing);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
