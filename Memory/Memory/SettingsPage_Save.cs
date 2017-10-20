@@ -72,11 +72,6 @@ namespace Memory
                     //Binary formatter die de data deserialized, en dit in de stream zet
                     BinaryFormatter formatter = new BinaryFormatter();
 
-                    //load het getal welke aangeeft hoeveel entry's de array had
-                    var l = formatter.Deserialize(stream);
-                    string l1 = Convert.ToString(l);
-                    int l2 = int.Parse(l1);
-
                     //Return de game data.
                     var d1 = formatter.Deserialize(stream);
 
