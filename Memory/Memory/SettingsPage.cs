@@ -71,11 +71,9 @@ namespace Memory
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
-			Memory.HomePage f2 = new Memory.HomePage();
-			f2.Show();
+            Memory.SettingsPage_Save.SaveData(ThemaBox.SelectedText);
 			await Task.Delay(300);
-			player.Stop();
-			Memory.SettingsPage_Save.SaveData(ThemaBox.SelectedText);
+            player.Stop();
 		}
 
 		private async void SettingsPage_FormClosed(object sender, FormClosedEventArgs e)

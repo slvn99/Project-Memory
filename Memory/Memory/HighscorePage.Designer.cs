@@ -228,6 +228,7 @@
             this.HomeButton.Size = new System.Drawing.Size(100, 100);
             this.HomeButton.TabIndex = 25;
             this.HomeButton.TabStop = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // HighscorePage
             // 
@@ -252,7 +253,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HighscorePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HighscorePage";
