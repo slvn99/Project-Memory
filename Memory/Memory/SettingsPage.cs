@@ -94,5 +94,11 @@ namespace Memory
             SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
                 (IntPtr)APPCOMMAND_VOLUME_MUTE);
         }
+
+        private void ServerDebug_Click(object sender, EventArgs e)
+        {
+            Memory.GameServer g1 = new Memory.GameServer();
+            g1.Show();
+        }
     }
 }

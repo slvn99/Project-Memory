@@ -6,9 +6,9 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameServer2_0
+namespace Memory
 {
-    class MemoryServer
+    class ServerHost
     {
         static int PacketSize = 1024 * 1024;
         public static TcpListener Listener;
@@ -31,7 +31,7 @@ namespace GameServer2_0
                 Client.GetStream().Write(bytes, 0, bytes.Length); // Send the response
                 return true;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Client.Close();
                 return false;
@@ -53,7 +53,7 @@ namespace GameServer2_0
 
                 return message;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Client.Close();
                 return null;
@@ -75,6 +75,4 @@ namespace GameServer2_0
             return messageToPrint;
         }
     }
-
-
 }
