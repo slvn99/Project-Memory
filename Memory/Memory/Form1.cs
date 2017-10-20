@@ -183,11 +183,6 @@ namespace WindowsFormsApp1
             this.Cursor = c;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-			
-		}
-
         private void PlayButton_Click(object sender, EventArgs e)
         {
             Play_Game();
