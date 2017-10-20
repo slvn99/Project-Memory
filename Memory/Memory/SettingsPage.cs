@@ -34,7 +34,7 @@ namespace Memory
 
         void ChangeCursor()
         {
-            Bitmap bmp = new Bitmap(Properties.Resources.mouse_xs);
+            Bitmap bmp = new Bitmap(Properties.Resources.cur1031);
             Cursor c = new Cursor(bmp.GetHicon());
             this.Cursor = c;
         }
@@ -97,6 +97,12 @@ namespace Memory
         {
             SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
                 (IntPtr)APPCOMMAND_VOLUME_MUTE);
+        }
+
+        private void ServerDebug_Click(object sender, EventArgs e)
+        {
+            Memory.GameServer g1 = new Memory.GameServer();
+            g1.Show();
         }
     }
 }

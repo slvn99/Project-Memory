@@ -5,16 +5,16 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameServer2_0
+namespace Memory
 {
-    class MemoryClient
+    class ServerClient
     {
         static int PacketSize = 1024 * 1024;
         public static TcpClient Client; //client die geconnect is
 
         public static void StartClient()
         {
-            Client = new TcpClient("141.252.237.44", 8984);
+            Client = new TcpClient("141.252.225.170", 8984);
 
         }
 
