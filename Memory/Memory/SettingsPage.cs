@@ -88,7 +88,6 @@ namespace Memory
             await Task.Delay(300);
             player.Stop();
             this.Close();
-            this.ShowInTaskbar = false;
         }
 
         private void MuteButton_Click(object sender, EventArgs e)

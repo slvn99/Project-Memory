@@ -10,10 +10,13 @@ using System.Windows.Forms;
 
 namespace Memory
 {
+
     public partial class Form4 : Form
     {
-		System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-		public Form4()
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+        
+
+        public Form4()
         {
             InitializeComponent();
 
@@ -93,18 +96,16 @@ namespace Memory
 
 			else if (a == 7)
 			{
-				label1.Text = "The ting goes skraa";
-				player.SoundLocation = "THE_TING_GO_SKRRA.wav";
-				player.Play();
-				label1.Font = new Font("Arial", 18, FontStyle.Bold);
+                label1.Text = "The ting goes skraa";
+                player.SoundLocation = "Skra.wav";
+                player.Play();
+                label1.Font = new Font("Arial", 18, FontStyle.Bold);
 				label1.ForeColor = System.Drawing.Color.Black;
 				label1.AutoSize = false;
 				label1.TextAlign = ContentAlignment.MiddleCenter;
 				label1.Dock = DockStyle.Fill;
 			}
-
-
-		}
+        }
 
 		void ChangeCursor()
         {
@@ -118,12 +119,14 @@ namespace Memory
             WindowsFormsApp1.Form1  f1 = new WindowsFormsApp1.Form1();
             f1.Show();
             this.Close();
+            timer1.Stop();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             Memory.Form3 f6 = new Memory.Form3();
             f6.Close();
+            timer2.Stop();
         }
 
         private async void timer3_Tick(object sender, EventArgs e)
@@ -132,6 +135,7 @@ namespace Memory
 			player.Play();
 			await Task.Delay(2000);
 			player.Stop();
+            timer3.Stop();
 		}
 
         private void Loading_bar_Click(object sender, EventArgs e)
