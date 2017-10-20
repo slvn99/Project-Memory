@@ -19,8 +19,13 @@ namespace Memory
             IPEndPoint ip = new IPEndPoint(IPAddress.Any, 8984);
             Listener = new TcpListener(ip);
             Listener.Start();
-
             Client = Listener.AcceptTcpClient();
+            //do
+            //{
+            //    Client = Listener.AcceptTcpClient();
+            //    GameServer.label2.Text = "connecting";
+            //} while (Client == null);
+            //GameServer.label2.Text = "Connectie!";
         }
 
         public static bool SendMessage(string message)
@@ -50,7 +55,6 @@ namespace Memory
                     Client.Close();
                     return null;
                 }
-
                 return message;
             }
             catch (Exception)

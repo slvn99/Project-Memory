@@ -51,6 +51,7 @@
             this.HostButton.TabIndex = 1;
             this.HostButton.Text = "Host";
             this.HostButton.UseVisualStyleBackColor = true;
+            this.HostButton.Click += new System.EventHandler(this.HostButton_Click);
             // 
             // ClientButton
             // 
@@ -60,6 +61,7 @@
             this.ClientButton.TabIndex = 2;
             this.ClientButton.Text = "Client";
             this.ClientButton.UseVisualStyleBackColor = true;
+            this.ClientButton.Click += new System.EventHandler(this.ClientButton_Click);
             // 
             // GameServer
             // 
@@ -77,9 +79,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button HostButton;
         private System.Windows.Forms.Button ClientButton;
+        public System.Windows.Forms.Label label1;
     }
 }
