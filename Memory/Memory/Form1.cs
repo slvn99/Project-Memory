@@ -135,10 +135,13 @@ namespace WindowsFormsApp1
 						Check_kaart();
 						break;
 					case "Fifa":
-						Console.WriteLine("Case 2");
+						//example
+						break;
+					case "Frozen":
+						//example
 						break;
 					default:
-						Console.WriteLine("Default case");
+						//Hier de standaard maar in
 						break;
 				}
 			}
@@ -616,7 +619,13 @@ namespace WindowsFormsApp1
             this.ShowInTaskbar = false;
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		private void TestLabel_Click(object sender, EventArgs e)
+		{
+			TestLabel.Text = thema;
+
+		}
+
+		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Memory.HomePage f2 = new Memory.HomePage();
             f2.Show();
@@ -778,6 +787,5 @@ namespace WindowsFormsApp1
             Variablen_save.Visible = false;
             value.Text = "";
         }
-
     }
 }
