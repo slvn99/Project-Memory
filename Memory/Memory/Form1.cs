@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
 
         void ChangeCursor()
         {
-            Bitmap bmp = new Bitmap (Resources.mouse_xs);
+            Bitmap bmp = new Bitmap (Resources.cur1031);
             Cursor c = new Cursor(bmp.GetHicon());
             this.Cursor = c;
         }

@@ -119,7 +119,7 @@ namespace Memory
 
 		void ChangeCursor()
         {
-            Bitmap bmp = new Bitmap(Properties.Resources.mouse_xs);
+            Bitmap bmp = new Bitmap(Properties.Resources.cur1031);
             Cursor c = new Cursor(bmp.GetHicon());
             this.Cursor = c;
         }
