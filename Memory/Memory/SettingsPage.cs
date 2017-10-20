@@ -53,11 +53,10 @@ namespace Memory
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
-			Memory.HomePage f2 = new Memory.HomePage();
-			f2.Show();
+            Memory.SettingsPage_Save.SaveData(ThemaBox.SelectedText);
+			MessageBox.Show(ThemaBox.SelectedText);
 			await Task.Delay(300);
-			player.Stop();
-			Memory.SettingsPage_Save.SaveData(ThemaBox.SelectedText);
+            player.Stop();
 		}
 
 		private async void SettingsPage_FormClosed(object sender, FormClosedEventArgs e)
@@ -94,7 +93,6 @@ namespace Memory
         {
             SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
                 (IntPtr)APPCOMMAND_VOLUME_MUTE);
-
         }
 
         private void ServerDebug_Click(object sender, EventArgs e)

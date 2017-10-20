@@ -15,6 +15,7 @@ namespace Memory
     {
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         
+        
 
         public Form4()
         {
@@ -30,7 +31,7 @@ namespace Memory
             ChangeCursor();
 
             Random rand = new Random();
-            double a = rand.Next(1, 8);
+            double a = rand.Next(1, 9);
 
 
 			if (a == 1)
@@ -105,7 +106,16 @@ namespace Memory
 				label1.TextAlign = ContentAlignment.MiddleCenter;
 				label1.Dock = DockStyle.Fill;
 			}
-        }
+			else if (a == 8)
+			{
+				label1.Text = "Donderdag visdag";
+				label1.Font = new Font("Arial", 18, FontStyle.Bold);
+				label1.ForeColor = System.Drawing.Color.Black;
+				label1.AutoSize = false;
+				label1.TextAlign = ContentAlignment.MiddleCenter;
+				label1.Dock = DockStyle.Fill;
+			}
+		}
 
 		void ChangeCursor()
         {
@@ -131,16 +141,12 @@ namespace Memory
 
         private async void timer3_Tick(object sender, EventArgs e)
         {
+            player.Stop(); //stop van ting goes skra
 			player.SoundLocation = "ping.wav";
 			player.Play();
 			await Task.Delay(2000);
 			player.Stop();
             timer3.Stop();
 		}
-
-        private void Loading_bar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
