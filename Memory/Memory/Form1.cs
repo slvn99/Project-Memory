@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
+
 			if (thema == "Er is nog geen\nsave file\naanwezig")
 			{ }
 			else
@@ -296,174 +297,174 @@ namespace WindowsFormsApp1
             }
         }
 
-        #region kaarten
-        private void GridButton1_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.Steam;
-            GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton1.BackgroundImage = myimage;
-            GridButton1.Text = "";
-            Click_kaart(GridButton1);
-            Check_kaart();
-        }
+		#region kaarten
+		private void GridButton1_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.Steam;
+			GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton1.BackgroundImage = myimage;
+			GridButton1.Text = "";
+			Click_kaart(GridButton1);
+			Check_kaart();
+		}
 
-        private void GridButton1Dup_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.Steam;
-            GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton1Dup.BackgroundImage = myimage;
-            GridButton1Dup.Text = "";
-            Click_kaart(GridButton1Dup);
-            Check_kaart();
-        }
+		private void GridButton1Dup_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.Steam;
+			GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton1Dup.BackgroundImage = myimage;
+			GridButton1Dup.Text = "";
+			Click_kaart(GridButton1Dup);
+			Check_kaart();
+		}
 
-        private void GridButton2_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.TwitchLogo;
-            GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton2.BackgroundImage = myimage;
-            GridButton2.Text = "";
-            Click_kaart(GridButton2);
-            Check_kaart();
-        }
+		private void GridButton2_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.TwitchLogo;
+			GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton2.BackgroundImage = myimage;
+			GridButton2.Text = "";
+			Click_kaart(GridButton2);
+			Check_kaart();
+		}
 
-        private void GridButton2Dub_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.TwitchLogo;
-            GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton2Dup.BackgroundImage = myimage;
-            GridButton2Dup.Text = "";
-            Click_kaart(GridButton2Dup);
-            Check_kaart();
-        }
+		private void GridButton2Dub_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.TwitchLogo;
+			GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton2Dup.BackgroundImage = myimage;
+			GridButton2Dup.Text = "";
+			Click_kaart(GridButton2Dup);
+			Check_kaart();
+		}
 
-        private void GridButton3_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.fb;
-            GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton3.BackgroundImage = myimage;
-            GridButton3.Text = "";
-            Click_kaart(GridButton3);
-            Check_kaart();
-        }
+		private void GridButton3_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.fb;
+			GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton3.BackgroundImage = myimage;
+			GridButton3.Text = "";
+			Click_kaart(GridButton3);
+			Check_kaart();
+		}
 
-        private void GridButton3Dub_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.fb;
-            GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton3Dup.BackgroundImage = myimage;
-            GridButton3Dup.Text = "";
-            Click_kaart(GridButton3Dup);
-            Check_kaart();
-        }
+		private void GridButton3Dub_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.fb;
+			GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton3Dup.BackgroundImage = myimage;
+			GridButton3Dup.Text = "";
+			Click_kaart(GridButton3Dup);
+			Check_kaart();
+		}
 
-        private void GridButton4_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.Reddit;
-            GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton4.BackgroundImage = myimage;
-            GridButton4.Text = "";
-            Click_kaart(GridButton4);
-            Check_kaart();
-        }
+		private void GridButton4_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.Reddit;
+			GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton4.BackgroundImage = myimage;
+			GridButton4.Text = "";
+			Click_kaart(GridButton4);
+			Check_kaart();
+		}
 
-        private void GridButton4Dub_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.Reddit;
-            GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton4Dup.BackgroundImage = myimage;
-            GridButton4Dup.Text = "";
-            Click_kaart(GridButton4Dup);
-            Check_kaart();
-        }
+		private void GridButton4Dub_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.Reddit;
+			GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton4Dup.BackgroundImage = myimage;
+			GridButton4Dup.Text = "";
+			Click_kaart(GridButton4Dup);
+			Check_kaart();
+		}
 
-        private void GridButton5_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources._9gag;
-            GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton5.BackgroundImage = myimage;
-            GridButton5.Text = "";
-            Click_kaart(GridButton5);
-            Check_kaart();
-        }
+		private void GridButton5_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources._9gag;
+			GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton5.BackgroundImage = myimage;
+			GridButton5.Text = "";
+			Click_kaart(GridButton5);
+			Check_kaart();
+		}
 
-        private void GridButton5Dub_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources._9gag;
-            GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton5Dup.BackgroundImage = myimage;
-            GridButton5Dup.Text = "";
-            Click_kaart(GridButton5Dup);
-            Check_kaart();
-        }
+		private void GridButton5Dub_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources._9gag;
+			GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton5Dup.BackgroundImage = myimage;
+			GridButton5Dup.Text = "";
+			Click_kaart(GridButton5Dup);
+			Check_kaart();
+		}
 
-        private void GridButton6_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.Twitter;
-            GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton6.BackgroundImage = myimage;
-            GridButton6.Text = "";
-            Click_kaart(GridButton6);
-            Check_kaart();
-        }
+		private void GridButton6_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.Twitter;
+			GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton6.BackgroundImage = myimage;
+			GridButton6.Text = "";
+			Click_kaart(GridButton6);
+			Check_kaart();
+		}
 
-        private void GridButton6Dub_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.Twitter;
-            GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton6Dup.BackgroundImage = myimage;
-            GridButton6Dup.Text = "";
-            Click_kaart(GridButton6Dup);
-            Check_kaart();
-        }
+		private void GridButton6Dub_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.Twitter;
+			GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton6Dup.BackgroundImage = myimage;
+			GridButton6Dup.Text = "";
+			Click_kaart(GridButton6Dup);
+			Check_kaart();
+		}
 
-        private void GridButton7_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.Youtube;
-            GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton7.BackgroundImage = myimage;
-            GridButton7.Text = "";
-            Click_kaart(GridButton7);
-            Check_kaart();
-        }
+		private void GridButton7_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.Youtube;
+			GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton7.BackgroundImage = myimage;
+			GridButton7.Text = "";
+			Click_kaart(GridButton7);
+			Check_kaart();
+		}
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
 
-        private void GridButton7Dup_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.Youtube;
-            GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton7Dup.BackgroundImage = myimage;
-            GridButton7Dup.Text = "";
-            Click_kaart(GridButton7Dup);
-            Check_kaart();
-        }
+		private void GridButton7Dup_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.Youtube;
+			GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton7Dup.BackgroundImage = myimage;
+			GridButton7Dup.Text = "";
+			Click_kaart(GridButton7Dup);
+			Check_kaart();
+		}
 
-        private void GridButton8_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.Google;
-            GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton8.BackgroundImage = myimage;
-            GridButton8.Text = "";
-            Click_kaart(GridButton8);
-            Check_kaart();
-        }
+		private void GridButton8_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.Google;
+			GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton8.BackgroundImage = myimage;
+			GridButton8.Text = "";
+			Click_kaart(GridButton8);
+			Check_kaart();
+		}
 
-        private void GridButton8Dup_Click(object sender, EventArgs e)
-        {
-            Image myimage = Resources.Google;
-            GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton8Dup.BackgroundImage = myimage;
-            GridButton8Dup.Text = "";
-            Click_kaart(GridButton8Dup);
-            Check_kaart();
-        }
-        #endregion
+		private void GridButton8Dup_Click(object sender, EventArgs e)
+		{
+			Image myimage = Resources.Google;
+			GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			GridButton8Dup.BackgroundImage = myimage;
+			GridButton8Dup.Text = "";
+			Click_kaart(GridButton8Dup);
+			Check_kaart();
+		}
+		#endregion
 
-        private void play_Click_1(object sender, EventArgs e)
+		private void play_Click_1(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
             player.Play();
@@ -514,7 +515,13 @@ namespace WindowsFormsApp1
             this.ShowInTaskbar = false;
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		private void TestLabel_Click(object sender, EventArgs e)
+		{
+			TestLabel.Text = thema;
+
+		}
+
+		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Memory.HomePage f2 = new Memory.HomePage();
             f2.Show();
@@ -676,6 +683,7 @@ namespace WindowsFormsApp1
             Variablen_save.Visible = false;
             value.Text = "";
         }
+
         public async void clearcards1()
         {
             await Task.Delay(1000);

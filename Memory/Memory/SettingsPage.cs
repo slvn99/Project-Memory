@@ -54,6 +54,7 @@ namespace Memory
 			player.SoundLocation = "click.wav";
 			player.Play();
             Memory.SettingsPage_Save.SaveData(ThemaBox.SelectedText);
+			MessageBox.Show(ThemaBox.SelectedText);
 			await Task.Delay(300);
             player.Stop();
 		}
@@ -92,7 +93,6 @@ namespace Memory
         {
             SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
                 (IntPtr)APPCOMMAND_VOLUME_MUTE);
-
         }
     }
 }

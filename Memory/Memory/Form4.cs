@@ -31,7 +31,7 @@ namespace Memory
             ChangeCursor();
 
             Random rand = new Random();
-            double a = rand.Next(1, 8);
+            double a = rand.Next(1, 9);
 
 
 			if (a == 1)
@@ -106,7 +106,16 @@ namespace Memory
 				label1.TextAlign = ContentAlignment.MiddleCenter;
 				label1.Dock = DockStyle.Fill;
 			}
-        }
+			else if (a == 8)
+			{
+				label1.Text = "Donderdag visdag";
+				label1.Font = new Font("Arial", 18, FontStyle.Bold);
+				label1.ForeColor = System.Drawing.Color.Black;
+				label1.AutoSize = false;
+				label1.TextAlign = ContentAlignment.MiddleCenter;
+				label1.Dock = DockStyle.Fill;
+			}
+		}
 
 		void ChangeCursor()
         {
