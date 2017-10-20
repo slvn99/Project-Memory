@@ -142,6 +142,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Skra.wav" />
+    <None Include="Resources\cur1031.png" />
+    <None Include="Resources\cur1028.gif" />
     <None Include="Resources\Settings.png" />
     <None Include="Resources\THE_TING_GO_SKRRA.wav" />
     <None Include="Resources\VolumeDownButton.png" />
