@@ -91,7 +91,7 @@ namespace WindowsFormsApp1
             this.GridButton1.Tag = "1";
             this.GridButton1.Text = "button1";
             this.GridButton1.UseVisualStyleBackColor = false;
-            this.GridButton1.Click += new System.EventHandler(this.GridButton1_Click);
+            //this.GridButton1.Click += new System.EventHandler(this.GridButton1_Click);
             // 
             // GridButton1Dup
             // 
@@ -105,7 +105,7 @@ namespace WindowsFormsApp1
             this.GridButton1Dup.Tag = "1";
             this.GridButton1Dup.Text = "button2";
             this.GridButton1Dup.UseVisualStyleBackColor = true;
-            this.GridButton1Dup.Click += new System.EventHandler(this.GridButton1Dup_Click);
+            //this.GridButton1Dup.Click += new System.EventHandler(this.GridButton1Dup_Click);
             // 
             // GridButton2
             // 
@@ -119,7 +119,7 @@ namespace WindowsFormsApp1
             this.GridButton2.Tag = "2";
             this.GridButton2.Text = "button3";
             this.GridButton2.UseVisualStyleBackColor = true;
-            this.GridButton2.Click += new System.EventHandler(this.GridButton2_Click);
+            //this.GridButton2.Click += new System.EventHandler(this.GridButton2_Click);
             // 
             // GridButton2Dup
             // 
@@ -133,7 +133,7 @@ namespace WindowsFormsApp1
             this.GridButton2Dup.Tag = "2";
             this.GridButton2Dup.Text = "button4";
             this.GridButton2Dup.UseVisualStyleBackColor = true;
-            this.GridButton2Dup.Click += new System.EventHandler(this.GridButton2Dub_Click);
+            //this.GridButton2Dup.Click += new System.EventHandler(this.GridButton2Dub_Click);
             // 
             // GridButton3
             // 
@@ -147,7 +147,7 @@ namespace WindowsFormsApp1
             this.GridButton3.Tag = "3";
             this.GridButton3.Text = "button5";
             this.GridButton3.UseVisualStyleBackColor = true;
-            this.GridButton3.Click += new System.EventHandler(this.GridButton3_Click);
+            //this.GridButton3.Click += new System.EventHandler(this.GridButton3_Click);
             // 
             // GridButton3Dup
             // 
@@ -161,7 +161,7 @@ namespace WindowsFormsApp1
             this.GridButton3Dup.Tag = "3";
             this.GridButton3Dup.Text = "button6";
             this.GridButton3Dup.UseVisualStyleBackColor = true;
-            this.GridButton3Dup.Click += new System.EventHandler(this.GridButton3Dub_Click);
+            //this.GridButton3Dup.Click += new System.EventHandler(this.GridButton3Dub_Click);
             // 
             // GridButton4
             // 
@@ -175,7 +175,7 @@ namespace WindowsFormsApp1
             this.GridButton4.Tag = "4";
             this.GridButton4.Text = "button7";
             this.GridButton4.UseVisualStyleBackColor = true;
-            this.GridButton4.Click += new System.EventHandler(this.GridButton4_Click);
+            //this.GridButton4.Click += new System.EventHandler(this.GridButton4_Click);
             // 
             // GridButton4Dup
             // 
@@ -189,7 +189,7 @@ namespace WindowsFormsApp1
             this.GridButton4Dup.Tag = "4";
             this.GridButton4Dup.Text = "button8";
             this.GridButton4Dup.UseVisualStyleBackColor = true;
-            this.GridButton4Dup.Click += new System.EventHandler(this.GridButton4Dub_Click);
+            //this.GridButton4Dup.Click += new System.EventHandler(this.GridButton4Dub_Click);
             // 
             // GridButton5
             // 
@@ -203,7 +203,7 @@ namespace WindowsFormsApp1
             this.GridButton5.Tag = "5";
             this.GridButton5.Text = "button9";
             this.GridButton5.UseVisualStyleBackColor = true;
-            this.GridButton5.Click += new System.EventHandler(this.GridButton5_Click);
+            //this.GridButton5.Click += new System.EventHandler(this.GridButton5_Click);
             // 
             // GridButton5Dup
             // 
@@ -217,7 +217,7 @@ namespace WindowsFormsApp1
             this.GridButton5Dup.Tag = "5";
             this.GridButton5Dup.Text = "button10";
             this.GridButton5Dup.UseVisualStyleBackColor = true;
-            this.GridButton5Dup.Click += new System.EventHandler(this.GridButton5Dub_Click);
+            //this.GridButton5Dup.Click += new System.EventHandler(this.GridButton5Dub_Click);
             // 
             // GridButton6
             // 
@@ -231,7 +231,7 @@ namespace WindowsFormsApp1
             this.GridButton6.Tag = "6";
             this.GridButton6.Text = "button11";
             this.GridButton6.UseVisualStyleBackColor = true;
-            this.GridButton6.Click += new System.EventHandler(this.GridButton6_Click);
+            //this.GridButton6.Click += new System.EventHandler(this.GridButton6_Click);
             // 
             // GridButton6Dup
             // 
@@ -245,7 +245,7 @@ namespace WindowsFormsApp1
             this.GridButton6Dup.Tag = "6";
             this.GridButton6Dup.Text = "button12";
             this.GridButton6Dup.UseVisualStyleBackColor = true;
-            this.GridButton6Dup.Click += new System.EventHandler(this.GridButton6Dub_Click);
+            //this.GridButton6Dup.Click += new System.EventHandler(this.GridButton6Dub_Click);
             // 
             // GridButton7
             // 
@@ -259,7 +259,7 @@ namespace WindowsFormsApp1
             this.GridButton7.Tag = "7";
             this.GridButton7.Text = "button13";
             this.GridButton7.UseVisualStyleBackColor = true;
-            this.GridButton7.Click += new System.EventHandler(this.GridButton7_Click);
+            //this.GridButton7.Click += new System.EventHandler(this.GridButton7_Click);
             // 
             // GridButton7Dup
             // 
@@ -273,7 +273,7 @@ namespace WindowsFormsApp1
             this.GridButton7Dup.Tag = "7";
             this.GridButton7Dup.Text = "button14";
             this.GridButton7Dup.UseVisualStyleBackColor = true;
-            this.GridButton7Dup.Click += new System.EventHandler(this.GridButton7Dup_Click);
+           // this.GridButton7Dup.Click += new System.EventHandler(this.GridButton7Dup_Click);
             // 
             // GridButton8
             // 
@@ -287,7 +287,7 @@ namespace WindowsFormsApp1
             this.GridButton8.Tag = "8";
             this.GridButton8.Text = "button15";
             this.GridButton8.UseVisualStyleBackColor = true;
-            this.GridButton8.Click += new System.EventHandler(this.GridButton8_Click);
+            //this.GridButton8.Click += new System.EventHandler(this.GridButton8_Click);
             // 
             // GridButton8Dup
             // 
@@ -301,7 +301,7 @@ namespace WindowsFormsApp1
             this.GridButton8Dup.Tag = "8";
             this.GridButton8Dup.Text = "button16";
             this.GridButton8Dup.UseVisualStyleBackColor = true;
-            this.GridButton8Dup.Click += new System.EventHandler(this.GridButton8Dup_Click);
+            //this.GridButton8Dup.Click += new System.EventHandler(this.GridButton8Dup_Click);
             // 
             // Player2Textbox
             // 
