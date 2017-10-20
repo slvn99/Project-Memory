@@ -15,6 +15,7 @@ namespace Memory
     {
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         
+        
 
         public Form4()
         {
@@ -131,16 +132,12 @@ namespace Memory
 
         private async void timer3_Tick(object sender, EventArgs e)
         {
+            player.Stop(); //stop van ting goes skra
 			player.SoundLocation = "ping.wav";
 			player.Play();
 			await Task.Delay(2000);
 			player.Stop();
             timer3.Stop();
 		}
-
-        private void Loading_bar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
