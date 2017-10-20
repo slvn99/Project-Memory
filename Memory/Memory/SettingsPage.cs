@@ -39,24 +39,6 @@ namespace Memory
             this.Cursor = c;
         }
 
-        public void ThemaBox_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			if (ThemaBox.SelectedText == "Thema 1")
-			{
-				// Als thema 1 gepickt wordt, dan moet het thema 1 gebruiken als cards
-			}
-
-			if (ThemaBox.SelectedText == "Thema 2")
-			{
-				// Als thema 2 gepickt wordt, dan moet het thema 2 gebruiken als cards
-			}
-
-			if (ThemaBox.SelectedText == "Thema 3")
-			{
-				// Als thema 3 gepickt wordt, dan moet het thema 3 gebruiken als cards
-			}
-		}
-
 		private async void HomeButton_Click_1(object sender, EventArgs e)
 		{
 			player.SoundLocation = "click.wav";
@@ -71,11 +53,9 @@ namespace Memory
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
-			Memory.HomePage f2 = new Memory.HomePage();
-			f2.Show();
+            Memory.SettingsPage_Save.SaveData(ThemaBox.SelectedText);
 			await Task.Delay(300);
-			player.Stop();
-			Memory.SettingsPage_Save.SaveData(ThemaBox.SelectedText);
+            player.Stop();
 		}
 
 		private async void SettingsPage_FormClosed(object sender, FormClosedEventArgs e)
