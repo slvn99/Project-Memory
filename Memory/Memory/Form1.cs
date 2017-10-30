@@ -22,20 +22,19 @@ namespace WindowsFormsApp1
         int PuntenPlayer1, PuntenPlayer2, TotaalMatches,lengte;
         List<Point> punten = new List<Point>();
         List<string> matchlist = new List<string>();
-        Random ButtonLocatie = new Random();
         string thema = Memory.SettingsPage_Save.LoadData();
+
 
 
 		public Form1()
         {
             InitializeComponent();
-
+            Saveclass.Visible = false;
 
 			if (thema == "Er is nog geen\nsave file\naanwezig")
 			{ }
 			else
 			{
-
 				switch (thema)
 				{
 					case "Thema 3":					
@@ -54,15 +53,16 @@ namespace WindowsFormsApp1
             {
                 x.Visible = false;
                 punten.Add(x.Location);
+                x.Text = "";
             }
 
+            Random ButtonLocatie = new Random();
             foreach (Button Button in ButtonGrid)
             {
                 int next = ButtonLocatie.Next(punten.Count);
                 Point p = punten[next];
                 Button.Location = p;
                 punten.Remove(p);
-				Button.Text = "";
             }
 
             Player1LabelInvoer.Font = new Font("Arial", 8, FontStyle.Bold);
@@ -75,6 +75,8 @@ namespace WindowsFormsApp1
             Points1.ForeColor = System.Drawing.Color.White;
             Points2.Font = new Font("Arial", 8, FontStyle.Bold);
             Points2.ForeColor = System.Drawing.Color.White;
+
+           
         }
 
         void ChangeCursor()
@@ -86,7 +88,9 @@ namespace WindowsFormsApp1
 
         private void PlayButton_Click(object sender, EventArgs e)
         {
+             GC.Collect();
             Play_Game();
+            
         }
 
         private void Play_Game()
@@ -103,7 +107,7 @@ namespace WindowsFormsApp1
             else
             {
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
-                
+               
                 foreach (var x in ButtonGrid)
                 {
                     x.Visible = true;
@@ -132,10 +136,10 @@ namespace WindowsFormsApp1
 				Beurt.Visible = true;
 				play.Visible = false;
                 Reset.Visible = true;
-
+                Loadclass.Visible = false;
+                Saveclass.Visible = true;
                 Player1LabelInvoer.Text = Player1Textbox.Text;
                 Player2LabelInvoer.Text = Player2Textbox.Text;
-
                 player1 = Player1LabelInvoer.Text;
                 player2 = Player2LabelInvoer.Text;
                 PlayerBeurt = player1;
@@ -250,54 +254,10 @@ namespace WindowsFormsApp1
 
         private void Reset_Function()
         {
-            //Ga terug naar begin spel                
-            PuntenPlayer1 = 0;
-            PuntenPlayer2 = 0;
-            Points1.Text = "0";
-            Points2.Text = "0";
-            Points1.Visible = false;
-            Points2.Visible = false;
-            PlayerBeurt = null;
-            BeurtLabel.Text = string.Empty;
-            Kaart1Select = null;
-            Kaart2Select = null;
-            Player1Textbox.Visible = true;
-            Player1Textbox.Text = string.Empty;
-            Player2Textbox.Visible = true;
-            Player2Textbox.Text = string.Empty;
-            Player1LabelInvoer.Visible = false;
-            Player2LabelInvoer.Visible = false;
-            Speler1.Visible = false;
-            Speler2.Visible = false;
-			Beurt.Visible = false;
-			play.Visible = true;
-            Reset.Visible = false;
-			pictureBox1.Visible = true;
-			pictureBox2.Visible = true;
-            GridButton1.Visible = true;
-			GridButton1.BackgroundImage = Resources.cardback;
-			GridButton1Dup.BackgroundImage = Resources.cardback;
-			GridButton2.BackgroundImage = Resources.cardback;
-			GridButton2Dup.BackgroundImage = Resources.cardback;
-			GridButton3.BackgroundImage = Resources.cardback;
-			GridButton3Dup.BackgroundImage = Resources.cardback;
-			GridButton4.BackgroundImage = Resources.cardback;
-			GridButton4Dup.BackgroundImage = Resources.cardback;
-			GridButton5.BackgroundImage = Resources.cardback;
-			GridButton5Dup.BackgroundImage = Resources.cardback;
-			GridButton6.BackgroundImage = Resources.cardback; 
-			GridButton6Dup.BackgroundImage = Resources.cardback;
-			GridButton7.BackgroundImage = Resources.cardback;
-			GridButton7Dup.BackgroundImage = Resources.cardback;
-			GridButton8.BackgroundImage = Resources.cardback;
-			GridButton8Dup.BackgroundImage = Resources.cardback;
-			
-			Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
-
-            foreach (var x in ButtonGrid)
-            {
-                x.Visible = false;
-            }
+            Memory.HomePage f2 = new Memory.HomePage();
+            Sluiten();
+            f2.form1reset();
+            
         }
 
         private void EndGame_Check()

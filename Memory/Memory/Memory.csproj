@@ -157,6 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Skra.wav" />
+    <None Include="Resources\Thema%27s.png" />
+    <None Include="Resources\toepassen.png" />
+    <None Include="Resources\coollogo_com-52152217.png" />
     <None Include="Resources\cardback.png" />
     <None Include="Resources\dikke meme.png" />
     <None Include="Resources\cur1031.png" />
