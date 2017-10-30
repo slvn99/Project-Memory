@@ -14,9 +14,7 @@ namespace Memory
     public partial class Form4 : Form
     {
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-        
-        
-
+   
         public Form4()
         {
             InitializeComponent();
@@ -42,7 +40,6 @@ namespace Memory
 				label1.TextAlign = ContentAlignment.MiddleCenter;
 				label1.Dock = DockStyle.Fill;
 			}
-
 
 			else if (a == 2)
 			{
@@ -130,7 +127,6 @@ namespace Memory
             timer1.Stop();
             Sluiten();
         }
-
 
         private async void timer3_Tick(object sender, EventArgs e)
         {

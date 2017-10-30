@@ -73,14 +73,27 @@ namespace Memory
 
         public  void Sluiten()
         {
-            Close();
+            ShowInTaskbar = false;
+            Visible = false;
             Dispose();
             GC.Collect();
+        }
+        public void tonen()
+        {
+            ShowInTaskbar = true;
+            Visible = true;
         }
 
         private void HomePage_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
+            if(e.CloseReason == CloseReason.UserClosing)
+            {
+                Manager.ManagerInstance.Close();
+            }
+            else
+            {
+
+            }
         }
     }
 

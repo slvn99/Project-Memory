@@ -204,6 +204,25 @@ namespace WindowsFormsApp1
 				}
             }
         }
+        public async void clearcards1()
+        {
+            await Task.Delay(1000);
+            Kaart1Select.Visible = false;
+            Kaart2Select.Visible = false;
+            Kaart1Select = null;
+            Kaart2Select = null;
+            Point_Add();
+        }
+
+        public async void clearcards2()
+        {
+            await Task.Delay(1000);
+            Kaart1Select.BackgroundImage = Resources.cardback;
+            Kaart2Select.BackgroundImage = Resources.cardback;
+            Kaart1Select = null;
+            Kaart2Select = null;
+            Change_Beurt();
+        }
         private void Change_Beurt()
         {
             if (PlayerBeurt == player1)
@@ -314,7 +333,7 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    //exit hoofdmenu
+                    Sluiten();
                 }
             }
         }
@@ -504,29 +523,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void ResetButton_Click(object sender, EventArgs e)
-        {
-            DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (ResetGame == DialogResult.Yes)
-            {
-                Reset_Function();
-            }
-            else
-            {
-                //return hoofdmenu.
-            }
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private async void pictureBox3_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -539,9 +535,7 @@ namespace WindowsFormsApp1
             {
                 Sluiten();
             }
-        }
-
-		
+        }		
         
         public void Saveclass_Click(object sender, EventArgs e)
         {
@@ -554,8 +548,10 @@ namespace WindowsFormsApp1
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Memory.HomePage f = new Memory.HomePage();
-            f.Show();
+            Memory.HomePage f2 = new Memory.HomePage();
+            f2.tonen();
+            Dispose();
+            GC.Collect();
         }
 
         public void Loadclass_Click(object sender, EventArgs e)
@@ -702,7 +698,6 @@ namespace WindowsFormsApp1
                 check = true;
             }
 
-
             while (check == false)
                 {  }
             Loadclass.Enabled = false;
@@ -710,26 +705,7 @@ namespace WindowsFormsApp1
             value.Text = "";
             Loadclass.Enabled = true;
         }
-
-        public async void clearcards1()
-        {
-            await Task.Delay(1000);
-            Kaart1Select.Visible = false;
-            Kaart2Select.Visible = false;
-            Kaart1Select = null;
-            Kaart2Select = null;
-            Point_Add();
-        }
-
-        public async void clearcards2()
-        {
-            await Task.Delay(1000);
-                    Kaart1Select.BackgroundImage = Resources.cardback;
-					Kaart2Select.BackgroundImage = Resources.cardback;
-					Kaart1Select = null;
-                    Kaart2Select = null;
-                    Change_Beurt();
-        }
+       
         public void Sluiten()
         {
             Close();

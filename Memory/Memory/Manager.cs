@@ -26,6 +26,7 @@ namespace Memory
 
             var HomePage = new HomePage();
             HomePage.Show();
-        }
+        }        
+        
     }
 }
