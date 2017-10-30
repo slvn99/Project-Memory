@@ -489,8 +489,18 @@ namespace WindowsFormsApp1
             {
                 Sluiten();
             }
-        }		
-        
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public void Saveclass_Click(object sender, EventArgs e)
         {
             string[] matcharray = new string[20];
