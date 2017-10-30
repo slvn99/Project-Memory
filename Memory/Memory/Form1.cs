@@ -250,6 +250,7 @@ namespace WindowsFormsApp1
             Speler2.Visible = false;
 			Beurt.Visible = false;
 			play.Visible = true;
+            Reset.Visible = false;
 			pictureBox1.Visible = true;
 			pictureBox2.Visible = true;
             GridButton1.Visible = true;
