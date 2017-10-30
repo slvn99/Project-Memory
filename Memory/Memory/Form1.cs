@@ -155,7 +155,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        public void Check_kaart()
+        public async void Check_kaart()
         {
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
             if (Kaart1Select != null && Kaart2Select != null)
@@ -176,7 +176,13 @@ namespace WindowsFormsApp1
                             x.Enabled = false;
                         }
 
-                        clearcards1();
+                        await Task.Delay(1000);
+                        Kaart1Select.Visible = false;
+                        Kaart2Select.Visible = false;
+                        Kaart1Select = null;
+                        Kaart2Select = null;
+                        Point_Add();
+                        GC.Collect();
 
                         foreach (var x in ButtonGrid)
                         {
@@ -191,7 +197,13 @@ namespace WindowsFormsApp1
                         x.Enabled = false;
                     }
 
-                    clearcards2();
+                    await Task.Delay(1000);
+                    Kaart1Select.BackgroundImage = Resources.cardback;
+                    Kaart2Select.BackgroundImage = Resources.cardback;
+                    Kaart1Select = null;
+                    Kaart2Select = null;
+                    Change_Beurt();
+                    GC.Collect();
 
                     foreach (var x in ButtonGrid)
                     {
@@ -204,25 +216,7 @@ namespace WindowsFormsApp1
 				}
             }
         }
-        public async void clearcards1()
-        {
-            await Task.Delay(1000);
-            Kaart1Select.Visible = false;
-            Kaart2Select.Visible = false;
-            Kaart1Select = null;
-            Kaart2Select = null;
-            Point_Add();
-        }
 
-        public async void clearcards2()
-        {
-            await Task.Delay(1000);
-            Kaart1Select.BackgroundImage = Resources.cardback;
-            Kaart2Select.BackgroundImage = Resources.cardback;
-            Kaart1Select = null;
-            Kaart2Select = null;
-            Change_Beurt();
-        }
         private void Change_Beurt()
         {
             if (PlayerBeurt == player1)
