@@ -193,6 +193,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap coollogo_com_52152217 {
+            get {
+                object obj = ResourceManager.GetObject("coollogo_com_52152217", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap cur1031 {
             get {
                 object obj = ResourceManager.GetObject("cur1031", resourceCulture);
@@ -546,6 +556,26 @@ namespace Memory.Properties {
         public static System.IO.UnmanagedMemoryStream THE_TING_GO_SKRRA {
             get {
                 return ResourceManager.GetStream("THE_TING_GO_SKRRA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Thema_s {
+            get {
+                object obj = ResourceManager.GetObject("Thema_s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap toepassen {
+            get {
+                object obj = ResourceManager.GetObject("toepassen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
