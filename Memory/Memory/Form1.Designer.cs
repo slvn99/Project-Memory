@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
             this.GridButton1Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton1Dup.Location = new System.Drawing.Point(337, 15);
-            this.GridButton1Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton1Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton1Dup.Name = "GridButton1Dup";
             this.GridButton1Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton1Dup.TabIndex = 2;
@@ -98,7 +98,7 @@ namespace WindowsFormsApp1
             this.GridButton2.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton2.Location = new System.Drawing.Point(609, 14);
-            this.GridButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton2.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton2.Name = "GridButton2";
             this.GridButton2.Size = new System.Drawing.Size(173, 160);
             this.GridButton2.TabIndex = 3;
@@ -112,7 +112,7 @@ namespace WindowsFormsApp1
             this.GridButton2Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton2Dup.Location = new System.Drawing.Point(873, 15);
-            this.GridButton2Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton2Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton2Dup.Name = "GridButton2Dup";
             this.GridButton2Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton2Dup.TabIndex = 4;
@@ -126,7 +126,7 @@ namespace WindowsFormsApp1
             this.GridButton3.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton3.Location = new System.Drawing.Point(69, 182);
-            this.GridButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton3.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton3.Name = "GridButton3";
             this.GridButton3.Size = new System.Drawing.Size(173, 160);
             this.GridButton3.TabIndex = 5;
@@ -140,7 +140,7 @@ namespace WindowsFormsApp1
             this.GridButton3Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton3Dup.Location = new System.Drawing.Point(337, 182);
-            this.GridButton3Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton3Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton3Dup.Name = "GridButton3Dup";
             this.GridButton3Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton3Dup.TabIndex = 6;
@@ -154,7 +154,7 @@ namespace WindowsFormsApp1
             this.GridButton4.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton4.Location = new System.Drawing.Point(609, 181);
-            this.GridButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton4.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton4.Name = "GridButton4";
             this.GridButton4.Size = new System.Drawing.Size(173, 160);
             this.GridButton4.TabIndex = 7;
@@ -168,7 +168,7 @@ namespace WindowsFormsApp1
             this.GridButton4Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton4Dup.Location = new System.Drawing.Point(873, 182);
-            this.GridButton4Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton4Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton4Dup.Name = "GridButton4Dup";
             this.GridButton4Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton4Dup.TabIndex = 8;
@@ -182,7 +182,7 @@ namespace WindowsFormsApp1
             this.GridButton5.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton5.Location = new System.Drawing.Point(69, 350);
-            this.GridButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton5.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton5.Name = "GridButton5";
             this.GridButton5.Size = new System.Drawing.Size(173, 160);
             this.GridButton5.TabIndex = 9;
@@ -196,7 +196,7 @@ namespace WindowsFormsApp1
             this.GridButton5Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton5Dup.Location = new System.Drawing.Point(337, 350);
-            this.GridButton5Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton5Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton5Dup.Name = "GridButton5Dup";
             this.GridButton5Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton5Dup.TabIndex = 10;
@@ -210,7 +210,7 @@ namespace WindowsFormsApp1
             this.GridButton6.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton6.Location = new System.Drawing.Point(609, 517);
-            this.GridButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton6.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton6.Name = "GridButton6";
             this.GridButton6.Size = new System.Drawing.Size(173, 160);
             this.GridButton6.TabIndex = 11;
@@ -224,7 +224,7 @@ namespace WindowsFormsApp1
             this.GridButton6Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton6Dup.Location = new System.Drawing.Point(873, 350);
-            this.GridButton6Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton6Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton6Dup.Name = "GridButton6Dup";
             this.GridButton6Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton6Dup.TabIndex = 12;
@@ -238,7 +238,7 @@ namespace WindowsFormsApp1
             this.GridButton7.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton7.Location = new System.Drawing.Point(69, 517);
-            this.GridButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton7.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton7.Name = "GridButton7";
             this.GridButton7.Size = new System.Drawing.Size(173, 160);
             this.GridButton7.TabIndex = 13;
@@ -252,7 +252,7 @@ namespace WindowsFormsApp1
             this.GridButton7Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton7Dup.Location = new System.Drawing.Point(337, 512);
-            this.GridButton7Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton7Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton7Dup.Name = "GridButton7Dup";
             this.GridButton7Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton7Dup.TabIndex = 14;
@@ -266,7 +266,7 @@ namespace WindowsFormsApp1
             this.GridButton8.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton8.Location = new System.Drawing.Point(609, 350);
-            this.GridButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton8.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton8.Name = "GridButton8";
             this.GridButton8.Size = new System.Drawing.Size(173, 160);
             this.GridButton8.TabIndex = 15;
@@ -280,7 +280,7 @@ namespace WindowsFormsApp1
             this.GridButton8Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton8Dup.Location = new System.Drawing.Point(873, 517);
-            this.GridButton8Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton8Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton8Dup.Name = "GridButton8Dup";
             this.GridButton8Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton8Dup.TabIndex = 16;
@@ -296,6 +296,7 @@ namespace WindowsFormsApp1
             this.Player2Textbox.Name = "Player2Textbox";
             this.Player2Textbox.Size = new System.Drawing.Size(137, 22);
             this.Player2Textbox.TabIndex = 21;
+            this.Player2Textbox.TextChanged += new System.EventHandler(this.Player2Textbox_TextChanged);
             // 
             // Player1Textbox
             // 
@@ -304,6 +305,7 @@ namespace WindowsFormsApp1
             this.Player1Textbox.Name = "Player1Textbox";
             this.Player1Textbox.Size = new System.Drawing.Size(137, 22);
             this.Player1Textbox.TabIndex = 22;
+            this.Player1Textbox.TextChanged += new System.EventHandler(this.Player1Textbox_TextChanged);
             // 
             // value
             // 
@@ -314,11 +316,12 @@ namespace WindowsFormsApp1
             this.value.Name = "value";
             this.value.Size = new System.Drawing.Size(0, 17);
             this.value.TabIndex = 23;
+            this.value.Click += new System.EventHandler(this.value_Click);
             // 
             // Saveclass
             // 
             this.Saveclass.Location = new System.Drawing.Point(1151, 500);
-            this.Saveclass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Saveclass.Margin = new System.Windows.Forms.Padding(4);
             this.Saveclass.Name = "Saveclass";
             this.Saveclass.Size = new System.Drawing.Size(129, 28);
             this.Saveclass.TabIndex = 24;
@@ -337,6 +340,7 @@ namespace WindowsFormsApp1
             this.Player1LabelInvoer.TabIndex = 25;
             this.Player1LabelInvoer.Text = ":__________:";
             this.Player1LabelInvoer.Visible = false;
+            this.Player1LabelInvoer.Click += new System.EventHandler(this.Player1LabelInvoer_Click);
             // 
             // Player2LabelInvoer
             // 
@@ -349,6 +353,7 @@ namespace WindowsFormsApp1
             this.Player2LabelInvoer.TabIndex = 26;
             this.Player2LabelInvoer.Text = ":__________:";
             this.Player2LabelInvoer.Visible = false;
+            this.Player2LabelInvoer.Click += new System.EventHandler(this.Player2LabelInvoer_Click);
             // 
             // BeurtLabel
             // 
@@ -361,6 +366,7 @@ namespace WindowsFormsApp1
             this.BeurtLabel.TabIndex = 28;
             this.BeurtLabel.Text = "Naam";
             this.BeurtLabel.Visible = false;
+            this.BeurtLabel.Click += new System.EventHandler(this.BeurtLabel_Click);
             // 
             // Points1
             // 
@@ -373,6 +379,7 @@ namespace WindowsFormsApp1
             this.Points1.TabIndex = 29;
             this.Points1.Text = "Punten";
             this.Points1.Visible = false;
+            this.Points1.Click += new System.EventHandler(this.Points1_Click);
             // 
             // Points2
             // 
@@ -385,6 +392,7 @@ namespace WindowsFormsApp1
             this.Points2.TabIndex = 30;
             this.Points2.Text = "Punten";
             this.Points2.Visible = false;
+            this.Points2.Click += new System.EventHandler(this.Points2_Click);
             // 
             // Loadclass
             // 
@@ -409,6 +417,7 @@ namespace WindowsFormsApp1
             this.Variablen_save.TabIndex = 36;
             this.Variablen_save.Text = "Player1:\r\nPlayer2:\r\nScore1:\r\nScore2: \r\nBeurt:";
             this.Variablen_save.Visible = false;
+            this.Variablen_save.Click += new System.EventHandler(this.Variablen_save_Click);
             // 
             // Exceptionbox
             // 
@@ -418,6 +427,7 @@ namespace WindowsFormsApp1
             this.Exceptionbox.Size = new System.Drawing.Size(0, 17);
             this.Exceptionbox.TabIndex = 37;
             this.Exceptionbox.Visible = false;
+            this.Exceptionbox.Click += new System.EventHandler(this.Exceptionbox_Click);
             // 
             // play
             // 
@@ -457,6 +467,7 @@ namespace WindowsFormsApp1
             this.pictureBox1.Size = new System.Drawing.Size(144, 37);
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Beurt
             // 
@@ -470,6 +481,7 @@ namespace WindowsFormsApp1
             this.Beurt.TabIndex = 42;
             this.Beurt.TabStop = false;
             this.Beurt.Visible = false;
+            this.Beurt.Click += new System.EventHandler(this.Beurt_Click);
             // 
             // Speler1
             // 
@@ -483,6 +495,7 @@ namespace WindowsFormsApp1
             this.Speler1.TabIndex = 43;
             this.Speler1.TabStop = false;
             this.Speler1.Visible = false;
+            this.Speler1.Click += new System.EventHandler(this.Speler1_Click);
             // 
             // Speler2
             // 
@@ -496,6 +509,7 @@ namespace WindowsFormsApp1
             this.Speler2.TabIndex = 44;
             this.Speler2.TabStop = false;
             this.Speler2.Visible = false;
+            this.Speler2.Click += new System.EventHandler(this.Speler2_Click);
             // 
             // pictureBox2
             // 
@@ -508,6 +522,7 @@ namespace WindowsFormsApp1
             this.pictureBox2.Size = new System.Drawing.Size(144, 42);
             this.pictureBox2.TabIndex = 45;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -527,7 +542,7 @@ namespace WindowsFormsApp1
             this.GridButton1.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton1.Location = new System.Drawing.Point(69, 15);
-            this.GridButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.GridButton1.Margin = new System.Windows.Forms.Padding(5);
             this.GridButton1.Name = "GridButton1";
             this.GridButton1.Size = new System.Drawing.Size(173, 160);
             this.GridButton1.TabIndex = 1;
@@ -580,7 +595,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.GridButton2);
             this.Controls.Add(this.GridButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

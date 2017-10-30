@@ -94,6 +94,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RunningInThe90s.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunningInThe90s.Designer.cs">
+      <DependentUpon>RunningInThe90s.cs</DependentUpon>
+    </Compile>
     <Compile Include="Save.cs" />
     <Compile Include="ServerClient.cs" />
     <Compile Include="ServerHost.cs" />
@@ -126,6 +132,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunningInThe90s.resx">
+      <DependentUpon>RunningInThe90s.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsPage.resx">
       <DependentUpon>SettingsPage.cs</DependentUpon>

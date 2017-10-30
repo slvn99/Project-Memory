@@ -529,8 +529,83 @@ namespace WindowsFormsApp1
             {
                 Sluiten();
             }
-        }		
-        
+        }
+
+        private void Speler1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Speler2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Beurt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Exceptionbox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Variablen_save_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Points2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Points1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BeurtLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Player2LabelInvoer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Player1LabelInvoer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void value_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Player1Textbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Player2Textbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         public void Saveclass_Click(object sender, EventArgs e)
         {
             string[] matcharray = new string[20];
