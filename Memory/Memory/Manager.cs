@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace Memory
 {
@@ -26,7 +27,9 @@ namespace Memory
 
             var HomePage = new HomePage();
             HomePage.Show();
-        }        
-        
+
+            axWindowsMediaPlayer1.URL = "chiper.wav";
+            axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
     }
 }
