@@ -15,7 +15,6 @@ namespace Memory
         public static void StartClient()
         {
             Client = new TcpClient("141.252.225.170", 8984);
-
         }
 
         public static void SendMessage(string message)
