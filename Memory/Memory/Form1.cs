@@ -682,7 +682,7 @@ namespace WindowsFormsApp1
                 string[] savearray = buffer.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
                 for (int i = 0; i < 5; i++)
                 {
-                    buffer2 = (buffer2 + savearray[i] +"n");
+                    buffer2 = (buffer2 + savearray[i] +"\n");
                 }
                 value.Text = buffer2;
             }
@@ -693,6 +693,7 @@ namespace WindowsFormsApp1
             //idem
             Variablen_save.Visible = false;
             value.Text = "";
+			Save.Encrypt();
         }
 
         public async void clearcards1()
