@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
 		public Form1()
         {
             InitializeComponent();
-            Saveclass.Visible = false;
+            opslaan.Visible = false;
 
 			if (thema == "Er is nog geen\nsave file\naanwezig")
 			{ }
@@ -126,7 +126,6 @@ namespace WindowsFormsApp1
                 Points2.Visible = true;
                 BeurtLabel.Visible = true;
                 Beurt.Visible = true;
-                Saveclass.Visible = true;
                 Speler1.Visible = true;
                 Speler2.Visible = true;
                 pictureBox1.Visible = false;
@@ -136,8 +135,8 @@ namespace WindowsFormsApp1
 				Beurt.Visible = true;
 				play.Visible = false;
                 Reset.Visible = true;
-                Loadclass.Visible = false;
-                Saveclass.Visible = true;
+                laden.Visible = false;
+                opslaan.Visible = true;
                 Player1LabelInvoer.Text = Player1Textbox.Text;
                 Player2LabelInvoer.Text = Player2Textbox.Text;
                 player1 = Player1LabelInvoer.Text;
@@ -255,9 +254,9 @@ namespace WindowsFormsApp1
         private void Reset_Function()
         {
             Memory.HomePage f2 = new Memory.HomePage();
-            Sluiten();
             f2.form1reset();
-            
+            Dispose();
+            GC.Collect();
         }
 
         private void EndGame_Check()
@@ -490,90 +489,7 @@ namespace WindowsFormsApp1
                 Sluiten();
             }
         }
-
-        private void Speler1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Speler2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Beurt_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Exceptionbox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Variablen_save_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Points2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Points1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BeurtLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Player2LabelInvoer_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Player1LabelInvoer_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void value_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Player1Textbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Player2Textbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        public void Saveclass_Click(object sender, EventArgs e)
-        {
-            string[] matcharray = new string[20];
-            matchlist.CopyTo(matcharray);
-
-            //click van deze button saved alle huidige data in .sav
-            Save.SaveData(player1, player2, PuntenPlayer1, PuntenPlayer2, PlayerBeurt, TotaalMatches, matcharray,lengte);
-        }
+        
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -583,7 +499,7 @@ namespace WindowsFormsApp1
             GC.Collect();
         }
 
-        public void Loadclass_Click(object sender, EventArgs e)
+        private void laden_Click(object sender, EventArgs e)
         {
             //click van deze button load alle huidige data uit .sav
             //en zet deze in save string
@@ -600,7 +516,7 @@ namespace WindowsFormsApp1
                 player2 = savearray[1];
                 PlayerBeurt = savearray[4];
                 Player1Textbox.Text = player1;
-                Player2Textbox.Text = player2;                
+                Player2Textbox.Text = player2;
 
                 //aanroeping van play game
                 Play_Game();
@@ -690,7 +606,17 @@ namespace WindowsFormsApp1
                     }
                 }
             }
+        
         }
+
+        private void opslaan_Click(object sender, EventArgs e)
+        {
+            string[] matcharray = new string[20];
+            matchlist.CopyTo(matcharray);
+
+            //click van deze button saved alle huidige data in .sav
+            Save.SaveData(player1, player2, PuntenPlayer1, PuntenPlayer2, PlayerBeurt, TotaalMatches, matcharray, lengte);
+        }     
 
         private void Loadclass_MouseHover(object sender, EventArgs e)
         {

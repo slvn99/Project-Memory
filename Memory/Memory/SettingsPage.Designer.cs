@@ -28,49 +28,25 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.ThemaBox = new System.Windows.Forms.ComboBox();
             this.Apply = new System.Windows.Forms.Button();
             this.VolumeUp = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.VolumeDown = new System.Windows.Forms.PictureBox();
             this.MuteButton = new System.Windows.Forms.PictureBox();
             this.Settings = new System.Windows.Forms.PictureBox();
             this.Home = new System.Windows.Forms.PictureBox();
             this.ServerDebug = new System.Windows.Forms.Button();
             this.RunningInThe90sButton = new System.Windows.Forms.Button();
+            this.Volume = new System.Windows.Forms.PictureBox();
+            this.Themas = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeUp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MuteButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Settings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Home)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Volume)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Themas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial", 20F);
-            this.label2.Location = new System.Drawing.Point(348, 207);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 39);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Music";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Arial", 20F);
-            this.label3.Location = new System.Drawing.Point(348, 326);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 39);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Thema\'s";
             // 
             // ThemaBox
             // 
@@ -78,22 +54,24 @@
             "Thema 1",
             "Thema 2",
             "Thema 3"});
-            this.ThemaBox.Location = new System.Drawing.Point(581, 326);
-            this.ThemaBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ThemaBox.Location = new System.Drawing.Point(581, 413);
+            this.ThemaBox.Margin = new System.Windows.Forms.Padding(4);
             this.ThemaBox.Name = "ThemaBox";
             this.ThemaBox.Size = new System.Drawing.Size(160, 24);
             this.ThemaBox.TabIndex = 0;
             // 
             // Apply
             // 
+            this.Apply.BackColor = System.Drawing.Color.DimGray;
+            this.Apply.BackgroundImage = global::Memory.Properties.Resources.toepassen;
+            this.Apply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Apply.Font = new System.Drawing.Font("Arial", 13F);
-            this.Apply.Location = new System.Drawing.Point(596, 575);
-            this.Apply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Apply.Location = new System.Drawing.Point(538, 571);
+            this.Apply.Margin = new System.Windows.Forms.Padding(4);
             this.Apply.Name = "Apply";
-            this.Apply.Size = new System.Drawing.Size(108, 39);
+            this.Apply.Size = new System.Drawing.Size(241, 78);
             this.Apply.TabIndex = 4;
-            this.Apply.Text = "Apply";
-            this.Apply.UseVisualStyleBackColor = true;
+            this.Apply.UseVisualStyleBackColor = false;
             this.Apply.Click += new System.EventHandler(this.Apply_Click);
             // 
             // VolumeUp
@@ -102,21 +80,12 @@
             this.VolumeUp.BackgroundImage = global::Memory.Properties.Resources.SpeakerButton;
             this.VolumeUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.VolumeUp.Location = new System.Drawing.Point(832, 196);
-            this.VolumeUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VolumeUp.Margin = new System.Windows.Forms.Padding(4);
             this.VolumeUp.Name = "VolumeUp";
             this.VolumeUp.Size = new System.Drawing.Size(117, 108);
             this.VolumeUp.TabIndex = 5;
             this.VolumeUp.TabStop = false;
-            this.VolumeUp.Click += new System.EventHandler(this.VolumeUp_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(-31, -57);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(133, 62);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.VolumeUp.Click += new System.EventHandler(this.VolumeUp_Click);          
             // 
             // VolumeDown
             // 
@@ -124,7 +93,7 @@
             this.VolumeDown.BackgroundImage = global::Memory.Properties.Resources.VolumeDownButton;
             this.VolumeDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.VolumeDown.Location = new System.Drawing.Point(707, 196);
-            this.VolumeDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VolumeDown.Margin = new System.Windows.Forms.Padding(4);
             this.VolumeDown.Name = "VolumeDown";
             this.VolumeDown.Size = new System.Drawing.Size(117, 108);
             this.VolumeDown.TabIndex = 7;
@@ -137,7 +106,7 @@
             this.MuteButton.BackgroundImage = global::Memory.Properties.Resources.MuteButton;
             this.MuteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.MuteButton.Location = new System.Drawing.Point(581, 196);
-            this.MuteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MuteButton.Margin = new System.Windows.Forms.Padding(4);
             this.MuteButton.Name = "MuteButton";
             this.MuteButton.Size = new System.Drawing.Size(117, 108);
             this.MuteButton.TabIndex = 8;
@@ -172,7 +141,7 @@
             // ServerDebug
             // 
             this.ServerDebug.Location = new System.Drawing.Point(68, 599);
-            this.ServerDebug.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ServerDebug.Margin = new System.Windows.Forms.Padding(4);
             this.ServerDebug.Name = "ServerDebug";
             this.ServerDebug.Size = new System.Drawing.Size(100, 28);
             this.ServerDebug.TabIndex = 12;
@@ -189,6 +158,27 @@
             this.RunningInThe90sButton.Text = "Running";
             this.RunningInThe90sButton.UseVisualStyleBackColor = true;
             this.RunningInThe90sButton.Click += new System.EventHandler(this.RunningInThe90sButton_Click);
+            // Volume
+            // 
+            this.Volume.BackColor = System.Drawing.Color.Transparent;
+            this.Volume.BackgroundImage = global::Memory.Properties.Resources.coollogo_com_52152217;
+            this.Volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Volume.Location = new System.Drawing.Point(91, 196);
+            this.Volume.Name = "Volume";
+            this.Volume.Size = new System.Drawing.Size(454, 108);
+            this.Volume.TabIndex = 13;
+            this.Volume.TabStop = false;
+            // 
+            // Themas
+            // 
+            this.Themas.BackColor = System.Drawing.Color.Transparent;
+            this.Themas.BackgroundImage = global::Memory.Properties.Resources.Thema_s;
+            this.Themas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Themas.Location = new System.Drawing.Point(91, 349);
+            this.Themas.Name = "Themas";
+            this.Themas.Size = new System.Drawing.Size(463, 88);
+            this.Themas.TabIndex = 14;
+            this.Themas.TabStop = false;
             // 
             // SettingsPage
             // 
@@ -198,46 +188,45 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1363, 730);
             this.Controls.Add(this.RunningInThe90sButton);
+            this.ClientSize = new System.Drawing.Size(1417, 730);
+            this.Controls.Add(this.Themas);
+            this.Controls.Add(this.Volume);
             this.Controls.Add(this.ServerDebug);
             this.Controls.Add(this.Home);
             this.Controls.Add(this.Settings);
             this.Controls.Add(this.MuteButton);
             this.Controls.Add(this.VolumeDown);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.VolumeUp);
             this.Controls.Add(this.Apply);
             this.Controls.Add(this.ThemaBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SettingsPage";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SettingsPage";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SettingsPage_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.VolumeUp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MuteButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Settings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Home)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Volume)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Themas)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
 		}
 
 		#endregion
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.ComboBox ThemaBox;
 		private System.Windows.Forms.Button Apply;
 		private System.Windows.Forms.PictureBox VolumeUp;
-		private System.Windows.Forms.PictureBox pictureBox2;
 		private System.Windows.Forms.PictureBox VolumeDown;
 		private System.Windows.Forms.PictureBox MuteButton;
         private System.Windows.Forms.PictureBox Settings;
         private System.Windows.Forms.PictureBox Home;
         private System.Windows.Forms.Button ServerDebug;
         private System.Windows.Forms.Button RunningInThe90sButton;
+        private System.Windows.Forms.PictureBox Volume;
+        private System.Windows.Forms.PictureBox Themas;
     }
 }

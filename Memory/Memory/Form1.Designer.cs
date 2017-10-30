@@ -51,13 +51,11 @@ namespace WindowsFormsApp1
             this.Player2Textbox = new System.Windows.Forms.TextBox();
             this.Player1Textbox = new System.Windows.Forms.TextBox();
             this.value = new System.Windows.Forms.Label();
-            this.Saveclass = new System.Windows.Forms.Button();
             this.Player1LabelInvoer = new System.Windows.Forms.Label();
             this.Player2LabelInvoer = new System.Windows.Forms.Label();
             this.BeurtLabel = new System.Windows.Forms.Label();
             this.Points1 = new System.Windows.Forms.Label();
             this.Points2 = new System.Windows.Forms.Label();
-            this.Loadclass = new System.Windows.Forms.Button();
             this.Variablen_save = new System.Windows.Forms.Label();
             this.Exceptionbox = new System.Windows.Forms.Label();
             this.play = new System.Windows.Forms.PictureBox();
@@ -69,6 +67,8 @@ namespace WindowsFormsApp1
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.GridButton1 = new System.Windows.Forms.Button();
+            this.laden = new System.Windows.Forms.PictureBox();
+            this.opslaan = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Reset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,6 +77,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.Speler2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.laden)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.opslaan)).BeginInit();
             this.SuspendLayout();
             // 
             // GridButton1Dup
@@ -296,7 +298,6 @@ namespace WindowsFormsApp1
             this.Player2Textbox.Name = "Player2Textbox";
             this.Player2Textbox.Size = new System.Drawing.Size(137, 22);
             this.Player2Textbox.TabIndex = 21;
-            this.Player2Textbox.TextChanged += new System.EventHandler(this.Player2Textbox_TextChanged);
             // 
             // Player1Textbox
             // 
@@ -305,7 +306,6 @@ namespace WindowsFormsApp1
             this.Player1Textbox.Name = "Player1Textbox";
             this.Player1Textbox.Size = new System.Drawing.Size(137, 22);
             this.Player1Textbox.TabIndex = 22;
-            this.Player1Textbox.TextChanged += new System.EventHandler(this.Player1Textbox_TextChanged);
             // 
             // value
             // 
@@ -316,18 +316,6 @@ namespace WindowsFormsApp1
             this.value.Name = "value";
             this.value.Size = new System.Drawing.Size(0, 17);
             this.value.TabIndex = 23;
-            this.value.Click += new System.EventHandler(this.value_Click);
-            // 
-            // Saveclass
-            // 
-            this.Saveclass.Location = new System.Drawing.Point(1151, 500);
-            this.Saveclass.Margin = new System.Windows.Forms.Padding(4);
-            this.Saveclass.Name = "Saveclass";
-            this.Saveclass.Size = new System.Drawing.Size(129, 28);
-            this.Saveclass.TabIndex = 24;
-            this.Saveclass.Text = "Opslaan";
-            this.Saveclass.UseVisualStyleBackColor = true;
-            this.Saveclass.Click += new System.EventHandler(this.Saveclass_Click);
             // 
             // Player1LabelInvoer
             // 
@@ -340,7 +328,6 @@ namespace WindowsFormsApp1
             this.Player1LabelInvoer.TabIndex = 25;
             this.Player1LabelInvoer.Text = ":__________:";
             this.Player1LabelInvoer.Visible = false;
-            this.Player1LabelInvoer.Click += new System.EventHandler(this.Player1LabelInvoer_Click);
             // 
             // Player2LabelInvoer
             // 
@@ -353,7 +340,6 @@ namespace WindowsFormsApp1
             this.Player2LabelInvoer.TabIndex = 26;
             this.Player2LabelInvoer.Text = ":__________:";
             this.Player2LabelInvoer.Visible = false;
-            this.Player2LabelInvoer.Click += new System.EventHandler(this.Player2LabelInvoer_Click);
             // 
             // BeurtLabel
             // 
@@ -366,7 +352,6 @@ namespace WindowsFormsApp1
             this.BeurtLabel.TabIndex = 28;
             this.BeurtLabel.Text = "Naam";
             this.BeurtLabel.Visible = false;
-            this.BeurtLabel.Click += new System.EventHandler(this.BeurtLabel_Click);
             // 
             // Points1
             // 
@@ -379,7 +364,6 @@ namespace WindowsFormsApp1
             this.Points1.TabIndex = 29;
             this.Points1.Text = "Punten";
             this.Points1.Visible = false;
-            this.Points1.Click += new System.EventHandler(this.Points1_Click);
             // 
             // Points2
             // 
@@ -392,20 +376,6 @@ namespace WindowsFormsApp1
             this.Points2.TabIndex = 30;
             this.Points2.Text = "Punten";
             this.Points2.Visible = false;
-            this.Points2.Click += new System.EventHandler(this.Points2_Click);
-            // 
-            // Loadclass
-            // 
-            this.Loadclass.Location = new System.Drawing.Point(1151, 390);
-            this.Loadclass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Loadclass.Name = "Loadclass";
-            this.Loadclass.Size = new System.Drawing.Size(129, 23);
-            this.Loadclass.TabIndex = 33;
-            this.Loadclass.Text = "Laden";
-            this.Loadclass.UseVisualStyleBackColor = true;
-            this.Loadclass.Click += new System.EventHandler(this.Loadclass_Click);
-            this.Loadclass.MouseLeave += new System.EventHandler(this.Loadclass_MouseLeave);
-            this.Loadclass.MouseHover += new System.EventHandler(this.Loadclass_MouseHover);
             // 
             // Variablen_save
             // 
@@ -417,7 +387,6 @@ namespace WindowsFormsApp1
             this.Variablen_save.TabIndex = 36;
             this.Variablen_save.Text = "Player1:\r\nPlayer2:\r\nScore1:\r\nScore2: \r\nBeurt:";
             this.Variablen_save.Visible = false;
-            this.Variablen_save.Click += new System.EventHandler(this.Variablen_save_Click);
             // 
             // Exceptionbox
             // 
@@ -427,17 +396,16 @@ namespace WindowsFormsApp1
             this.Exceptionbox.Size = new System.Drawing.Size(0, 17);
             this.Exceptionbox.TabIndex = 37;
             this.Exceptionbox.Visible = false;
-            this.Exceptionbox.Click += new System.EventHandler(this.Exceptionbox_Click);
             // 
             // play
             // 
             this.play.BackColor = System.Drawing.Color.Transparent;
             this.play.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG321;
             this.play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.play.Location = new System.Drawing.Point(1115, 182);
+            this.play.Location = new System.Drawing.Point(1115, 206);
             this.play.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.play.Name = "play";
-            this.play.Size = new System.Drawing.Size(165, 82);
+            this.play.Size = new System.Drawing.Size(165, 46);
             this.play.TabIndex = 38;
             this.play.TabStop = false;
             this.play.Click += new System.EventHandler(this.play_Click_1);
@@ -467,7 +435,6 @@ namespace WindowsFormsApp1
             this.pictureBox1.Size = new System.Drawing.Size(144, 37);
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Beurt
             // 
@@ -481,7 +448,6 @@ namespace WindowsFormsApp1
             this.Beurt.TabIndex = 42;
             this.Beurt.TabStop = false;
             this.Beurt.Visible = false;
-            this.Beurt.Click += new System.EventHandler(this.Beurt_Click);
             // 
             // Speler1
             // 
@@ -495,7 +461,6 @@ namespace WindowsFormsApp1
             this.Speler1.TabIndex = 43;
             this.Speler1.TabStop = false;
             this.Speler1.Visible = false;
-            this.Speler1.Click += new System.EventHandler(this.Speler1_Click);
             // 
             // Speler2
             // 
@@ -509,7 +474,6 @@ namespace WindowsFormsApp1
             this.Speler2.TabIndex = 44;
             this.Speler2.TabStop = false;
             this.Speler2.Visible = false;
-            this.Speler2.Click += new System.EventHandler(this.Speler2_Click);
             // 
             // pictureBox2
             // 
@@ -522,7 +486,6 @@ namespace WindowsFormsApp1
             this.pictureBox2.Size = new System.Drawing.Size(144, 42);
             this.pictureBox2.TabIndex = 45;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -551,6 +514,32 @@ namespace WindowsFormsApp1
             this.GridButton1.UseVisualStyleBackColor = false;
             this.GridButton1.Click += new System.EventHandler(this.GridButton1_Click);
             // 
+            // laden
+            // 
+            this.laden.BackColor = System.Drawing.Color.Transparent;
+            this.laden.BackgroundImage = global::Memory.Properties.Resources.button_laden;
+            this.laden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.laden.Location = new System.Drawing.Point(1114, 368);
+            this.laden.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.laden.Name = "laden";
+            this.laden.Size = new System.Drawing.Size(165, 46);
+            this.laden.TabIndex = 47;
+            this.laden.TabStop = false;
+            this.laden.Click += new System.EventHandler(this.laden_Click);
+            // 
+            // opslaan
+            // 
+            this.opslaan.BackColor = System.Drawing.Color.Transparent;
+            this.opslaan.BackgroundImage = global::Memory.Properties.Resources.button_opslaan;
+            this.opslaan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.opslaan.Location = new System.Drawing.Point(1115, 517);
+            this.opslaan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.opslaan.Name = "opslaan";
+            this.opslaan.Size = new System.Drawing.Size(165, 68);
+            this.opslaan.TabIndex = 48;
+            this.opslaan.TabStop = false;
+            this.opslaan.Click += new System.EventHandler(this.opslaan_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -558,6 +547,8 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1417, 730);
+            this.Controls.Add(this.opslaan);
+            this.Controls.Add(this.laden);
             this.Controls.Add(this.GridButton1Dup);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.Reset);
@@ -569,11 +560,9 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Exceptionbox);
             this.Controls.Add(this.Variablen_save);
-            this.Controls.Add(this.Loadclass);
             this.Controls.Add(this.Points2);
             this.Controls.Add(this.Points1);
             this.Controls.Add(this.BeurtLabel);
-            this.Controls.Add(this.Saveclass);
             this.Controls.Add(this.Player2LabelInvoer);
             this.Controls.Add(this.Player1LabelInvoer);
             this.Controls.Add(this.value);
@@ -608,6 +597,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.Speler2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.laden)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.opslaan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -651,6 +642,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox pictureBox3;
 		private System.Windows.Forms.Label TestLabel;
         private System.Windows.Forms.Button GridButton1;
+        private System.Windows.Forms.PictureBox laden;
+        private System.Windows.Forms.PictureBox opslaan;
     }
 }
 
