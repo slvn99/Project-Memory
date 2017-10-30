@@ -253,22 +253,22 @@ namespace WindowsFormsApp1
 			pictureBox1.Visible = true;
 			pictureBox2.Visible = true;
             GridButton1.Visible = true;
-			GridButton1.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton1Dup.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton2.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton2Dup.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton3.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton3Dup.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton4.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton4Dup.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton5.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton5Dup.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton6.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton6Dup.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton7.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton7Dup.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton8.BackgroundImage = Resources.back_of_memory_cards;
-			GridButton8Dup.BackgroundImage = Resources.back_of_memory_cards;
+			GridButton1.BackgroundImage = Resources.cardback;
+			GridButton1Dup.BackgroundImage = Resources.cardback;
+			GridButton2.BackgroundImage = Resources.cardback;
+			GridButton2Dup.BackgroundImage = Resources.cardback;
+			GridButton3.BackgroundImage = Resources.cardback;
+			GridButton3Dup.BackgroundImage = Resources.cardback;
+			GridButton4.BackgroundImage = Resources.cardback;
+			GridButton4Dup.BackgroundImage = Resources.cardback;
+			GridButton5.BackgroundImage = Resources.cardback;
+			GridButton5Dup.BackgroundImage = Resources.cardback;
+			GridButton6.BackgroundImage = Resources.cardback; 
+			GridButton6Dup.BackgroundImage = Resources.cardback;
+			GridButton7.BackgroundImage = Resources.cardback;
+			GridButton7Dup.BackgroundImage = Resources.cardback;
+			GridButton8.BackgroundImage = Resources.cardback;
+			GridButton8Dup.BackgroundImage = Resources.cardback;
 			
 			Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
@@ -706,9 +706,9 @@ namespace WindowsFormsApp1
             await Task.Delay(1000);
                     Kaart1Select.Text = "[=]";
                     Kaart2Select.Text = "[=]";
-                    Kaart1Select.BackgroundImage = Resources.back_of_memory_cards;
-                    Kaart2Select.BackgroundImage = Resources.back_of_memory_cards;
-                    Kaart1Select = null;
+                    Kaart1Select.BackgroundImage = Resources.cardback;
+					Kaart2Select.BackgroundImage = Resources.cardback;
+					Kaart1Select = null;
                     Kaart2Select = null;
                     Change_Beurt();
         }
