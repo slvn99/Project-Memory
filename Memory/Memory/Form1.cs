@@ -62,7 +62,7 @@ namespace WindowsFormsApp1
                 Point p = punten[next];
                 Button.Location = p;
                 punten.Remove(p);
-                Button.Text = "[=]";
+				Button.Text = "";
             }
 
             Player1LabelInvoer.Font = new Font("Arial", 8, FontStyle.Bold);
@@ -95,6 +95,10 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Je moet een naam invullen!");
             }
+			if (Player1Textbox.Text == Player2Textbox.Text)
+			{
+				MessageBox.Show("Voer 2 verschillende namen in");
+			}
 
             else
             {
@@ -193,7 +197,11 @@ namespace WindowsFormsApp1
                     {
                         x.Enabled = true;
                     }
-                }
+					foreach (var x in ButtonGrid)
+					{
+						x.Text = "";
+					}
+				}
             }
         }
         private void Change_Beurt()
@@ -275,10 +283,6 @@ namespace WindowsFormsApp1
             foreach (var x in ButtonGrid)
             {
                 x.Visible = false;
-            }
-            foreach (var x in ButtonGrid)
-            {
-                x.Text = "[=]";
             }
         }
 
@@ -704,8 +708,6 @@ namespace WindowsFormsApp1
         public async void clearcards2()
         {
             await Task.Delay(1000);
-                    Kaart1Select.Text = "[=]";
-                    Kaart2Select.Text = "[=]";
                     Kaart1Select.BackgroundImage = Resources.cardback;
 					Kaart2Select.BackgroundImage = Resources.cardback;
 					Kaart1Select = null;
