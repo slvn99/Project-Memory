@@ -528,31 +528,15 @@ namespace WindowsFormsApp1
             player.Play();
             await Task.Delay(300);
             player.Stop();
-            this.Close();
-            this.ShowInTaskbar = false;
-        }
-
-		private void TestLabel_Click(object sender, EventArgs e)
-		{
-			TestLabel.Text = thema;
-
-		}
-
-		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Memory.HomePage f2 = new Memory.HomePage();
-            f2.Show();
-        }
-
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            DialogResult ExitGame = MessageBox.Show("Weet u zeker dat u het spel wil verlaten? Onopgeslagen progressie zal verloren gaan! ", "Exit", MessageBoxButtons.YesNo); 
+            DialogResult ExitGame = MessageBox.Show("Weet u zeker dat u het spel wil verlaten? Onopgeslagen progressie zal verloren gaan! ", "Exit", MessageBoxButtons.YesNo);
 
             if (ExitGame == DialogResult.Yes)
             {
-                Application.Exit();
+                Sluiten();
             }
         }
+
+		
         
         public void Saveclass_Click(object sender, EventArgs e)
         {
@@ -561,6 +545,12 @@ namespace WindowsFormsApp1
 
             //click van deze button saved alle huidige data in .sav
             Save.SaveData(player1, player2, PuntenPlayer1, PuntenPlayer2, PlayerBeurt, TotaalMatches, matcharray,lengte);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Memory.HomePage f = new Memory.HomePage();
+            f.Show();
         }
 
         public void Loadclass_Click(object sender, EventArgs e)
@@ -721,6 +711,12 @@ namespace WindowsFormsApp1
                     Kaart1Select = null;
                     Kaart2Select = null;
                     Change_Beurt();
+        }
+        public void Sluiten()
+        {
+            Close();
+            Dispose();
+            GC.Collect();
         }
     }
 

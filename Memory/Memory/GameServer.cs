@@ -16,7 +16,10 @@ namespace Memory
         {
             InitializeComponent();
         }
+        public static Label label2 = new Label();
+        bool loop = true;
 
+        
         //static void Main(string[] args)
         //{
         //    Console.WriteLine("SERVER of CLIENT");
@@ -39,6 +42,10 @@ namespace Memory
         {
             ServerHost.StartServer();
             label1.Text = (ServerHost.ReceiveMessage());
+            //do
+            //{
+            //    label1.Text = label2.Text;
+            //} while (loop == true);
         }
 
         private void ClientButton_Click(object sender, EventArgs e)

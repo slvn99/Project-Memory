@@ -45,9 +45,11 @@ namespace Memory
 			player.Play();
 			await Task.Delay(300);
 			player.Stop();
-			this.Close();
 			this.ShowInTaskbar = false;
-		}
+            this.Close();
+            this.Dispose();
+            GC.Collect();
+        }
 
 		public async void Apply_Click(object sender, EventArgs e)
 		{
@@ -64,8 +66,10 @@ namespace Memory
 			Memory.HomePage f13 = new Memory.HomePage();
 			f13.Show();
 			await Task.Delay(100);
-			this.Close();
-		}
+            this.Close();
+            this.Dispose();
+            GC.Collect();
+        }
 
 		private void VolumeDown_Click(object sender, EventArgs e)
 		{

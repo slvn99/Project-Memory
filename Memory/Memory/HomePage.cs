@@ -36,12 +36,13 @@ namespace Memory
 
         private async void PlayButton_Click(object sender, EventArgs e)
         {
+            Memory.Form4 f = new Memory.Form4();
             player.SoundLocation = "click.wav";
             player.Play();
-            Memory.Form4 f5 = new Memory.Form4();
-            f5.Show();
+            f.Show();
+            Sluiten();
             await Task.Delay(100);
-			this.Hide();
+            player.Stop();
         }
 
         private async void SettingButton_Click(object sender, EventArgs e)
@@ -51,9 +52,10 @@ namespace Memory
             Memory.SettingsPage f6 = new Memory.SettingsPage();
             f6.Show();
             await Task.Delay(300);
-			player.Stop();
+            player.Stop();
             this.WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false;
+            Sluiten();
         }
 
         private async void RankButton_Click(object sender, EventArgs e)
@@ -63,14 +65,23 @@ namespace Memory
             Memory.HighscorePage f7 = new Memory.HighscorePage();
             f7.Show();
             await Task.Delay(300);
-			player.Stop();
-			this.WindowState = FormWindowState.Minimized;
+            player.Stop();
+            this.WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false;
+            Sluiten();
         }
 
-        private void HomePage_FormClosed(object sender, FormClosedEventArgs e)
+        public  void Sluiten()
         {
-            Application.Exit();
+            Close();
+            Dispose();
+            GC.Collect();
+        }
+
+        private void HomePage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           
         }
     }
+
 }
