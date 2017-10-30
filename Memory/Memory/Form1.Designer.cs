@@ -526,6 +526,8 @@ namespace WindowsFormsApp1
             this.laden.TabIndex = 47;
             this.laden.TabStop = false;
             this.laden.Click += new System.EventHandler(this.laden_Click);
+            this.laden.MouseLeave += new System.EventHandler(this.laden_MouseLeave);
+            this.laden.MouseHover += new System.EventHandler(this.laden_MouseHover);
             // 
             // opslaan
             // 
