@@ -36,6 +36,7 @@
             this.Settings = new System.Windows.Forms.PictureBox();
             this.Home = new System.Windows.Forms.PictureBox();
             this.ServerDebug = new System.Windows.Forms.Button();
+            this.RunningInThe90sButton = new System.Windows.Forms.Button();
             this.Volume = new System.Windows.Forms.PictureBox();
             this.Themas = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeUp)).BeginInit();
@@ -84,7 +85,7 @@
             this.VolumeUp.Size = new System.Drawing.Size(117, 108);
             this.VolumeUp.TabIndex = 5;
             this.VolumeUp.TabStop = false;
-            this.VolumeUp.Click += new System.EventHandler(this.VolumeUp_Click);
+            this.VolumeUp.Click += new System.EventHandler(this.VolumeUp_Click);          
             // 
             // VolumeDown
             // 
@@ -148,6 +149,15 @@
             this.ServerDebug.UseVisualStyleBackColor = true;
             this.ServerDebug.Click += new System.EventHandler(this.ServerDebug_Click);
             // 
+            // RunningInThe90sButton
+            // 
+            this.RunningInThe90sButton.Location = new System.Drawing.Point(610, 440);
+            this.RunningInThe90sButton.Name = "RunningInThe90sButton";
+            this.RunningInThe90sButton.Size = new System.Drawing.Size(75, 23);
+            this.RunningInThe90sButton.TabIndex = 13;
+            this.RunningInThe90sButton.Text = "Running";
+            this.RunningInThe90sButton.UseVisualStyleBackColor = true;
+            this.RunningInThe90sButton.Click += new System.EventHandler(this.RunningInThe90sButton_Click);
             // Volume
             // 
             this.Volume.BackColor = System.Drawing.Color.Transparent;
@@ -176,6 +186,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1363, 730);
+            this.Controls.Add(this.RunningInThe90sButton);
             this.ClientSize = new System.Drawing.Size(1417, 730);
             this.Controls.Add(this.Themas);
             this.Controls.Add(this.Volume);
@@ -213,6 +225,7 @@
         private System.Windows.Forms.PictureBox Settings;
         private System.Windows.Forms.PictureBox Home;
         private System.Windows.Forms.Button ServerDebug;
+        private System.Windows.Forms.Button RunningInThe90sButton;
         private System.Windows.Forms.PictureBox Volume;
         private System.Windows.Forms.PictureBox Themas;
     }
