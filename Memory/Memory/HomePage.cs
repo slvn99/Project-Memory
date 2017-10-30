@@ -77,6 +77,7 @@ namespace Memory
             Visible = false;
             Dispose();
             GC.Collect();
+            Close();
         }
         public void tonen()
         {
@@ -94,6 +95,12 @@ namespace Memory
             {
 
             }
+        }
+        public void form1reset()
+        {
+            WindowsFormsApp1.Form1 f = new WindowsFormsApp1.Form1();
+            f.Show();
+            Sluiten();
         }
     }
 
