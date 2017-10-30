@@ -148,6 +148,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Skra.wav" />
+    <Content Include="Resources\button laden.png" />
+    <Content Include="Resources\button opslaan.png" />
     <None Include="Resources\Thema%27s.png" />
     <None Include="Resources\toepassen.png" />
     <None Include="Resources\coollogo_com-52152217.png" />
