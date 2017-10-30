@@ -133,6 +133,26 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap button_laden {
+            get {
+                object obj = ResourceManager.GetObject("button_laden", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap button_opslaan {
+            get {
+                object obj = ResourceManager.GetObject("button_opslaan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap buttons_PNG32 {
             get {
                 object obj = ResourceManager.GetObject("buttons_PNG32", resourceCulture);
