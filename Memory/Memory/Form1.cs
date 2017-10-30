@@ -255,9 +255,9 @@ namespace WindowsFormsApp1
         private void Reset_Function()
         {
             Memory.HomePage f2 = new Memory.HomePage();
-            Sluiten();
             f2.form1reset();
-            
+            Dispose();
+            GC.Collect();
         }
 
         private void EndGame_Check()
