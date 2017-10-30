@@ -14,18 +14,20 @@ namespace Memory
     public partial class GameServer : Form
     {
         string TempName, HostName, ClienName;
-
+        public static Label TempConLabel = new Label();
 
         public GameServer()
         {
             InitializeComponent();
+
+            TempConLabel.Text = null;
 
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
             foreach (Button x in ButtonGrid)
             {
                 x.Visible = false;
             }
-
+            
             HC_Label.Visible = false;
             HostButton.Visible = false;
             ClientButton.Visible = false;
@@ -52,17 +54,6 @@ namespace Memory
         //    }
         //    Console.ReadLine();
         //}
-
-        private void HostButton_Click(object sender, EventArgs e)
-        {
-            ServerHost.StartServer();
-            ConLabel.Text = (ServerHost.ReceiveMessage());
-            //do
-            //{
-            //    label1.Text = label2.Text;
-            //} while (loop == true);
-        }
-
         private void GridButton1_Click(object sender, EventArgs e)
         {
 			GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -78,91 +69,99 @@ namespace Memory
         private void GridButton2_Click(object sender, EventArgs e)
         {
             GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton2.BackgroundImage = Resources.Steam;
+            GridButton2.BackgroundImage = Resources.TwitchLogo;
         }
 
         private void GridButton2Dup_Click(object sender, EventArgs e)
         {
             GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton2Dup.BackgroundImage = Resources.Steam;
+            GridButton2Dup.BackgroundImage = Resources.TwitchLogo;
         }
 
         private void GridButton3_Click(object sender, EventArgs e)
         {
             GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton3.BackgroundImage = Resources.Steam;
+            GridButton3.BackgroundImage = Resources.fb;
         }
 
         private void GridButton3Dup_Click(object sender, EventArgs e)
         {
             GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton3Dup.BackgroundImage = Resources.Steam;
+            GridButton3Dup.BackgroundImage = Resources.fb;
         }
 
         private void GridButton4_Click(object sender, EventArgs e)
         {
             GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton4.BackgroundImage = Resources.Steam;
+            GridButton4.BackgroundImage = Resources.Reddit;
         }
 
         private void GridButton4Dup_Click(object sender, EventArgs e)
         {
             GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton4Dup.BackgroundImage = Resources.Steam;
+            GridButton4Dup.BackgroundImage = Resources.Reddit;
         }
 
         private void GridButton5_Click(object sender, EventArgs e)
         {
             GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton5.BackgroundImage = Resources.Steam;
+            GridButton5.BackgroundImage = Resources._9gag;
         }
 
         private void GridButton5Dup_Click(object sender, EventArgs e)
         {
             GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton5Dup.BackgroundImage = Resources.Steam;
+            GridButton5Dup.BackgroundImage = Resources._9gag;
         }
 
         private void GridButton6_Click(object sender, EventArgs e)
         {
             GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton6.BackgroundImage = Resources.Steam;
+            GridButton6.BackgroundImage = Resources.Twitter;
         }
 
         private void GridButton6Dup_Click(object sender, EventArgs e)
         {
             GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton6Dup.BackgroundImage = Resources.Steam;
+            GridButton6Dup.BackgroundImage = Resources.Twitter;
         }
 
         private void GridButton7_Click(object sender, EventArgs e)
         {
             GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton7.BackgroundImage = Resources.Steam;
+            GridButton7.BackgroundImage = Resources.Youtube;
         }
 
         private void GridButton7Dup_Click(object sender, EventArgs e)
         {
             GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton7Dup.BackgroundImage = Resources.Steam;
+            GridButton7Dup.BackgroundImage = Resources.Youtube;
         }
 
         private void GridButton8_Click(object sender, EventArgs e)
         {
             GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton8.BackgroundImage = Resources.Steam;
+            GridButton8.BackgroundImage = Resources.Google;
         }
 
         private void GridButton8Dup_Click(object sender, EventArgs e)
         {
             GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton8Dup.BackgroundImage = Resources.Steam;
+            GridButton8Dup.BackgroundImage = Resources.Google;
+        }
+
+        private void HostButton_Click(object sender, EventArgs e)
+        {
+            ServerHost.StartServer();
+            ConLabel.Text = TempConLabel.Text;
+            //ConLabel.Text = (ServerHost.ReceiveMessage());
+            
         }
 
         private void ClientButton_Click(object sender, EventArgs e)
         {
             ServerClient.StartClient();
-            ServerClient.SendMessage("Testerino");
+            //ServerClient.SendMessage("Testerino");
         }
 
         private void NaamButton_Click(object sender, EventArgs e)

@@ -13,19 +13,39 @@ namespace Memory
         static int PacketSize = 1024 * 1024;
         public static TcpListener Listener;
         public static TcpClient Client; //client die geconnect is
+        int count = 0;
 
         public static void StartServer()
         {
             IPEndPoint ip = new IPEndPoint(IPAddress.Any, 8984);
             Listener = new TcpListener(ip);
             Listener.Start();
-            Client = Listener.AcceptTcpClient();
-            //do
+            AcceptClient();
+            
+
+            //for(int i = 0; i < 20; i++)
             //{
-            //    Client = Listener.AcceptTcpClient();
-            //    GameServer.label2.Text = "connecting";
-            //} while (Client == null);
-            //GameServer.label2.Text = "Connectie!";
+            //    if (Client == null)
+            //    {
+            //        GameServer.TempConLabel.Text = "connecting " ;
+            //    }
+            //    else
+            //    {
+            //        GameServer.TempConLabel.Text = "Connectie!";
+            //    }
+            //}
+        }
+
+        public static void AcceptClient()
+        {
+            Listener.BeginAcceptTcpClient(ClientConnected, null);
+            GameServer.TempConLabel.Text = "connecting";
+        }
+
+        public static void ClientConnected(IAsyncResult ar)
+        {
+            Client = Listener.EndAcceptTcpClient(ar);
+            GameServer.TempConLabel.Text = "connected!";
         }
 
         public static bool SendMessage(string message)
