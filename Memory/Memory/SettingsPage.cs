@@ -104,5 +104,11 @@ namespace Memory
             Memory.GameServer g1 = new Memory.GameServer();
             g1.Show();
         }
+
+        private void RunningInThe90sButton_Click(object sender, EventArgs e)
+        {
+            Memory.RunningInThe90s inThe90S = new Memory.RunningInThe90s();
+            inThe90S.Show();
+        }
     }
 }
