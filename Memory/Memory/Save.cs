@@ -77,7 +77,6 @@ namespace WindowsFormsApp1
                 {
                     formatter.Serialize(stream, matcharray[i]);
                     i++;
-                    //arrayint moet overgedragen worden naar deserialise somehow
                 }
 
                 //Return

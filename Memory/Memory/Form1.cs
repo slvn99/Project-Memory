@@ -258,6 +258,7 @@ namespace WindowsFormsApp1
             Speler2.Visible = false;
 			Beurt.Visible = false;
 			play.Visible = true;
+            Reset.Visible = false;
 			pictureBox1.Visible = true;
 			pictureBox2.Visible = true;
             GridButton1.Visible = true;
@@ -693,6 +694,7 @@ namespace WindowsFormsApp1
             //idem
             Variablen_save.Visible = false;
             value.Text = "";
+			Save.Encrypt();
         }
 
         public async void clearcards1()
