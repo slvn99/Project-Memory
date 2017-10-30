@@ -26,10 +26,6 @@ namespace Memory
 
             //proberen van laden van savedata if aanwezig, anders doet hij niks
             string message = Decrypt();
-            //if (message == "Decrypten is mislukt.")
-            //{ }
-            //else
-            //{
                 string save = LoadData();
                 if (save == "Er is nog geen\nsave file\naanwezig")
                 { }
@@ -293,6 +289,16 @@ namespace Memory
                 string message = ("Decrypten is mislukt.");
                 return message; 
             }
+        }
+        public static void Reset()
+        {
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+            var file = @"" + path + "highscores.sav";
+            byte[] data = null;
+            File.WriteAllBytes(file, data);
+            file = @"" + path + "lengte.ini";
+            string lengte = Convert.ToString(data);
+            File.WriteAllText(file, lengte);
         }
     }
 }
