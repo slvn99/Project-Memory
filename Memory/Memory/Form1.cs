@@ -127,6 +127,7 @@ namespace WindowsFormsApp1
 				Speler2.Visible = true;
 				Beurt.Visible = true;
 				play.Visible = false;
+                Reset.Visible = true;
 
                 Player1LabelInvoer.Text = Player1Textbox.Text;
                 Player2LabelInvoer.Text = Player2Textbox.Text;
