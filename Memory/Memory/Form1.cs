@@ -664,13 +664,13 @@ namespace WindowsFormsApp1
                         i++;
                     }
                 }
-                WindowsFormsApp1.Save.Encrypt();
             }
         }
 
         private void Loadclass_MouseHover(object sender, EventArgs e)
         {
             //laten zien van wat er in de save staat
+            Loadclass.Enabled = false;
             Variablen_save.Visible = true;
             string buffer = Save.LoadData();
             string buffer2 = "";
@@ -687,14 +687,28 @@ namespace WindowsFormsApp1
                 }
                 value.Text = buffer2;
             }
+            Loadclass.Enabled = true;
         }
 
         private void Loadclass_MouseLeave(object sender, EventArgs e)
         {
-            //idem
+            bool check;
+            if (Loadclass.Enabled == false)
+            {
+                check = false;
+            }
+            else
+            {
+                check = true;
+            }
+
+
+            while (check == false)
+                {  }
+            Loadclass.Enabled = false;
             Variablen_save.Visible = false;
             value.Text = "";
-			Save.Encrypt();
+            Loadclass.Enabled = true;
         }
 
         public async void clearcards1()

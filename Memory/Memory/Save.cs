@@ -47,6 +47,8 @@ namespace WindowsFormsApp1
             //Terugzetten van bytes naar data
             string opslag = Deserialize(bytes);
 
+            //weer encrypten
+            Save.Encrypt();
             //variabelen teruggeven aan button die een label aanpast
             return (opslag);           
         }
