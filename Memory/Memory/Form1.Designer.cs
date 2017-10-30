@@ -602,7 +602,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button GridButton8Dup;
         private System.Windows.Forms.TextBox Player2Textbox;
         private System.Windows.Forms.TextBox Player1Textbox;
-        private System.Windows.Forms.Button Saveclass;
         public System.Windows.Forms.Label value;
         private System.Windows.Forms.Label Player1LabelInvoer;
         private System.Windows.Forms.Label Player2LabelInvoer;
@@ -620,7 +619,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox Speler2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-		private System.Windows.Forms.Label TestLabel;
         private System.Windows.Forms.Button GridButton1;
         private System.Windows.Forms.PictureBox laden;
         private System.Windows.Forms.PictureBox opslaan;
