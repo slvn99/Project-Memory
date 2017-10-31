@@ -746,10 +746,12 @@ namespace WindowsFormsApp1
             GC.Collect();
         }
 
-        private void laden_Click(object sender, EventArgs e)
+        private async void laden_Click(object sender, EventArgs e)
         {
             //click van deze button load alle huidige data uit .sav
             //en zet deze in save string
+            player.SoundLocation = "click.wav";
+            player.Play();
             string save = Save.LoadData();
             if (save == "Er is nog geen\nsave file\naanwezig")
             { }
@@ -853,16 +855,22 @@ namespace WindowsFormsApp1
                     }
                 }
             }
+            await Task.Delay(1000);
+            player.Stop();
         }
 
 
-        private void opslaan_Click(object sender, EventArgs e)
+        private async void opslaan_Click(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
             string[] matcharray = new string[20];
             matchlist.CopyTo(matcharray);
 
             //click van deze button saved alle huidige data in .sav
             Save.SaveData(player1, player2, PuntenPlayer1, PuntenPlayer2, PlayerBeurt, TotaalMatches, matcharray, lengte);
+            await Task.Delay(1000);
+            player.Stop();
         }     
 
         public void Sluiten()
