@@ -553,6 +553,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap media_achtergrond {
+            get {
+                object obj = ResourceManager.GetObject("media_achtergrond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Memory {
             get {
                 object obj = ResourceManager.GetObject("Memory", resourceCulture);
