@@ -160,7 +160,7 @@ namespace Memory
         {
             if (host == true)
             {
-                ConLabel.Text = TempConLabel.Text;
+                //ConLabel.Text = TempConLabel.Text;
                 GameData = Convert.ToString(GridButton1.Location);
                 ServerHost.SendMessage(GameData);
             }
