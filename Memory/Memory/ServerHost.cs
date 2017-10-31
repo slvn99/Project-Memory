@@ -13,7 +13,6 @@ namespace Memory
         static int PacketSize = 1024 * 1024;
         public static TcpListener Listener;
         public static TcpClient Client; //client die geconnect is
-        int count = 0;
 
         public static void StartServer()
         {
@@ -45,7 +44,7 @@ namespace Memory
         public static void ClientConnected(IAsyncResult ar)
         {
             Client = Listener.EndAcceptTcpClient(ar);
-            GameServer.TempConLabel.Text = "connected!";
+            //GameServer.TempConLabel.Text = "connected!";
         }
 
         public static bool SendMessage(string message)
