@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Skra.wav" />
+    <None Include="Resources\Reset highscore.png" />
     <None Include="Resources\1.png" />
     <None Include="Resources\2.png" />
     <None Include="Resources\3.png" />
