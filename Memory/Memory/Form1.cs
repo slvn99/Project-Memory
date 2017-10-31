@@ -193,14 +193,14 @@ namespace WindowsFormsApp1
             {
                 if (Kaart1Select.Tag == Kaart2Select.Tag)
                 {
-                    player.SoundLocation = "tada.wav";
-                    player.Play();
                     if (Kaart1Select.Name == Kaart2Select.Name)
                     {
                         Kaart2Select = null;
                     }
                     else
                     {
+                        player.SoundLocation = "ping.wav";
+                        player.Play();
                         matchlist.Add(Kaart1Select.Name);
                         matchlist.Add(Kaart2Select.Name);
                         lengte += 2;
@@ -302,24 +302,39 @@ namespace WindowsFormsApp1
             GC.Collect();
         }
 
-        private void EndGame_Check()
+        private async void EndGame_Check()
         {
             if (TotaalMatches == 8)
             {
                 opslaan.Visible = false;
                 if (PuntenPlayer1 > PuntenPlayer2)
                 {
+                    Reset.Visible = false;
+                    player.SoundLocation = "tada.wav";
+                    player.Play();
                     MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
                     Memory.Highscores_save.SaveData(player1, PuntenPlayer1);
+                    await Task.Delay(2000);
+                    player.Stop();
                 }
                 else if (PuntenPlayer1 == PuntenPlayer2)
                 {
+                    Reset.Visible = false;
+                    player.SoundLocation = "wow.wav";
+                    player.Play();
                     MessageBox.Show("WOW, " + player1 + " heeft gelijk gespeeld met " + player2 + "!" , "Einde Spel", MessageBoxButtons.OK);
+                    await Task.Delay(2000);
+                    player.Stop();
                 }
                 else
                 {
+                    Reset.Visible = false;
+                    player.SoundLocation = "tada.wav";
+                    player.Play();
                     MessageBox.Show("Gefeliciteerd " + player2 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
                     Memory.Highscores_save.SaveData(player2, PuntenPlayer2);
+                    await Task.Delay(2000);
+                    player.Stop();
                 }
 
                 DialogResult ResetGame = MessageBox.Show("Willen jullie een nieuw spel spelen?", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
