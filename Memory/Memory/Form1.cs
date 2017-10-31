@@ -30,6 +30,8 @@ namespace WindowsFormsApp1
         {
 			InitializeComponent();
 
+            this.ActiveControl = Player1Textbox;
+
             opslaan.Visible = false;
 
 			ChangeCursor();
