@@ -130,10 +130,10 @@ namespace WindowsFormsApp1
 				switch (thema)
 				{
 					case "Media":
-						//Form1.BackgroundImage = Resources.controller;
+						//this.BackgroundImage = Resources.Background
 						break;
 					case "Films":
-						//Form1.BackgroundImage = Resources.controller;
+						this.BackgroundImage = Resources.popcorn_background;
 						GridButton1.BackgroundImage = Resources.clapperboard;
 						GridButton1Dup.BackgroundImage = Resources.clapperboard;
 						GridButton2.BackgroundImage = Resources.clapperboard;
@@ -152,7 +152,7 @@ namespace WindowsFormsApp1
 						GridButton8Dup.BackgroundImage = Resources.clapperboard;
 						break;
 					case "Games":
-						//Form1.BackgroundImage = Resources.controller;
+						this.BackgroundImage = Resources.controller;
 						GridButton1.BackgroundImage = Resources.controller_cardback;
 						GridButton1Dup.BackgroundImage = Resources.controller_cardback;
 						GridButton2.BackgroundImage = Resources.controller_cardback;
