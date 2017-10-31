@@ -212,6 +212,7 @@
             this.play.TabIndex = 75;
             this.play.TabStop = false;
             this.play.Click += new System.EventHandler(this.play_Click);
+            this.play.MouseClick += new System.Windows.Forms.MouseEventHandler(this.play_MouseClick);
             // 
             // Speler1
             // 
