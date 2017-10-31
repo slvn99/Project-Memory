@@ -50,10 +50,11 @@
 			// 
 			// ThemaBox
 			// 
+			this.ThemaBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.ThemaBox.Items.AddRange(new object[] {
-            "Reddit",
-            "Twitch",
-            "Steam"});
+            "Media",
+            "Films",
+            "Games"});
 			this.ThemaBox.Location = new System.Drawing.Point(436, 336);
 			this.ThemaBox.Name = "ThemaBox";
 			this.ThemaBox.Size = new System.Drawing.Size(121, 21);
@@ -114,7 +115,7 @@
 			this.Settings.BackgroundImage = global::Memory.Properties.Resources.Settings;
 			this.Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.Settings.Location = new System.Drawing.Point(359, 19);
-			this.Settings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Settings.Margin = new System.Windows.Forms.Padding(2);
 			this.Settings.Name = "Settings";
 			this.Settings.Size = new System.Drawing.Size(358, 105);
 			this.Settings.TabIndex = 11;
@@ -126,7 +127,7 @@
 			this.Home.BackgroundImage = global::Memory.Properties.Resources.HomeButton;
 			this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.Home.Location = new System.Drawing.Point(988, 512);
-			this.Home.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Home.Margin = new System.Windows.Forms.Padding(2);
 			this.Home.Name = "Home";
 			this.Home.Size = new System.Drawing.Size(75, 81);
 			this.Home.TabIndex = 10;
@@ -146,7 +147,7 @@
 			// RunningInThe90sButton
 			// 
 			this.RunningInThe90sButton.Location = new System.Drawing.Point(458, 358);
-			this.RunningInThe90sButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.RunningInThe90sButton.Margin = new System.Windows.Forms.Padding(2);
 			this.RunningInThe90sButton.Name = "RunningInThe90sButton";
 			this.RunningInThe90sButton.Size = new System.Drawing.Size(56, 19);
 			this.RunningInThe90sButton.TabIndex = 13;
@@ -160,7 +161,7 @@
 			this.Volume.BackgroundImage = global::Memory.Properties.Resources.coollogo_com_52152217;
 			this.Volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.Volume.Location = new System.Drawing.Point(68, 159);
-			this.Volume.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Volume.Margin = new System.Windows.Forms.Padding(2);
 			this.Volume.Name = "Volume";
 			this.Volume.Size = new System.Drawing.Size(340, 88);
 			this.Volume.TabIndex = 13;
@@ -172,7 +173,7 @@
 			this.Themas.BackgroundImage = global::Memory.Properties.Resources.Thema_s;
 			this.Themas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.Themas.Location = new System.Drawing.Point(68, 284);
-			this.Themas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Themas.Margin = new System.Windows.Forms.Padding(2);
 			this.Themas.Name = "Themas";
 			this.Themas.Size = new System.Drawing.Size(347, 72);
 			this.Themas.TabIndex = 14;
