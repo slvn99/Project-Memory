@@ -183,6 +183,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap avengers130 {
+            get {
+                object obj = ResourceManager.GetObject("avengers130", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap back_of_memory_cards {
             get {
                 object obj = ResourceManager.GetObject("back_of_memory_cards", resourceCulture);
@@ -313,6 +323,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap clapperboard {
+            get {
+                object obj = ResourceManager.GetObject("clapperboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap coollogo_com_52152217 {
             get {
                 object obj = ResourceManager.GetObject("coollogo_com_52152217", resourceCulture);
@@ -373,6 +393,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ff130 {
+            get {
+                object obj = ResourceManager.GetObject("ff130", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Gold_trophy {
             get {
                 object obj = ResourceManager.GetObject("Gold_trophy", resourceCulture);
@@ -406,6 +436,36 @@ namespace Memory.Properties {
         public static System.Drawing.Bitmap HomeButton {
             get {
                 object obj = ResourceManager.GetObject("HomeButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap hp130 {
+            get {
+                object obj = ResourceManager.GetObject("hp130", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap indiana130 {
+            get {
+                object obj = ResourceManager.GetObject("indiana130", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap lotr_130 {
+            get {
+                object obj = ResourceManager.GetObject("lotr_130", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -563,6 +623,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap popcorn_background {
+            get {
+                object obj = ResourceManager.GetObject("popcorn_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap RankingButton {
             get {
                 object obj = ResourceManager.GetObject("RankingButton", resourceCulture);
@@ -623,6 +693,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap shrek130 {
+            get {
+                object obj = ResourceManager.GetObject("shrek130", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Silver_trophy {
             get {
                 object obj = ResourceManager.GetObject("Silver_trophy", resourceCulture);
@@ -666,6 +746,26 @@ namespace Memory.Properties {
         public static System.Drawing.Bitmap speler_2 {
             get {
                 object obj = ResourceManager.GetObject("speler_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap star_trek130 {
+            get {
+                object obj = ResourceManager.GetObject("star_trek130", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap starwars130 {
+            get {
+                object obj = ResourceManager.GetObject("starwars130", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
