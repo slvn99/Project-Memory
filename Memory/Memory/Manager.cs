@@ -17,6 +17,8 @@ namespace Memory
 
         public Manager()
         {
+            timer1.Start();
+
             ManagerInstance = this;
 
             WindowState = FormWindowState.Minimized;
