@@ -57,7 +57,6 @@ namespace Memory
 			player.Play();
             string thema = ThemaBox.SelectedItem.ToString();
             Memory.SettingsPage_Save.SaveData(thema);
-			MessageBox.Show(thema);
 			await Task.Delay(300);
             player.Stop();
 		}
