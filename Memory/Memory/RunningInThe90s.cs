@@ -60,14 +60,7 @@ namespace Memory
             }
         }
 
-
-
-        private void PlayButton_Click(object sender, EventArgs e)
-        {
-            RunningInthe90s();
-        }
-
-        private void RunningInthe90s()
+        private void PlayRunningInthe90s()
         {
             if (Player1Textbox.Text == "")
             {
@@ -353,14 +346,6 @@ namespace Memory
         }
         #endregion
 
-        private void play_Click_1(object sender, EventArgs e)
-        {
-            player.SoundLocation = "click.wav";
-            player.Play();
-            RunningInthe90s();
-        }
-       
-
         private void Reset_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -406,12 +391,9 @@ namespace Memory
 
         private void play_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void play_MouseClick(object sender, MouseEventArgs e)
-        {
-            RunningInthe90s();
+            player.SoundLocation = "click.wav";
+            player.Play();
+            PlayRunningInthe90s();
         }
 
         public void Saveclass_Click(object sender, EventArgs e)
