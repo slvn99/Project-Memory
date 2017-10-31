@@ -15,45 +15,37 @@ namespace Memory
     {
         string TempName, HostName, ClienName;
         public static Label TempConLabel = new Label();
+        List<Point> PointLocation = new List<Point>();
+        Button[] ButtonGrid = new Button[];
 
         public GameServer()
         {
             InitializeComponent();
 
-            TempConLabel.Text = null;
-
-            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
-            foreach (Button x in ButtonGrid)
-            {
-                x.Visible = false;
-            }
-            
             HC_Label.Visible = false;
             HostButton.Visible = false;
             ClientButton.Visible = false;
             ConLabel.Visible = false;
         }
-        public static Label label2 = new Label();
-        bool loop = true;
 
+        void SetupGame()
+        {
+            ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+            foreach (Button x in ButtonGrid)
+            {
+                PointLocation.Add(x.Location);
+            }
+
+            Random ButtonLocatie = new Random();
+            foreach (Button button in ButtonGrid)
+            {
+                int next = ButtonLocatie.Next(PointLocation.Count);
+                Point p = PointLocation[next];
+                button.Location = p;
+                PointLocation.Remove(p);
+            }
+        }
         
-        //static void Main(string[] args)
-        //{
-        //    Console.WriteLine("SERVER of CLIENT");
-        //    string keuze = Console.ReadLine();
-        //    if (keuze == "SERVER")
-        //    {
-        //        ServerHost.StartServer();
-        //        Console.WriteLine(ServerHost.ReceiveMessage());
-        //    }
-
-        //    else
-        //    {
-        //        ServerClient.StartClient();
-        //        ServerClient.SendMessage("Testerino");
-        //    }
-        //    Console.ReadLine();
-        //}
         private void GridButton1_Click(object sender, EventArgs e)
         {
 			GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -160,7 +152,7 @@ namespace Memory
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ConLabel.Text = TempConLabel.Text;
+            ConLabel.Text = ServerHost.ReceiveMessage();
         }
 
         private void ClientButton_Click(object sender, EventArgs e)

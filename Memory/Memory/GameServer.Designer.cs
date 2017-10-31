@@ -316,7 +316,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(39, 229);
+            this.button1.Location = new System.Drawing.Point(17, 230);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 23;
@@ -367,7 +367,6 @@
         private System.Windows.Forms.TextBox NaamTextBox;
         private System.Windows.Forms.Label NaamLabel;
         private System.Windows.Forms.Button NaamButton;
-        private System.Windows.Forms.Button GridButton1;
         private System.Windows.Forms.Button GridButton1Dup;
         private System.Windows.Forms.Button GridButton2;
         private System.Windows.Forms.Button GridButton2Dup;
@@ -385,5 +384,6 @@
         private System.Windows.Forms.Button GridButton8Dup;
         public System.Windows.Forms.Label ConLabel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button GridButton1;
     }
 }
