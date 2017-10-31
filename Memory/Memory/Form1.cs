@@ -264,7 +264,7 @@ namespace WindowsFormsApp1
         {
             if (TotaalMatches == 8)
             {
-                
+                opslaan.Visible = false;
                 if (PuntenPlayer1 > PuntenPlayer2)
                 {
                     MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
