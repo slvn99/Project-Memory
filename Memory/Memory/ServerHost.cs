@@ -7,6 +7,8 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace Memory
 {
@@ -16,7 +18,8 @@ namespace Memory
         public static TcpListener Listener;
         public static TcpClient Client; //client die geconnect is
         List<Point> PointLocation = new List<Point>();
-        Button GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup;
+        public static Button tempGridbutton = new Button();
+        public static string GameData;
 
         public static void StartServer()
         {
@@ -24,8 +27,7 @@ namespace Memory
             Listener = new TcpListener(ip);
             Listener.Start();
             AcceptClient();
-
-
+            //GameData = Convert.ToString(tempGridbutton.Location);
         }
 
         public static void AcceptClient()
@@ -37,7 +39,7 @@ namespace Memory
         public static void ClientConnected(IAsyncResult ar)
         {
             Client = Listener.EndAcceptTcpClient(ar);
-            //GameServer.TempConLabel.Text = "connected!";
+            GameServer.TempConLabel.Text = "connected!";
         }
 
         public static bool SendMessage(string message)
