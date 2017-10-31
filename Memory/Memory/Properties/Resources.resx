@@ -334,14 +334,32 @@
   <data name="Reset_highscore" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reset highscore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ac130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ac130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="avengers130" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avengers130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clapperboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clapperboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="controller" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\controller.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="controller_cardback" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\controller cardback.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ff130" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ff130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fifa130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fifa130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gta130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gta130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="halo130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\halo130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hp130" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hp130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -352,8 +370,14 @@
   <data name="lotr_130" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lotr_130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="need_for_speed130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\need for speed130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="popcorn_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\popcorn background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="portal130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\portal130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shrek130" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shrek130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -363,5 +387,11 @@
   </data>
   <data name="star_trek130" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\star-trek130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="witcher130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\witcher130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zelda130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zelda130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

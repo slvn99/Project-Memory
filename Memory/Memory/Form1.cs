@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
 
 		public Form1()
         {
-            InitializeComponent();
+			InitializeComponent();
             opslaan.Visible = false;
 			ChangeCursor();
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
@@ -127,7 +127,51 @@ namespace WindowsFormsApp1
                 player2 = Player2LabelInvoer.Text;
                 PlayerBeurt = player1;
                 BeurtLabel.Text = PlayerBeurt;
-            }
+				switch (thema)
+				{
+					case "Media":
+						//Form1.BackgroundImage = Resources.controller;
+						break;
+					case "Films":
+						//Form1.BackgroundImage = Resources.controller;
+						GridButton1.BackgroundImage = Resources.clapperboard;
+						GridButton1Dup.BackgroundImage = Resources.clapperboard;
+						GridButton2.BackgroundImage = Resources.clapperboard;
+						GridButton2Dup.BackgroundImage = Resources.clapperboard;
+						GridButton3.BackgroundImage = Resources.clapperboard;
+						GridButton3Dup.BackgroundImage = Resources.clapperboard;
+						GridButton4.BackgroundImage = Resources.clapperboard;
+						GridButton4Dup.BackgroundImage = Resources.clapperboard;
+						GridButton5.BackgroundImage = Resources.clapperboard;
+						GridButton5Dup.BackgroundImage = Resources.clapperboard;
+						GridButton6.BackgroundImage = Resources.clapperboard;
+						GridButton6Dup.BackgroundImage = Resources.clapperboard;
+						GridButton7.BackgroundImage = Resources.clapperboard;
+						GridButton7Dup.BackgroundImage = Resources.clapperboard;
+						GridButton8.BackgroundImage = Resources.clapperboard;
+						GridButton8Dup.BackgroundImage = Resources.clapperboard;
+						break;
+					case "Games":
+						//Form1.BackgroundImage = Resources.controller;
+						GridButton1.BackgroundImage = Resources.controller_cardback;
+						GridButton1Dup.BackgroundImage = Resources.controller_cardback;
+						GridButton2.BackgroundImage = Resources.controller_cardback;
+						GridButton2Dup.BackgroundImage = Resources.controller_cardback;
+						GridButton3.BackgroundImage = Resources.controller_cardback;
+						GridButton3Dup.BackgroundImage = Resources.controller_cardback;
+						GridButton4.BackgroundImage = Resources.controller_cardback;
+						GridButton4Dup.BackgroundImage = Resources.controller_cardback;
+						GridButton5.BackgroundImage = Resources.controller_cardback;
+						GridButton5Dup.BackgroundImage = Resources.controller_cardback;
+						GridButton6.BackgroundImage = Resources.controller_cardback;
+						GridButton6Dup.BackgroundImage = Resources.controller_cardback;
+						GridButton7.BackgroundImage = Resources.controller_cardback;
+						GridButton7Dup.BackgroundImage = Resources.controller_cardback;
+						GridButton8.BackgroundImage = Resources.controller_cardback;
+						GridButton8Dup.BackgroundImage = Resources.controller_cardback;
+						break;
+				}
+			}
         }
 
         private void Click_kaart(Button Buttonclick)
@@ -185,8 +229,21 @@ namespace WindowsFormsApp1
                     }
 
                     await Task.Delay(1000);
-                    Kaart1Select.BackgroundImage = Resources.cardback;
-                    Kaart2Select.BackgroundImage = Resources.cardback;
+					switch (thema)
+					{
+						case "Media":
+							Kaart1Select.BackgroundImage = Resources.cardback;
+							Kaart2Select.BackgroundImage = Resources.cardback;
+							break;
+						case "Films":
+							Kaart1Select.BackgroundImage = Resources.clapperboard;
+							Kaart2Select.BackgroundImage = Resources.clapperboard;
+							break;
+						case "Games":
+							Kaart1Select.BackgroundImage = Resources.controller_cardback;
+							Kaart2Select.BackgroundImage = Resources.controller_cardback;
+							break;
+					}
                     Kaart1Select = null;
                     Kaart2Select = null;
                     Change_Beurt();
@@ -287,7 +344,7 @@ namespace WindowsFormsApp1
 					GridButton1.BackgroundImage = Resources.ff130;
 					break;
 				case "Games":
-					GridButton1.BackgroundImage = Resources.Tyfusding;
+					GridButton1.BackgroundImage = Resources.ac130;
 					break;
 			}
 			GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -306,7 +363,7 @@ namespace WindowsFormsApp1
 					GridButton1Dup.BackgroundImage = Resources.ff130;
 					break;
 				case "Games":
-					GridButton1Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton1Dup.BackgroundImage = Resources.ac130;
 					break;
 			}
 			GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -325,7 +382,7 @@ namespace WindowsFormsApp1
 					GridButton2.BackgroundImage = Resources.hp130;
 				break;
 				case "Games":
-					GridButton2.BackgroundImage = Resources.Tyfusding;
+					GridButton2.BackgroundImage = Resources.zelda130;
 				break;
 			}
 			GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -344,7 +401,7 @@ namespace WindowsFormsApp1
 					GridButton2Dup.BackgroundImage = Resources.hp130;
 					break;
 				case "Games":
-					GridButton2Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton2Dup.BackgroundImage = Resources.zelda130;
 					break;
 			}
 			GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -363,7 +420,7 @@ namespace WindowsFormsApp1
 					GridButton3.BackgroundImage = Resources.shrek130;
 					break;
 				case "Games":
-					GridButton3.BackgroundImage = Resources.Tyfusding;
+					GridButton3.BackgroundImage = Resources.witcher130;
 					break;
 			}
 			GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -382,7 +439,7 @@ namespace WindowsFormsApp1
 					GridButton3Dup.BackgroundImage = Resources.shrek130;
 					break;
 				case "Games":
-					GridButton3Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton3Dup.BackgroundImage = Resources.witcher130;
 					break;
 			}
 			GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -401,7 +458,7 @@ namespace WindowsFormsApp1
 					GridButton4.BackgroundImage = Resources.indiana130;
 					break;
 				case "Games":
-					GridButton4.BackgroundImage = Resources.Tyfusding;
+					GridButton4.BackgroundImage = Resources.fifa130;
 					break;
 			}
 			GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -420,7 +477,7 @@ namespace WindowsFormsApp1
 					GridButton4Dup.BackgroundImage = Resources.indiana130;
 					break;
 				case "Games":
-					GridButton4Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton4Dup.BackgroundImage = Resources.fifa130;
 					break;
 			}
 			GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -439,7 +496,7 @@ namespace WindowsFormsApp1
 					GridButton5.BackgroundImage = Resources.lotr_130;
 					break;
 				case "Games":
-					GridButton5.BackgroundImage = Resources.Tyfusding;
+					GridButton5.BackgroundImage = Resources.need_for_speed130;
 					break;
 			}
 			GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -458,7 +515,7 @@ namespace WindowsFormsApp1
 					GridButton5Dup.BackgroundImage = Resources.lotr_130;
 					break;
 				case "Games":
-					GridButton5Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton5Dup.BackgroundImage = Resources.need_for_speed130;
 					break;
 			}
 			GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -477,7 +534,7 @@ namespace WindowsFormsApp1
 					GridButton6.BackgroundImage = Resources.avengers130;
 					break;
 				case "Games":
-					GridButton6.BackgroundImage = Resources.Tyfusding;
+					GridButton6.BackgroundImage = Resources.gta130;
 					break;
 			}
 			GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -496,7 +553,7 @@ namespace WindowsFormsApp1
 					GridButton6Dup.BackgroundImage = Resources.avengers130;
 					break;
 				case "Games":
-					GridButton6Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton6Dup.BackgroundImage = Resources.gta130;
 					break;
 			}
 			GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -515,7 +572,7 @@ namespace WindowsFormsApp1
 					GridButton7.BackgroundImage = Resources.star_trek130;
 					break;
 				case "Games":
-					GridButton7.BackgroundImage = Resources.Tyfusding;
+					GridButton7.BackgroundImage = Resources.portal130;
 					break;
 			}
 			GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -534,7 +591,7 @@ namespace WindowsFormsApp1
 					GridButton7Dup.BackgroundImage = Resources.star_trek130;
 					break;
 				case "Games":
-					GridButton7Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton7Dup.BackgroundImage = Resources.portal130;
 					break;
 			}
 			GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -553,7 +610,7 @@ namespace WindowsFormsApp1
 					GridButton8.BackgroundImage = Resources.starwars130;
 					break;
 				case "Games":
-					GridButton8.BackgroundImage = Resources.Tyfusding;
+					GridButton8.BackgroundImage = Resources.halo130;
 					break;
 			}
 			GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -572,7 +629,7 @@ namespace WindowsFormsApp1
 					GridButton8Dup.BackgroundImage = Resources.starwars130;
 					break;
 				case "Games":
-					GridButton8Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton8Dup.BackgroundImage = Resources.halo130;
 					break;
 			}
 			GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
