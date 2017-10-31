@@ -334,4 +334,34 @@
   <data name="Reset_highscore" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reset highscore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="avengers130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avengers130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clapperboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clapperboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ff130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ff130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hp130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hp130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indiana130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indiana130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lotr_130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lotr_130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="popcorn_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\popcorn background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shrek130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shrek130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="starwars130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\starwars130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star_trek130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star-trek130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
