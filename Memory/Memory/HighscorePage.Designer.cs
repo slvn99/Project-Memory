@@ -53,6 +53,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.HsResetbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Bronze)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -351,6 +352,17 @@
             this.pictureBox12.TabIndex = 35;
             this.pictureBox12.TabStop = false;
             // 
+            // HsResetbutton
+            // 
+            this.HsResetbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HsResetbutton.Location = new System.Drawing.Point(844, 510);
+            this.HsResetbutton.Name = "HsResetbutton";
+            this.HsResetbutton.Size = new System.Drawing.Size(128, 81);
+            this.HsResetbutton.TabIndex = 36;
+            this.HsResetbutton.Text = "Reset Highscores";
+            this.HsResetbutton.UseVisualStyleBackColor = true;
+            this.HsResetbutton.Click += new System.EventHandler(this.HsResetbutton_Click);
+            // 
             // HighscorePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,6 +370,7 @@
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1063, 593);
+            this.Controls.Add(this.HsResetbutton);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox10);
@@ -435,5 +448,6 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Button HsResetbutton;
     }
 }
