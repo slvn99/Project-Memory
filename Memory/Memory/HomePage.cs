@@ -43,7 +43,7 @@ namespace Memory
             Sluiten();
             await Task.Delay(100);
             player.Stop();
-        }
+		}
 
         private async void SettingButton_Click(object sender, EventArgs e)
         {
