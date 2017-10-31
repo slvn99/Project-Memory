@@ -158,10 +158,15 @@ namespace Memory
             
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ConLabel.Text = TempConLabel.Text;
+        }
+
         private void ClientButton_Click(object sender, EventArgs e)
         {
             ServerClient.StartClient();
-            //ServerClient.SendMessage("Testerino");
+            ServerClient.SendMessage("Connected!");
         }
 
         private void NaamButton_Click(object sender, EventArgs e)
