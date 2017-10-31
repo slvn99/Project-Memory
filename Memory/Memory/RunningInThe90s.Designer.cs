@@ -174,6 +174,7 @@
             this.GridButton1Dup.Tag = "1";
             this.GridButton1Dup.Text = "button2";
             this.GridButton1Dup.UseVisualStyleBackColor = true;
+            this.GridButton1Dup.Click += new System.EventHandler(this.GridButton1Dup_Click);
             // 
             // pictureBox3
             // 
@@ -212,7 +213,6 @@
             this.play.TabIndex = 75;
             this.play.TabStop = false;
             this.play.Click += new System.EventHandler(this.play_Click);
-            this.play.MouseClick += new System.Windows.Forms.MouseEventHandler(this.play_MouseClick);
             // 
             // Speler1
             // 
@@ -433,6 +433,7 @@
             this.GridButton2.Tag = "2";
             this.GridButton2.Text = "button3";
             this.GridButton2.UseVisualStyleBackColor = true;
+            this.GridButton2.Click += new System.EventHandler(this.GridButton2_Click);
             // 
             // GridButton1
             // 
