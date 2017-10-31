@@ -17,8 +17,6 @@ namespace Memory
 
         public Manager()
         {
-            timer1.Start();
-
             ManagerInstance = this;
 
             WindowState = FormWindowState.Minimized;
@@ -26,6 +24,8 @@ namespace Memory
             Visible = false;
 
             InitializeComponent();
+
+            timer1.Start();
 
             var HomePage = new HomePage();
             HomePage.Show();
