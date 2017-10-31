@@ -153,6 +153,15 @@
     <Content Include="bin\Debug\just_do_it.wav" />
     <Content Include="bin\Debug\no1.wav" />
     <Content Include="bin\Debug\Skra.wav" />
+    <None Include="Resources\starwars130.png" />
+    <None Include="Resources\star-trek130.png" />
+    <None Include="Resources\shrek130.png" />
+    <None Include="Resources\lotr_130.png" />
+    <None Include="Resources\hp130.png" />
+    <None Include="Resources\indiana130.png" />
+    <None Include="Resources\popcorn background.jpg" />
+    <None Include="Resources\ff130.png" />
+    <None Include="Resources\clapperboard.png" />
     <None Include="Resources\Reset highscore.png" />
     <None Include="Resources\1.png" />
     <None Include="Resources\2.png" />
@@ -166,6 +175,7 @@
     <None Include="Resources\10.png" />
     <Content Include="bin\Debug\tada.wav" />
     <Content Include="bin\Debug\wow.wav" />
+    <None Include="Resources\avengers130.png" />
     <Content Include="Resources\button laden.png" />
     <Content Include="Resources\button opslaan.png" />
     <None Include="Resources\Thema%27s.png" />

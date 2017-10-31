@@ -430,7 +430,7 @@ namespace WindowsFormsApp1
 					GridButton1.BackgroundImage = Resources.Steam;
 					break;
 				case "Films":
-					GridButton1.BackgroundImage = Resources.Tyfusding;
+					GridButton1.BackgroundImage = Resources.ff130;
 					break;
 				case "Games":
 					GridButton1.BackgroundImage = Resources.Tyfusding;
@@ -449,7 +449,7 @@ namespace WindowsFormsApp1
 					GridButton1Dup.BackgroundImage = Resources.Steam;
 					break;
 				case "Films":
-					GridButton1Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton1Dup.BackgroundImage = Resources.ff130;
 					break;
 				case "Games":
 					GridButton1Dup.BackgroundImage = Resources.Tyfusding;
@@ -468,7 +468,7 @@ namespace WindowsFormsApp1
 					GridButton2.BackgroundImage = Resources.fb;
 				break;
 				case "Films":
-					GridButton2.BackgroundImage = Resources.Tyfusding;
+					GridButton2.BackgroundImage = Resources.hp130;
 				break;
 				case "Games":
 					GridButton2.BackgroundImage = Resources.Tyfusding;
@@ -487,7 +487,7 @@ namespace WindowsFormsApp1
 					GridButton2Dup.BackgroundImage = Resources.fb;
 					break;
 				case "Films":
-					GridButton2Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton2Dup.BackgroundImage = Resources.hp130;
 					break;
 				case "Games":
 					GridButton2Dup.BackgroundImage = Resources.Tyfusding;
@@ -506,7 +506,7 @@ namespace WindowsFormsApp1
 					GridButton3.BackgroundImage = Resources.Google;
 					break;
 				case "Films":
-					GridButton3.BackgroundImage = Resources.Tyfusding;
+					GridButton3.BackgroundImage = Resources.shrek130;
 					break;
 				case "Games":
 					GridButton3.BackgroundImage = Resources.Tyfusding;
@@ -525,7 +525,7 @@ namespace WindowsFormsApp1
 					GridButton3Dup.BackgroundImage = Resources.Google;
 					break;
 				case "Films":
-					GridButton3Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton3Dup.BackgroundImage = Resources.shrek130;
 					break;
 				case "Games":
 					GridButton3Dup.BackgroundImage = Resources.Tyfusding;
@@ -544,7 +544,7 @@ namespace WindowsFormsApp1
 					GridButton4.BackgroundImage = Resources.Youtube;
 					break;
 				case "Films":
-					GridButton4.BackgroundImage = Resources.Tyfusding;
+					GridButton4.BackgroundImage = Resources.indiana130;
 					break;
 				case "Games":
 					GridButton4.BackgroundImage = Resources.Tyfusding;
@@ -563,7 +563,7 @@ namespace WindowsFormsApp1
 					GridButton4Dup.BackgroundImage = Resources.Youtube;
 					break;
 				case "Films":
-					GridButton4Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton4Dup.BackgroundImage = Resources.indiana130;
 					break;
 				case "Games":
 					GridButton4Dup.BackgroundImage = Resources.Tyfusding;
@@ -582,7 +582,7 @@ namespace WindowsFormsApp1
 					GridButton5.BackgroundImage = Resources.Twitter;
 					break;
 				case "Films":
-					GridButton5.BackgroundImage = Resources.Tyfusding;
+					GridButton5.BackgroundImage = Resources.lotr_130;
 					break;
 				case "Games":
 					GridButton5.BackgroundImage = Resources.Tyfusding;
@@ -601,7 +601,7 @@ namespace WindowsFormsApp1
 					GridButton5Dup.BackgroundImage = Resources.Twitter;
 					break;
 				case "Films":
-					GridButton5Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton5Dup.BackgroundImage = Resources.lotr_130;
 					break;
 				case "Games":
 					GridButton5Dup.BackgroundImage = Resources.Tyfusding;
@@ -620,7 +620,7 @@ namespace WindowsFormsApp1
 					GridButton6.BackgroundImage = Resources._9gag;
 					break;
 				case "Films":
-					GridButton6.BackgroundImage = Resources.Tyfusding;
+					GridButton6.BackgroundImage = Resources.avengers130;
 					break;
 				case "Games":
 					GridButton6.BackgroundImage = Resources.Tyfusding;
@@ -639,7 +639,7 @@ namespace WindowsFormsApp1
 					GridButton6Dup.BackgroundImage = Resources._9gag;
 					break;
 				case "Films":
-					GridButton6Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton6Dup.BackgroundImage = Resources.avengers130;
 					break;
 				case "Games":
 					GridButton6Dup.BackgroundImage = Resources.Tyfusding;
@@ -658,7 +658,7 @@ namespace WindowsFormsApp1
 					GridButton7.BackgroundImage = Resources.TwitchLogo;
 					break;
 				case "Films":
-					GridButton7.BackgroundImage = Resources.Tyfusding;
+					GridButton7.BackgroundImage = Resources.star_trek130;
 					break;
 				case "Games":
 					GridButton7.BackgroundImage = Resources.Tyfusding;
@@ -677,7 +677,7 @@ namespace WindowsFormsApp1
 					GridButton7Dup.BackgroundImage = Resources.TwitchLogo;
 					break;
 				case "Films":
-					GridButton7Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton7Dup.BackgroundImage = Resources.star_trek130;
 					break;
 				case "Games":
 					GridButton7Dup.BackgroundImage = Resources.Tyfusding;
@@ -696,7 +696,7 @@ namespace WindowsFormsApp1
 					GridButton8.BackgroundImage = Resources.Reddit;
 					break;
 				case "Films":
-					GridButton8.BackgroundImage = Resources.Tyfusding;
+					GridButton8.BackgroundImage = Resources.starwars130;
 					break;
 				case "Games":
 					GridButton8.BackgroundImage = Resources.Tyfusding;
@@ -715,7 +715,7 @@ namespace WindowsFormsApp1
 					GridButton8Dup.BackgroundImage = Resources.Reddit;
 					break;
 				case "Films":
-					GridButton8Dup.BackgroundImage = Resources.Tyfusding;
+					GridButton8Dup.BackgroundImage = Resources.starwars130;
 					break;
 				case "Games":
 					GridButton8Dup.BackgroundImage = Resources.Tyfusding;
