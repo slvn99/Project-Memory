@@ -153,6 +153,15 @@
     <Content Include="bin\Debug\just_do_it.wav" />
     <Content Include="bin\Debug\no1.wav" />
     <Content Include="bin\Debug\Skra.wav" />
+    <None Include="Resources\zelda130.png" />
+    <None Include="Resources\witcher130.png" />
+    <None Include="Resources\portal130.png" />
+    <None Include="Resources\need for speed130.png" />
+    <None Include="Resources\halo130.png" />
+    <None Include="Resources\gta130.png" />
+    <None Include="Resources\fifa130.png" />
+    <None Include="Resources\controller.png" />
+    <None Include="Resources\controller cardback.png" />
     <None Include="Resources\starwars130.png" />
     <None Include="Resources\star-trek130.png" />
     <None Include="Resources\shrek130.png" />
@@ -176,6 +185,7 @@
     <Content Include="bin\Debug\tada.wav" />
     <Content Include="bin\Debug\wow.wav" />
     <None Include="Resources\avengers130.png" />
+    <None Include="Resources\ac130.png" />
     <Content Include="Resources\button laden.png" />
     <Content Include="Resources\button opslaan.png" />
     <None Include="Resources\Thema%27s.png" />
