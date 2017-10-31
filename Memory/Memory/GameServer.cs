@@ -158,7 +158,7 @@ namespace Memory
         private void ClientButton_Click(object sender, EventArgs e)
         {
             ServerClient.StartClient();
-            ServerClient.SendMessage("Connected!");
+            ServerClient.SendMessage("prank");
         }
 
         private void NaamButton_Click(object sender, EventArgs e)

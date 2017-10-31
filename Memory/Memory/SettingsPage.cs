@@ -55,8 +55,8 @@ namespace Memory
 		{
 			player.SoundLocation = "click.wav";
 			player.Play();
-            Memory.SettingsPage_Save.SaveData(ThemaBox.SelectedText);
-			MessageBox.Show(ThemaBox.SelectedText);
+            string thema = ThemaBox.SelectedItem.ToString();
+            Memory.SettingsPage_Save.SaveData(thema);
 			await Task.Delay(300);
             player.Stop();
 		}

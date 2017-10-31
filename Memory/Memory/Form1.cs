@@ -37,13 +37,142 @@ namespace WindowsFormsApp1
 			{
 				switch (thema)
 				{
-					case "Thema 3":					
+					case "Steam":
+						GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton1.BackgroundImage = Resources.Steam;
+						GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton1Dup.BackgroundImage = Resources.Steam;
+						GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton2.BackgroundImage = Resources.TwitchLogo;
+						GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton2Dup.BackgroundImage = Resources.TwitchLogo;
+						GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton3.BackgroundImage = Resources.fb;
+						GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton3Dup.BackgroundImage = Resources.fb;
+						GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton4.BackgroundImage = Resources.Reddit;
+						GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton4Dup.BackgroundImage = Resources.Reddit;
+						GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton5.BackgroundImage = Resources._9gag;
+						GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton5Dup.BackgroundImage = Resources._9gag;
+						GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton6.BackgroundImage = Resources.Twitter;
+						GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton6Dup.BackgroundImage = Resources.Twitter;
+						GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton7.BackgroundImage = Resources.Youtube;
+						GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton7Dup.BackgroundImage = Resources.Youtube;
+						GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton8.BackgroundImage = Resources.Google;
+						GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton8Dup.BackgroundImage = Resources.Google;
 						break;
-					case "Fifa":
-						Console.WriteLine("Case 2");
+					case "Twitch":
+						GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton1.BackgroundImage = Resources.Steam;
+						GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton1Dup.BackgroundImage = Resources.Steam;
+						GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton2.BackgroundImage = Resources.TwitchLogo;
+						GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton2Dup.BackgroundImage = Resources.TwitchLogo;
+						GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton3.BackgroundImage = Resources.fb;
+						GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton3Dup.BackgroundImage = Resources.fb;
+						GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton4.BackgroundImage = Resources.Reddit;
+						GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton4Dup.BackgroundImage = Resources.Reddit;
+						GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton5.BackgroundImage = Resources._9gag;
+						GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton5Dup.BackgroundImage = Resources._9gag;
+						GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton6.BackgroundImage = Resources.Twitter;
+						GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton6Dup.BackgroundImage = Resources.Twitter;
+						GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton7.BackgroundImage = Resources.Youtube;
+						GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton7Dup.BackgroundImage = Resources.Youtube;
+						GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton8.BackgroundImage = Resources.Google;
+						GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton8Dup.BackgroundImage = Resources.Google;
+						break;
+					case "Reddit":
+						GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton1.BackgroundImage = Resources.Reddit;
+						//GridButton1.Click = GridButton1.BackgroundImage = Resources.Reddit;
+						GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton1Dup.BackgroundImage = Resources.Reddit;
+						GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton2.BackgroundImage = Resources.Reddit;
+						GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton2Dup.BackgroundImage = Resources.Reddit;
+						GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton3.BackgroundImage = Resources.Reddit;
+						GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton3Dup.BackgroundImage = Resources.Reddit;
+						GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton4.BackgroundImage = Resources.Reddit;
+						GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton4Dup.BackgroundImage = Resources.Reddit;
+						GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton5.BackgroundImage = Resources.Reddit;
+						GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton5Dup.BackgroundImage = Resources.Reddit;
+						GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton6.BackgroundImage = Resources.Reddit;
+						GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton6Dup.BackgroundImage = Resources.Reddit;
+						GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton7.BackgroundImage = Resources.Reddit;
+						GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton7Dup.BackgroundImage = Resources.Reddit;
+						GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton8.BackgroundImage = Resources.Reddit;
+						GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+						GridButton8Dup.BackgroundImage = Resources.Reddit;
 						break;
 					default:
-						Console.WriteLine("Default case");
+							GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton1.BackgroundImage = Resources.Steam;
+							GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton1Dup.BackgroundImage = Resources.Steam;
+							GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton2.BackgroundImage = Resources.TwitchLogo;
+							GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton2Dup.BackgroundImage = Resources.TwitchLogo;
+							GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton3.BackgroundImage = Resources.fb;
+							GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton3Dup.BackgroundImage = Resources.fb;
+							GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton4.BackgroundImage = Resources.Reddit;
+							GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton4Dup.BackgroundImage = Resources.Reddit;
+							GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton5.BackgroundImage = Resources._9gag;
+							GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton5Dup.BackgroundImage = Resources._9gag;
+							GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton6.BackgroundImage = Resources.Twitter;
+							GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton6Dup.BackgroundImage = Resources.Twitter;
+							GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton7.BackgroundImage = Resources.Youtube;
+							GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton7Dup.BackgroundImage = Resources.Youtube;
+							GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton8.BackgroundImage = Resources.Google;
+							GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+							GridButton8Dup.BackgroundImage = Resources.Google;
 						break;
 				}
 			}                     
@@ -264,7 +393,7 @@ namespace WindowsFormsApp1
         {
             if (TotaalMatches == 8)
             {
-                
+                opslaan.Visible = false;
                 if (PuntenPlayer1 > PuntenPlayer2)
                 {
                     MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
@@ -295,8 +424,19 @@ namespace WindowsFormsApp1
 		#region kaarten
 		private void GridButton1_Click(object sender, EventArgs e)
 		{
+			switch (thema)
+			{
+				case "Steam":
+					GridButton1.BackgroundImage = Resources.Steam;
+					break;
+				case "Twitch":
+					GridButton1.BackgroundImage = Resources.Steam;
+					break;
+				case "Reddit":
+					GridButton1.BackgroundImage = Resources.Steam;
+					break;
+			}
 			GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			GridButton1.BackgroundImage = Resources.Steam;
 			Click_kaart(GridButton1);
 			Check_kaart();
 		}

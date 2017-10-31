@@ -83,8 +83,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton1Dup
 			// 
-			this.GridButton1Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton1Dup.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton1Dup.Location = new System.Drawing.Point(253, 12);
 			this.GridButton1Dup.Name = "GridButton1Dup";
 			this.GridButton1Dup.Size = new System.Drawing.Size(130, 130);
@@ -95,8 +95,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton2
 			// 
-			this.GridButton2.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton2.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton2.Location = new System.Drawing.Point(457, 11);
 			this.GridButton2.Name = "GridButton2";
 			this.GridButton2.Size = new System.Drawing.Size(130, 130);
@@ -107,8 +107,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton2Dup
 			// 
-			this.GridButton2Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton2Dup.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton2Dup.Location = new System.Drawing.Point(655, 12);
 			this.GridButton2Dup.Name = "GridButton2Dup";
 			this.GridButton2Dup.Size = new System.Drawing.Size(130, 130);
@@ -119,8 +119,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton3
 			// 
-			this.GridButton3.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton3.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton3.Location = new System.Drawing.Point(52, 148);
 			this.GridButton3.Name = "GridButton3";
 			this.GridButton3.Size = new System.Drawing.Size(130, 130);
@@ -131,8 +131,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton3Dup
 			// 
-			this.GridButton3Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton3Dup.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton3Dup.Location = new System.Drawing.Point(253, 148);
 			this.GridButton3Dup.Name = "GridButton3Dup";
 			this.GridButton3Dup.Size = new System.Drawing.Size(130, 130);
@@ -143,8 +143,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton4
 			// 
-			this.GridButton4.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton4.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton4.Location = new System.Drawing.Point(457, 147);
 			this.GridButton4.Name = "GridButton4";
 			this.GridButton4.Size = new System.Drawing.Size(130, 130);
@@ -155,8 +155,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton4Dup
 			// 
-			this.GridButton4Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton4Dup.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton4Dup.Location = new System.Drawing.Point(655, 148);
 			this.GridButton4Dup.Name = "GridButton4Dup";
 			this.GridButton4Dup.Size = new System.Drawing.Size(130, 130);
@@ -167,8 +167,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton5
 			// 
-			this.GridButton5.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton5.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton5.Location = new System.Drawing.Point(52, 284);
 			this.GridButton5.Name = "GridButton5";
 			this.GridButton5.Size = new System.Drawing.Size(130, 130);
@@ -179,8 +179,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton5Dup
 			// 
-			this.GridButton5Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton5Dup.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton5Dup.Location = new System.Drawing.Point(253, 284);
 			this.GridButton5Dup.Name = "GridButton5Dup";
 			this.GridButton5Dup.Size = new System.Drawing.Size(130, 130);
@@ -191,8 +191,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton6
 			// 
-			this.GridButton6.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton6.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton6.Location = new System.Drawing.Point(457, 420);
 			this.GridButton6.Name = "GridButton6";
 			this.GridButton6.Size = new System.Drawing.Size(130, 130);
@@ -203,8 +203,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton6Dup
 			// 
-			this.GridButton6Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton6Dup.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton6Dup.Location = new System.Drawing.Point(655, 284);
 			this.GridButton6Dup.Name = "GridButton6Dup";
 			this.GridButton6Dup.Size = new System.Drawing.Size(130, 130);
@@ -215,8 +215,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton7
 			// 
-			this.GridButton7.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton7.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton7.Location = new System.Drawing.Point(52, 420);
 			this.GridButton7.Name = "GridButton7";
 			this.GridButton7.Size = new System.Drawing.Size(130, 130);
@@ -227,8 +227,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton7Dup
 			// 
-			this.GridButton7Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton7Dup.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton7Dup.Location = new System.Drawing.Point(253, 416);
 			this.GridButton7Dup.Name = "GridButton7Dup";
 			this.GridButton7Dup.Size = new System.Drawing.Size(130, 130);
@@ -239,8 +239,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton8
 			// 
-			this.GridButton8.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton8.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton8.Location = new System.Drawing.Point(457, 284);
 			this.GridButton8.Name = "GridButton8";
 			this.GridButton8.Size = new System.Drawing.Size(130, 130);
@@ -251,8 +251,8 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton8Dup
 			// 
-			this.GridButton8Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton8Dup.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton8Dup.Location = new System.Drawing.Point(655, 420);
 			this.GridButton8Dup.Name = "GridButton8Dup";
 			this.GridButton8Dup.Size = new System.Drawing.Size(130, 130);
@@ -264,7 +264,7 @@ namespace WindowsFormsApp1
 			// Player2Textbox
 			// 
 			this.Player2Textbox.Location = new System.Drawing.Point(366, 296);
-			this.Player2Textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Player2Textbox.Margin = new System.Windows.Forms.Padding(2);
 			this.Player2Textbox.Name = "Player2Textbox";
 			this.Player2Textbox.Size = new System.Drawing.Size(104, 20);
 			this.Player2Textbox.TabIndex = 21;
@@ -272,7 +272,7 @@ namespace WindowsFormsApp1
 			// Player1Textbox
 			// 
 			this.Player1Textbox.Location = new System.Drawing.Point(366, 245);
-			this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2);
 			this.Player1Textbox.Name = "Player1Textbox";
 			this.Player1Textbox.Size = new System.Drawing.Size(104, 20);
 			this.Player1Textbox.TabIndex = 22;
@@ -369,7 +369,7 @@ namespace WindowsFormsApp1
 			this.play.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG321;
 			this.play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.play.Location = new System.Drawing.Point(836, 167);
-			this.play.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.play.Margin = new System.Windows.Forms.Padding(2);
 			this.play.Name = "play";
 			this.play.Size = new System.Drawing.Size(124, 37);
 			this.play.TabIndex = 38;
@@ -382,7 +382,7 @@ namespace WindowsFormsApp1
 			this.Reset.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG322222;
 			this.Reset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.Reset.Location = new System.Drawing.Point(836, 206);
-			this.Reset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Reset.Margin = new System.Windows.Forms.Padding(2);
 			this.Reset.Name = "Reset";
 			this.Reset.Size = new System.Drawing.Size(123, 44);
 			this.Reset.TabIndex = 40;
@@ -396,7 +396,7 @@ namespace WindowsFormsApp1
 			this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
 			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox1.Location = new System.Drawing.Point(365, 214);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(108, 30);
 			this.pictureBox1.TabIndex = 41;
@@ -408,7 +408,7 @@ namespace WindowsFormsApp1
 			this.Beurt.BackgroundImage = global::Memory.Properties.Resources.Beurt1;
 			this.Beurt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.Beurt.Location = new System.Drawing.Point(799, 63);
-			this.Beurt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Beurt.Margin = new System.Windows.Forms.Padding(2);
 			this.Beurt.Name = "Beurt";
 			this.Beurt.Size = new System.Drawing.Size(91, 40);
 			this.Beurt.TabIndex = 42;
@@ -421,7 +421,7 @@ namespace WindowsFormsApp1
 			this.Speler1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Speler1.BackgroundImage")));
 			this.Speler1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.Speler1.Location = new System.Drawing.Point(806, 2);
-			this.Speler1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Speler1.Margin = new System.Windows.Forms.Padding(2);
 			this.Speler1.Name = "Speler1";
 			this.Speler1.Size = new System.Drawing.Size(75, 29);
 			this.Speler1.TabIndex = 43;
@@ -434,7 +434,7 @@ namespace WindowsFormsApp1
 			this.Speler2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Speler2.BackgroundImage")));
 			this.Speler2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.Speler2.Location = new System.Drawing.Point(806, 28);
-			this.Speler2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Speler2.Margin = new System.Windows.Forms.Padding(2);
 			this.Speler2.Name = "Speler2";
 			this.Speler2.Size = new System.Drawing.Size(75, 30);
 			this.Speler2.TabIndex = 44;
@@ -447,7 +447,7 @@ namespace WindowsFormsApp1
 			this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
 			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox2.Location = new System.Drawing.Point(365, 261);
-			this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
 			this.pictureBox2.Name = "pictureBox2";
 			this.pictureBox2.Size = new System.Drawing.Size(108, 34);
 			this.pictureBox2.TabIndex = 45;
@@ -459,7 +459,7 @@ namespace WindowsFormsApp1
 			this.pictureBox3.BackgroundImage = global::Memory.Properties.Resources.HomeButton;
 			this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.pictureBox3.Location = new System.Drawing.Point(987, 513);
-			this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
 			this.pictureBox3.Name = "pictureBox3";
 			this.pictureBox3.Size = new System.Drawing.Size(75, 81);
 			this.pictureBox3.TabIndex = 46;
@@ -468,10 +468,10 @@ namespace WindowsFormsApp1
 			// 
 			// GridButton1
 			// 
-			this.GridButton1.BackgroundImage = global::Memory.Properties.Resources.cardback;
 			this.GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.GridButton1.Image = global::Memory.Properties.Resources.cardback;
 			this.GridButton1.Location = new System.Drawing.Point(52, 12);
-			this.GridButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.GridButton1.Margin = new System.Windows.Forms.Padding(4);
 			this.GridButton1.Name = "GridButton1";
 			this.GridButton1.Size = new System.Drawing.Size(130, 130);
 			this.GridButton1.TabIndex = 1;
@@ -485,7 +485,7 @@ namespace WindowsFormsApp1
 			this.laden.BackgroundImage = global::Memory.Properties.Resources.button_laden;
 			this.laden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.laden.Location = new System.Drawing.Point(836, 299);
-			this.laden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.laden.Margin = new System.Windows.Forms.Padding(2);
 			this.laden.Name = "laden";
 			this.laden.Size = new System.Drawing.Size(124, 37);
 			this.laden.TabIndex = 47;
@@ -500,7 +500,7 @@ namespace WindowsFormsApp1
 			this.opslaan.BackgroundImage = global::Memory.Properties.Resources.button_opslaan;
 			this.opslaan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.opslaan.Location = new System.Drawing.Point(836, 420);
-			this.opslaan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.opslaan.Margin = new System.Windows.Forms.Padding(2);
 			this.opslaan.Name = "opslaan";
 			this.opslaan.Size = new System.Drawing.Size(124, 55);
 			this.opslaan.TabIndex = 48;

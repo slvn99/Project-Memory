@@ -294,11 +294,9 @@ namespace Memory
         {
             var path = AppDomain.CurrentDomain.BaseDirectory;
             var file = @"" + path + "highscores.sav";
-            byte[] data = null;
-            File.WriteAllBytes(file, data);
+            File.Delete(file);
             file = @"" + path + "lengte.ini";
-            string lengte = Convert.ToString(data);
-            File.WriteAllText(file, lengte);
+            File.Delete(file);
         }
     }
 }
