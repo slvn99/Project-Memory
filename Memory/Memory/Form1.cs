@@ -193,6 +193,8 @@ namespace WindowsFormsApp1
             {
                 if (Kaart1Select.Tag == Kaart2Select.Tag)
                 {
+                    player.SoundLocation = "tada.wav";
+                    player.Play();
                     if (Kaart1Select.Name == Kaart2Select.Name)
                     {
                         Kaart2Select = null;
