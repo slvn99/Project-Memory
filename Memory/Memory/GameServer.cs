@@ -175,7 +175,61 @@ namespace Memory
             {
                 //ConLabel.Text = ServerClient.ReceiveMessage();
                 ServerClient.RecieveGamaData();
-                Point[] ButtonGrid = ServerClient.TempRandomButLocation.ToArray();
+                Point[] ButtonGridLocation = ServerClient.TempRandomButLocation.ToArray();
+                for (int i = 0; i < ButtonGridLocation.Length; i++)
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            GridButton1.Location = ButtonGridLocation[i];
+                            break;
+                        case 1:
+                            GridButton1Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 2:
+                            GridButton2.Location = ButtonGridLocation[i];
+                            break;
+                        case 3:
+                            GridButton2Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 4:
+                            GridButton3.Location = ButtonGridLocation[i];
+                            break;
+                        case 5:
+                            GridButton3Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 6:
+                            GridButton4.Location = ButtonGridLocation[i];
+                            break;
+                        case 7:
+                            GridButton4Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 8:
+                            GridButton5.Location = ButtonGridLocation[i];
+                            break;
+                        case 9:
+                            GridButton5Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 10:
+                            GridButton6.Location = ButtonGridLocation[i];
+                            break;
+                        case 11:
+                            GridButton6Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 12:
+                            GridButton7.Location = ButtonGridLocation[i];
+                            break;
+                        case 13:
+                            GridButton7Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 14:
+                            GridButton8.Location = ButtonGridLocation[i];
+                            break;
+                        case 15:
+                            GridButton8Dup.Location = ButtonGridLocation[i];
+                            break;
+                    }
+                }
             }
         }
 
