@@ -41,7 +41,21 @@ namespace Memory
         {
             Client = Listener.EndAcceptTcpClient(ar);
             GameServer.TempConLabel.Text = "connected!";
-            
+            SendGameState();
+
+
+        }
+
+        static void SendGameState()
+        {
+           // Socket socket = Listener.AcceptSocket();
+
+            //Stream stream = new NetworkStream(socket);
+
+            Stream stream = Client.GetStream();
+            var bin = new BinaryFormatter();
+            bin.Serialize(stream, TempRandomButLocation);
+            //Client.GetStream().Write(TempRandomButLocation, 0 , 16 );
         }
 
         public static bool SendMessage(string message)
