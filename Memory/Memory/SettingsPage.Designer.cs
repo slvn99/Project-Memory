@@ -185,13 +185,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(1417, 730);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.RunningInThe90sButton);
-=======
             this.ClientSize = new System.Drawing.Size(1063, 593);
->>>>>>> ca5777f8140516b58d7336290445d0f278e74ae1
             this.Controls.Add(this.Themas);
             this.Controls.Add(this.Volume);
             this.Controls.Add(this.ServerDebug);
