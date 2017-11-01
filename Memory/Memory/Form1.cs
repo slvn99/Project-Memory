@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
 
         private void PlayButton_Click(object sender, EventArgs e)
         {
-             GC.Collect();
+            GC.Collect();
             Play_Game();
             
         }
@@ -274,10 +274,6 @@ namespace WindowsFormsApp1
                     {
                         x.Enabled = true;
                     }
-					foreach (var x in ButtonGrid)
-					{
-						x.Text = "";
-					}
 				}
             }
         }

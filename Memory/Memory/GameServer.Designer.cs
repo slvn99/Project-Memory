@@ -53,6 +53,9 @@
             this.GridButton8 = new System.Windows.Forms.Button();
             this.GridButton8Dup = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.Points1 = new System.Windows.Forms.Label();
+            this.Points2 = new System.Windows.Forms.Label();
+            this.BeurtLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // HC_Label
@@ -324,11 +327,41 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Points1
+            // 
+            this.Points1.AutoSize = true;
+            this.Points1.Location = new System.Drawing.Point(975, 9);
+            this.Points1.Name = "Points1";
+            this.Points1.Size = new System.Drawing.Size(35, 13);
+            this.Points1.TabIndex = 24;
+            this.Points1.Text = "label1";
+            // 
+            // Points2
+            // 
+            this.Points2.AutoSize = true;
+            this.Points2.Location = new System.Drawing.Point(975, 22);
+            this.Points2.Name = "Points2";
+            this.Points2.Size = new System.Drawing.Size(35, 13);
+            this.Points2.TabIndex = 25;
+            this.Points2.Text = "label2";
+            // 
+            // BeurtLabel
+            // 
+            this.BeurtLabel.AutoSize = true;
+            this.BeurtLabel.Location = new System.Drawing.Point(864, 71);
+            this.BeurtLabel.Name = "BeurtLabel";
+            this.BeurtLabel.Size = new System.Drawing.Size(35, 13);
+            this.BeurtLabel.TabIndex = 26;
+            this.BeurtLabel.Text = "label1";
+            // 
             // GameServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1022, 593);
+            this.Controls.Add(this.BeurtLabel);
+            this.Controls.Add(this.Points2);
+            this.Controls.Add(this.Points1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.GridButton8Dup);
             this.Controls.Add(this.GridButton8);
@@ -385,5 +418,8 @@
         public System.Windows.Forms.Label ConLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button GridButton1;
+        private System.Windows.Forms.Label Points1;
+        private System.Windows.Forms.Label Points2;
+        private System.Windows.Forms.Label BeurtLabel;
     }
 }
