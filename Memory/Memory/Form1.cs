@@ -866,6 +866,7 @@ namespace WindowsFormsApp1
         {
             player.SoundLocation = "click.wav";
             player.Play();
+            MessageBox.Show("je spel is succesvol opgeslagen");
             string[] matcharray = new string[20];
             matchlist.CopyTo(matcharray);
 
