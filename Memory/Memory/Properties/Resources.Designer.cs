@@ -453,9 +453,9 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Google1 {
+        public static System.Drawing.Bitmap Google {
             get {
-                object obj = ResourceManager.GetObject("Google1", resourceCulture);
+                object obj = ResourceManager.GetObject("Google", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -912,9 +912,9 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap TwitchLogo1 {
+        public static System.Drawing.Bitmap TwitchLogo {
             get {
-                object obj = ResourceManager.GetObject("TwitchLogo1", resourceCulture);
+                object obj = ResourceManager.GetObject("TwitchLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
