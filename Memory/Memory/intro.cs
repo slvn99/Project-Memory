@@ -14,10 +14,26 @@ namespace Memory
     {
         public intro()
         {
+            //CenterToScreen();
+
             InitializeComponent();
+
+            timer1.Start();
 
             axWindowsMediaPlayer1.URL = "intro.mp4";
             axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
+        public void Sluiten()
+        {
+            Close();
+            Dispose();
+            GC.Collect();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            Sluiten();
         }
     }
 }
