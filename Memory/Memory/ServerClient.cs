@@ -24,9 +24,8 @@ namespace Memory
 
         public static void RecieveGamaData()
         {
-            Stream stream = Client.GetStream();
             var bin = new BinaryFormatter();
-            var list = (List<Point>)bin.Deserialize(stream);
+            var list = (List<Point>)bin.Deserialize(Client.GetStream());
             TempRandomButLocation = list;
         }
 
