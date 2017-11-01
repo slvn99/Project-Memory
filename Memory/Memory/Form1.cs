@@ -130,7 +130,7 @@ namespace WindowsFormsApp1
 				switch (thema)
 				{
 					case "Media":
-						//this.BackgroundImage = Resources.Background
+						this.BackgroundImage = Resources.media_achtergrond;
 						break;
 					case "Films":
 						this.BackgroundImage = Resources.popcorn_background;

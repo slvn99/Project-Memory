@@ -153,6 +153,7 @@
     <Content Include="bin\Debug\just_do_it.wav" />
     <Content Include="bin\Debug\no1.wav" />
     <Content Include="bin\Debug\Skra.wav" />
+    <None Include="Resources\media_achtergrond.jpg" />
     <None Include="Resources\zelda130.png" />
     <None Include="Resources\witcher130.png" />
     <None Include="Resources\portal130.png" />
