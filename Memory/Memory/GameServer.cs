@@ -17,6 +17,7 @@ namespace Memory
         public static Label TempConLabel = new Label();
         bool host = false;
         List<Point> PointLocation = new List<Point>();
+        public static List<Button> RandomButLocation = new List<Button>();
 
         public GameServer()
         {
@@ -50,8 +51,15 @@ namespace Memory
                 button.Location = p;
                 PointLocation.Remove(p);
             }
+
+            foreach (Button x in ButtonGrid)
+            {
+                RandomButLocation.Add(x);
+            }
+
         }
-        
+
+        #region kaarten
         private void GridButton1_Click(object sender, EventArgs e)
         {
 			GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -147,12 +155,13 @@ namespace Memory
             GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton8Dup.BackgroundImage = Resources.Google;
         }
+#endregion
 
         private void HostButton_Click(object sender, EventArgs e)
         {
             ServerHost.tempGridbutton.Location = GridButton1.Location;
-            ServerHost.StartServer();
             SetupGame();
+            ServerHost.StartServer();
             host = true;
         }
 
