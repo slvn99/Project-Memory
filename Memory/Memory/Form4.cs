@@ -151,10 +151,18 @@ namespace Memory
 
         private void Form4_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Memory.HomePage f2 = new Memory.HomePage();
-            f2.tonen();
-            Dispose();
-            GC.Collect();
+            //if (e.CloseReason == CloseReason.UserClosing)
+            //{
+            //    Memory.HomePage f2 = new Memory.HomePage();
+            //    f2.tonen();
+            //    Dispose();
+            //    GC.Collect();
+            //}
+            //else
+            //{
+
+            //}
+            
         }
     }
 }
