@@ -249,11 +249,7 @@ namespace Memory
 
         private void Reset_Function()
         {
-            //Ga terug naar begin spel                
-            RunningInThe90s r2 = new RunningInThe90s();
-            r2.Show();
-            this.Dispose(false);
-            GC.Collect();
+            
         }     
 
         private void EndGame_Check()
@@ -265,16 +261,12 @@ namespace Memory
             }
 
 
+            else 
+            {
+                DialogResult ResetGame = MessageBox.Show("wil je een nieuw spel spelen?", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
 
-            DialogResult ResetGame = MessageBox.Show("wil je een nieuw spel spelen?", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (ResetGame == DialogResult.Yes)
-            {
-                Reset_Function();
-            }
-            else
-            {
-                //exit hoofdmenu
-            }
+            
         }
 
 
@@ -410,7 +402,7 @@ namespace Memory
             switch (thema)
             {
                 case "Media":
-                    GridButton3.BackgroundImage = Resources.Google;
+                    GridButton3.BackgroundImage = Resources.Google1;
                     break;
                 case "Films":
                     GridButton3.BackgroundImage = Resources.shrek130;
@@ -429,7 +421,7 @@ namespace Memory
             switch (thema)
             {
                 case "Media":
-                    GridButton3Dup.BackgroundImage = Resources.Google;
+                    GridButton3Dup.BackgroundImage = Resources.Google1;
                     break;
                 case "Films":
                     GridButton3Dup.BackgroundImage = Resources.shrek130;
@@ -562,7 +554,7 @@ namespace Memory
             switch (thema)
             {
                 case "Media":
-                    GridButton7.BackgroundImage = Resources.TwitchLogo;
+                    GridButton7.BackgroundImage = Resources.TwitchLogo1;
                     break;
                 case "Films":
                     GridButton7.BackgroundImage = Resources.star_trek130;
@@ -581,7 +573,7 @@ namespace Memory
             switch (thema)
             {
                 case "Media":
-                    GridButton7Dup.BackgroundImage = Resources.TwitchLogo;
+                    GridButton7Dup.BackgroundImage = Resources.TwitchLogo1;
                     break;
                 case "Films":
                     GridButton7Dup.BackgroundImage = Resources.star_trek130;

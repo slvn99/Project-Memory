@@ -523,6 +523,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap initial_D {
+            get {
+                object obj = ResourceManager.GetObject("initial_D", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap lotr_130 {
             get {
                 object obj = ResourceManager.GetObject("lotr_130", resourceCulture);

@@ -15,6 +15,9 @@ namespace Memory
         public intro()
         {
             InitializeComponent();
+
+            axWindowsMediaPlayer1.URL = "intro.mp4";
+            axWindowsMediaPlayer1.Ctlcontrols.play();
         }
     }
 }

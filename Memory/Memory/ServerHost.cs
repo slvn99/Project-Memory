@@ -40,12 +40,9 @@ namespace Memory
         {
             Client = Listener.EndAcceptTcpClient(ar);
             GameServer.TempConLabel.Text = "connected!";
-            SendGameState();
-
-
         }
 
-        static void SendGameState()
+        public static void SendGameState()
         {
             Stream stream = Client.GetStream();
             var bin = new BinaryFormatter();

@@ -169,15 +169,13 @@ namespace Memory
         {
             if (host == true)
             {
-                //ConLabel.Text = TempConLabel.Text;
-                //GameData = Convert.ToString(GridButton1.Location);
-                //ServerHost.SendMessage(GameData);
+                ServerHost.SendGameState();
             }
             else
             {
                 //ConLabel.Text = ServerClient.ReceiveMessage();
                 ServerClient.RecieveGamaData();
-                //Button[] ButtonGrid = ServerClient.TempRandomButLocation.ToArray();
+                Point[] ButtonGrid = ServerClient.TempRandomButLocation.ToArray();
             }
         }
 
