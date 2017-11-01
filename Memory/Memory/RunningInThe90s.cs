@@ -249,11 +249,7 @@ namespace Memory
 
         private void Reset_Function()
         {
-            //Ga terug naar begin spel                
-            RunningInThe90s r2 = new RunningInThe90s();
-            r2.Show();
-            this.Dispose(false);
-            GC.Collect();
+            
         }     
 
         private void EndGame_Check()
@@ -265,16 +261,12 @@ namespace Memory
             }
 
 
+            else 
+            {
+                DialogResult ResetGame = MessageBox.Show("wil je een nieuw spel spelen?", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
 
-            DialogResult ResetGame = MessageBox.Show("wil je een nieuw spel spelen?", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (ResetGame == DialogResult.Yes)
-            {
-                Reset_Function();
-            }
-            else
-            {
-                //exit hoofdmenu
-            }
+            
         }
 
 
