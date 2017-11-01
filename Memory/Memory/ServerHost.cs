@@ -17,7 +17,7 @@ namespace Memory
         static int PacketSize = 1024 * 1024;
         public static TcpListener Listener;
         public static TcpClient Client; //client die geconnect is
-        List<Point> PointLocation = new List<Point>();
+        public static List<Button> TempRandomButLocation = new List<Button>();
         public static Button tempGridbutton = new Button();
         public static string GameData;
 
@@ -27,6 +27,7 @@ namespace Memory
             Listener = new TcpListener(ip);
             Listener.Start();
             AcceptClient();
+            TempRandomButLocation = GameServer.RandomButLocation;
             //GameData = Convert.ToString(tempGridbutton.Location);
         }
 
@@ -40,6 +41,7 @@ namespace Memory
         {
             Client = Listener.EndAcceptTcpClient(ar);
             GameServer.TempConLabel.Text = "connected!";
+            
         }
 
         public static bool SendMessage(string message)
