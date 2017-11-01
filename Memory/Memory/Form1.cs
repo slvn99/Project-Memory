@@ -26,15 +26,15 @@ namespace WindowsFormsApp1
 
 
 
-		public Form1()
+        public Form1()
         {
-			InitializeComponent();
+            InitializeComponent();
 
             this.ActiveControl = Player1Textbox;
 
             opslaan.Visible = false;
 
-			ChangeCursor();
+            ChangeCursor();
 
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
             foreach (var x in ButtonGrid)
@@ -64,7 +64,7 @@ namespace WindowsFormsApp1
             Points2.Font = new Font("Arial", 8, FontStyle.Bold);
             Points2.ForeColor = System.Drawing.Color.White;
 
-           
+
         }
 
         protected override CreateParams CreateParams
