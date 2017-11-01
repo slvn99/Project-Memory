@@ -380,7 +380,6 @@ namespace WindowsFormsApp1
 					GridButton1.BackgroundImage = Resources.ac130;
 					break;
 			}
-			GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton1);
 			Check_kaart();
 		}
@@ -399,7 +398,6 @@ namespace WindowsFormsApp1
 					GridButton1Dup.BackgroundImage = Resources.ac130;
 					break;
 			}
-			GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton1Dup);
 			Check_kaart();
 		}
@@ -418,7 +416,6 @@ namespace WindowsFormsApp1
 					GridButton2.BackgroundImage = Resources.zelda130;
 				break;
 			}
-			GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton2);
 			Check_kaart();
 		}
@@ -437,7 +434,6 @@ namespace WindowsFormsApp1
 					GridButton2Dup.BackgroundImage = Resources.zelda130;
 					break;
 			}
-			GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton2Dup);
 			Check_kaart();
 		}
@@ -456,7 +452,6 @@ namespace WindowsFormsApp1
 					GridButton3.BackgroundImage = Resources.witcher130;
 					break;
 			}
-			GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton3);
 			Check_kaart();
 		}
@@ -475,7 +470,6 @@ namespace WindowsFormsApp1
 					GridButton3Dup.BackgroundImage = Resources.witcher130;
 					break;
 			}
-			GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton3Dup);
 			Check_kaart();
 		}
@@ -494,7 +488,6 @@ namespace WindowsFormsApp1
 					GridButton4.BackgroundImage = Resources.fifa130;
 					break;
 			}
-			GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton4);
 			Check_kaart();
 		}
@@ -513,7 +506,6 @@ namespace WindowsFormsApp1
 					GridButton4Dup.BackgroundImage = Resources.fifa130;
 					break;
 			}
-			GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton4Dup);
 			Check_kaart();
 		}
@@ -532,7 +524,6 @@ namespace WindowsFormsApp1
 					GridButton5.BackgroundImage = Resources.need_for_speed130;
 					break;
 			}
-			GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton5);
 			Check_kaart();
 		}
@@ -551,7 +542,6 @@ namespace WindowsFormsApp1
 					GridButton5Dup.BackgroundImage = Resources.need_for_speed130;
 					break;
 			}
-			GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton5Dup);
 			Check_kaart();
 		}
@@ -570,7 +560,6 @@ namespace WindowsFormsApp1
 					GridButton6.BackgroundImage = Resources.gta130;
 					break;
 			}
-			GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton6);
 			Check_kaart();
 		}
@@ -589,7 +578,6 @@ namespace WindowsFormsApp1
 					GridButton6Dup.BackgroundImage = Resources.gta130;
 					break;
 			}
-			GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton6Dup);
 			Check_kaart();
 		}
@@ -608,7 +596,6 @@ namespace WindowsFormsApp1
 					GridButton7.BackgroundImage = Resources.portal130;
 					break;
 			}
-			GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton7);
 			Check_kaart();
 		}
@@ -627,7 +614,6 @@ namespace WindowsFormsApp1
 					GridButton7Dup.BackgroundImage = Resources.portal130;
 					break;
 			}
-			GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton7Dup);
 			Check_kaart();
 		}
@@ -646,7 +632,6 @@ namespace WindowsFormsApp1
 					GridButton8.BackgroundImage = Resources.halo130;
 					break;
 			}
-			GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton8);
 			Check_kaart();
 		}
@@ -665,7 +650,6 @@ namespace WindowsFormsApp1
 					GridButton8Dup.BackgroundImage = Resources.halo130;
 					break;
 			}
-			GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			Click_kaart(GridButton8Dup);
 			Check_kaart();
 		}
