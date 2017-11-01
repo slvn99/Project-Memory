@@ -893,7 +893,5 @@ namespace WindowsFormsApp1
             Dispose();
             GC.Collect();
         }
-
-		
 	}
 }
