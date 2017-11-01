@@ -63,7 +63,6 @@
             this.GridButton1 = new System.Windows.Forms.Button();
             this.RunningTimer = new System.Windows.Forms.Timer(this.components);
             this.RunningLabel = new System.Windows.Forms.Label();
-            this.RunningTimerMs = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Reset)).BeginInit();
@@ -581,7 +580,6 @@
         private System.Windows.Forms.Button GridButton1;
         private System.Windows.Forms.Timer RunningTimer;
         private System.Windows.Forms.Label RunningLabel;
-        private System.Windows.Forms.Timer RunningTimerMs;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -257,8 +257,8 @@ namespace Memory
         {
             if (TotaalMatches == 8)
             {
-                MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + "s!", "Einde Spel", MessageBoxButtons.OK);
                 RunningTimer.Enabled = false;
+                MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + " seconde!", "Einde Spel", MessageBoxButtons.OK);
             }
 
             
