@@ -43,7 +43,7 @@ namespace Memory
 
 			else if (a == 2)
 			{
-				label1.Text = "Finishing the last preparations";
+                label1.Text = "Finishing the last preparations";
 				label1.Font = new Font("Arial", 18, FontStyle.Bold);
 				label1.ForeColor = System.Drawing.Color.Black;
 				label1.AutoSize = false;
@@ -53,7 +53,7 @@ namespace Memory
 
 			else if (a == 3)
 			{
-				label1.Text = "Showing an extremly useless loading screen";
+                label1.Text = "Showing an extremly useless loading screen";
 				label1.Font = new Font("Arial", 18, FontStyle.Bold);
 				label1.ForeColor = System.Drawing.Color.Black;
 				label1.AutoSize = false;
@@ -63,7 +63,7 @@ namespace Memory
 
 			else if (a == 4)
 			{
-				label1.Text = "Giving you some time to mentally prepare";
+                label1.Text = "Giving you some time to mentally prepare";
 				label1.Font = new Font("Arial", 18, FontStyle.Bold);
 				label1.ForeColor = System.Drawing.Color.Black;
 				label1.AutoSize = false;
@@ -73,7 +73,7 @@ namespace Memory
 
 			else if (a == 5)
 			{
-				label1.Text = "Wasting valuable time";
+                label1.Text = "Wasting valuable time";
 				label1.Font = new Font("Arial", 18, FontStyle.Bold);
 				label1.ForeColor = System.Drawing.Color.Black;
 				label1.AutoSize = false;
@@ -83,7 +83,7 @@ namespace Memory
 
 			else if (a == 6)
 			{
-				label1.Text = "Testing players for hacks";
+                label1.Text = "Testing players for hacks";
 				label1.Font = new Font("Arial", 18, FontStyle.Bold);
 				label1.ForeColor = System.Drawing.Color.Black;
 				label1.AutoSize = false;
@@ -94,7 +94,7 @@ namespace Memory
 			else if (a == 7)
 			{
                 label1.Text = "The ting goes skraa";
-				Skraa();
+                timer2.Start();
                 label1.Font = new Font("Arial", 18, FontStyle.Bold);
 				label1.ForeColor = System.Drawing.Color.Black;
 				label1.AutoSize = false;
@@ -103,7 +103,7 @@ namespace Memory
 			}
 			else if (a == 8)
 			{
-				label1.Text = "Donderdag visdag";
+                label1.Text = "Donderdag visdag";
 				label1.Font = new Font("Arial", 18, FontStyle.Bold);
 				label1.ForeColor = System.Drawing.Color.Black;
 				label1.AutoSize = false;
@@ -142,26 +142,20 @@ namespace Memory
             Dispose();
             GC.Collect();
         }
-		public async void Skraa()
+
+		private void Form4_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			player.SoundLocation = "Skra.wav";
-			player.Play();
-			await Task.Delay(2000);
+		//    Memory.HomePage f2 = new Memory.HomePage();
+		//    f2.tonen();
+		//    Dispose();
+		//    GC.Collect();
 		}
 
-        private void Form4_FormClosing(object sender, FormClosingEventArgs e)
+        private void timer2_Tick(object sender, EventArgs e)
         {
-            //if (e.CloseReason == CloseReason.UserClosing)
-            //{
-            //    Memory.HomePage f2 = new Memory.HomePage();
-            //    f2.tonen();
-            //    Dispose();
-            //    GC.Collect();
-            //}
-            //else
-            //{
-
-            //}
+            player.SoundLocation = "Skra.wav";
+            player.Play();
+            timer2.Stop();
             
         }
     }

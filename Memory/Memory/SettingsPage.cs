@@ -22,12 +22,13 @@ namespace Memory
         public static extern IntPtr SendMessageW(IntPtr hWnd, int Msg,
             IntPtr wParam, IntPtr lParam);
 
-
         public static string SetValueForComboBox = "";
 		System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 		public SettingsPage()
 		{
 			InitializeComponent();
+
+            ThemaBox.SelectedIndex = 0;
 
             ChangeCursor();
 		}
@@ -53,11 +54,12 @@ namespace Memory
 
 		public async void Apply_Click(object sender, EventArgs e)
 		{
-			player.SoundLocation = "click.wav";
+            player.SoundLocation = "click.wav";
 			player.Play();
-            string thema = ThemaBox.SelectedItem.ToString();
+            string thema = ThemaBox.SelectedItem.ToString();      
             Memory.SettingsPage_Save.SaveData(thema);
-			await Task.Delay(300);
+            MessageBox.Show("Thema is succesvol toegepast");
+            await Task.Delay(300);
             player.Stop();
 		}
 
@@ -109,6 +111,11 @@ namespace Memory
         {
             Memory.RunningInThe90s inThe90S = new Memory.RunningInThe90s();
             inThe90S.Show();
+        }
+
+        private void ThemaBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
