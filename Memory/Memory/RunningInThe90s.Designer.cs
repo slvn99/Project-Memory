@@ -159,19 +159,6 @@
             this.Player1Textbox.Size = new System.Drawing.Size(104, 20);
             this.Player1Textbox.TabIndex = 64;
             // 
-            // GridButton1Dup
-            // 
-            this.GridButton1Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
-            this.GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.GridButton1Dup.Location = new System.Drawing.Point(227, 11);
-            this.GridButton1Dup.Name = "GridButton1Dup";
-            this.GridButton1Dup.Size = new System.Drawing.Size(130, 130);
-            this.GridButton1Dup.TabIndex = 48;
-            this.GridButton1Dup.Tag = "1";
-            this.GridButton1Dup.Text = "button2";
-            this.GridButton1Dup.UseVisualStyleBackColor = true;
-            this.GridButton1Dup.Click += new System.EventHandler(this.GridButton1Dup_Click);
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -429,6 +416,19 @@
             this.GridButton2.Text = "button3";
             this.GridButton2.UseVisualStyleBackColor = true;
             this.GridButton2.Click += new System.EventHandler(this.GridButton2_Click);
+            // 
+            // GridButton1Dup
+            // 
+            this.GridButton1Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
+            this.GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GridButton1Dup.Location = new System.Drawing.Point(227, 11);
+            this.GridButton1Dup.Name = "GridButton1Dup";
+            this.GridButton1Dup.Size = new System.Drawing.Size(130, 130);
+            this.GridButton1Dup.TabIndex = 48;
+            this.GridButton1Dup.Tag = "1";
+            this.GridButton1Dup.Text = "button2";
+            this.GridButton1Dup.UseVisualStyleBackColor = true;
+            this.GridButton1Dup.Click += new System.EventHandler(this.GridButton1Dup_Click);
             // 
             // GridButton1
             // 

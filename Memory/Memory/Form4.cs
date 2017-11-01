@@ -143,13 +143,6 @@ namespace Memory
             GC.Collect();
         }
 
-		private void Form4_FormClosing(object sender, FormClosingEventArgs e)
-		{
-		//    Memory.HomePage f2 = new Memory.HomePage();
-		//    f2.tonen();
-		//    Dispose();
-		//    GC.Collect();
-		}
 
         private void timer2_Tick(object sender, EventArgs e)
         {
