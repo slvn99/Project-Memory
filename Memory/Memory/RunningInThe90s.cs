@@ -353,17 +353,17 @@ namespace Memory
             switch (thema)
             {
                 case "Media":
-                    GridButton1.BackgroundImage = Resources.Steam;
+                    GridButton1Dup.BackgroundImage = Resources.Steam;
                     break;
                 case "Films":
-                    GridButton1.BackgroundImage = Resources.ff130;
+                    GridButton1Dup.BackgroundImage = Resources.ff130;
                     break;
                 case "Games":
-                    GridButton1.BackgroundImage = Resources.ac130;
+                    GridButton1Dup.BackgroundImage = Resources.ac130;
                     break;
             }
-            GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            Click_kaart(GridButton1);
+            GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton1Dup);
             Check_kaart();
         }
 

@@ -17,9 +17,8 @@ namespace Memory
         static int PacketSize = 1024 * 1024;
         public static TcpListener Listener;
         public static TcpClient Client; //client die geconnect is
-        public static List<Button> TempRandomButLocation = new List<Button>();
+        public static List<Point> TempRandomButLocation = new List<Point>();
         public static Button tempGridbutton = new Button();
-        public static string GameData;
 
         public static void StartServer()
         {
@@ -27,7 +26,7 @@ namespace Memory
             Listener = new TcpListener(ip);
             Listener.Start();
             AcceptClient();
-            TempRandomButLocation = GameServer.RandomButLocation;
+            /*TempRandomButLocation = GameServer.RandomButLocation*/;
             //GameData = Convert.ToString(tempGridbutton.Location);
         }
 
@@ -48,14 +47,9 @@ namespace Memory
 
         static void SendGameState()
         {
-           // Socket socket = Listener.AcceptSocket();
-
-            //Stream stream = new NetworkStream(socket);
-
             Stream stream = Client.GetStream();
             var bin = new BinaryFormatter();
             bin.Serialize(stream, TempRandomButLocation);
-            //Client.GetStream().Write(TempRandomButLocation, 0 , 16 );
         }
 
         public static bool SendMessage(string message)
