@@ -21,7 +21,7 @@ namespace Memory
 
             Loading_bar.Controls.Add(label1);
             label1.BackColor = Color.Transparent;
-
+            timer2.Start();
             timer1.Start();
             timer3.Start();
 
@@ -129,14 +129,6 @@ namespace Memory
 			}
 		}
 
-		private void timer1_Tick(object sender, EventArgs e)
-        {
-            WindowsFormsApp1.Form1  f1 = new WindowsFormsApp1.Form1();
-            f1.Show();            
-            timer1.Stop();
-            Sluiten();
-        }
-
         private async void timer3_Tick(object sender, EventArgs e)
         {
             player.Stop(); //stop van ting goes skra
@@ -146,9 +138,10 @@ namespace Memory
 			player.Stop();
             timer3.Stop();
 		}
+
         public void Sluiten()
         {
-            Close();
+            this.Close();
             Dispose();
             GC.Collect();
         }
@@ -160,6 +153,12 @@ namespace Memory
             player.Play();
             timer2.Stop();
             
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            Sluiten();
         }
     }
 }
