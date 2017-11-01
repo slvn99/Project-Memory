@@ -410,7 +410,7 @@ namespace Memory
             switch (thema)
             {
                 case "Media":
-                    GridButton3.BackgroundImage = Resources.Google;
+                    GridButton3.BackgroundImage = Resources.Google1;
                     break;
                 case "Films":
                     GridButton3.BackgroundImage = Resources.shrek130;
@@ -429,7 +429,7 @@ namespace Memory
             switch (thema)
             {
                 case "Media":
-                    GridButton3Dup.BackgroundImage = Resources.Google;
+                    GridButton3Dup.BackgroundImage = Resources.Google1;
                     break;
                 case "Films":
                     GridButton3Dup.BackgroundImage = Resources.shrek130;
@@ -562,7 +562,7 @@ namespace Memory
             switch (thema)
             {
                 case "Media":
-                    GridButton7.BackgroundImage = Resources.TwitchLogo;
+                    GridButton7.BackgroundImage = Resources.TwitchLogo1;
                     break;
                 case "Films":
                     GridButton7.BackgroundImage = Resources.star_trek130;
@@ -581,7 +581,7 @@ namespace Memory
             switch (thema)
             {
                 case "Media":
-                    GridButton7Dup.BackgroundImage = Resources.TwitchLogo;
+                    GridButton7Dup.BackgroundImage = Resources.TwitchLogo1;
                     break;
                 case "Films":
                     GridButton7Dup.BackgroundImage = Resources.star_trek130;
