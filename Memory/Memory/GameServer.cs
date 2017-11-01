@@ -170,20 +170,20 @@ namespace Memory
             if (host == true)
             {
                 //ConLabel.Text = TempConLabel.Text;
-                GameData = Convert.ToString(GridButton1.Location);
-                ServerHost.SendMessage(GameData);
+                //GameData = Convert.ToString(GridButton1.Location);
+                //ServerHost.SendMessage(GameData);
             }
             else
             {
-                ConLabel.Text = ServerClient.ReceiveMessage();
+                //ConLabel.Text = ServerClient.ReceiveMessage();
+                ServerClient.RecieveGamaData();
+                Button[] ButtonGrid = ServerClient.TempRandomButLocation.ToArray();
             }
         }
 
         private void ClientButton_Click(object sender, EventArgs e)
         {
             ServerClient.StartClient();
-            ServerClient.RecieveGamaData();
-            Button[] ButtonGrid = ServerClient.TempRandomButLocation.ToArray();
         }
 
         private void NaamButton_Click(object sender, EventArgs e)
