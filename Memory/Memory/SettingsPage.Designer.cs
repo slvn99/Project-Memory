@@ -39,6 +39,7 @@
             this.RunningInThe90sButton = new System.Windows.Forms.Button();
             this.Volume = new System.Windows.Forms.PictureBox();
             this.Themas = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MuteButton)).BeginInit();
@@ -186,6 +187,16 @@
             this.Themas.TabIndex = 14;
             this.Themas.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1168, 451);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -193,6 +204,7 @@
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1417, 730);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.RunningInThe90sButton);
             this.Controls.Add(this.Themas);
             this.Controls.Add(this.Volume);
@@ -233,5 +245,6 @@
         private System.Windows.Forms.Button RunningInThe90sButton;
         private System.Windows.Forms.PictureBox Volume;
         private System.Windows.Forms.PictureBox Themas;
+        private System.Windows.Forms.Button button1;
     }
 }
