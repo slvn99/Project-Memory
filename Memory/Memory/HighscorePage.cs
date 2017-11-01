@@ -176,14 +176,20 @@ namespace Memory
             this.Close();
         }
 
-        private void HsResetbutton_Click(object sender, EventArgs e)
+        private async void hsreset_Click(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
             DialogResult ExitGame = MessageBox.Show("Weet je zeker dat je de highscores wilt resetten? ", "Reset", MessageBoxButtons.YesNo);
 
             if (ExitGame == DialogResult.Yes)
             {
                 Highscores_save.Reset();
             }
+
+            await Task.Delay(1000);
+            player.Stop();
+            this.Close();
         }
     }
 }
