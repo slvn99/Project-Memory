@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RunningInThe90s));
             this.Exceptionbox = new System.Windows.Forms.Label();
             this.Variablen_save = new System.Windows.Forms.Label();
@@ -60,6 +61,10 @@
             this.GridButton2Dup = new System.Windows.Forms.Button();
             this.GridButton2 = new System.Windows.Forms.Button();
             this.GridButton1 = new System.Windows.Forms.Button();
+            this.RunningTimer = new System.Windows.Forms.Timer(this.components);
+            this.RunningLabel = new System.Windows.Forms.Label();
+            this.RunningTimerMs = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Reset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.play)).BeginInit();
@@ -125,7 +130,7 @@
             // Saveclass
             // 
             this.Saveclass.Location = new System.Drawing.Point(1117, 498);
-            this.Saveclass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Saveclass.Margin = new System.Windows.Forms.Padding(4);
             this.Saveclass.Name = "Saveclass";
             this.Saveclass.Size = new System.Drawing.Size(129, 28);
             this.Saveclass.TabIndex = 66;
@@ -167,7 +172,7 @@
             this.GridButton1Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton1Dup.Location = new System.Drawing.Point(303, 14);
-            this.GridButton1Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton1Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton1Dup.Name = "GridButton1Dup";
             this.GridButton1Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton1Dup.TabIndex = 48;
@@ -257,7 +262,7 @@
             this.GridButton8Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton8Dup.Location = new System.Drawing.Point(839, 516);
-            this.GridButton8Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton8Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton8Dup.Name = "GridButton8Dup";
             this.GridButton8Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton8Dup.TabIndex = 62;
@@ -271,7 +276,7 @@
             this.GridButton8.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton8.Location = new System.Drawing.Point(575, 511);
-            this.GridButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton8.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton8.Name = "GridButton8";
             this.GridButton8.Size = new System.Drawing.Size(173, 160);
             this.GridButton8.TabIndex = 61;
@@ -285,7 +290,7 @@
             this.GridButton7Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton7Dup.Location = new System.Drawing.Point(303, 511);
-            this.GridButton7Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton7Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton7Dup.Name = "GridButton7Dup";
             this.GridButton7Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton7Dup.TabIndex = 60;
@@ -299,7 +304,7 @@
             this.GridButton7.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton7.Location = new System.Drawing.Point(35, 516);
-            this.GridButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton7.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton7.Name = "GridButton7";
             this.GridButton7.Size = new System.Drawing.Size(173, 160);
             this.GridButton7.TabIndex = 59;
@@ -313,7 +318,7 @@
             this.GridButton6Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton6Dup.Location = new System.Drawing.Point(839, 350);
-            this.GridButton6Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton6Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton6Dup.Name = "GridButton6Dup";
             this.GridButton6Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton6Dup.TabIndex = 58;
@@ -327,7 +332,7 @@
             this.GridButton6.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton6.Location = new System.Drawing.Point(575, 350);
-            this.GridButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton6.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton6.Name = "GridButton6";
             this.GridButton6.Size = new System.Drawing.Size(173, 160);
             this.GridButton6.TabIndex = 57;
@@ -341,7 +346,7 @@
             this.GridButton5Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton5Dup.Location = new System.Drawing.Point(303, 350);
-            this.GridButton5Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton5Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton5Dup.Name = "GridButton5Dup";
             this.GridButton5Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton5Dup.TabIndex = 56;
@@ -355,7 +360,7 @@
             this.GridButton5.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton5.Location = new System.Drawing.Point(35, 350);
-            this.GridButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton5.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton5.Name = "GridButton5";
             this.GridButton5.Size = new System.Drawing.Size(173, 160);
             this.GridButton5.TabIndex = 55;
@@ -369,7 +374,7 @@
             this.GridButton4Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton4Dup.Location = new System.Drawing.Point(839, 181);
-            this.GridButton4Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton4Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton4Dup.Name = "GridButton4Dup";
             this.GridButton4Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton4Dup.TabIndex = 54;
@@ -383,7 +388,7 @@
             this.GridButton4.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton4.Location = new System.Drawing.Point(575, 180);
-            this.GridButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton4.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton4.Name = "GridButton4";
             this.GridButton4.Size = new System.Drawing.Size(173, 160);
             this.GridButton4.TabIndex = 53;
@@ -397,7 +402,7 @@
             this.GridButton3Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton3Dup.Location = new System.Drawing.Point(303, 181);
-            this.GridButton3Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton3Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton3Dup.Name = "GridButton3Dup";
             this.GridButton3Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton3Dup.TabIndex = 52;
@@ -411,7 +416,7 @@
             this.GridButton3.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton3.Location = new System.Drawing.Point(35, 181);
-            this.GridButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton3.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton3.Name = "GridButton3";
             this.GridButton3.Size = new System.Drawing.Size(173, 160);
             this.GridButton3.TabIndex = 51;
@@ -425,7 +430,7 @@
             this.GridButton2Dup.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton2Dup.Location = new System.Drawing.Point(839, 14);
-            this.GridButton2Dup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton2Dup.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton2Dup.Name = "GridButton2Dup";
             this.GridButton2Dup.Size = new System.Drawing.Size(173, 160);
             this.GridButton2Dup.TabIndex = 50;
@@ -439,7 +444,7 @@
             this.GridButton2.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton2.Location = new System.Drawing.Point(575, 14);
-            this.GridButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton2.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton2.Name = "GridButton2";
             this.GridButton2.Size = new System.Drawing.Size(173, 160);
             this.GridButton2.TabIndex = 49;
@@ -453,7 +458,7 @@
             this.GridButton1.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton1.Location = new System.Drawing.Point(35, 14);
-            this.GridButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.GridButton1.Margin = new System.Windows.Forms.Padding(5);
             this.GridButton1.Name = "GridButton1";
             this.GridButton1.Size = new System.Drawing.Size(173, 160);
             this.GridButton1.TabIndex = 47;
@@ -462,6 +467,30 @@
             this.GridButton1.UseVisualStyleBackColor = false;
             this.GridButton1.Click += new System.EventHandler(this.GridButton1_Click);
             // 
+            // RunningTimer
+            // 
+            this.RunningTimer.Tick += new System.EventHandler(this.RunningTimer_Tick);
+            // 
+            // RunningLabel
+            // 
+            this.RunningLabel.AutoSize = true;
+            this.RunningLabel.BackColor = System.Drawing.Color.Transparent;
+            this.RunningLabel.Location = new System.Drawing.Point(1078, 333);
+            this.RunningLabel.Name = "RunningLabel";
+            this.RunningLabel.Size = new System.Drawing.Size(28, 17);
+            this.RunningLabel.TabIndex = 83;
+            this.RunningLabel.Text = "0:0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(1112, 333);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 17);
+            this.label1.TabIndex = 84;
+            this.label1.Text = "seconde";
+            // 
             // RunningInThe90s
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -469,6 +498,8 @@
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1355, 730);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.RunningLabel);
             this.Controls.Add(this.GridButton1Dup);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.Reset);
@@ -548,5 +579,9 @@
         private System.Windows.Forms.Button GridButton2Dup;
         private System.Windows.Forms.Button GridButton2;
         private System.Windows.Forms.Button GridButton1;
+        private System.Windows.Forms.Timer RunningTimer;
+        private System.Windows.Forms.Label RunningLabel;
+        private System.Windows.Forms.Timer RunningTimerMs;
+        private System.Windows.Forms.Label label1;
     }
 }
