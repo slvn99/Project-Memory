@@ -21,7 +21,6 @@ namespace Memory
 
             Loading_bar.Controls.Add(label1);
             label1.BackColor = Color.Transparent;
-            timer2.Start();
             timer1.Start();
             timer3.Start();
 

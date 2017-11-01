@@ -14,14 +14,14 @@ namespace Memory
     {
         public intro()
         {
-            //CenterToScreen();
+            //this.Default();
 
             InitializeComponent();
 
             timer1.Start();
 
-            axWindowsMediaPlayer1.URL = "intro.mp4";
-            axWindowsMediaPlayer1.Ctlcontrols.play();
+            //axWindowsMediaPlayer1.URL = "intro.mp4";
+            //axWindowsMediaPlayer1.Ctlcontrols.play();
         }
         public void Sluiten()
         {
@@ -34,6 +34,11 @@ namespace Memory
         {
             timer1.Stop();
             Sluiten();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
