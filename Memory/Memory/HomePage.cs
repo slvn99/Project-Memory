@@ -36,11 +36,25 @@ namespace Memory
 
         private async void PlayButton_Click(object sender, EventArgs e)
         {
-            Memory.Form4 f = new Memory.Form4();
+            //Memory.Form4 f = new Memory.Form4();
             player.SoundLocation = "click.wav";
             player.Play();
-            f.Show();
-            Sluiten();
+            
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            pictureBox4.Visible = false;
+            pictureBox6.Visible = false;
+            pictureBox7.Visible = false;
+            pictureBox8.Visible = false;
+            RankButton.Visible = false;
+            PlayButton.Visible = false;
+            SettingButton.Visible = false;
+            tableLayoutPanel1.Visible = false;
+            tableLayoutPanel3.Visible = false;
+            tableLayoutPanel4.Visible = false;
+            tableLayoutPanel5.Visible = false;
+            //f.Show();
+            //Sluiten();
             await Task.Delay(100);
             player.Stop();
 		}
