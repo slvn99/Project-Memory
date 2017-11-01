@@ -13,11 +13,11 @@ namespace Memory
 {
     public partial class GameServer : Form
     {
-        string TempName, GameData, HostName, ClienName;
+        string TempName;
         public static Label TempConLabel = new Label();
         bool host = false;
         List<Point> PointLocation = new List<Point>();
-        public static List<Button> RandomButLocation = new List<Button>();
+        public static List<Point> RandomButLocation = new List<Point>();
 
         public GameServer()
         {
@@ -54,7 +54,7 @@ namespace Memory
 
             foreach (Button x in ButtonGrid)
             {
-                RandomButLocation.Add(x);
+                RandomButLocation.Add(x.Location);
             }
 
         }
@@ -177,7 +177,7 @@ namespace Memory
             {
                 //ConLabel.Text = ServerClient.ReceiveMessage();
                 ServerClient.RecieveGamaData();
-                Button[] ButtonGrid = ServerClient.TempRandomButLocation.ToArray();
+                //Button[] ButtonGrid = ServerClient.TempRandomButLocation.ToArray();
             }
         }
 
