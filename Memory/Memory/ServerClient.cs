@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net.Sockets;
@@ -14,7 +15,7 @@ namespace Memory
     {
         static int PacketSize = 1024 * 1024;
         public static TcpClient Client; //client die geconnect is
-        public static List<Button> TempRandomButLocation = new List<Button>();
+        public static List<Point> TempRandomButLocation = new List<Point>();
 
         public static void StartClient()
         {
@@ -25,7 +26,7 @@ namespace Memory
         {
             Stream stream = Client.GetStream();
             var bin = new BinaryFormatter();
-            var list = (List<Button>)bin.Deserialize(stream);
+            var list = (List<Point>)bin.Deserialize(stream);
             TempRandomButLocation = list;
         }
 
