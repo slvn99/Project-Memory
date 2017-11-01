@@ -29,8 +29,13 @@ namespace WindowsFormsApp1
 		public Form1()
         {
 			InitializeComponent();
+
+            this.ActiveControl = Player1Textbox;
+
             opslaan.Visible = false;
+
 			ChangeCursor();
+
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
             foreach (var x in ButtonGrid)
             {
@@ -130,7 +135,7 @@ namespace WindowsFormsApp1
 				switch (thema)
 				{
 					case "Media":
-						//this.BackgroundImage = Resources.Background
+						this.BackgroundImage = Resources.media_achtergrond;
 						break;
 					case "Films":
 						this.BackgroundImage = Resources.popcorn_background;
@@ -199,6 +204,8 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
+                        player.SoundLocation = "ping.wav";
+                        player.Play();
                         matchlist.Add(Kaart1Select.Name);
                         matchlist.Add(Kaart2Select.Name);
                         lengte += 2;
@@ -300,24 +307,39 @@ namespace WindowsFormsApp1
             GC.Collect();
         }
 
-        private void EndGame_Check()
+        private async void EndGame_Check()
         {
             if (TotaalMatches == 8)
             {
                 opslaan.Visible = false;
                 if (PuntenPlayer1 > PuntenPlayer2)
                 {
+                    Reset.Visible = false;
+                    player.SoundLocation = "tada.wav";
+                    player.Play();
                     MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
                     Memory.Highscores_save.SaveData(player1, PuntenPlayer1);
+                    await Task.Delay(2000);
+                    player.Stop();
                 }
                 else if (PuntenPlayer1 == PuntenPlayer2)
                 {
+                    Reset.Visible = false;
+                    player.SoundLocation = "wow.wav";
+                    player.Play();
                     MessageBox.Show("WOW, " + player1 + " heeft gelijk gespeeld met " + player2 + "!" , "Einde Spel", MessageBoxButtons.OK);
+                    await Task.Delay(2000);
+                    player.Stop();
                 }
                 else
                 {
+                    Reset.Visible = false;
+                    player.SoundLocation = "tada.wav";
+                    player.Play();
                     MessageBox.Show("Gefeliciteerd " + player2 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
                     Memory.Highscores_save.SaveData(player2, PuntenPlayer2);
+                    await Task.Delay(2000);
+                    player.Stop();
                 }
 
                 DialogResult ResetGame = MessageBox.Show("Willen jullie een nieuw spel spelen?", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -726,10 +748,12 @@ namespace WindowsFormsApp1
             GC.Collect();
         }
 
-        private void laden_Click(object sender, EventArgs e)
+        private async void laden_Click(object sender, EventArgs e)
         {
             //click van deze button load alle huidige data uit .sav
             //en zet deze in save string
+            player.SoundLocation = "click.wav";
+            player.Play();
             string save = Save.LoadData();
             if (save == "Er is nog geen\nsave file\naanwezig")
             { }
@@ -833,16 +857,22 @@ namespace WindowsFormsApp1
                     }
                 }
             }
+            await Task.Delay(1000);
+            player.Stop();
         }
 
 
-        private void opslaan_Click(object sender, EventArgs e)
+        private async void opslaan_Click(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
             string[] matcharray = new string[20];
             matchlist.CopyTo(matcharray);
 
             //click van deze button saved alle huidige data in .sav
             Save.SaveData(player1, player2, PuntenPlayer1, PuntenPlayer2, PlayerBeurt, TotaalMatches, matcharray, lengte);
+            await Task.Delay(1000);
+            player.Stop();
         }     
 
         public void Sluiten()

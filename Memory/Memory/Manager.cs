@@ -25,6 +25,8 @@ namespace Memory
 
             InitializeComponent();
 
+            timer1.Start();
+
             var HomePage = new HomePage();
             HomePage.Show();
 
