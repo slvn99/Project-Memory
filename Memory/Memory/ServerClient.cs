@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Sockets;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Memory
 {
@@ -11,10 +14,19 @@ namespace Memory
     {
         static int PacketSize = 1024 * 1024;
         public static TcpClient Client; //client die geconnect is
+        public static List<Button> TempRandomButLocation = new List<Button>();
 
         public static void StartClient()
         {
-            Client = new TcpClient("141.252.225.170", 8984);
+            Client = new TcpClient("141.252.225.177", 8984);
+        }
+
+        public static void RecieveGamaData()
+        {
+            Stream stream = Client.GetStream();
+            var bin = new BinaryFormatter();
+            var list = (List<Button>)bin.Deserialize(stream);
+            TempRandomButLocation = list;
         }
 
         public static void SendMessage(string message)
