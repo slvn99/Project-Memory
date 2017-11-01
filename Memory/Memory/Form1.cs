@@ -887,9 +887,9 @@ namespace WindowsFormsApp1
 		{
 			get
 			{
-				CreateParams cp = base.CreateParams;
-				cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
-				return cp;
+				var parms = base.CreateParams;
+				parms.Style &= ~0x02000000;  // Turn off WS_CLIPCHILDREN
+				return parms;
 			}
 		}
 	}

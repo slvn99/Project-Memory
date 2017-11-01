@@ -176,7 +176,17 @@ namespace Memory
             this.Close();
         }
 
-        private async void hsreset_Click(object sender, EventArgs e)
+		protected override CreateParams CreateParams
+		{
+			get
+			{
+				CreateParams cp = base.CreateParams;
+				cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+				return cp;
+			}
+		}
+
+		private async void hsreset_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
             player.Play();
