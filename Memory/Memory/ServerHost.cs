@@ -44,9 +44,11 @@ namespace Memory
 
         public static void SendGameState()
         {
-            Stream stream = Client.GetStream();
+            //Socket socket = Listener.AcceptSocket();
+            //Stream stream = new NetworkStream(socket);
+            TempRandomButLocation = GameServer.RandomButLocation;
             var bin = new BinaryFormatter();
-            bin.Serialize(stream, TempRandomButLocation);
+            bin.Serialize(Client.GetStream(), TempRandomButLocation);
         }
 
         public static bool SendMessage(string message)

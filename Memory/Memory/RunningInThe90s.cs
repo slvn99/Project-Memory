@@ -97,6 +97,7 @@ namespace Memory
                 pictureBox1.Visible = false;
                 Speler1.Visible = true;
                 play.Visible = false;
+                RunningTimer.Enabled = false;
 
                 Player1LabelInvoer.Text = Player1Textbox.Text;
 
@@ -256,15 +257,11 @@ namespace Memory
         {
             if (TotaalMatches == 8)
             {
-                MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in blablabla secondes!", "Einde Spel", MessageBoxButtons.OK);
-
+                MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + "s!", "Einde Spel", MessageBoxButtons.OK);
+                RunningTimer.Enabled = false;
             }
 
-
-            else 
-            {
-                DialogResult ResetGame = MessageBox.Show("wil je een nieuw spel spelen?", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            }
+            
 
             
         }
@@ -318,6 +315,8 @@ namespace Memory
             player.SoundLocation = "click.wav";
             player.Play();
             PlayRunningInthe90s();
+            RunningTimer.Start();
+            RunningTimer.Enabled = true;
         }
 
         #region kaarten
@@ -625,6 +624,21 @@ namespace Memory
             Check_kaart();
         }
         #endregion
+
+        int seconde = 0;
+        int tijds = 0;
+        private void RunningTimer_Tick(object sender, EventArgs e)
+        {
+            tijds++;
+            RunningLabel.Text = seconde + ":" + tijds.ToString();
+
+            if (tijds == 10)
+            {
+                seconde++;
+                tijds = 0;
+            }
+        }
+        
 
         public void Saveclass_Click(object sender, EventArgs e)
         {
