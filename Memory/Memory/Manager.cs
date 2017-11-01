@@ -32,11 +32,6 @@ namespace Memory
 
             axWindowsMediaPlayer1.URL = "chiper.wav";
             axWindowsMediaPlayer1.Ctlcontrols.play();
-
-			var Runninginthe90s = new RunningInThe90s();
-			Runninginthe90s.Show();
-			axWindowsMediaPlayer1.URL = "Run90s.wav";
-			axWindowsMediaPlayer1.Ctlcontrols.play();
 		}
 
         private void timer1_Tick(object sender, EventArgs e)
