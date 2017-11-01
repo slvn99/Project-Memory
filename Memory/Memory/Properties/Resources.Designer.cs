@@ -443,6 +443,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap giphy {
+            get {
+                object obj = ResourceManager.GetObject("giphy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Gold_trophy {
             get {
                 object obj = ResourceManager.GetObject("Gold_trophy", resourceCulture);
@@ -526,6 +536,16 @@ namespace Memory.Properties {
         public static System.Drawing.Bitmap initial_D {
             get {
                 object obj = ResourceManager.GetObject("initial_D", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap intro {
+            get {
+                object obj = ResourceManager.GetObject("intro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
