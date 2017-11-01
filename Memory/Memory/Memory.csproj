@@ -75,6 +75,12 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="intro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="intro.Designer.cs">
+      <DependentUpon>intro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="intro.resx">
+      <DependentUpon>intro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager.resx">
       <DependentUpon>Manager.cs</DependentUpon>
