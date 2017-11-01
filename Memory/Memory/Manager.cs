@@ -32,7 +32,7 @@ namespace Memory
 
             axWindowsMediaPlayer1.URL = "chiper.wav";
             axWindowsMediaPlayer1.Ctlcontrols.play();
-        }
+		}
 
         private void timer1_Tick(object sender, EventArgs e)
         {

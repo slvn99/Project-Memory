@@ -75,13 +75,13 @@ namespace Memory
         private void GridButton2_Click(object sender, EventArgs e)
         {
             GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton2.BackgroundImage = Resources.TwitchLogo1;
+            GridButton2.BackgroundImage = Resources.TwitchLogo;
         }
 
         private void GridButton2Dup_Click(object sender, EventArgs e)
         {
             GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton2Dup.BackgroundImage = Resources.TwitchLogo1;
+            GridButton2Dup.BackgroundImage = Resources.TwitchLogo;
         }
 
         private void GridButton3_Click(object sender, EventArgs e)
@@ -147,13 +147,13 @@ namespace Memory
         private void GridButton8_Click(object sender, EventArgs e)
         {
             GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton8.BackgroundImage = Resources.Google1;
+            GridButton8.BackgroundImage = Resources.Google;
         }
 
         private void GridButton8Dup_Click(object sender, EventArgs e)
         {
             GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton8Dup.BackgroundImage = Resources.Google1;
+            GridButton8Dup.BackgroundImage = Resources.Google;
         }
 #endregion
 
@@ -175,7 +175,61 @@ namespace Memory
             {
                 //ConLabel.Text = ServerClient.ReceiveMessage();
                 ServerClient.RecieveGamaData();
-                Point[] ButtonGrid = ServerClient.TempRandomButLocation.ToArray();
+                Point[] ButtonGridLocation = ServerClient.TempRandomButLocation.ToArray();
+                for (int i = 0; i < ButtonGridLocation.Length; i++)
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            GridButton1.Location = ButtonGridLocation[i];
+                            break;
+                        case 1:
+                            GridButton1Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 2:
+                            GridButton2.Location = ButtonGridLocation[i];
+                            break;
+                        case 3:
+                            GridButton2Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 4:
+                            GridButton3.Location = ButtonGridLocation[i];
+                            break;
+                        case 5:
+                            GridButton3Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 6:
+                            GridButton4.Location = ButtonGridLocation[i];
+                            break;
+                        case 7:
+                            GridButton4Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 8:
+                            GridButton5.Location = ButtonGridLocation[i];
+                            break;
+                        case 9:
+                            GridButton5Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 10:
+                            GridButton6.Location = ButtonGridLocation[i];
+                            break;
+                        case 11:
+                            GridButton6Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 12:
+                            GridButton7.Location = ButtonGridLocation[i];
+                            break;
+                        case 13:
+                            GridButton7Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 14:
+                            GridButton8.Location = ButtonGridLocation[i];
+                            break;
+                        case 15:
+                            GridButton8Dup.Location = ButtonGridLocation[i];
+                            break;
+                    }
+                }
             }
         }
 
