@@ -158,9 +158,11 @@ namespace Memory
 
         private void RunningGamemode_Click(object sender, EventArgs e)
         {
-            Memory.RunningInThe90s f1 = new Memory.RunningInThe90s();
-            f1.Show();
+            Memory.Form4 f = new Memory.Form4();
+            f.Show();
             Sluiten();
+            RG();
+
         }
 
         private void StandardGamemode_Click_1(object sender, EventArgs e)
@@ -168,6 +170,21 @@ namespace Memory
             Memory.Form4 f = new Memory.Form4();
             f.Show();
             Sluiten();
+            SG();
+        }
+
+        private async void RG()
+        {
+            await Task.Delay(4000);
+            Memory.RunningInThe90s f = new Memory.RunningInThe90s();
+            f.Show();
+        }
+
+        private async void SG()
+        {
+            await Task.Delay(4000);
+            WindowsFormsApp1.Form1 f = new WindowsFormsApp1.Form1();
+            f.Show();
         }
     }
 
