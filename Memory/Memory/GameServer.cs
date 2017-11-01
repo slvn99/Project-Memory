@@ -75,13 +75,13 @@ namespace Memory
         private void GridButton2_Click(object sender, EventArgs e)
         {
             GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton2.BackgroundImage = Resources.TwitchLogo;
+            GridButton2.BackgroundImage = Resources.TwitchLogo1;
         }
 
         private void GridButton2Dup_Click(object sender, EventArgs e)
         {
             GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton2Dup.BackgroundImage = Resources.TwitchLogo;
+            GridButton2Dup.BackgroundImage = Resources.TwitchLogo1;
         }
 
         private void GridButton3_Click(object sender, EventArgs e)
@@ -147,13 +147,13 @@ namespace Memory
         private void GridButton8_Click(object sender, EventArgs e)
         {
             GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton8.BackgroundImage = Resources.Google;
+            GridButton8.BackgroundImage = Resources.Google1;
         }
 
         private void GridButton8Dup_Click(object sender, EventArgs e)
         {
             GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton8Dup.BackgroundImage = Resources.Google;
+            GridButton8Dup.BackgroundImage = Resources.Google1;
         }
 #endregion
 

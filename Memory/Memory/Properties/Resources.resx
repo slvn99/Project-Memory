@@ -145,9 +145,6 @@
   <data name="Naamloos_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Naamloos-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TwitchLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TwitchLogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -237,9 +234,6 @@
   </data>
   <data name="HomeButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HomeButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Google" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Google.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Beurt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Beurt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -396,5 +390,11 @@
   </data>
   <data name="zelda130" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zelda130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Google1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Google.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TwitchLogo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TwitchLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
