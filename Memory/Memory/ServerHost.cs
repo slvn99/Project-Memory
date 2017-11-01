@@ -40,7 +40,6 @@ namespace Memory
         {
             Client = Listener.EndAcceptTcpClient(ar);
             GameServer.TempConLabel.Text = "connected!";
-            
         }
 
         public static void SendGameState()
