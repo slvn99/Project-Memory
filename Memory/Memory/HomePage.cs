@@ -93,6 +93,7 @@ namespace Memory
         {
             if(e.CloseReason == CloseReason.UserClosing)
             {
+                Application.Exit();
                 Manager.ManagerInstance.Close();
             }
             else

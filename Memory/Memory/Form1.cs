@@ -144,6 +144,9 @@ namespace WindowsFormsApp1
                 BeurtLabel.Text = PlayerBeurt;
 				switch (thema)
 				{
+					default:
+						this.BackgroundImage = Resources.media_achtergrond;
+						break;
 					case "Media":
 						this.BackgroundImage = Resources.media_achtergrond;
 						break;
@@ -370,6 +373,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.Steam;
+					break;
 				case "Media":
 					GridButton1.BackgroundImage = Resources.Steam;
 					break;
@@ -388,6 +394,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.Steam;
+					break;
 				case "Media":
 					GridButton1Dup.BackgroundImage = Resources.Steam;
 					break;
@@ -406,6 +415,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.fb;
+					break;
 				case "Media":
 					GridButton2.BackgroundImage = Resources.fb;
 				break;
@@ -424,6 +436,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.fb;
+					break;
 				case "Media":
 					GridButton2Dup.BackgroundImage = Resources.fb;
 					break;
@@ -442,6 +457,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.Google;
+					break;
 				case "Media":
 					GridButton3.BackgroundImage = Resources.Google;
 					break;
@@ -460,6 +478,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.Google;
+					break;
 				case "Media":
 					GridButton3Dup.BackgroundImage = Resources.Google;
 					break;
@@ -478,6 +499,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.Youtube;
+					break;
 				case "Media":
 					GridButton4.BackgroundImage = Resources.Youtube;
 					break;
@@ -496,6 +520,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.Youtube;
+					break;
 				case "Media":
 					GridButton4Dup.BackgroundImage = Resources.Youtube;
 					break;
@@ -514,6 +541,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.Twitter;
+					break;
 				case "Media":
 					GridButton5.BackgroundImage = Resources.Twitter;
 					break;
@@ -532,6 +562,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.Twitter;
+					break;
 				case "Media":
 					GridButton5Dup.BackgroundImage = Resources.Twitter;
 					break;
@@ -550,6 +583,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources._9gag;
+					break;
 				case "Media":
 					GridButton6.BackgroundImage = Resources._9gag;
 					break;
@@ -568,6 +604,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources._9gag;
+					break;
 				case "Media":
 					GridButton6Dup.BackgroundImage = Resources._9gag;
 					break;
@@ -586,6 +625,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.TwitchLogo;
+					break;
 				case "Media":
 					GridButton7.BackgroundImage = Resources.TwitchLogo;
 					break;
@@ -604,6 +646,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.TwitchLogo;
+					break;
 				case "Media":
 					GridButton7Dup.BackgroundImage = Resources.TwitchLogo;
 					break;
@@ -622,6 +667,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.Reddit;
+					break;
 				case "Media":
 					GridButton8.BackgroundImage = Resources.Reddit;
 					break;
@@ -640,6 +688,9 @@ namespace WindowsFormsApp1
 		{
 			switch (thema)
 			{
+				default:
+					GridButton1.BackgroundImage = Resources.Reddit;
+					break;
 				case "Media":
 					GridButton8Dup.BackgroundImage = Resources.Reddit;
 					break;
