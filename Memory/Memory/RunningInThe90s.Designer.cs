@@ -64,12 +64,14 @@
             this.RunningTimer = new System.Windows.Forms.Timer(this.components);
             this.RunningLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Reset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Speler1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Beurt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // Exceptionbox
@@ -490,6 +492,15 @@
             this.label1.TabIndex = 84;
             this.label1.Text = "seconde";
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(1274, 170);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(75, 23);
+            this.axWindowsMediaPlayer1.TabIndex = 85;
+            // 
             // RunningInThe90s
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -497,6 +508,7 @@
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1355, 730);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RunningLabel);
             this.Controls.Add(this.GridButton1Dup);
@@ -540,6 +552,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Speler1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Beurt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -581,5 +594,6 @@
         private System.Windows.Forms.Timer RunningTimer;
         private System.Windows.Forms.Label RunningLabel;
         private System.Windows.Forms.Label label1;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }
 }
