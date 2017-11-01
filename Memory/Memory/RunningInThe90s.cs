@@ -642,6 +642,19 @@ namespace Memory
             }
         }
 
+        private void RunningInThe90s_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Memory.HomePage f2 = new Memory.HomePage();
+            f2.tonen();
+            Dispose();
+            GC.Collect();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
+
         public void Saveclass_Click(object sender, EventArgs e)
         {
             string[] matcharray = new string[20];

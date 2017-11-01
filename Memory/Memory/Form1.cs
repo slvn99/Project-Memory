@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Je moet een naam invullen!");
             }
-			if (Player1Textbox.Text == Player2Textbox.Text)
+			else if (Player1Textbox.Text == Player2Textbox.Text)
 			{
 				MessageBox.Show("Voer 2 verschillende namen in");
 			}
