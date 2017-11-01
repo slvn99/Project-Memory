@@ -41,7 +41,7 @@
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(-133, -113);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(1428, 832);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(1538, 832);
             this.axWindowsMediaPlayer1.TabIndex = 0;
             // 
             // timer1
@@ -53,8 +53,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1417, 730);
+            this.ClientSize = new System.Drawing.Size(1435, 777);
             this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "intro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "intro";
