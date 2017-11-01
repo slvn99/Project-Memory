@@ -87,7 +87,6 @@
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form4_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.Loading_bar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
