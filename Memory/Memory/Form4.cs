@@ -119,7 +119,17 @@ namespace Memory
             this.Cursor = c;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+		protected override CreateParams CreateParams
+		{
+			get
+			{
+				CreateParams cp = base.CreateParams;
+				cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+				return cp;
+			}
+		}
+
+		private void timer1_Tick(object sender, EventArgs e)
         {
             WindowsFormsApp1.Form1  f1 = new WindowsFormsApp1.Form1();
             f1.Show();            
@@ -143,13 +153,6 @@ namespace Memory
             GC.Collect();
         }
 
-		private void Form4_FormClosing(object sender, FormClosingEventArgs e)
-		{
-		//    Memory.HomePage f2 = new Memory.HomePage();
-		//    f2.tonen();
-		//    Dispose();
-		//    GC.Collect();
-		}
 
         private void timer2_Tick(object sender, EventArgs e)
         {

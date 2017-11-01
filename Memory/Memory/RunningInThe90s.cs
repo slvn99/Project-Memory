@@ -91,6 +91,50 @@ namespace Memory
                 Player1LabelInvoer.Text = Player1Textbox.Text;
 
                 player1 = Player1LabelInvoer.Text;
+                switch (thema)
+                {
+                    case "Media":
+                        this.BackgroundImage = Resources.media_achtergrond;
+                        break;
+                    case "Films":
+                        this.BackgroundImage = Resources.popcorn_background;
+                        GridButton1.BackgroundImage = Resources.clapperboard;
+                        GridButton1Dup.BackgroundImage = Resources.clapperboard;
+                        GridButton2.BackgroundImage = Resources.clapperboard;
+                        GridButton2Dup.BackgroundImage = Resources.clapperboard;
+                        GridButton3.BackgroundImage = Resources.clapperboard;
+                        GridButton3Dup.BackgroundImage = Resources.clapperboard;
+                        GridButton4.BackgroundImage = Resources.clapperboard;
+                        GridButton4Dup.BackgroundImage = Resources.clapperboard;
+                        GridButton5.BackgroundImage = Resources.clapperboard;
+                        GridButton5Dup.BackgroundImage = Resources.clapperboard;
+                        GridButton6.BackgroundImage = Resources.clapperboard;
+                        GridButton6Dup.BackgroundImage = Resources.clapperboard;
+                        GridButton7.BackgroundImage = Resources.clapperboard;
+                        GridButton7Dup.BackgroundImage = Resources.clapperboard;
+                        GridButton8.BackgroundImage = Resources.clapperboard;
+                        GridButton8Dup.BackgroundImage = Resources.clapperboard;
+                        break;
+                    case "Games":
+                        this.BackgroundImage = Resources.controller;
+                        GridButton1.BackgroundImage = Resources.controller_cardback;
+                        GridButton1Dup.BackgroundImage = Resources.controller_cardback;
+                        GridButton2.BackgroundImage = Resources.controller_cardback;
+                        GridButton2Dup.BackgroundImage = Resources.controller_cardback;
+                        GridButton3.BackgroundImage = Resources.controller_cardback;
+                        GridButton3Dup.BackgroundImage = Resources.controller_cardback;
+                        GridButton4.BackgroundImage = Resources.controller_cardback;
+                        GridButton4Dup.BackgroundImage = Resources.controller_cardback;
+                        GridButton5.BackgroundImage = Resources.controller_cardback;
+                        GridButton5Dup.BackgroundImage = Resources.controller_cardback;
+                        GridButton6.BackgroundImage = Resources.controller_cardback;
+                        GridButton6Dup.BackgroundImage = Resources.controller_cardback;
+                        GridButton7.BackgroundImage = Resources.controller_cardback;
+                        GridButton7Dup.BackgroundImage = Resources.controller_cardback;
+                        GridButton8.BackgroundImage = Resources.controller_cardback;
+                        GridButton8Dup.BackgroundImage = Resources.controller_cardback;
+                        break;
+                }
             }
         }
 
@@ -129,6 +173,21 @@ namespace Memory
 
 
                         await Task.Delay(1000);
+                        switch (thema)
+                        {
+                            case "Media":
+                                Kaart1Select.BackgroundImage = Resources.cardback;
+                                Kaart2Select.BackgroundImage = Resources.cardback;
+                                break;
+                            case "Films":
+                                Kaart1Select.BackgroundImage = Resources.clapperboard;
+                                Kaart2Select.BackgroundImage = Resources.clapperboard;
+                                break;
+                            case "Games":
+                                Kaart1Select.BackgroundImage = Resources.controller_cardback;
+                                Kaart2Select.BackgroundImage = Resources.controller_cardback;
+                                break;
+                        }
                         Kaart1Select.Visible = false;
                         Kaart2Select.Visible = false;
                         Kaart1Select = null;
@@ -264,82 +323,306 @@ namespace Memory
         #region kaarten
         private void GridButton1_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton1.BackgroundImage = Resources.Steam;
+                    break;
+                case "Films":
+                    GridButton1.BackgroundImage = Resources.ff130;
+                    break;
+                case "Games":
+                    GridButton1.BackgroundImage = Resources.ac130;
+                    break;
+            }
+            GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton1);
+            Check_kaart();
         }
 
         private void GridButton1Dup_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton1.BackgroundImage = Resources.Steam;
+                    break;
+                case "Films":
+                    GridButton1.BackgroundImage = Resources.ff130;
+                    break;
+                case "Games":
+                    GridButton1.BackgroundImage = Resources.ac130;
+                    break;
+            }
+            GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton1);
+            Check_kaart();
         }
 
         private void GridButton2_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton2Dup.BackgroundImage = Resources.fb;
+                    break;
+                case "Films":
+                    GridButton2Dup.BackgroundImage = Resources.hp130;
+                    break;
+                case "Games":
+                    GridButton2Dup.BackgroundImage = Resources.zelda130;
+                    break;
+            }
+            GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton2Dup);
+            Check_kaart();
         }
 
         private void GridButton2Dup_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton2.BackgroundImage = Resources.fb;
+                    break;
+                case "Films":
+                    GridButton2.BackgroundImage = Resources.hp130;
+                    break;
+                case "Games":
+                    GridButton2.BackgroundImage = Resources.zelda130;
+                    break;
+            }
+            GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton2);
+            Check_kaart();
         }
 
         private void GridButton3_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton3.BackgroundImage = Resources.Google;
+                    break;
+                case "Films":
+                    GridButton3.BackgroundImage = Resources.shrek130;
+                    break;
+                case "Games":
+                    GridButton3.BackgroundImage = Resources.witcher130;
+                    break;
+            }
+            GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton3);
+            Check_kaart();
         }
 
         private void GridButton3Dup_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton3.BackgroundImage = Resources.Google;
+                    break;
+                case "Films":
+                    GridButton3.BackgroundImage = Resources.shrek130;
+                    break;
+                case "Games":
+                    GridButton3.BackgroundImage = Resources.witcher130;
+                    break;
+            }
+            GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton3);
+            Check_kaart();
         }
 
         private void GridButton4_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton4.BackgroundImage = Resources.Youtube;
+                    break;
+                case "Films":
+                    GridButton4.BackgroundImage = Resources.indiana130;
+                    break;
+                case "Games":
+                    GridButton4.BackgroundImage = Resources.fifa130;
+                    break;
+            }
+            GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton4);
+            Check_kaart();
         }
 
         private void GridButton4Dup_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton4.BackgroundImage = Resources.Youtube;
+                    break;
+                case "Films":
+                    GridButton4.BackgroundImage = Resources.indiana130;
+                    break;
+                case "Games":
+                    GridButton4.BackgroundImage = Resources.fifa130;
+                    break;
+            }
+            GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton4);
+            Check_kaart();
         }
 
         private void GridButton5_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton5.BackgroundImage = Resources.Twitter;
+                    break;
+                case "Films":
+                    GridButton5.BackgroundImage = Resources.lotr_130;
+                    break;
+                case "Games":
+                    GridButton5.BackgroundImage = Resources.need_for_speed130;
+                    break;
+            }
+            GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton5);
+            Check_kaart();
         }
 
         private void GridButton5Dup_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton5.BackgroundImage = Resources.Twitter;
+                    break;
+                case "Films":
+                    GridButton5.BackgroundImage = Resources.lotr_130;
+                    break;
+                case "Games":
+                    GridButton5.BackgroundImage = Resources.need_for_speed130;
+                    break;
+            }
+            GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton5);
+            Check_kaart();
         }
 
         private void GridButton6Dup_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton6.BackgroundImage = Resources._9gag;
+                    break;
+                case "Films":
+                    GridButton6.BackgroundImage = Resources.avengers130;
+                    break;
+                case "Games":
+                    GridButton6.BackgroundImage = Resources.gta130;
+                    break;
+            }
+            GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton6);
+            Check_kaart();
         }
 
         private void GridButton6_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton6.BackgroundImage = Resources._9gag;
+                    break;
+                case "Films":
+                    GridButton6.BackgroundImage = Resources.avengers130;
+                    break;
+                case "Games":
+                    GridButton6.BackgroundImage = Resources.gta130;
+                    break;
+            }
+            GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton6);
+            Check_kaart();
         }
 
         private void GridButton7_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton7.BackgroundImage = Resources.TwitchLogo;
+                    break;
+                case "Films":
+                    GridButton7.BackgroundImage = Resources.star_trek130;
+                    break;
+                case "Games":
+                    GridButton7.BackgroundImage = Resources.portal130;
+                    break;
+            }
+            GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton7);
+            Check_kaart();
         }
 
         private void GridButton7Dup_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton7.BackgroundImage = Resources.TwitchLogo;
+                    break;
+                case "Films":
+                    GridButton7.BackgroundImage = Resources.star_trek130;
+                    break;
+                case "Games":
+                    GridButton7.BackgroundImage = Resources.portal130;
+                    break;
+            }
+            GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton7);
+            Check_kaart();
         }
 
         private void GridButton8_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton8.BackgroundImage = Resources.Reddit;
+                    break;
+                case "Films":
+                    GridButton8.BackgroundImage = Resources.starwars130;
+                    break;
+                case "Games":
+                    GridButton8.BackgroundImage = Resources.halo130;
+                    break;
+            }
+            GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton8);
+            Check_kaart();
         }
 
         private void GridButton8Dup_Click(object sender, EventArgs e)
         {
-
+            switch (thema)
+            {
+                case "Media":
+                    GridButton8.BackgroundImage = Resources.Reddit;
+                    break;
+                case "Films":
+                    GridButton8.BackgroundImage = Resources.starwars130;
+                    break;
+                case "Games":
+                    GridButton8.BackgroundImage = Resources.halo130;
+                    break;
+            }
+            GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            Click_kaart(GridButton8);
+            Check_kaart();
         }
         #endregion
 

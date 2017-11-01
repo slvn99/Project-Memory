@@ -67,6 +67,16 @@ namespace WindowsFormsApp1
            
         }
 
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+                return cp;
+            }
+        }
+
         void ChangeCursor()
         {
             Bitmap bmp = new Bitmap (Resources.cur1031);
@@ -178,6 +188,7 @@ namespace WindowsFormsApp1
 				}
 			}
         }
+        
 
         private void Click_kaart(Button Buttonclick)
         {
@@ -866,6 +877,7 @@ namespace WindowsFormsApp1
         {
             player.SoundLocation = "click.wav";
             player.Play();
+            MessageBox.Show("je spel is succesvol opgeslagen");
             string[] matcharray = new string[20];
             matchlist.CopyTo(matcharray);
 
@@ -881,6 +893,5 @@ namespace WindowsFormsApp1
             Dispose();
             GC.Collect();
         }
-    }
-
+	}
 }

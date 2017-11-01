@@ -44,6 +44,9 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.PlayButton = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.StandardGamemode = new System.Windows.Forms.PictureBox();
+            this.RunningGamemode = new System.Windows.Forms.PictureBox();
+            this.Backbutton = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -60,6 +63,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StandardGamemode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RunningGamemode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Backbutton)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -275,11 +281,42 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // StandardGamemode
+            // 
+            this.StandardGamemode.Location = new System.Drawing.Point(214, 204);
+            this.StandardGamemode.Name = "StandardGamemode";
+            this.StandardGamemode.Size = new System.Drawing.Size(200, 200);
+            this.StandardGamemode.TabIndex = 4;
+            this.StandardGamemode.TabStop = false;
+            this.StandardGamemode.Click += new System.EventHandler(this.StandardGamemode_Click_1);
+            // 
+            // RunningGamemode
+            // 
+            this.RunningGamemode.Location = new System.Drawing.Point(647, 204);
+            this.RunningGamemode.Name = "RunningGamemode";
+            this.RunningGamemode.Size = new System.Drawing.Size(200, 200);
+            this.RunningGamemode.TabIndex = 5;
+            this.RunningGamemode.TabStop = false;
+            this.RunningGamemode.Click += new System.EventHandler(this.RunningGamemode_Click);
+            // 
+            // Backbutton
+            // 
+            this.Backbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Backbutton.Location = new System.Drawing.Point(484, 304);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(100, 100);
+            this.Backbutton.TabIndex = 6;
+            this.Backbutton.TabStop = false;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 593);
+            this.Controls.Add(this.Backbutton);
+            this.Controls.Add(this.RunningGamemode);
+            this.Controls.Add(this.StandardGamemode);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.pictureBox1);
@@ -303,6 +340,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StandardGamemode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RunningGamemode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Backbutton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,5 +365,8 @@
         private System.Windows.Forms.PictureBox PlayButton;
         private System.Windows.Forms.PictureBox SettingButton;
         private System.Windows.Forms.PictureBox RankButton;
+        private System.Windows.Forms.PictureBox StandardGamemode;
+        private System.Windows.Forms.PictureBox RunningGamemode;
+        private System.Windows.Forms.PictureBox Backbutton;
     }
 }
