@@ -183,7 +183,7 @@ namespace Memory
         {
             ServerClient.StartClient();
             ServerClient.RecieveGamaData();
-            Button[] ButtonGrid = ServerClient.
+            Button[] ButtonGrid = ServerClient.TempRandomButLocation.ToArray();
         }
 
         private void NaamButton_Click(object sender, EventArgs e)
