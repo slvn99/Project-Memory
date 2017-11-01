@@ -17,6 +17,9 @@ namespace Memory
         public HomePage()
         {
             InitializeComponent();
+            StandardGamemode.Visible = false;
+            RunningGamemode.Visible = false;
+            Backbutton.Visible = false;
 
             pictureBox1.Controls.Add(tableLayoutPanel1);
             tableLayoutPanel1.BackColor = Color.Transparent;
@@ -34,30 +37,7 @@ namespace Memory
             this.Cursor = c;
         }
 
-        private async void PlayButton_Click(object sender, EventArgs e)
-        {
-            //Memory.Form4 f = new Memory.Form4();
-            player.SoundLocation = "click.wav";
-            player.Play();
-            
-            pictureBox2.Visible = false;
-            pictureBox3.Visible = false;
-            pictureBox4.Visible = false;
-            pictureBox6.Visible = false;
-            pictureBox7.Visible = false;
-            pictureBox8.Visible = false;
-            RankButton.Visible = false;
-            PlayButton.Visible = false;
-            SettingButton.Visible = false;
-            tableLayoutPanel1.Visible = false;
-            tableLayoutPanel3.Visible = false;
-            tableLayoutPanel4.Visible = false;
-            tableLayoutPanel5.Visible = false;
-            //f.Show();
-            //Sluiten();
-            await Task.Delay(100);
-            player.Stop();
-		}
+       
 
         private async void SettingButton_Click(object sender, EventArgs e)
         {
@@ -113,6 +93,69 @@ namespace Memory
         public void form1reset()
         {
             WindowsFormsApp1.Form1 f = new WindowsFormsApp1.Form1();
+            f.Show();
+            Sluiten();
+        }
+
+        private async void PlayButton_Click(object sender, EventArgs e)
+        {
+
+            player.SoundLocation = "click.wav";
+            player.Play();
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            pictureBox4.Visible = false;
+            pictureBox6.Visible = false;
+            pictureBox7.Visible = false;
+            pictureBox8.Visible = false;
+            RankButton.Visible = false;
+            PlayButton.Visible = false;
+            SettingButton.Visible = false;
+            tableLayoutPanel1.Visible = false;
+            tableLayoutPanel3.Visible = false;
+            tableLayoutPanel4.Visible = false;
+            tableLayoutPanel5.Visible = false;
+            StandardGamemode.Visible = true;
+            RunningGamemode.Visible = true;
+            Backbutton.Visible = true;
+            await Task.Delay(100);
+            player.Stop();
+        }
+
+        private async void Backbutton_Click(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            pictureBox2.Visible = true;
+            pictureBox3.Visible = true;
+            pictureBox4.Visible = true;
+            pictureBox6.Visible = true;
+            pictureBox7.Visible = true;
+            pictureBox8.Visible = true;
+            RankButton.Visible = true;
+            PlayButton.Visible = true;
+            SettingButton.Visible = true;
+            tableLayoutPanel1.Visible = true;
+            tableLayoutPanel3.Visible = true;
+            tableLayoutPanel4.Visible = true;
+            tableLayoutPanel5.Visible = true;
+            StandardGamemode.Visible = false;
+            RunningGamemode.Visible = false;
+            Backbutton.Visible = false;
+            await Task.Delay(100);
+            player.Stop();
+        }
+
+        private void RunningGamemode_Click(object sender, EventArgs e)
+        {
+            Memory.RunningInThe90s f1 = new Memory.RunningInThe90s();
+            f1.Show();
+            Sluiten();
+        }
+
+        private void StandardGamemode_Click_1(object sender, EventArgs e)
+        {
+            Memory.Form4 f = new Memory.Form4();
             f.Show();
             Sluiten();
         }
