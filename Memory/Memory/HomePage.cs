@@ -17,6 +17,7 @@ namespace Memory
         public HomePage()
         {
             InitializeComponent();
+
             StandardGamemode.Visible = false;
             RunningGamemode.Visible = false;
             Backbutton.Visible = false;
@@ -31,7 +32,7 @@ namespace Memory
 
             ChangeCursor();
         }
-
+        //past mouse crusor aan
         void ChangeCursor()
         {
             Bitmap bmp = new Bitmap(Properties.Resources.cur1031);
@@ -40,7 +41,7 @@ namespace Memory
         }
 
        
-
+        //openen settingspagina
         private async void SettingButton_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -54,6 +55,7 @@ namespace Memory
             Sluiten();
         }
 
+        //openen rankedpagina
         private async void RankButton_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -67,6 +69,7 @@ namespace Memory
             Sluiten();
         }
 
+        //magische code
         protected override CreateParams CreateParams
         {
             get
