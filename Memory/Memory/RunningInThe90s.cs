@@ -274,24 +274,43 @@ namespace Memory
             if (TotaalMatches == 8)
             {
                 RunningTimer.Enabled = false;
-				if (PuntenPlayer1 == 8)
-				{
-					HistoryofMemory();
-				}
-				player.SoundLocation = "tada.wav";
-				player.Play();
-				MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + " seconde!", "Einde Spel", MessageBoxButtons.OK);
+                string bufferstring = RunningLabel.Text;
+                string buf1 = bufferstring.Split(':')[0];
+                string buf2 = bufferstring.Split(':')[1];
+                bufferstring = buf1 + "," + buf2;
+                double score = double.Parse(bufferstring);
+                MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + score + " seconde!", "Einde Spel", MessageBoxButtons.OK);
+                Memory.RunningSave.SaveData(player1,score);
+                player.SoundLocation = "tada.wav";
+                player.Play();
+                MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + " seconde!", "Einde Spel", MessageBoxButtons.OK);
                 DialogResult Klaar = MessageBox.Show("Wil je een nieuw spel spelen?", "Nieuw spel", MessageBoxButtons.YesNo);
-				player.Stop();
+                player.Stop();
 
-                if (Klaar ==DialogResult.Yes)
+                if (Klaar == DialogResult.Yes)
                 {
                     Reset_Function();
                 }
                 if (Klaar == DialogResult.No)
                 {
-                    Sluiten ();
+                    Sluiten();
                 }
+            }
+
+            
+
+            
+        }
+
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (ResetGame == DialogResult.Yes)
+            {
+                Reset_Function();
             }
         }
         private async void pictureBox3_Click(object sender, EventArgs e)
@@ -673,6 +692,19 @@ namespace Memory
             axWindowsMediaPlayer1.Ctlcontrols.play();
         }
 
+        private async void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
+            DialogResult ExitGame = MessageBox.Show("Weet u zeker dat u het spel wil verlaten? Onopgeslagen progressie zal verloren gaan! ", "Exit", MessageBoxButtons.YesNo);
+
+            if (ExitGame == DialogResult.Yes)
+            {
+                Sluiten();
+            }
+        }
         private void Reset_Click_1(object sender, EventArgs e)
         {
             {
