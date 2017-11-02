@@ -255,10 +255,17 @@ namespace Memory
 
         }
 
+        public void runningreset()
+        {
+            RunningInThe90s f = new RunningInThe90s();
+            f.Show();
+            Sluiten();
+        }
+
         private void Reset_Function()
         {
-            Memory.HomePage f2 = new Memory.HomePage();
-            f2.Form1reset();
+            Memory.RunningInThe90s f2 = new Memory.RunningInThe90s();
+            f2.runningreset();
             Dispose();
             GC.Collect();
         }
