@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RunningSave.cs" />
     <Compile Include="StandardGame.cs">
       <SubType>Form</SubType>
     </Compile>

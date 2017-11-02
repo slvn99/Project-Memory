@@ -264,7 +264,13 @@ namespace Memory
             if (TotaalMatches == 8)
             {
                 RunningTimer.Enabled = false;
-                MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + " seconde!", "Einde Spel", MessageBoxButtons.OK);
+                string bufferstring = RunningLabel.Text;
+                string buf1 = bufferstring.Split(':')[0];
+                string buf2 = bufferstring.Split(':')[1];
+                bufferstring = buf1 + "," + buf2;
+                double score = double.Parse(bufferstring);
+                MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + score + " seconde!", "Einde Spel", MessageBoxButtons.OK);
+                Memory.RunningSave.SaveData(player1,score);
             }
 
             
@@ -655,6 +661,20 @@ namespace Memory
         private void timer1_Tick(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
+
+        private async void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
+            DialogResult ExitGame = MessageBox.Show("Weet u zeker dat u het spel wil verlaten? Onopgeslagen progressie zal verloren gaan! ", "Exit", MessageBoxButtons.YesNo);
+
+            if (ExitGame == DialogResult.Yes)
+            {
+                Sluiten();
+            }
         }
 
         public void Saveclass_Click(object sender, EventArgs e)
