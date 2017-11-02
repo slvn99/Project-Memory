@@ -31,6 +31,9 @@ namespace Memory
 
             timer3.Start();
 
+            var intro = new intro();
+            intro.Show();
+
             axWindowsMediaPlayer1.URL = "chiper.wav";
 		}
 
