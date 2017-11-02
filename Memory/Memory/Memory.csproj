@@ -163,6 +163,7 @@
     <Content Include="bin\Debug\no1.wav" />
     <Content Include="bin\Debug\Run90s.wav" />
     <Content Include="bin\Debug\Skra.wav" />
+    <None Include="Resources\Run90s.wav" />
     <None Include="Resources\PauseMusicButton.png" />
     <None Include="Resources\StopMusicButton.png" />
     <None Include="Resources\intro.gif" />
