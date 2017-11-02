@@ -234,6 +234,7 @@ namespace WindowsFormsApp1
                         Kaart1Select = null;
                         Kaart2Select = null;
                         Point_Add();
+						player.Stop();
                         GC.Collect();
 
                         foreach (var x in ButtonGrid)

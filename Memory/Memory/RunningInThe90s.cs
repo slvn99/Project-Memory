@@ -179,24 +179,26 @@ namespace Memory
                     }
                     else
                     {
-                        matchlist.Add(Kaart1Select.Name);
-                        matchlist.Add(Kaart2Select.Name);
-                        lengte += 2;
-                        foreach (var x in ButtonGrid)
-                        {
-                            x.Enabled = false;
-                        }
+						player.SoundLocation = "ping.wav";
+						player.Play();
+						matchlist.Add(Kaart1Select.Name);
+						matchlist.Add(Kaart2Select.Name);
+						lengte += 2;
+						foreach (var x in ButtonGrid)
+						{
+							x.Enabled = false;
+						}
 
+						await Task.Delay(1000);
+						Kaart1Select.Visible = false;
+						Kaart2Select.Visible = false;
+						Kaart1Select = null;
+						Kaart2Select = null;
+						Point_Add();
+						player.Stop();
+						GC.Collect();
 
-                        await Task.Delay(1000);
-                        Kaart1Select.Visible = false;
-                        Kaart2Select.Visible = false;
-                        Kaart1Select = null;
-                        Kaart2Select = null;
-                        Point_Add();
-                        GC.Collect();
-
-                        foreach (var x in ButtonGrid)
+						foreach (var x in ButtonGrid)
                         {
                             x.Enabled = true;
                         }
@@ -259,13 +261,17 @@ namespace Memory
             f2.Form1reset();
             Dispose();
             GC.Collect();
-        }    private void EndGame_Check()
+        }
+		private void EndGame_Check()
         {
             if (TotaalMatches == 8)
             {
                 RunningTimer.Enabled = false;
-                MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + " seconde!", "Einde Spel", MessageBoxButtons.OK);
+				player.SoundLocation = "tada.wav";
+				player.Play();
+				MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + " seconde!", "Einde Spel", MessageBoxButtons.OK);
                 DialogResult Klaar = MessageBox.Show("Wil je een nieuw spel spelen?", "Nieuw spel", MessageBoxButtons.YesNo);
+				player.Stop();
 
                 if (Klaar ==DialogResult.Yes)
                 {
