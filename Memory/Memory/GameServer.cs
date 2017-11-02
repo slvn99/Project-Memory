@@ -13,7 +13,7 @@ namespace Memory
 {
     public partial class GameServer : Form
     {
-        string TempName, PlayerBeurt, player1, player2;
+        string PlayerBeurt, player1, player2;
         int PuntenPlayer1, PuntenPlayer2, TotaalMatches;
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         public static Label TempConLabel = new Label();
@@ -411,7 +411,7 @@ namespace Memory
         private void NaamButton_Click(object sender, EventArgs e)
         {
             NaamLabel.Text = "Naam: " + NaamTextBox.Text;
-            TempName = NaamTextBox.Text;
+            player1 = NaamTextBox.Text;
             NaamTextBox.Visible = false;
             NaamButton.Visible = false;
             HC_Label.Visible = true;
