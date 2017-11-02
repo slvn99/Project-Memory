@@ -325,8 +325,8 @@ namespace WindowsFormsApp1
         }
 
         private async void EndGame_Check()
-		{ 
-			else if (TotaalMatches == 8)
+        { 
+			 if (TotaalMatches == 8)
             {
                 opslaan.Visible = false;
 				if (PuntenPlayer1 > PuntenPlayer2)
