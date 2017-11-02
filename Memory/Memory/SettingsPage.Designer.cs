@@ -190,12 +190,12 @@
 			this.button2.TabIndex = 15;
 			this.button2.Text = "button2";
 			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.button2_Click);
+			this.button2.Click += new System.EventHandler(this.Button2_Click);
 			// 
 			// StopMusicButton
 			// 
 			this.StopMusicButton.BackColor = System.Drawing.Color.Transparent;
-			this.StopMusicButton.BackgroundImage = global::Memory.Properties.Resources.StopMusicButton;
+			this.StopMusicButton.BackgroundImage = global::Memory.Properties.Resources.PauseMusicButton;
 			this.StopMusicButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.StopMusicButton.Location = new System.Drawing.Point(718, 159);
 			this.StopMusicButton.Name = "StopMusicButton";

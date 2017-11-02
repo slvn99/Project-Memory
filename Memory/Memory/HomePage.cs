@@ -83,7 +83,7 @@ namespace Memory
             GC.Collect();
             Close();
         }
-        public void tonen()
+        public void Tonen()
         {
             ShowInTaskbar = true;
             Visible = true;
@@ -101,7 +101,7 @@ namespace Memory
 
             }
         }
-        public void form1reset()
+        public void Form1reset()
         {
             WindowsFormsApp1.Form1 f = new WindowsFormsApp1.Form1();
             f.Show();

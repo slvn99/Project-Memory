@@ -373,7 +373,7 @@
             this.hsreset.Size = new System.Drawing.Size(235, 100);
             this.hsreset.TabIndex = 37;
             this.hsreset.TabStop = false;
-            this.hsreset.Click += new System.EventHandler(this.hsreset_Click);
+            this.hsreset.Click += new System.EventHandler(this.Hsreset_Click);
             // 
             // HighscorePage
             // 
