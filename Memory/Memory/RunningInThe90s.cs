@@ -254,7 +254,9 @@ namespace Memory
 
         private void Reset_Function()
         {
-            
+            Memory.RunningInThe90s r2 = new Memory.RunningInThe90s();
+            Dispose();
+            GC.Collect();
         }     
 
         private void EndGame_Check()

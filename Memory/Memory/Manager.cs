@@ -31,7 +31,9 @@ namespace Memory
 
             timer3.Start();
 
-            axWindowsMediaPlayer1.URL = "chiper.wav";
+            var intro = new intro();
+            intro.Show();
+
 		}
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -50,6 +52,12 @@ namespace Memory
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
             timer3.Stop();
+        }
+
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.URL = "chiper.wav";
+            timer4.Stop();
         }
     }
 }
