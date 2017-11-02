@@ -82,6 +82,7 @@ namespace Memory
 
             else
             {
+                RunningTimer.Start();
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
                 foreach (var x in ButtonGrid)
@@ -318,7 +319,6 @@ namespace Memory
             player.SoundLocation = "click.wav";
             player.Play();
             PlayRunningInthe90s();
-            RunningTimer.Start();
             RunningTimer.Enabled = true;
         }
 
@@ -629,13 +629,13 @@ namespace Memory
         #endregion
 
         int seconde = 0;
-        int tijds = 0;
+        int tijds = -1;
         private void RunningTimer_Tick(object sender, EventArgs e)
         {
             tijds++;
             RunningLabel.Text = seconde + ":" + tijds.ToString();
 
-            if (tijds == 10)
+            if (tijds == 9)
             {
                 seconde++;
                 tijds = 0;

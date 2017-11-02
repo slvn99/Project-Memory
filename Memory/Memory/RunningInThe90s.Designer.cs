@@ -100,7 +100,7 @@
             // Loadclass
             // 
             this.Loadclass.Location = new System.Drawing.Point(838, 316);
-            this.Loadclass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Loadclass.Margin = new System.Windows.Forms.Padding(2);
             this.Loadclass.Name = "Loadclass";
             this.Loadclass.Size = new System.Drawing.Size(97, 19);
             this.Loadclass.TabIndex = 72;
@@ -111,7 +111,7 @@
             // 
             this.Points1.AutoSize = true;
             this.Points1.BackColor = System.Drawing.Color.Transparent;
-            this.Points1.Location = new System.Drawing.Point(940, 11);
+            this.Points1.Location = new System.Drawing.Point(963, 11);
             this.Points1.Name = "Points1";
             this.Points1.Size = new System.Drawing.Size(41, 13);
             this.Points1.TabIndex = 70;
@@ -161,7 +161,7 @@
             // Player1Textbox
             // 
             this.Player1Textbox.Location = new System.Drawing.Point(340, 245);
-            this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Player1Textbox.Name = "Player1Textbox";
             this.Player1Textbox.Size = new System.Drawing.Size(104, 20);
             this.Player1Textbox.TabIndex = 64;
@@ -185,7 +185,7 @@
             this.pictureBox3.BackgroundImage = global::Memory.Properties.Resources.HomeButton;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(930, 501);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(75, 81);
             this.pictureBox3.TabIndex = 82;
@@ -197,7 +197,7 @@
             this.Reset.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG322222;
             this.Reset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Reset.Location = new System.Drawing.Point(811, 206);
-            this.Reset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Reset.Margin = new System.Windows.Forms.Padding(2);
             this.Reset.Name = "Reset";
             this.Reset.Size = new System.Drawing.Size(123, 44);
             this.Reset.TabIndex = 76;
@@ -210,7 +210,7 @@
             this.play.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG321;
             this.play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.play.Location = new System.Drawing.Point(811, 147);
-            this.play.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.play.Margin = new System.Windows.Forms.Padding(2);
             this.play.Name = "play";
             this.play.Size = new System.Drawing.Size(124, 67);
             this.play.TabIndex = 75;
@@ -223,7 +223,7 @@
             this.Speler1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Speler1.BackgroundImage")));
             this.Speler1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Speler1.Location = new System.Drawing.Point(781, 1);
-            this.Speler1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Speler1.Margin = new System.Windows.Forms.Padding(2);
             this.Speler1.Name = "Speler1";
             this.Speler1.Size = new System.Drawing.Size(75, 29);
             this.Speler1.TabIndex = 79;
@@ -236,7 +236,7 @@
             this.Beurt.BackgroundImage = global::Memory.Properties.Resources.Beurt1;
             this.Beurt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Beurt.Location = new System.Drawing.Point(773, 63);
-            this.Beurt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Beurt.Margin = new System.Windows.Forms.Padding(2);
             this.Beurt.Name = "Beurt";
             this.Beurt.Size = new System.Drawing.Size(91, 40);
             this.Beurt.TabIndex = 78;
@@ -249,7 +249,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(340, 213);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(108, 30);
             this.pictureBox1.TabIndex = 77;
@@ -442,7 +442,7 @@
             this.GridButton1.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton1.Location = new System.Drawing.Point(26, 11);
-            this.GridButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton1.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton1.Name = "GridButton1";
             this.GridButton1.Size = new System.Drawing.Size(130, 130);
             this.GridButton1.TabIndex = 47;
@@ -481,7 +481,7 @@
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(1274, 170);
-            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(75, 23);
@@ -533,7 +533,7 @@
             this.Controls.Add(this.GridButton2Dup);
             this.Controls.Add(this.GridButton2);
             this.Controls.Add(this.GridButton1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RunningInThe90s";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RunningInThe90s";
