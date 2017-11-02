@@ -256,7 +256,7 @@ namespace Memory
         private void Reset_Function()
         {
             Memory.HomePage f2 = new Memory.HomePage();
-            f2.form1reset();
+            f2.Form1reset();
             Dispose();
             GC.Collect();
         }    private void EndGame_Check()
@@ -639,7 +639,7 @@ namespace Memory
         private void RunningInThe90s_FormClosing(object sender, FormClosingEventArgs e)
         {
             Memory.HomePage f2 = new Memory.HomePage();
-            f2.tonen();
+            f2.Tonen();
             Dispose();
             GC.Collect();
         }
