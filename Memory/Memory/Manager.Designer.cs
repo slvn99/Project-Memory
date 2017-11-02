@@ -55,7 +55,7 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 3500;
+            this.timer2.Interval = 1;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // timer3
@@ -65,7 +65,7 @@
             // 
             // timer4
             // 
-            this.timer4.Interval = 3000;
+            this.timer4.Interval = 3500;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // Manager

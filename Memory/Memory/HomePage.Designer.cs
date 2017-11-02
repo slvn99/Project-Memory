@@ -28,44 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.Backbutton = new System.Windows.Forms.PictureBox();
-            this.RunningGamemode = new System.Windows.Forms.PictureBox();
-            this.StandardGamemode = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.SettingButton = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.RankButton = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.PlayButton = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.Backbutton = new System.Windows.Forms.PictureBox();
+            this.RunningGamemode = new System.Windows.Forms.PictureBox();
+            this.StandardGamemode = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.intro = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Backbutton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RunningGamemode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StandardGamemode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SettingButton)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RankButton)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Backbutton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RunningGamemode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StandardGamemode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intro)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -80,6 +84,18 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1063, 172);
             this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox5.Image = global::Memory.Properties.Resources.Memory;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(1063, 172);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -116,72 +132,6 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(355, 183);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
-            this.tableLayoutPanel4.Controls.Add(this.pictureBox2, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.pictureBox4, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.RankButton, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(354, 183);
-            this.tableLayoutPanel4.TabIndex = 6;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
-            this.tableLayoutPanel3.Controls.Add(this.pictureBox3, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.pictureBox8, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.PlayButton, 1, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(354, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(354, 183);
-            this.tableLayoutPanel3.TabIndex = 7;
-            // 
-            // Backbutton
-            // 
-            this.Backbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Backbutton.Location = new System.Drawing.Point(484, 304);
-            this.Backbutton.Name = "Backbutton";
-            this.Backbutton.Size = new System.Drawing.Size(100, 100);
-            this.Backbutton.TabIndex = 6;
-            this.Backbutton.TabStop = false;
-            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
-            // 
-            // RunningGamemode
-            // 
-            this.RunningGamemode.BackgroundImage = global::Memory.Properties.Resources.initial_D;
-            this.RunningGamemode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RunningGamemode.Location = new System.Drawing.Point(647, 204);
-            this.RunningGamemode.Name = "RunningGamemode";
-            this.RunningGamemode.Size = new System.Drawing.Size(200, 200);
-            this.RunningGamemode.TabIndex = 5;
-            this.RunningGamemode.TabStop = false;
-            this.RunningGamemode.Click += new System.EventHandler(this.RunningGamemode_Click);
-            // 
-            // StandardGamemode
-            // 
-            this.StandardGamemode.Location = new System.Drawing.Point(214, 204);
-            this.StandardGamemode.Name = "StandardGamemode";
-            this.StandardGamemode.Size = new System.Drawing.Size(200, 200);
-            this.StandardGamemode.TabIndex = 4;
-            this.StandardGamemode.TabStop = false;
-            this.StandardGamemode.Click += new System.EventHandler(this.StandardGamemode_Click_1);
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -216,6 +166,24 @@
             this.SettingButton.TabIndex = 2;
             this.SettingButton.TabStop = false;
             this.SettingButton.Click += new System.EventHandler(this.SettingButton_Click);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.tableLayoutPanel4.Controls.Add(this.pictureBox2, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.pictureBox4, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.RankButton, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(354, 183);
+            this.tableLayoutPanel4.TabIndex = 6;
             // 
             // pictureBox2
             // 
@@ -252,6 +220,24 @@
             this.RankButton.TabStop = false;
             this.RankButton.Click += new System.EventHandler(this.RankButton_Click);
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.tableLayoutPanel3.Controls.Add(this.pictureBox3, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.pictureBox8, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.PlayButton, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(354, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(354, 183);
+            this.tableLayoutPanel3.TabIndex = 7;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -287,17 +273,35 @@
             this.PlayButton.TabStop = false;
             this.PlayButton.Click += new System.EventHandler(this.PlayButton_Click);
             // 
-            // pictureBox5
+            // Backbutton
             // 
-            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox5.Image = global::Memory.Properties.Resources.Memory;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(1063, 172);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
+            this.Backbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Backbutton.Location = new System.Drawing.Point(484, 304);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(100, 100);
+            this.Backbutton.TabIndex = 6;
+            this.Backbutton.TabStop = false;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
+            // 
+            // RunningGamemode
+            // 
+            this.RunningGamemode.BackgroundImage = global::Memory.Properties.Resources.initial_D;
+            this.RunningGamemode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RunningGamemode.Location = new System.Drawing.Point(647, 204);
+            this.RunningGamemode.Name = "RunningGamemode";
+            this.RunningGamemode.Size = new System.Drawing.Size(200, 200);
+            this.RunningGamemode.TabIndex = 5;
+            this.RunningGamemode.TabStop = false;
+            this.RunningGamemode.Click += new System.EventHandler(this.RunningGamemode_Click);
+            // 
+            // StandardGamemode
+            // 
+            this.StandardGamemode.Location = new System.Drawing.Point(214, 204);
+            this.StandardGamemode.Name = "StandardGamemode";
+            this.StandardGamemode.Size = new System.Drawing.Size(200, 200);
+            this.StandardGamemode.TabIndex = 4;
+            this.StandardGamemode.TabStop = false;
+            this.StandardGamemode.Click += new System.EventHandler(this.StandardGamemode_Click_1);
             // 
             // pictureBox1
             // 
@@ -311,11 +315,26 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // intro
+            // 
+            this.intro.Image = global::Memory.Properties.Resources.intro;
+            this.intro.Location = new System.Drawing.Point(-80, -50);
+            this.intro.Name = "intro";
+            this.intro.Size = new System.Drawing.Size(1143, 643);
+            this.intro.TabIndex = 7;
+            this.intro.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 3700;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 593);
+            this.Controls.Add(this.intro);
             this.Controls.Add(this.Backbutton);
             this.Controls.Add(this.RunningGamemode);
             this.Controls.Add(this.StandardGamemode);
@@ -327,24 +346,25 @@
             this.Text = "HomePage";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HomePage_FormClosing);
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Backbutton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RunningGamemode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StandardGamemode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SettingButton)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RankButton)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Backbutton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RunningGamemode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StandardGamemode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -370,5 +390,7 @@
         private System.Windows.Forms.PictureBox StandardGamemode;
         private System.Windows.Forms.PictureBox RunningGamemode;
         private System.Windows.Forms.PictureBox Backbutton;
+        private System.Windows.Forms.PictureBox intro;
+        private System.Windows.Forms.Timer timer1;
     }
 }
