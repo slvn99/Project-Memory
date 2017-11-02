@@ -267,6 +267,10 @@ namespace Memory
             if (TotaalMatches == 8)
             {
                 RunningTimer.Enabled = false;
+				if (PuntenPlayer1 == 8)
+				{
+					HistoryofMemory();
+				}
 				player.SoundLocation = "tada.wav";
 				player.Play();
 				MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + " seconde!", "Einde Spel", MessageBoxButtons.OK);
@@ -297,6 +301,13 @@ namespace Memory
             }
         }
 
+		private async void HistoryofMemory()
+		{
+			player.SoundLocation = "no1.wav";
+			player.Play();
+			await Task.Delay(5000);
+			player.Stop();
+		}
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {

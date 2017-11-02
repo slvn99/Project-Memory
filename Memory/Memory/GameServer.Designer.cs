@@ -325,10 +325,7 @@
             this.button1.TabIndex = 23;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             //this.button1.Click += new System.EventHandler(this.button1_Click);
-=======
->>>>>>> 4680ebe4db2ae78dbb67d1e84020ad60128a8b2a
             // 
             // Points1
             // 
