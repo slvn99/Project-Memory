@@ -27,6 +27,8 @@ namespace Memory
             pictureBox1.Controls.Add(tableLayoutPanel2);
             tableLayoutPanel2.BackColor = Color.Transparent;
 
+            timer1.Start();
+
             ChangeCursor();
         }
 
@@ -83,7 +85,7 @@ namespace Memory
             GC.Collect();
             Close();
         }
-        public void tonen()
+        public void Tonen()
         {
             ShowInTaskbar = true;
             Visible = true;
@@ -101,7 +103,7 @@ namespace Memory
 
             }
         }
-        public void form1reset()
+        public void Form1reset()
         {
             WindowsFormsApp1.Form1 f = new WindowsFormsApp1.Form1();
             f.Show();
@@ -186,6 +188,12 @@ namespace Memory
             await Task.Delay(4000);
             WindowsFormsApp1.Form1 f = new WindowsFormsApp1.Form1();
             f.Show();
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            intro.SendToBack();
+            timer1.Stop();
         }
     }
 

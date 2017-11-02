@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Memory
 
@@ -30,7 +32,6 @@ namespace Memory
 
             axWindowsMediaPlayer1.URL = "Run90s.wav";
             axWindowsMediaPlayer1.Ctlcontrols.play();
-
 
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
             foreach (var x in ButtonGrid)
@@ -178,24 +179,26 @@ namespace Memory
                     }
                     else
                     {
-                        matchlist.Add(Kaart1Select.Name);
-                        matchlist.Add(Kaart2Select.Name);
-                        lengte += 2;
-                        foreach (var x in ButtonGrid)
-                        {
-                            x.Enabled = false;
-                        }
+						player.SoundLocation = "ping.wav";
+						player.Play();
+						matchlist.Add(Kaart1Select.Name);
+						matchlist.Add(Kaart2Select.Name);
+						lengte += 2;
+						foreach (var x in ButtonGrid)
+						{
+							x.Enabled = false;
+						}
 
+						await Task.Delay(1000);
+						Kaart1Select.Visible = false;
+						Kaart2Select.Visible = false;
+						Kaart1Select = null;
+						Kaart2Select = null;
+						Point_Add();
+						player.Stop();
+						GC.Collect();
 
-                        await Task.Delay(1000);
-                        Kaart1Select.Visible = false;
-                        Kaart2Select.Visible = false;
-                        Kaart1Select = null;
-                        Kaart2Select = null;
-                        Point_Add();
-                        GC.Collect();
-
-                        foreach (var x in ButtonGrid)
+						foreach (var x in ButtonGrid)
                         {
                             x.Enabled = true;
                         }
@@ -252,14 +255,21 @@ namespace Memory
 
         }
 
+        public void runningreset()
+        {
+            RunningInThe90s f = new RunningInThe90s();
+            f.Show();
+            Sluiten();
+        }
+
         private void Reset_Function()
         {
-            Memory.RunningInThe90s r2 = new Memory.RunningInThe90s();
+            Memory.RunningInThe90s f2 = new Memory.RunningInThe90s();
+            f2.runningreset();
             Dispose();
             GC.Collect();
-        }     
-
-        private void EndGame_Check()
+        }
+		private void EndGame_Check()
         {
             if (TotaalMatches == 8)
             {
@@ -271,6 +281,20 @@ namespace Memory
                 double score = double.Parse(bufferstring);
                 MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + score + " seconde!", "Einde Spel", MessageBoxButtons.OK);
                 Memory.RunningSave.SaveData(player1,score);
+                player.SoundLocation = "tada.wav";
+                player.Play();
+                MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + " seconde!", "Einde Spel", MessageBoxButtons.OK);
+                DialogResult Klaar = MessageBox.Show("Wil je een nieuw spel spelen?", "Nieuw spel", MessageBoxButtons.YesNo);
+                player.Stop();
+
+                if (Klaar == DialogResult.Yes)
+                {
+                    Reset_Function();
+                }
+                if (Klaar == DialogResult.No)
+                {
+                    Sluiten();
+                }
             }
 
             
@@ -289,8 +313,6 @@ namespace Memory
                 Reset_Function();
             }
         }
-
-
         private async void pictureBox3_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -305,6 +327,13 @@ namespace Memory
             }
         }
 
+		private async void HistoryofMemory()
+		{
+			player.SoundLocation = "no1.wav";
+			player.Play();
+			await Task.Delay(5000);
+			player.Stop();
+		}
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -653,7 +682,7 @@ namespace Memory
         private void RunningInThe90s_FormClosing(object sender, FormClosingEventArgs e)
         {
             Memory.HomePage f2 = new Memory.HomePage();
-            f2.tonen();
+            f2.Tonen();
             Dispose();
             GC.Collect();
         }
@@ -674,6 +703,18 @@ namespace Memory
             if (ExitGame == DialogResult.Yes)
             {
                 Sluiten();
+            }
+        }
+        private void Reset_Click_1(object sender, EventArgs e)
+        {
+            {
+                player.SoundLocation = "click.wav";
+                player.Play();
+                DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (ResetGame == DialogResult.Yes)
+                {
+                    Reset_Function();
+                }
             }
         }
 

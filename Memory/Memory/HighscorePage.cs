@@ -186,7 +186,7 @@ namespace Memory
 			}
 		}
 
-		private async void hsreset_Click(object sender, EventArgs e)
+		private async void Hsreset_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
             player.Play();

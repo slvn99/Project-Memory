@@ -23,8 +23,7 @@ namespace WindowsFormsApp1
         List<Point> punten = new List<Point>();
         List<string> matchlist = new List<string>();
         string thema = Memory.SettingsPage_Save.LoadData();
-
-
+	
 
         public Form1()
         {
@@ -63,8 +62,6 @@ namespace WindowsFormsApp1
             Points1.ForeColor = System.Drawing.Color.White;
             Points2.Font = new Font("Arial", 8, FontStyle.Bold);
             Points2.ForeColor = System.Drawing.Color.White;
-
-
         }
 
         protected override CreateParams CreateParams
@@ -234,6 +231,7 @@ namespace WindowsFormsApp1
                         Kaart1Select = null;
                         Kaart2Select = null;
                         Point_Add();
+						player.Stop();
                         GC.Collect();
 
                         foreach (var x in ButtonGrid)
@@ -274,8 +272,17 @@ namespace WindowsFormsApp1
                     {
                         x.Enabled = true;
                     }
+					if (PuntenPlayer1 == 8)
+					{
+						HistoryofMemory();
+					}
+					else if (PuntenPlayer2 == 8)
+					{
+						HistoryofMemory();
+					}
+
 				}
-            }
+			}
         }
 
         private void Change_Beurt()
@@ -312,20 +319,20 @@ namespace WindowsFormsApp1
         private void Reset_Function()
         {
             Memory.HomePage f2 = new Memory.HomePage();
-            f2.form1reset();
+            f2.Form1reset();
             Dispose();
             GC.Collect();
         }
 
         private async void EndGame_Check()
-        {
-            if (TotaalMatches == 8)
+		{ 
+			if (TotaalMatches == 8)
             {
                 opslaan.Visible = false;
-                if (PuntenPlayer1 > PuntenPlayer2)
+				if (PuntenPlayer1 > PuntenPlayer2)
                 {
                     Reset.Visible = false;
-                    player.SoundLocation = "tada.wav";
+					player.SoundLocation = "tada.wav";
                     player.Play();
                     MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
                     Memory.Highscores_save.SaveData(player1, PuntenPlayer1);
@@ -363,6 +370,14 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+		private async void HistoryofMemory()
+		{
+			player.SoundLocation = "no1.wav";
+			player.Play();
+			await Task.Delay(7000);
+			player.Stop();
+		}
 
 		#region kaarten
 		private void GridButton1_Click(object sender, EventArgs e)
@@ -739,7 +754,12 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void laden_MouseHover(object sender, EventArgs e)
+		private void Testno1_Click(object sender, EventArgs e)
+		{
+			HistoryofMemory();
+		}
+
+		private void laden_MouseHover(object sender, EventArgs e)
         {
             //laten zien van wat er in de save staat
             laden.Enabled = false;
@@ -785,7 +805,7 @@ namespace WindowsFormsApp1
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Memory.HomePage f2 = new Memory.HomePage();
-            f2.tonen();
+            f2.Tonen();
             Dispose();
             GC.Collect();
         }

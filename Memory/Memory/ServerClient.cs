@@ -14,28 +14,15 @@ namespace Memory
 {
     class ServerClient
     {
+        public static string HostIP;
         static int PacketSize = 1024 * 1024;
-        public static TcpClient Client; //client die geconnect is
-        //IPAddress ipAddress = "141.252.225.177";
-        //IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 8984);
+        public static TcpClient Client;
         public static List<Point> TempRandomButLocation = new List<Point>();
+        public static Array[] TurnArray = new Array[1];
 
         public static void StartClient()
         {
-            try
-            {
-                Client = new TcpClient("141.252.225.177", 8984);
-
-            }
-            catch
-            {
-                MessageBox.Show("ERROR, er kon geen verbinding gemaakt worden!", "ERROR!", MessageBoxButtons.OK);
-            }
-
-            //Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-
-            //My_Socket.BeginConnect(localEndPoint, new AsyncCallback(Connect_To_Port), My_Socket);
-
+            Client = new TcpClient(HostIP, 8984);
         }
 
         public static void RecieveGamaData()
@@ -43,6 +30,18 @@ namespace Memory
             var bin = new BinaryFormatter();
             var list = (List<Point>)bin.Deserialize(Client.GetStream());
             TempRandomButLocation = list;
+        }
+
+        public static void SendTurn()
+        {
+            var bin = new BinaryFormatter();
+            bin.Serialize(Client.GetStream(), TurnArray);
+        }
+
+        public static void RecieveTurn()
+        {
+            var bin = new BinaryFormatter();
+            bin.Serialize(Client.GetStream(), TempRandomButLocation);
         }
 
         public static void SendMessage(string message)
