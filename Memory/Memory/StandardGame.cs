@@ -88,7 +88,7 @@ namespace WindowsFormsApp1
             
         }
 
-        private void Play_Game()
+        private  void Play_Game()
         {
             if (Player1Textbox.Text == "" || Player2Textbox.Text == "")
             {
@@ -101,6 +101,9 @@ namespace WindowsFormsApp1
 
             else
             {
+
+                timer1.Start();
+
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
                
                 foreach (var x in ButtonGrid)
@@ -192,6 +195,11 @@ namespace WindowsFormsApp1
 
         private void Click_kaart(Button Buttonclick)
         {
+            timer1.Stop();
+            timer1.Start();
+            player.SoundLocation = "flip.wav";
+            player.Play();
+
             if (Kaart1Select == null)
             {
                 Kaart1Select = Buttonclick;
@@ -238,6 +246,7 @@ namespace WindowsFormsApp1
                         {
                             x.Enabled = true;
                         }
+                        No1_Check();
                     }
                 }
                 else
@@ -324,6 +333,15 @@ namespace WindowsFormsApp1
             GC.Collect();
         }
 
+        private void No1_Check()
+        { 
+            if (PuntenPlayer1 == 8 || PuntenPlayer2 == 8)
+            {
+                player.SoundLocation = "no1.wav";
+                player.Play();
+            }
+        }
+
         private async void EndGame_Check()
 		{ 
 			if (TotaalMatches == 8)
@@ -331,6 +349,7 @@ namespace WindowsFormsApp1
                 opslaan.Visible = false;
 				if (PuntenPlayer1 > PuntenPlayer2)
                 {
+                    await Task.Delay(6000);
                     Reset.Visible = false;
 					player.SoundLocation = "tada.wav";
                     player.Play();
@@ -373,7 +392,7 @@ namespace WindowsFormsApp1
 
 		private async void HistoryofMemory()
 		{
-			player.SoundLocation = "no1.wav";
+			player.SoundLocation = "wow.wav";
 			player.Play();
 			await Task.Delay(7000);
 			player.Stop();
@@ -754,12 +773,15 @@ namespace WindowsFormsApp1
             }
         }
 
-		private void Testno1_Click(object sender, EventArgs e)
-		{
-			HistoryofMemory();
-		}
+        private async void timer1_Tick(object sender, EventArgs e)
+        {
+            player.SoundLocation = "just_do_it.wav";
+            player.Play();
+            await Task.Delay(2000);
+            player.Stop();
+        }
 
-		private void laden_MouseHover(object sender, EventArgs e)
+        private void laden_MouseHover(object sender, EventArgs e)
         {
             //laten zien van wat er in de save staat
             laden.Enabled = false;

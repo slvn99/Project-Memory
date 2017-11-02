@@ -13,6 +13,8 @@ namespace Memory
 {
     public partial class Manager : Form
     {
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
         public static Manager ManagerInstance;
 
         public Manager()
@@ -33,7 +35,12 @@ namespace Memory
 
             timer4.Start();
 
-		}
+            timer5.Start();
+
+            player.SoundLocation = "intro_audio.wav";
+            player.Play();
+
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -67,5 +74,11 @@ namespace Memory
             axWindowsMediaPlayer1.Ctlcontrols.play();
         }
 
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+            timer5.Stop();
+            
+        }
     }
 }

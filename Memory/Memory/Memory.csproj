@@ -160,6 +160,8 @@
     <Folder Include="AxWMPLib\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\flip.wav" />
+    <Content Include="bin\Debug\intro_audio.wav" />
     <Content Include="bin\Debug\just_do_it.wav" />
     <Content Include="bin\Debug\no1.wav" />
     <Content Include="bin\Debug\Run90s.wav" />
