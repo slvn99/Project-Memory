@@ -11,11 +11,11 @@ using System.Windows.Forms;
 namespace Memory
 {
 
-    public partial class Form4 : Form
+    public partial class LoadingScreen : Form
     {
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
    
-        public Form4()
+        public LoadingScreen()
         {
             InitializeComponent();
 

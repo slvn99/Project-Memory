@@ -159,7 +159,7 @@ namespace Memory
 
         private void RunningGamemode_Click(object sender, EventArgs e)
         {
-            Memory.Form4 f = new Memory.Form4();
+            Memory.LoadingScreen f = new Memory.LoadingScreen();
             f.Show();
             Sluiten();
             RG();
@@ -168,7 +168,7 @@ namespace Memory
 
         private void StandardGamemode_Click_1(object sender, EventArgs e)
         {
-            Memory.Form4 f = new Memory.Form4();
+            Memory.LoadingScreen f = new Memory.LoadingScreen();
             f.Show();
             Sluiten();
             SG();

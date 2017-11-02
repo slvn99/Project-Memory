@@ -1,6 +1,6 @@
 ﻿namespace Memory
 {
-    partial class Form4
+    partial class LoadingScreen
     {
         /// <summary>
         /// Required designer variable.
