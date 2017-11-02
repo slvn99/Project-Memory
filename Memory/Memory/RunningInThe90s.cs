@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Memory
 
@@ -253,37 +255,28 @@ namespace Memory
 
         private void Reset_Function()
         {
-            Memory.RunningInThe90s r2 = new Memory.RunningInThe90s();
+            Memory.HomePage f2 = new Memory.HomePage();
+            f2.form1reset();
             Dispose();
             GC.Collect();
-        }     
-
-        private void EndGame_Check()
+        }    private void EndGame_Check()
         {
             if (TotaalMatches == 8)
             {
                 RunningTimer.Enabled = false;
                 MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + " seconde!", "Einde Spel", MessageBoxButtons.OK);
-            }
+                DialogResult Klaar = MessageBox.Show("Wil je een nieuw spel spelen?", "Nieuw spel", MessageBoxButtons.YesNo);
 
-            
-
-            
-        }
-
-
-        private void Reset_Click(object sender, EventArgs e)
-        {
-            player.SoundLocation = "click.wav";
-            player.Play();
-            DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (ResetGame == DialogResult.Yes)
-            {
-                Reset_Function();
+                if (Klaar ==DialogResult.Yes)
+                {
+                    Reset_Function();
+                }
+                if (Klaar == DialogResult.No)
+                {
+                    Sluiten ();
+                }
             }
         }
-
-
         private async void pictureBox3_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -654,6 +647,19 @@ namespace Memory
         private void timer1_Tick(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
+
+        private void Reset_Click_1(object sender, EventArgs e)
+        {
+            {
+                player.SoundLocation = "click.wav";
+                player.Play();
+                DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (ResetGame == DialogResult.Yes)
+                {
+                    Reset_Function();
+                }
+            }
         }
 
         public void Saveclass_Click(object sender, EventArgs e)
