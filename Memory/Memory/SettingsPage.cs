@@ -15,8 +15,9 @@ namespace Memory
 	{
         private const int APPCOMMAND_VOLUME_MUTE = 0x80000;
         private const int APPCOMMAND_VOLUME_UP = 0xA0000;
-        private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
-        private const int WM_APPCOMMAND = 0x319;
+		private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
+		private const int APPCOMMAND_MEDIA_STOP = ;
+		private const int WM_APPCOMMAND = 0x319;
 
         [DllImport("user32.dll")]
         public static extern IntPtr SendMessageW(IntPtr hWnd, int Msg,
@@ -133,5 +134,11 @@ namespace Memory
             Memory.intro intro = new Memory.intro();
             intro.Show();
         }
-    }
+
+		private void StopMusicButton_Click(object sender, EventArgs e)
+		{
+			SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
+				(IntPtr)APPCOMMAND_MEDIA_STOP);
+		}
+	}
 }
