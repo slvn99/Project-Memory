@@ -26,8 +26,6 @@ namespace Memory
             Listener = new TcpListener(ip);
             Listener.Start();
             AcceptClient();
-            /*TempRandomButLocation = GameServer.RandomButLocation*/;
-            //GameData = Convert.ToString(tempGridbutton.Location);
         }
 
         public static void AcceptClient()
@@ -44,8 +42,6 @@ namespace Memory
 
         public static void SendGameState()
         {
-            //Socket socket = Listener.AcceptSocket();
-            //Stream stream = new NetworkStream(socket);
             TempRandomButLocation = GameServer.RandomButLocation;
             var bin = new BinaryFormatter();
             bin.Serialize(Client.GetStream(), TempRandomButLocation);
