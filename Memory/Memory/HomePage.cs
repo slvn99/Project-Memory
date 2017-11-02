@@ -27,8 +27,6 @@ namespace Memory
             pictureBox1.Controls.Add(tableLayoutPanel2);
             tableLayoutPanel2.BackColor = Color.Transparent;
 
-            timer1.Start();
-
             ChangeCursor();
         }
 
@@ -188,12 +186,6 @@ namespace Memory
             await Task.Delay(4000);
             WindowsFormsApp1.Form1 f = new WindowsFormsApp1.Form1();
             f.Show();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            intro.Visible = false;
-            timer1.Stop();
         }
     }
 
