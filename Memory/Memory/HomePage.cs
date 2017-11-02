@@ -190,7 +190,7 @@ namespace Memory
             f.Show();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             intro.SendToBack();
             timer1.Stop();
