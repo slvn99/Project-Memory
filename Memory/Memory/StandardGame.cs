@@ -281,15 +281,6 @@ namespace WindowsFormsApp1
                     {
                         x.Enabled = true;
                     }
-					if (PuntenPlayer1 == 8)
-					{
-						HistoryofMemory();
-					}
-					else if (PuntenPlayer2 == 8)
-					{
-						HistoryofMemory();
-					}
-
 				}
 			}
         }
@@ -389,14 +380,6 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
-		private async void HistoryofMemory()
-		{
-			player.SoundLocation = "wow.wav";
-			player.Play();
-			await Task.Delay(7000);
-			player.Stop();
-		}
 
 		#region kaarten
 		private void GridButton1_Click(object sender, EventArgs e)
