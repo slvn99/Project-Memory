@@ -20,7 +20,9 @@ namespace Memory
         }
         public void Sluiten()
         {
-            Close();
+            Memory.HomePage  H1 = new Memory.HomePage();
+            H1.Show();
+            this.Close();
             Dispose();
             GC.Collect();
         }
