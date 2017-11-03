@@ -14,11 +14,11 @@ namespace Memory
     public partial class GameServer : Form
     {
         public static string PlayerBeurt, LocalPlayer, OtherPlayer, player1, player2;
-        public static Button[] TurnArray;
+        public static string[] TurnArray = new string[2];
         int PuntenLocalPlayer, PuntenOtherPlayer, TotaalMatches;
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         public static Label TempConLabel = new Label();
-        Button Kaart1Select, Kaart2Select;
+        Button Kaart1Select, Kaart2Select, TempKaart1Select, TempKaart2Select;
         bool host = false;
         List<Point> PointLocation = new List<Point>();
         public static List<Point> RandomButLocation = new List<Point>();
@@ -213,7 +213,7 @@ namespace Memory
                     {
                         Kaart2Select = null;
                     }
-                    else
+                    else if(Kaart1Select.Name != Kaart2Select.Name)
                     {
                         player.SoundLocation = "ping.wav";
                         player.Play();
@@ -225,8 +225,8 @@ namespace Memory
                         await Task.Delay(1000);
                         Kaart1Select.Visible = false;
                         Kaart2Select.Visible = false;
-                        TurnArray[0] = Kaart1Select;
-                        TurnArray[1] = Kaart2Select;
+                        TurnArray[0] = Kaart1Select.Name;
+                        TurnArray[1] = Kaart2Select.Name;
                         Kaart1Select = null;
                         Kaart2Select = null;
                         Point_Add();
@@ -479,22 +479,90 @@ namespace Memory
             }
             else
             {
-                TurnArray = ServerClient.TurnArray;
+                TurnArray = ServerHost.TurnArray;
                 TurnPlayBack();
             }
         }
 
-        private void TurnPlayBack()
+        private async void TurnPlayBack()
         {
-            foreach (var x in TurnArray)
+            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+            foreach(Button x in ButtonGrid)
             {
-
+                if (x.Name == TurnArray[0])
+                {
+                    Kaart1Select = x;
+                }
+                if (x.Name == TurnArray[1])
+                {
+                    Kaart2Select = x;
+                }
             }
 
-            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
-            foreach (Button x in ButtonGrid)
+            if (Kaart1Select != null && Kaart2Select != null)
             {
-                //if ()
+                if (Kaart1Select.Tag == Kaart2Select.Tag)
+                {
+                    if (Kaart1Select.Name == Kaart2Select.Name)
+                    {
+                        Kaart2Select = null;
+                    }
+                    else
+                    {
+                        player.SoundLocation = "ping.wav";
+                        player.Play();
+                        foreach (var x in ButtonGrid)
+                        {
+                            x.Enabled = false;
+                        }
+
+                        await Task.Delay(1000);
+                        Kaart1Select.Visible = false;
+                        Kaart2Select.Visible = false;
+                        Kaart1Select = null;
+                        Kaart2Select = null;
+                        Point_Add();
+                        GC.Collect();
+
+                        foreach (var x in ButtonGrid)
+                        {
+                            x.Enabled = true;
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (var x in ButtonGrid)
+                    {
+                        x.Enabled = false;
+                    }
+
+                    await Task.Delay(1000);
+                    switch (thema)
+                    {
+                        case "Media":
+                            Kaart1Select.BackgroundImage = Resources.cardback;
+                            Kaart2Select.BackgroundImage = Resources.cardback;
+                            break;
+                        case "Films":
+                            Kaart1Select.BackgroundImage = Resources.clapperboard;
+                            Kaart2Select.BackgroundImage = Resources.clapperboard;
+                            break;
+                        case "Games":
+                            Kaart1Select.BackgroundImage = Resources.controller_cardback;
+                            Kaart2Select.BackgroundImage = Resources.controller_cardback;
+                            break;
+                    }
+                    Kaart1Select = null;
+                    Kaart2Select = null;
+                    Change_Beurt();
+                    GC.Collect();
+
+                    foreach (var x in ButtonGrid)
+                    {
+                        x.Enabled = true;
+                    }
+                }
             }
         }
 

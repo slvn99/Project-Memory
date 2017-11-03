@@ -19,7 +19,7 @@ namespace Memory
         public static TcpListener Listener;
         public static TcpClient Client; //client die geconnect is
         public static List<Point> TempRandomButLocation = new List<Point>();
-        public static Button[] TurnArray = new Button[1];
+        public static string[] TurnArray = new string[1];
 
         public static void StartServer()
         {
@@ -69,6 +69,7 @@ namespace Memory
 
         public static void SendTurn()
         {
+            TurnArray = GameServer.TurnArray;
             var bin = new BinaryFormatter();
             bin.Serialize(Client.GetStream(), TurnArray);
         }

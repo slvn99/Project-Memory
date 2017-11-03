@@ -19,7 +19,7 @@ namespace Memory
         static int PacketSize = 1024 * 1024;
         public static TcpClient Client;
         public static List<Point> TempRandomButLocation = new List<Point>();
-        public static Button[] TurnArray = new Button[1];
+        public static string[] TurnArray = new string[1];
 
         public static void StartClient()
         {
@@ -52,7 +52,7 @@ namespace Memory
         public static void RecieveTurn()
         {
             var bin = new BinaryFormatter();
-            TurnArray =(Button[])bin.Deserialize(Client.GetStream());
+            TurnArray =(string[])bin.Deserialize(Client.GetStream());
         }
 
         public static void SendName()
