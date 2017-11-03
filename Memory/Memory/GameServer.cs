@@ -336,20 +336,103 @@ namespace Memory
                 }
             }
         }
+        #region TurnKaart
+        private void TurnKaart(Button x)
+        {
+            if (x == GridButton1)
+            {
+                GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton1.BackgroundImage = Resources.Steam;
+            }
+            if (x == GridButton1Dup)
+            {
+                GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton1Dup.BackgroundImage = Resources.Steam;
+            }
+            if (x == GridButton2)
+            {
+                GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton2.BackgroundImage = Resources.TwitchLogo;
+            }
+            if (x == GridButton2Dup)
+            {
+                GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton2Dup.BackgroundImage = Resources.TwitchLogo;
+            }
+            if (x == GridButton3)
+            {
+                GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton3.BackgroundImage = Resources.fb;
+            }
+            if (x == GridButton3Dup)
+            {
+                GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton3Dup.BackgroundImage = Resources.fb;
+            }
+            if (x == GridButton4)
+            {
+                GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton4.BackgroundImage = Resources.Reddit;
+            }
+            if (x == GridButton4Dup)
+            {
+                GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton4Dup.BackgroundImage = Resources.Reddit;
+            }
+            if (x == GridButton5)
+            {
+                GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton5.BackgroundImage = Resources._9gag;
+            }
+            if (x == GridButton5Dup)
+            {
+                GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton5Dup.BackgroundImage = Resources._9gag;
+            }
+            if (x == GridButton6)
+            {
+                GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton6.BackgroundImage = Resources.Twitter;
+            }
+            if (x == GridButton6Dup)
+            {
+                GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton6Dup.BackgroundImage = Resources.Twitter;
+            }
+            if (x == GridButton7)
+            {
+                GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton7.BackgroundImage = Resources.Youtube;
+            }
+            if (x == GridButton7Dup)
+            {
+                GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton7Dup.BackgroundImage = Resources.Youtube;
+            }
+            if (x == GridButton8)
+            {
+                GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton8.BackgroundImage = Resources.Google;
+            }
+            if (x == GridButton8Dup)
+            {
+                GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton8Dup.BackgroundImage = Resources.Google;
+            }
+        }
+        #endregion
 
         #region kaarten
         private void GridButton1_Click(object sender, EventArgs e)
         {
-			GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			GridButton1.BackgroundImage = Resources.Steam;
+            TurnKaart(GridButton1);
             Click_kaart(GridButton1);
             Check_kaart();
         }
 
         private void GridButton1Dup_Click(object sender, EventArgs e)
         {
-            GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton1Dup.BackgroundImage = Resources.Steam;
+            TurnKaart(GridButton1Dup);
             Click_kaart(GridButton1Dup);
             Check_kaart();
         }
@@ -510,6 +593,10 @@ namespace Memory
                     }
                     else
                     {
+                        foreach(Button x in ButtonGrid)
+                        {
+                            if
+                        }
                         player.SoundLocation = "ping.wav";
                         player.Play();
                         foreach (var x in ButtonGrid)
