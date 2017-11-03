@@ -271,6 +271,7 @@ namespace Memory
                 string buf2 = bufferstring.Split(':')[1];
                 bufferstring = buf1 + "," + buf2;
                 double score = double.Parse(bufferstring);
+                Memory.RunningSave.SaveData(player1, score);
                 player.SoundLocation = "tada.wav";
                 player.Play();
                 MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + " seconde!", "Einde Spel", MessageBoxButtons.OK);
