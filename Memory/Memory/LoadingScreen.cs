@@ -26,7 +26,7 @@ namespace Memory
 
             ChangeCursor();
 
-            // genereren van een willekeurige Loadingscreen text
+            // Genereren van een willekeurige Loadingscreen text
             Random rand = new Random();
             double a = rand.Next(1, 9);
 
@@ -112,7 +112,7 @@ namespace Memory
 			}
 		}
 
-        //veranderd de mouse cursor
+        // Veranderd de mouse cursor
 		void ChangeCursor()
         {
             Bitmap bmp = new Bitmap(Properties.Resources.cur1031);
@@ -120,7 +120,7 @@ namespace Memory
             this.Cursor = c;
         }
 
-        //magische code
+		// Magische code die de flickering in de form fixt
 		protected override CreateParams CreateParams
 		{
 			get
@@ -131,7 +131,7 @@ namespace Memory
 			}
 		}
 
-        //afspelen van een soundeffect
+        // Afspelen van een soundeffect
         private async void timer3_Tick(object sender, EventArgs e)
         {
             player.Stop(); //stop van ting goes skra
@@ -142,7 +142,7 @@ namespace Memory
             timer3.Stop();
 		}
 
-        //method voor het sluiten van de form
+        // Method voor het sluiten van de form
         public void Sluiten()
         {
             this.Close();
@@ -150,7 +150,7 @@ namespace Memory
             GC.Collect();
         }
 
-        //afspelen van audio bij het willekeurige getal: 7
+        // Afspelen van audio bij het willekeurige getal: 7
         private void timer2_Tick(object sender, EventArgs e)
         {
             player.SoundLocation = "Skra.wav";
@@ -159,7 +159,7 @@ namespace Memory
             
         }
 
-        //Sluiten van de loadingscreen form na een bepaalde tijd
+        // Sluiten van de loadingscreen form na een bepaalde tijd
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();

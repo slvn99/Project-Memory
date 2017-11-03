@@ -14,7 +14,7 @@ using Memory.Properties;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form 
+    public partial class Form1 : Form // Standard game 
     {
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         Button Kaart1Select, Kaart2Select;
@@ -35,12 +35,12 @@ namespace WindowsFormsApp1
 
             ChangeCursor();
 
+			//
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
             foreach (var x in ButtonGrid)
             {
                 x.Visible = false;
                 punten.Add(x.Location);
-                x.Text = "";
             }
 
             Random ButtonLocatie = new Random();
@@ -64,7 +64,8 @@ namespace WindowsFormsApp1
             Points2.ForeColor = System.Drawing.Color.White;
         }
 
-        protected override CreateParams CreateParams
+		// Magische code die de flickering in de form fixt
+		protected override CreateParams CreateParams
         {
             get
             {
@@ -74,6 +75,7 @@ namespace WindowsFormsApp1
             }
         }
 
+		// Veranderd cursor
         void ChangeCursor()
         {
             Bitmap bmp = new Bitmap (Resources.cur1031);
@@ -81,16 +83,10 @@ namespace WindowsFormsApp1
             this.Cursor = c;
         }
 
-        private void PlayButton_Click(object sender, EventArgs e)
+		// Zorgt ervoor dat je niet 2 dezelfde namen in kan vullen of helemaal niks in kan vullen
+		private void Play_Game()
         {
-            GC.Collect();
-            Play_Game();
-            
-        }
-
-        private  void Play_Game()
-        {
-            if (Player1Textbox.Text == "" || Player2Textbox.Text == "")
+            if (Player1Textbox.Text == "" || Player2Textbox.Text == "" || Player1Textbox.Text == " " || Player2Textbox.Text == " ")
             {
                 MessageBox.Show("Je moet een naam invullen!");
             }
@@ -99,18 +95,20 @@ namespace WindowsFormsApp1
 				MessageBox.Show("Voer 2 verschillende namen in");
 			}
 
+			// Als dat niet het geval was start hij het spel
             else
             {
-
                 timer1.Start();
 
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
                
+				// Maakt alle buttons visible
                 foreach (var x in ButtonGrid)
                 {
                     x.Visible = true;
                 }
                 
+				// Maakt alle onnodige buttons invisible en nodige buttons visible
                 PuntenPlayer1 = 0;
                 PuntenPlayer2 = 0;
                 TotaalMatches = 0;
@@ -127,8 +125,8 @@ namespace WindowsFormsApp1
                 opslaan.Visible = true;
                 Speler1.Visible = true;
                 Speler2.Visible = true;
-                pictureBox1.Visible = false;
-                pictureBox2.Visible = false;
+                NaamSpeler1.Visible = false;
+                NaamSpeler2.Visible = false;
 				Speler1.Visible = true;
 				Speler2.Visible = true;
 				Beurt.Visible = true;
@@ -142,6 +140,8 @@ namespace WindowsFormsApp1
                 player2 = Player2LabelInvoer.Text;
                 PlayerBeurt = player1;
                 BeurtLabel.Text = PlayerBeurt;
+
+				// Veranderd de achtergrond en de back van de cards op basis van welke thema is geselecteerd
 				switch (thema)
 				{
 					default:
@@ -192,7 +192,7 @@ namespace WindowsFormsApp1
 			}
         }
         
-
+		// Als je op een kaart clickt registered hij dit als kaart1 en 2 select
         private void Click_kaart(Button Buttonclick)
         {
             timer1.Stop();
@@ -210,8 +210,10 @@ namespace WindowsFormsApp1
             }
         }
 
+		// Hier checkt hij of de kaart 1 en 2 select wel of niet een koppel is
         public async void Check_kaart()
         {
+			// Checkt of het niet een koppel is
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
             if (Kaart1Select != null && Kaart2Select != null)
             {
@@ -221,6 +223,8 @@ namespace WindowsFormsApp1
                     {
                         Kaart2Select = null;
                     }
+
+					// Als het wel een koppel is
                     else
                     {
                         player.SoundLocation = "ping.wav";
@@ -256,9 +260,14 @@ namespace WindowsFormsApp1
                         x.Enabled = false;
                     }
 
+					// Reset cardback per thema
                     await Task.Delay(1000);
 					switch (thema)
 					{
+						default:
+							Kaart1Select.BackgroundImage = Resources.cardback;
+							Kaart2Select.BackgroundImage = Resources.cardback;
+							break;
 						case "Media":
 							Kaart1Select.BackgroundImage = Resources.cardback;
 							Kaart2Select.BackgroundImage = Resources.cardback;
@@ -272,6 +281,7 @@ namespace WindowsFormsApp1
 							Kaart2Select.BackgroundImage = Resources.controller_cardback;
 							break;
 					}
+					// Maakt kaartselect leeg en geeft de beurt aan de andere speler
                     Kaart1Select = null;
                     Kaart2Select = null;
                     Change_Beurt();
@@ -285,6 +295,7 @@ namespace WindowsFormsApp1
 			}
         }
 
+		// Als deze wordt gecalld dan veranderd hij de beurt naar de andere speler
         private void Change_Beurt()
         {
             if (PlayerBeurt == player1)
@@ -298,6 +309,7 @@ namespace WindowsFormsApp1
             BeurtLabel.Text = PlayerBeurt;
         }
 
+		// Deze wordt gecalld als er een match is
         private void Point_Add()
         {
             if (PlayerBeurt == player1)
@@ -316,6 +328,7 @@ namespace WindowsFormsApp1
             }
         }
 
+		// Dit reset de form
         private void Reset_Function()
         {
             Memory.HomePage f2 = new Memory.HomePage();
@@ -324,7 +337,8 @@ namespace WindowsFormsApp1
             GC.Collect();
         }
 
-        private void No1_Check()
+		// Checkt 8 punten bij 1 speler voor sound effect
+		private void No1_Check()
         { 
             if (PuntenPlayer1 == 8 || PuntenPlayer2 == 8)
             {
@@ -333,6 +347,7 @@ namespace WindowsFormsApp1
             }
         }
 
+		// Checkt elke beurt of er al 8 matches zijn, want dan is de game klaar
         private async void EndGame_Check()
 		{ 
 			if (TotaalMatches == 8)
@@ -380,7 +395,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
+		// Hier staan alle button.clicks die de images veranderen 
 		#region kaarten
 		private void GridButton1_Click(object sender, EventArgs e)
 		{
@@ -408,7 +423,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources.Steam;
+					GridButton1Dup.BackgroundImage = Resources.Steam;
 					break;
 				case "Media":
 					GridButton1Dup.BackgroundImage = Resources.Steam;
@@ -429,7 +444,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources.fb;
+					GridButton2.BackgroundImage = Resources.fb;
 					break;
 				case "Media":
 					GridButton2.BackgroundImage = Resources.fb;
@@ -450,7 +465,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources.fb;
+					GridButton2Dup.BackgroundImage = Resources.fb;
 					break;
 				case "Media":
 					GridButton2Dup.BackgroundImage = Resources.fb;
@@ -471,7 +486,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources.Google;
+					GridButton3.BackgroundImage = Resources.Google;
 					break;
 				case "Media":
 					GridButton3.BackgroundImage = Resources.Google;
@@ -492,7 +507,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources.Google;
+					GridButton3Dup.BackgroundImage = Resources.Google;
 					break;
 				case "Media":
 					GridButton3Dup.BackgroundImage = Resources.Google;
@@ -513,7 +528,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources.Youtube;
+					GridButton4.BackgroundImage = Resources.Youtube;
 					break;
 				case "Media":
 					GridButton4.BackgroundImage = Resources.Youtube;
@@ -534,7 +549,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources.Youtube;
+					GridButton4Dup.BackgroundImage = Resources.Youtube;
 					break;
 				case "Media":
 					GridButton4Dup.BackgroundImage = Resources.Youtube;
@@ -555,7 +570,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources.Twitter;
+					GridButton5.BackgroundImage = Resources.Twitter;
 					break;
 				case "Media":
 					GridButton5.BackgroundImage = Resources.Twitter;
@@ -576,7 +591,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources.Twitter;
+					GridButton5Dup.BackgroundImage = Resources.Twitter;
 					break;
 				case "Media":
 					GridButton5Dup.BackgroundImage = Resources.Twitter;
@@ -597,7 +612,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources._9gag;
+					GridButton6.BackgroundImage = Resources._9gag;
 					break;
 				case "Media":
 					GridButton6.BackgroundImage = Resources._9gag;
@@ -618,7 +633,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources._9gag;
+					GridButton6Dup.BackgroundImage = Resources._9gag;
 					break;
 				case "Media":
 					GridButton6Dup.BackgroundImage = Resources._9gag;
@@ -639,7 +654,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources.TwitchLogo;
+					GridButton7.BackgroundImage = Resources.TwitchLogo;
 					break;
 				case "Media":
 					GridButton7.BackgroundImage = Resources.TwitchLogo;
@@ -660,7 +675,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources.TwitchLogo;
+					GridButton7Dup.BackgroundImage = Resources.TwitchLogo;
 					break;
 				case "Media":
 					GridButton7Dup.BackgroundImage = Resources.TwitchLogo;
@@ -681,7 +696,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources.Reddit;
+					GridButton8.BackgroundImage = Resources.Reddit;
 					break;
 				case "Media":
 					GridButton8.BackgroundImage = Resources.Reddit;
@@ -702,7 +717,7 @@ namespace WindowsFormsApp1
 			switch (thema)
 			{
 				default:
-					GridButton1.BackgroundImage = Resources.Reddit;
+					GridButton8Dup.BackgroundImage = Resources.Reddit;
 					break;
 				case "Media":
 					GridButton8Dup.BackgroundImage = Resources.Reddit;
@@ -719,11 +734,7 @@ namespace WindowsFormsApp1
 		}
 		#endregion
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-			Application.Exit();
-		}
-
+		// Start van game
 		private void play_Click_1(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -731,6 +742,7 @@ namespace WindowsFormsApp1
             Play_Game();
         }
 
+		// Button om de game te resetten
         private void Reset_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -742,7 +754,8 @@ namespace WindowsFormsApp1
             }
         }
 
-        private async void pictureBox3_Click(object sender, EventArgs e)
+		// Button om naar home screen te gaan
+        private async void HomeButton_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
             player.Play();
@@ -756,6 +769,7 @@ namespace WindowsFormsApp1
             }
         }
 
+		// Als je te lang niks doet encouraged met een sound om een move te maken
         private async void timer1_Tick(object sender, EventArgs e)
         {
             player.SoundLocation = "just_do_it.wav";
@@ -764,6 +778,7 @@ namespace WindowsFormsApp1
             player.Stop();
         }
 
+		// Als je over de laden knop hover zie je een kleine samenvatting van wat hij dan laat
         private void laden_MouseHover(object sender, EventArgs e)
         {
             //laten zien van wat er in de save staat
@@ -787,6 +802,7 @@ namespace WindowsFormsApp1
             laden.Enabled = true;
         }
 
+		// Als je muis er af hovered dan laat hij die samenvatting niet meer zien
         private void laden_MouseLeave(object sender, EventArgs e)
         {
             bool check;
@@ -807,7 +823,23 @@ namespace WindowsFormsApp1
             laden.Enabled = true;
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		// Sla de state van de game op zodat je hem weer kan loaden
+		private async void opslaan_Click(object sender, EventArgs e)
+		{
+			player.SoundLocation = "click.wav";
+			player.Play();
+			MessageBox.Show("je spel is succesvol opgeslagen");
+			string[] matcharray = new string[20];
+			matchlist.CopyTo(matcharray);
+
+			//click van deze button saved alle huidige data in .sav
+			Save.SaveData(player1, player2, PuntenPlayer1, PuntenPlayer2, PlayerBeurt, TotaalMatches, matcharray, lengte);
+			await Task.Delay(1000);
+			player.Stop();
+		}
+
+		// Als de form geclosed wordt word hij gelijk naar het homepage geredirect
+		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Memory.HomePage f2 = new Memory.HomePage();
             f2.Tonen();
@@ -815,10 +847,11 @@ namespace WindowsFormsApp1
             GC.Collect();
         }
 
+		// Als je er op klikt dan laad hij een save die je eerder opgeslagen hebt
         private async void laden_Click(object sender, EventArgs e)
         {
-            //click van deze button load alle huidige data uit .sav
-            //en zet deze in save string
+            // Click van deze button load alle huidige data uit .sav
+            // En zet deze in save string
             player.SoundLocation = "click.wav";
             player.Play();
             string save = Save.LoadData();
@@ -826,20 +859,20 @@ namespace WindowsFormsApp1
             { }
             else
             {
-                //save string wordt gesplit op \n en in string array gezet
+                // Save string wordt gesplit op \n en in string array gezet
                 string[] savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
 
-                //toekennen van waarden uit array aan variabelen
+                // Toekennen van waarden uit array aan variabelen
                 player1 = savearray[0];
                 player2 = savearray[1];
                 PlayerBeurt = savearray[4];
                 Player1Textbox.Text = player1;
                 Player2Textbox.Text = player2;
 
-                //aanroeping van play game
+                // Aanroeping van play game
                 Play_Game();
 
-                //Score setter
+                // Score setter
                 PuntenPlayer1 = int.Parse(savearray[2]);
                 PuntenPlayer2 = int.Parse(savearray[3]);
                 TotaalMatches = int.Parse(savearray[5]);
@@ -847,7 +880,7 @@ namespace WindowsFormsApp1
                 Points2.Text = Convert.ToString(PuntenPlayer2);
                 int i = 7;
                 int x = int.Parse(savearray[6] + 6);
-                //Button TempButton = new Button;
+                // Button TempButton = new Button;
 
                 foreach (string xy in savearray)
                 {
@@ -926,23 +959,9 @@ namespace WindowsFormsApp1
             }
             await Task.Delay(1000);
             player.Stop();
-        }
-
-
-        private async void opslaan_Click(object sender, EventArgs e)
-        {
-            player.SoundLocation = "click.wav";
-            player.Play();
-            MessageBox.Show("je spel is succesvol opgeslagen");
-            string[] matcharray = new string[20];
-            matchlist.CopyTo(matcharray);
-
-            //click van deze button saved alle huidige data in .sav
-            Save.SaveData(player1, player2, PuntenPlayer1, PuntenPlayer2, PlayerBeurt, TotaalMatches, matcharray, lengte);
-            await Task.Delay(1000);
-            player.Stop();
-        }     
-
+        }  
+		
+		// Sluit de form
         public void Sluiten()
         {
             Close();

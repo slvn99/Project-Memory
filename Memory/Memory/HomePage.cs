@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Memory
 {
-    public partial class HomePage : Form
+    public partial class HomePage : Form // Home screen
     {
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 
@@ -35,7 +35,7 @@ namespace Memory
 
             ChangeCursor();
         }
-        //past mouse crusor aan
+        // Past mouse cursor aan
         void ChangeCursor()
         {
             Bitmap bmp = new Bitmap(Properties.Resources.cur1031);
@@ -43,7 +43,7 @@ namespace Memory
             this.Cursor = c;
         }
       
-        //openen settingspagina
+        // Opent settingspagina
         private async void SettingButton_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -57,7 +57,7 @@ namespace Memory
             Sluiten();
         }
 
-        //openen Highscorepagina
+        // Opent Highscorepagina
         private async void RankButton_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -71,7 +71,7 @@ namespace Memory
             Sluiten();
         }
 
-        //magische code
+        // Magische code die de flikkering in de form fixt
         protected override CreateParams CreateParams
         {
             get
@@ -82,7 +82,7 @@ namespace Memory
             }
         }
 
-        //sluit HomePage form
+        // Sluit HomePage form
         public  void Sluiten()
         {
             ShowInTaskbar = false;
@@ -92,14 +92,14 @@ namespace Memory
             Close();
         }
 
-        //onnodig?
+        // Tonen van de form in taskbar
         public void Tonen()
         {
             ShowInTaskbar = true;
             Visible = true;
         }
 
-
+		// Zorgt ervoor dat als de HomePage sluit dat de hele applicatie sluit
         private void HomePage_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(e.CloseReason == CloseReason.UserClosing)
@@ -107,14 +107,9 @@ namespace Memory
                 Application.Exit();
                 Manager.ManagerInstance.Close();
             }
-            //klopt deze code?
-            else
-            {
-
-            }
         }
 
-        //reset method Standardgamemode
+        // Reset method Standardgamemode
         public void Form1reset()
         {
             WindowsFormsApp1.Form1 f = new WindowsFormsApp1.Form1();
@@ -122,7 +117,7 @@ namespace Memory
             Sluiten();
         }
 
-        //reset method Runninginthe90s
+        // Reset method Runninginthe90s
         public void runningreset()
         {
             RunningInThe90s f = new RunningInThe90s();
@@ -130,7 +125,7 @@ namespace Memory
             Sluiten();
         }
 
-        //Het tonen van de speelbare gamemodes
+        // Het tonen van de speelbare gamemodes
         private async void PlayButton_Click(object sender, EventArgs e)
         {
 
@@ -151,12 +146,13 @@ namespace Memory
             tableLayoutPanel5.Visible = false;
             StandardGamemode.Visible = true;
             RunningGamemode.Visible = true;
+			Multiplayer.Visible = true;
             Backbutton.Visible = true;
             await Task.Delay(100);
             player.Stop();
         }
 
-        //openen van het Loadingscreen dat doorverwijst naar de Runninginthe90s gamemode
+        // Openen van het Loadingscreen dat doorverwijst naar de Runninginthe90s gamemode
         private void RunningGamemode_Click(object sender, EventArgs e)
         {
             Memory.LoadingScreen f = new Memory.LoadingScreen();
@@ -166,7 +162,7 @@ namespace Memory
 
         }
 
-        //Openen van het Loadingscreen dat doorverwijst naar de 2 player hotseat
+        // Openen van het Loadingscreen dat doorverwijst naar de 2 player hotseat
         private void StandardGamemode_Click_1(object sender, EventArgs e)
         {
             Memory.LoadingScreen f = new Memory.LoadingScreen();
@@ -175,6 +171,7 @@ namespace Memory
             SG();
         }
 
+		// Openen van het Loadingscreen dat doorverwijst naar de multiplayer gamemode
 		private void Multiplayer_Click(object sender, EventArgs e)
 		{
 			Memory.LoadingScreen f = new Memory.LoadingScreen();
@@ -183,7 +180,7 @@ namespace Memory
 			MG();
 		}
 
-		//Het openen van de game na het LoadingScreen
+		// Het openen van de game na het LoadingScreen
 		private async void RG()
         {
             await Task.Delay(4000);
@@ -191,7 +188,7 @@ namespace Memory
             f.Show();
         }
 
-        //Het openen van de game na het LoadingScreen
+        // Het openen van de game na het LoadingScreen
         private async void SG()
         {
             await Task.Delay(4000);
@@ -199,7 +196,7 @@ namespace Memory
             f.Show();
         }
 
-		//Het openen van de game na het LoadingScreen (Doen we wel als we een duidelijke MP form hebben)
+		// Het openen van de game na het LoadingScreen (Doen we wel als we een duidelijke MP form hebben)
 		private /*async*/ void MG()
 		{
 		//	await Task.Delay(4000);
@@ -207,14 +204,14 @@ namespace Memory
 		//	f.Show();
 		}
 
-		//Het Verstoppen van Intro?
+		// Het Verstoppen van Intro nadat hij klaar is
 		private void Timer1_Tick(object sender, EventArgs e)
         {
             intro.SendToBack();
             timer1.Stop();
         }
 
-        //Het teruggaan naar het standaard Hoofdmenu
+        // Het teruggaan naar het standaard Hoofdmenu
         private async void Backbutton_Click_1(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
