@@ -14,7 +14,8 @@ namespace Memory
 {
     class ServerClient
     {
-        public static string HostIP;
+        public static string HostIP, ClientName, HostName;
+        public static bool ClientConnection;
         static int PacketSize = 1024 * 1024;
         public static TcpClient Client;
         public static List<Point> TempRandomButLocation = new List<Point>();
@@ -24,14 +25,14 @@ namespace Memory
         {
             try
             {
-                Client = new TcpClient("141.252.225.185", 8984);
+                Client = new TcpClient(HostIP, 8984);
+                ClientConnection = true;
             }
             catch
             {
                 MessageBox.Show("Error, het was niet mogenlijk om connectie te maken.", "ERROR!", MessageBoxButtons.OK);
+                ClientConnection = false;
             }
-            
-
         }
 
         public static void RecieveGamaData()
@@ -50,7 +51,19 @@ namespace Memory
         public static void RecieveTurn()
         {
             var bin = new BinaryFormatter();
-            bin.Serialize(Client.GetStream(), TempRandomButLocation);
+            var turnRes = bin.Deserialize(Client.GetStream());
+        }
+
+        public static void SendName()
+        {
+            var bin = new BinaryFormatter();
+            bin.Serialize(Client.GetStream(), GameServer.LocalPlayer);
+        }
+
+        public static void RecieveName()
+        {
+            var bin = new BinaryFormatter();
+            HostName = (string) bin.Deserialize(Client.GetStream());
         }
 
         public static void SendMessage(string message)

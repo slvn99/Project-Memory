@@ -99,7 +99,7 @@ namespace Memory
             //lengte +1 ivm 1 extra entry
             if (lengte == 11)
             {
-                lengte = lengte -1;
+                lengte = 10;
             }
             List<string> savelist = new List<string>();
             while (i< lengte)

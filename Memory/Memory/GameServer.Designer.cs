@@ -52,17 +52,19 @@
             this.GridButton7Dup = new System.Windows.Forms.Button();
             this.GridButton8 = new System.Windows.Forms.Button();
             this.GridButton8Dup = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Points1 = new System.Windows.Forms.Label();
-            this.Points2 = new System.Windows.Forms.Label();
+            this.LocalPlayerLabel = new System.Windows.Forms.Label();
+            this.OtherPlayerLabel = new System.Windows.Forms.Label();
             this.BeurtLabel = new System.Windows.Forms.Label();
+            this.GeefIpLabel = new System.Windows.Forms.Label();
+            this.IpTextBox = new System.Windows.Forms.TextBox();
+            this.ConnectButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HC_Label
             // 
             this.HC_Label.AutoSize = true;
             this.HC_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HC_Label.Location = new System.Drawing.Point(12, 99);
+            this.HC_Label.Location = new System.Drawing.Point(443, 179);
             this.HC_Label.Name = "HC_Label";
             this.HC_Label.Size = new System.Drawing.Size(188, 25);
             this.HC_Label.TabIndex = 0;
@@ -70,7 +72,7 @@
             // 
             // HostButton
             // 
-            this.HostButton.Location = new System.Drawing.Point(17, 127);
+            this.HostButton.Location = new System.Drawing.Point(448, 207);
             this.HostButton.Name = "HostButton";
             this.HostButton.Size = new System.Drawing.Size(91, 33);
             this.HostButton.TabIndex = 1;
@@ -80,7 +82,7 @@
             // 
             // ClientButton
             // 
-            this.ClientButton.Location = new System.Drawing.Point(109, 127);
+            this.ClientButton.Location = new System.Drawing.Point(540, 207);
             this.ClientButton.Name = "ClientButton";
             this.ClientButton.Size = new System.Drawing.Size(91, 33);
             this.ClientButton.TabIndex = 2;
@@ -100,7 +102,7 @@
             // 
             // NaamTextBox
             // 
-            this.NaamTextBox.Location = new System.Drawing.Point(17, 37);
+            this.NaamTextBox.Location = new System.Drawing.Point(487, 127);
             this.NaamTextBox.Name = "NaamTextBox";
             this.NaamTextBox.Size = new System.Drawing.Size(100, 20);
             this.NaamTextBox.TabIndex = 4;
@@ -108,16 +110,16 @@
             // NaamLabel
             // 
             this.NaamLabel.AutoSize = true;
-            this.NaamLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NaamLabel.Location = new System.Drawing.Point(12, 9);
+            this.NaamLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NaamLabel.Location = new System.Drawing.Point(471, 100);
             this.NaamLabel.Name = "NaamLabel";
-            this.NaamLabel.Size = new System.Drawing.Size(70, 25);
+            this.NaamLabel.Size = new System.Drawing.Size(135, 24);
             this.NaamLabel.TabIndex = 5;
-            this.NaamLabel.Text = "Naam:";
+            this.NaamLabel.Text = "Geef uw Naam";
             // 
             // NaamButton
             // 
-            this.NaamButton.Location = new System.Drawing.Point(17, 63);
+            this.NaamButton.Location = new System.Drawing.Point(487, 153);
             this.NaamButton.Name = "NaamButton";
             this.NaamButton.Size = new System.Drawing.Size(100, 20);
             this.NaamButton.TabIndex = 6;
@@ -317,33 +319,23 @@
             this.GridButton8Dup.UseVisualStyleBackColor = true;
             this.GridButton8Dup.Click += new System.EventHandler(this.GridButton8Dup_Click);
             // 
-            // button1
+            // LocalPlayerLabel
             // 
-            this.button1.Location = new System.Drawing.Point(17, 230);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.LocalPlayerLabel.AutoSize = true;
+            this.LocalPlayerLabel.Location = new System.Drawing.Point(12, 9);
+            this.LocalPlayerLabel.Name = "LocalPlayerLabel";
+            this.LocalPlayerLabel.Size = new System.Drawing.Size(62, 13);
+            this.LocalPlayerLabel.TabIndex = 24;
+            this.LocalPlayerLabel.Text = "LocalPlayer";
             // 
-            // Points1
+            // OtherPlayerLabel
             // 
-            this.Points1.AutoSize = true;
-            this.Points1.Location = new System.Drawing.Point(975, 9);
-            this.Points1.Name = "Points1";
-            this.Points1.Size = new System.Drawing.Size(35, 13);
-            this.Points1.TabIndex = 24;
-            this.Points1.Text = "label1";
-            // 
-            // Points2
-            // 
-            this.Points2.AutoSize = true;
-            this.Points2.Location = new System.Drawing.Point(975, 22);
-            this.Points2.Name = "Points2";
-            this.Points2.Size = new System.Drawing.Size(35, 13);
-            this.Points2.TabIndex = 25;
-            this.Points2.Text = "label2";
+            this.OtherPlayerLabel.AutoSize = true;
+            this.OtherPlayerLabel.Location = new System.Drawing.Point(12, 33);
+            this.OtherPlayerLabel.Name = "OtherPlayerLabel";
+            this.OtherPlayerLabel.Size = new System.Drawing.Size(62, 13);
+            this.OtherPlayerLabel.TabIndex = 25;
+            this.OtherPlayerLabel.Text = "OtherPlayer";
             // 
             // BeurtLabel
             // 
@@ -354,15 +346,51 @@
             this.BeurtLabel.TabIndex = 26;
             this.BeurtLabel.Text = "label1";
             // 
+            // GeefIpLabel
+            // 
+            this.GeefIpLabel.AutoSize = true;
+            this.GeefIpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GeefIpLabel.Location = new System.Drawing.Point(460, 246);
+            this.GeefIpLabel.Name = "GeefIpLabel";
+            this.GeefIpLabel.Size = new System.Drawing.Size(154, 20);
+            this.GeefIpLabel.TabIndex = 27;
+            this.GeefIpLabel.Text = "Geef hier de Host IP";
+            // 
+            // IpTextBox
+            // 
+            this.IpTextBox.Location = new System.Drawing.Point(464, 269);
+            this.IpTextBox.Name = "IpTextBox";
+            this.IpTextBox.Size = new System.Drawing.Size(150, 20);
+            this.IpTextBox.TabIndex = 28;
+            this.IpTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IpTextBox_KeyPress);
+            // 
+            // ConnectButton
+            // 
+            this.ConnectButton.Location = new System.Drawing.Point(487, 295);
+            this.ConnectButton.Name = "ConnectButton";
+            this.ConnectButton.Size = new System.Drawing.Size(100, 33);
+            this.ConnectButton.TabIndex = 29;
+            this.ConnectButton.Text = "Connect";
+            this.ConnectButton.UseVisualStyleBackColor = true;
+            this.ConnectButton.Click += new System.EventHandler(this.ConnectButton_Click);
+            // 
             // GameServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 593);
+            this.Controls.Add(this.ConnectButton);
+            this.Controls.Add(this.IpTextBox);
+            this.Controls.Add(this.GeefIpLabel);
+            this.Controls.Add(this.ClientButton);
+            this.Controls.Add(this.HostButton);
+            this.Controls.Add(this.HC_Label);
+            this.Controls.Add(this.NaamButton);
+            this.Controls.Add(this.NaamLabel);
+            this.Controls.Add(this.NaamTextBox);
             this.Controls.Add(this.BeurtLabel);
-            this.Controls.Add(this.Points2);
-            this.Controls.Add(this.Points1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.OtherPlayerLabel);
+            this.Controls.Add(this.LocalPlayerLabel);
             this.Controls.Add(this.GridButton8Dup);
             this.Controls.Add(this.GridButton8);
             this.Controls.Add(this.GridButton7Dup);
@@ -379,13 +407,7 @@
             this.Controls.Add(this.GridButton2);
             this.Controls.Add(this.GridButton1Dup);
             this.Controls.Add(this.GridButton1);
-            this.Controls.Add(this.NaamButton);
-            this.Controls.Add(this.NaamLabel);
-            this.Controls.Add(this.NaamTextBox);
             this.Controls.Add(this.ConLabel);
-            this.Controls.Add(this.ClientButton);
-            this.Controls.Add(this.HostButton);
-            this.Controls.Add(this.HC_Label);
             this.Name = "GameServer";
             this.Text = "GameServer";
             this.ResumeLayout(false);
@@ -416,10 +438,12 @@
         private System.Windows.Forms.Button GridButton8;
         private System.Windows.Forms.Button GridButton8Dup;
         public System.Windows.Forms.Label ConLabel;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button GridButton1;
-        private System.Windows.Forms.Label Points1;
-        private System.Windows.Forms.Label Points2;
+        private System.Windows.Forms.Label LocalPlayerLabel;
+        private System.Windows.Forms.Label OtherPlayerLabel;
         private System.Windows.Forms.Label BeurtLabel;
+        private System.Windows.Forms.Label GeefIpLabel;
+        private System.Windows.Forms.TextBox IpTextBox;
+        private System.Windows.Forms.Button ConnectButton;
     }
 }
