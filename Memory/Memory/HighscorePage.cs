@@ -203,11 +203,11 @@ namespace Memory
             if (ExitGame == DialogResult.Yes)
             {
                 Highscores_save.Reset();
+                this.Close();
             }
 
             await Task.Delay(1000);
             player.Stop();
-            this.Close();
         }
 
         //Het tonen van de Highscorepage aangepast op de gamemode
