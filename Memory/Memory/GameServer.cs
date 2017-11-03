@@ -659,6 +659,7 @@ namespace Memory
                     {
                         x.Enabled = true;
                     }
+                    backgroundWorker.RunWorkerAsync();
                 }
             }
         }
