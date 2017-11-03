@@ -22,13 +22,13 @@ namespace Memory
             RunningGamemode.Visible = false;
             Backbutton.Visible = false;
 
-            pictureBox1.Controls.Add(Backbutton);
+            CatGif.Controls.Add(Backbutton);
             Backbutton.BackColor = Color.Transparent;
 
-            pictureBox1.Controls.Add(tableLayoutPanel1);
+            CatGif.Controls.Add(tableLayoutPanel1);
             tableLayoutPanel1.BackColor = Color.Transparent;
 
-            pictureBox1.Controls.Add(tableLayoutPanel2);
+            CatGif.Controls.Add(tableLayoutPanel2);
             tableLayoutPanel2.BackColor = Color.Transparent;
 
             timer1.Start();
@@ -175,8 +175,16 @@ namespace Memory
             SG();
         }
 
-        //Het openen van de game na het LoadingScreen
-        private async void RG()
+		private void Multiplayer_Click(object sender, EventArgs e)
+		{
+			Memory.LoadingScreen f = new Memory.LoadingScreen();
+			f.Show();
+			Sluiten();
+			MG();
+		}
+
+		//Het openen van de game na het LoadingScreen
+		private async void RG()
         {
             await Task.Delay(4000);
             Memory.RunningInThe90s f = new Memory.RunningInThe90s();
@@ -191,8 +199,16 @@ namespace Memory
             f.Show();
         }
 
-        //Het Verstoppen van Intro?
-        private void Timer1_Tick(object sender, EventArgs e)
+		//Het openen van de game na het LoadingScreen (Doen we wel als we een duidelijke MP form hebben)
+		private /*async*/ void MG()
+		{
+		//	await Task.Delay(4000);
+		//	WindowsFormsApp1.? Multiplayer ? f = new WindowsFormsApp1.?Multiplayer ? ();
+		//	f.Show();
+		}
+
+		//Het Verstoppen van Intro?
+		private void Timer1_Tick(object sender, EventArgs e)
         {
             intro.SendToBack();
             timer1.Stop();
@@ -222,6 +238,5 @@ namespace Memory
             await Task.Delay(100);
             player.Stop();
         }
-    }
-
+	}
 }
