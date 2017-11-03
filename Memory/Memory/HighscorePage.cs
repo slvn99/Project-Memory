@@ -144,6 +144,7 @@ namespace Memory
                 ChangeCursor();
             }
 
+            //methode die de mousecursor aanpast
             void ChangeCursor()
             {
                 Bitmap bmp = new Bitmap(Properties.Resources.cur1031);
@@ -164,12 +165,14 @@ namespace Memory
 
         }
 
+        //event die je terugstuurt naar de Homepage wanneer de highscore form gesloten is
 		private void HighscorePage_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			Memory.HomePage f2 = new Memory.HomePage();
 			f2.Show();
 		}
 
+        //Het terugsturen naar het hoofdmenu vanuit de highscorepage
         private async void HomeButton_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -179,6 +182,7 @@ namespace Memory
             this.Close();
         }
 
+        //magische code
 		protected override CreateParams CreateParams
 		{
 			get
@@ -189,6 +193,7 @@ namespace Memory
 			}
 		}
 
+        //Resetfunctie voor de highscores
 		private async void Hsreset_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -205,6 +210,7 @@ namespace Memory
             this.Close();
         }
 
+        //wat is dit?
         private void Listswitchbutton_Click(object sender, EventArgs e)
         {
             if (Gamemodelabel.Text == "Standard Gamemode")

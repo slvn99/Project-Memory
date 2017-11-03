@@ -80,6 +80,7 @@ namespace Memory
             }
         }
 
+        //sluit HomePage form
         public  void Sluiten()
         {
             ShowInTaskbar = false;
@@ -88,12 +89,14 @@ namespace Memory
             GC.Collect();
             Close();
         }
+        //onnodig?
         public void Tonen()
         {
             ShowInTaskbar = true;
             Visible = true;
         }
 
+        //klopt deze code?
         private void HomePage_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(e.CloseReason == CloseReason.UserClosing)
@@ -106,6 +109,8 @@ namespace Memory
 
             }
         }
+
+        //??
         public void Form1reset()
         {
             WindowsFormsApp1.Form1 f = new WindowsFormsApp1.Form1();
@@ -113,6 +118,7 @@ namespace Memory
             Sluiten();
         }
 
+        //Het tonen van de speelbare gamemodes
         private async void PlayButton_Click(object sender, EventArgs e)
         {
 
@@ -138,6 +144,7 @@ namespace Memory
             player.Stop();
         }
 
+        //Het teruggaan naar het standaard Hoofdmenu
         private async void Backbutton_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -162,6 +169,7 @@ namespace Memory
             player.Stop();
         }
 
+        //openen van het Loadingscreen dat doorverwijst naar de Runninginthe90s gamemode
         private void RunningGamemode_Click(object sender, EventArgs e)
         {
             Memory.LoadingScreen f = new Memory.LoadingScreen();
@@ -171,6 +179,7 @@ namespace Memory
 
         }
 
+        //Openen van het Loadingscreen dat doorverwijst naar de 2 player hotseat
         private void StandardGamemode_Click_1(object sender, EventArgs e)
         {
             Memory.LoadingScreen f = new Memory.LoadingScreen();
@@ -179,6 +188,7 @@ namespace Memory
             SG();
         }
 
+        //Het openen van de game na het LoadingScreen
         private async void RG()
         {
             await Task.Delay(4000);
@@ -186,6 +196,7 @@ namespace Memory
             f.Show();
         }
 
+        //Het openen van de game na het LoadingScreen
         private async void SG()
         {
             await Task.Delay(4000);
@@ -193,6 +204,7 @@ namespace Memory
             f.Show();
         }
 
+        //Het Verstoppen van Intro?
         private void Timer1_Tick(object sender, EventArgs e)
         {
             intro.SendToBack();

@@ -275,7 +275,9 @@
             // 
             // Backbutton
             // 
-            this.Backbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Backbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Backbutton.BackgroundImage = global::Memory.Properties.Resources.HomeButton;
+            this.Backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Backbutton.Location = new System.Drawing.Point(484, 304);
             this.Backbutton.Name = "Backbutton";
             this.Backbutton.Size = new System.Drawing.Size(100, 100);
@@ -318,9 +320,9 @@
             // intro
             // 
             this.intro.Image = global::Memory.Properties.Resources.intro;
-            this.intro.Location = new System.Drawing.Point(-80, -50);
+            this.intro.Location = new System.Drawing.Point(-92, -62);
             this.intro.Name = "intro";
-            this.intro.Size = new System.Drawing.Size(1143, 643);
+            this.intro.Size = new System.Drawing.Size(1155, 655);
             this.intro.TabIndex = 7;
             this.intro.TabStop = false;
             // 
