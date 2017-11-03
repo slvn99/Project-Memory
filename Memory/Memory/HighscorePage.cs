@@ -17,6 +17,8 @@ namespace Memory
         {
             InitializeComponent();
             string save = Highscores_save.LoadData();
+            string runningsave = RunningSave.LoadData();
+            Gamemodelabel.Text = "Standard Gamemode";
 
             if (save == "Er is nog geen\nsave file\naanwezig")
             {
@@ -24,6 +26,7 @@ namespace Memory
 
             else
             {
+                
                 //save string wordt gesplit op \n en in string array gezet
                 string[] savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
                 //toekennen van waarden uit array aan variabelen
@@ -141,6 +144,7 @@ namespace Memory
                 ChangeCursor();
             }
 
+            //methode die de mousecursor aanpast
             void ChangeCursor()
             {
                 Bitmap bmp = new Bitmap(Properties.Resources.cur1031);
@@ -161,12 +165,14 @@ namespace Memory
 
         }
 
+        //event die je terugstuurt naar de Homepage wanneer de highscore form gesloten is
 		private void HighscorePage_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			Memory.HomePage f2 = new Memory.HomePage();
 			f2.Show();
 		}
 
+        //Het terugsturen naar het hoofdmenu vanuit de highscorepage
         private async void HomeButton_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -176,6 +182,7 @@ namespace Memory
             this.Close();
         }
 
+        //magische code
 		protected override CreateParams CreateParams
 		{
 			get
@@ -186,6 +193,7 @@ namespace Memory
 			}
 		}
 
+        //Resetfunctie voor de highscores
 		private async void Hsreset_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -200,6 +208,252 @@ namespace Memory
             await Task.Delay(1000);
             player.Stop();
             this.Close();
+        }
+
+        //wat is dit?
+        private void Listswitchbutton_Click(object sender, EventArgs e)
+        {
+            if (Gamemodelabel.Text == "Standard Gamemode")
+            {
+                Gamemodelabel.Text = "Running Gamemode";
+                string save = Highscores_save.LoadData();
+                string runningsave = RunningSave.LoadData();
+
+                //save string wordt gesplit op \n en in string array gezet
+                string[] savearray = runningsave.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+                //toekennen van waarden uit array aan variabelen
+                try
+                {
+                    if (savearray[0] != null)
+                    {
+                        label1.Text = savearray[0];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[1] != null)
+                    {
+                        label2.Text = savearray[1];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[2] != null)
+                    {
+                        label3.Text = savearray[2];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+                try
+                {
+                    if (savearray[3] != null)
+                    {
+                        label4.Text = savearray[3];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[4] != null)
+                    {
+                        label5.Text = savearray[4];
+                    }
+                }
+
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[5] != null)
+                    {
+                        label6.Text = savearray[5];
+                    }
+                }
+
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[6] != null)
+                    {
+                        label7.Text = savearray[6];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[7] != null)
+                    {
+                        label8.Text = savearray[7];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[8] != null)
+                    {
+                        label9.Text = savearray[8];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[9] != null)
+                    {
+                        label10.Text = savearray[9];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+            }
+
+            else if (Gamemodelabel.Text == "Running Gamemode")
+            {
+                Gamemodelabel.Text = "Standard Gamemode";
+                string save = Highscores_save.LoadData();
+                string runningsave = RunningSave.LoadData();
+
+                //save string wordt gesplit op \n en in string array gezet
+                string[] savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+                //toekennen van waarden uit array aan variabelen
+                try
+                {
+                    if (savearray[0] != null)
+                    {
+                        label1.Text = savearray[0];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[1] != null)
+                    {
+                        label2.Text = savearray[1];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[2] != null)
+                    {
+                        label3.Text = savearray[2];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+                try
+                {
+                    if (savearray[3] != null)
+                    {
+                        label4.Text = savearray[3];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[4] != null)
+                    {
+                        label5.Text = savearray[4];
+                    }
+                }
+
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[5] != null)
+                    {
+                        label6.Text = savearray[5];
+                    }
+                }
+
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[6] != null)
+                    {
+                        label7.Text = savearray[6];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[7] != null)
+                    {
+                        label8.Text = savearray[7];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[8] != null)
+                    {
+                        label9.Text = savearray[8];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                try
+                {
+                    if (savearray[9] != null)
+                    {
+                        label10.Text = savearray[9];
+                    }
+                }
+                catch (Exception)
+                {
+                }
+            }
         }
     }
 }

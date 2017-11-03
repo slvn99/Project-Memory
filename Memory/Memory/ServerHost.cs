@@ -37,6 +37,7 @@ namespace Memory
         public static void ClientConnected(IAsyncResult ar)
         {
             Client = Listener.EndAcceptTcpClient(ar);
+            GameServer.Connectie = true;
         }
 
         public static void SendGameState()

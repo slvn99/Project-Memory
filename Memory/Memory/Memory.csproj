@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RunningSave.cs" />
     <Compile Include="StandardGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,10 +160,13 @@
     <Folder Include="AxWMPLib\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\flip.wav" />
+    <Content Include="bin\Debug\intro_audio.wav" />
     <Content Include="bin\Debug\just_do_it.wav" />
     <Content Include="bin\Debug\no1.wav" />
     <Content Include="bin\Debug\Run90s.wav" />
     <Content Include="bin\Debug\Skra.wav" />
+    <None Include="Resources\Run90s.wav" />
     <None Include="Resources\PauseMusicButton.png" />
     <None Include="Resources\StopMusicButton.png" />
     <None Include="Resources\intro.gif" />

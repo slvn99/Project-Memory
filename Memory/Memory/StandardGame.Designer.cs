@@ -32,6 +32,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.GridButton1Dup = new System.Windows.Forms.Button();
             this.GridButton2 = new System.Windows.Forms.Button();
@@ -69,6 +70,8 @@ namespace WindowsFormsApp1
             this.GridButton1 = new System.Windows.Forms.Button();
             this.laden = new System.Windows.Forms.PictureBox();
             this.opslaan = new System.Windows.Forms.PictureBox();
+            this.Testno1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Reset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -508,6 +511,20 @@ namespace WindowsFormsApp1
             this.opslaan.TabStop = false;
             this.opslaan.Click += new System.EventHandler(this.opslaan_Click);
             // 
+            // Testno1
+            // 
+            this.Testno1.Location = new System.Drawing.Point(607, 148);
+            this.Testno1.Name = "Testno1";
+            this.Testno1.Size = new System.Drawing.Size(75, 23);
+            this.Testno1.TabIndex = 49;
+            this.Testno1.Text = "button1";
+            this.Testno1.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 30000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -515,6 +532,7 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1063, 593);
+            this.Controls.Add(this.Testno1);
             this.Controls.Add(this.opslaan);
             this.Controls.Add(this.laden);
             this.Controls.Add(this.GridButton1Dup);
@@ -609,6 +627,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button GridButton1;
         private System.Windows.Forms.PictureBox laden;
         private System.Windows.Forms.PictureBox opslaan;
+		private System.Windows.Forms.Button Testno1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

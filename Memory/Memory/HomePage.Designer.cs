@@ -44,12 +44,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.PlayButton = new System.Windows.Forms.PictureBox();
-            this.Backbutton = new System.Windows.Forms.PictureBox();
             this.RunningGamemode = new System.Windows.Forms.PictureBox();
             this.StandardGamemode = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.intro = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Backbutton = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -65,11 +65,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Backbutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RunningGamemode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StandardGamemode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.intro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Backbutton)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -273,16 +273,6 @@
             this.PlayButton.TabStop = false;
             this.PlayButton.Click += new System.EventHandler(this.PlayButton_Click);
             // 
-            // Backbutton
-            // 
-            this.Backbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Backbutton.Location = new System.Drawing.Point(484, 304);
-            this.Backbutton.Name = "Backbutton";
-            this.Backbutton.Size = new System.Drawing.Size(100, 100);
-            this.Backbutton.TabIndex = 6;
-            this.Backbutton.TabStop = false;
-            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
-            // 
             // RunningGamemode
             // 
             this.RunningGamemode.BackgroundImage = global::Memory.Properties.Resources.initial_D;
@@ -318,16 +308,29 @@
             // intro
             // 
             this.intro.Image = global::Memory.Properties.Resources.intro;
-            this.intro.Location = new System.Drawing.Point(-80, -50);
+            this.intro.Location = new System.Drawing.Point(-92, -62);
             this.intro.Name = "intro";
-            this.intro.Size = new System.Drawing.Size(1143, 643);
+            this.intro.Size = new System.Drawing.Size(1155, 655);
             this.intro.TabIndex = 7;
             this.intro.TabStop = false;
             // 
             // timer1
             // 
             this.timer1.Interval = 3700;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // Backbutton
+            // 
+            this.Backbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Backbutton.Image = global::Memory.Properties.Resources.HomeButton;
+            this.Backbutton.Location = new System.Drawing.Point(490, 271);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(100, 100);
+            this.Backbutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Backbutton.TabIndex = 8;
+            this.Backbutton.TabStop = false;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click_1);
             // 
             // HomePage
             // 
@@ -360,11 +363,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Backbutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RunningGamemode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StandardGamemode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.intro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Backbutton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -389,8 +392,8 @@
         private System.Windows.Forms.PictureBox RankButton;
         private System.Windows.Forms.PictureBox StandardGamemode;
         private System.Windows.Forms.PictureBox RunningGamemode;
-        private System.Windows.Forms.PictureBox Backbutton;
         private System.Windows.Forms.PictureBox intro;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox Backbutton;
     }
 }

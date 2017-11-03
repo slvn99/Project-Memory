@@ -62,7 +62,6 @@
 			this.ThemaBox.Name = "ThemaBox";
 			this.ThemaBox.Size = new System.Drawing.Size(121, 21);
 			this.ThemaBox.TabIndex = 0;
-			this.ThemaBox.SelectedIndexChanged += new System.EventHandler(this.ThemaBox_SelectedIndexChanged);
 			// 
 			// Apply
 			// 

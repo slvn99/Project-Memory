@@ -179,24 +179,26 @@ namespace Memory
                     }
                     else
                     {
-                        matchlist.Add(Kaart1Select.Name);
-                        matchlist.Add(Kaart2Select.Name);
-                        lengte += 2;
-                        foreach (var x in ButtonGrid)
-                        {
-                            x.Enabled = false;
-                        }
+						player.SoundLocation = "ping.wav";
+						player.Play();
+						matchlist.Add(Kaart1Select.Name);
+						matchlist.Add(Kaart2Select.Name);
+						lengte += 2;
+						foreach (var x in ButtonGrid)
+						{
+							x.Enabled = false;
+						}
 
+						await Task.Delay(1000);
+						Kaart1Select.Visible = false;
+						Kaart2Select.Visible = false;
+						Kaart1Select = null;
+						Kaart2Select = null;
+						Point_Add();
+						player.Stop();
+						GC.Collect();
 
-                        await Task.Delay(1000);
-                        Kaart1Select.Visible = false;
-                        Kaart2Select.Visible = false;
-                        Kaart1Select = null;
-                        Kaart2Select = null;
-                        Point_Add();
-                        GC.Collect();
-
-                        foreach (var x in ButtonGrid)
+						foreach (var x in ButtonGrid)
                         {
                             x.Enabled = true;
                         }
@@ -253,28 +255,62 @@ namespace Memory
 
         }
 
+        public void runningreset()
+        {
+            RunningInThe90s f = new RunningInThe90s();
+            f.Show();
+            Sluiten();
+        }
+
         private void Reset_Function()
         {
-            Memory.HomePage f2 = new Memory.HomePage();
-            f2.Form1reset();
+            Memory.RunningInThe90s f2 = new Memory.RunningInThe90s();
+            f2.runningreset();
             Dispose();
             GC.Collect();
-        }    private void EndGame_Check()
+        }
+		private void EndGame_Check()
         {
             if (TotaalMatches == 8)
             {
                 RunningTimer.Enabled = false;
+                string bufferstring = RunningLabel.Text;
+                string buf1 = bufferstring.Split(':')[0];
+                string buf2 = bufferstring.Split(':')[1];
+                bufferstring = buf1 + "," + buf2;
+                double score = double.Parse(bufferstring);
+                MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + score + " seconde!", "Einde Spel", MessageBoxButtons.OK);
+                Memory.RunningSave.SaveData(player1,score);
+                player.SoundLocation = "tada.wav";
+                player.Play();
                 MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + " seconde!", "Einde Spel", MessageBoxButtons.OK);
                 DialogResult Klaar = MessageBox.Show("Wil je een nieuw spel spelen?", "Nieuw spel", MessageBoxButtons.YesNo);
+                player.Stop();
 
-                if (Klaar ==DialogResult.Yes)
+                if (Klaar == DialogResult.Yes)
                 {
                     Reset_Function();
                 }
                 if (Klaar == DialogResult.No)
                 {
-                    Sluiten ();
+                    Sluiten();
                 }
+            }
+
+            
+
+            
+        }
+
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            DialogResult ResetGame = MessageBox.Show("Weet je zeker dat je opnieuw wilt beginnen? Je voortgang zal verloren gaan", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (ResetGame == DialogResult.Yes)
+            {
+                Reset_Function();
             }
         }
         private async void pictureBox3_Click(object sender, EventArgs e)
@@ -291,6 +327,13 @@ namespace Memory
             }
         }
 
+		private async void HistoryofMemory()
+		{
+			player.SoundLocation = "no1.wav";
+			player.Play();
+			await Task.Delay(5000);
+			player.Stop();
+		}
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -649,6 +692,19 @@ namespace Memory
             axWindowsMediaPlayer1.Ctlcontrols.play();
         }
 
+        private async void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
+            DialogResult ExitGame = MessageBox.Show("Weet u zeker dat u het spel wil verlaten? Onopgeslagen progressie zal verloren gaan! ", "Exit", MessageBoxButtons.YesNo);
+
+            if (ExitGame == DialogResult.Yes)
+            {
+                Sluiten();
+            }
+        }
         private void Reset_Click_1(object sender, EventArgs e)
         {
             {
@@ -660,6 +716,11 @@ namespace Memory
                     Reset_Function();
                 }
             }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.play();
         }
 
         public void Saveclass_Click(object sender, EventArgs e)

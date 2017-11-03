@@ -13,6 +13,7 @@ namespace Memory
 {
 	public partial class SettingsPage : Form
 	{
+        //commands voor het aanpassen van systeemgeluid
         private const int APPCOMMAND_VOLUME_MUTE = 0x80000;
         private const int APPCOMMAND_VOLUME_UP = 0xA0000;
 		private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
@@ -33,7 +34,8 @@ namespace Memory
 
             ChangeCursor();
 		}
-
+        
+        //Veranderen van de Mousecursor
         void ChangeCursor()
         {
             Bitmap bmp = new Bitmap(Properties.Resources.cur1031);
@@ -41,18 +43,7 @@ namespace Memory
             this.Cursor = c;
         }
 
-		private async void HomeButton_Click_1(object sender, EventArgs e)
-		{
-			player.SoundLocation = "click.wav";
-			player.Play();
-			await Task.Delay(300);
-			player.Stop();
-			this.ShowInTaskbar = false;
-            this.Close();
-            this.Dispose();
-            GC.Collect();
-        }
-
+        //Toepassen van het gekozen thema uit de combobox
 		public async void Apply_Click(object sender, EventArgs e)
 		{
             player.SoundLocation = "click.wav";
@@ -64,6 +55,7 @@ namespace Memory
             player.Stop();
 		}
 
+        //magische code
 		protected override CreateParams CreateParams
 		{
 			get
@@ -74,6 +66,7 @@ namespace Memory
 			}
 		}
 
+        //event die de HomePage herstart bij het afluiten van de Settingspage
 		private async void SettingsPage_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			Memory.HomePage f13 = new Memory.HomePage();
@@ -84,6 +77,7 @@ namespace Memory
             GC.Collect();
         }
 
+        //volume verlagen
 		private void VolumeDown_Click(object sender, EventArgs e)
 		{
             SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
@@ -91,21 +85,27 @@ namespace Memory
 
         }
 
+        //volume verhogen
         private void VolumeUp_Click(object sender, EventArgs e)
 		{
             SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
                 (IntPtr)APPCOMMAND_VOLUME_UP);
         }
 
+        //Het terugkeren naar het Hoofdmenu
         private async void Home_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
             player.Play();
             await Task.Delay(300);
             player.Stop();
+            this.ShowInTaskbar = false;
             this.Close();
+            this.Dispose();
+            GC.Collect();
         }
 
+        //volume dempen
         private void MuteButton_Click(object sender, EventArgs e)
         {
             SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
@@ -124,17 +124,13 @@ namespace Memory
             inThe90S.Show();
         }
 
-        private void ThemaBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Button2_Click(object sender, EventArgs e)
         {
             Memory.intro intro = new Memory.intro();
             intro.Show();
         }
 
+        //geluiden uitschakelen
 		private void StopMusicButton_Click(object sender, EventArgs e)
 		{
 			SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,

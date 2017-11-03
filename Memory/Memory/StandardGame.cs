@@ -23,8 +23,7 @@ namespace WindowsFormsApp1
         List<Point> punten = new List<Point>();
         List<string> matchlist = new List<string>();
         string thema = Memory.SettingsPage_Save.LoadData();
-
-
+	
 
         public Form1()
         {
@@ -63,8 +62,6 @@ namespace WindowsFormsApp1
             Points1.ForeColor = System.Drawing.Color.White;
             Points2.Font = new Font("Arial", 8, FontStyle.Bold);
             Points2.ForeColor = System.Drawing.Color.White;
-
-
         }
 
         protected override CreateParams CreateParams
@@ -91,7 +88,7 @@ namespace WindowsFormsApp1
             
         }
 
-        private void Play_Game()
+        private  void Play_Game()
         {
             if (Player1Textbox.Text == "" || Player2Textbox.Text == "")
             {
@@ -104,6 +101,9 @@ namespace WindowsFormsApp1
 
             else
             {
+
+                timer1.Start();
+
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
                
                 foreach (var x in ButtonGrid)
@@ -195,6 +195,11 @@ namespace WindowsFormsApp1
 
         private void Click_kaart(Button Buttonclick)
         {
+            timer1.Stop();
+            timer1.Start();
+            player.SoundLocation = "flip.wav";
+            player.Play();
+
             if (Kaart1Select == null)
             {
                 Kaart1Select = Buttonclick;
@@ -234,12 +239,14 @@ namespace WindowsFormsApp1
                         Kaart1Select = null;
                         Kaart2Select = null;
                         Point_Add();
+						player.Stop();
                         GC.Collect();
 
                         foreach (var x in ButtonGrid)
                         {
                             x.Enabled = true;
                         }
+                        No1_Check();
                     }
                 }
                 else
@@ -274,8 +281,17 @@ namespace WindowsFormsApp1
                     {
                         x.Enabled = true;
                     }
+					if (PuntenPlayer1 == 8)
+					{
+						HistoryofMemory();
+					}
+					else if (PuntenPlayer2 == 8)
+					{
+						HistoryofMemory();
+					}
+
 				}
-            }
+			}
         }
 
         private void Change_Beurt()
@@ -317,15 +333,25 @@ namespace WindowsFormsApp1
             GC.Collect();
         }
 
+        private void No1_Check()
+        { 
+            if (PuntenPlayer1 == 8 || PuntenPlayer2 == 8)
+            {
+                player.SoundLocation = "no1.wav";
+                player.Play();
+            }
+        }
+
         private async void EndGame_Check()
-        {
-            if (TotaalMatches == 8)
+		{ 
+			if (TotaalMatches == 8)
             {
                 opslaan.Visible = false;
-                if (PuntenPlayer1 > PuntenPlayer2)
+				if (PuntenPlayer1 > PuntenPlayer2)
                 {
+                    await Task.Delay(6000);
                     Reset.Visible = false;
-                    player.SoundLocation = "tada.wav";
+					player.SoundLocation = "tada.wav";
                     player.Play();
                     MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
                     Memory.Highscores_save.SaveData(player1, PuntenPlayer1);
@@ -363,6 +389,14 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+		private async void HistoryofMemory()
+		{
+			player.SoundLocation = "wow.wav";
+			player.Play();
+			await Task.Delay(7000);
+			player.Stop();
+		}
 
 		#region kaarten
 		private void GridButton1_Click(object sender, EventArgs e)
@@ -737,6 +771,14 @@ namespace WindowsFormsApp1
             {
                 Sluiten();
             }
+        }
+
+        private async void timer1_Tick(object sender, EventArgs e)
+        {
+            player.SoundLocation = "just_do_it.wav";
+            player.Play();
+            await Task.Delay(2000);
+            player.Stop();
         }
 
         private void laden_MouseHover(object sender, EventArgs e)
