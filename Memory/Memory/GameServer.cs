@@ -22,6 +22,7 @@ namespace Memory
         List<Point> PointLocation = new List<Point>();
         public static List<Point> RandomButLocation = new List<Point>();
         string thema = Memory.SettingsPage_Save.LoadData();
+        public static bool Connectie = false;
 
         public GameServer()
         {
@@ -234,108 +235,132 @@ namespace Memory
         {
 			GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			GridButton1.BackgroundImage = Resources.Steam;
+            Click_kaart(GridButton1);
+            Check_kaart();
         }
 
         private void GridButton1Dup_Click(object sender, EventArgs e)
         {
             GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton1Dup.BackgroundImage = Resources.Steam;
+            Click_kaart(GridButton1Dup);
+            Check_kaart();
         }
 
         private void GridButton2_Click(object sender, EventArgs e)
         {
             GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton2.BackgroundImage = Resources.TwitchLogo;
+            Click_kaart(GridButton2);
+            Check_kaart();
         }
 
         private void GridButton2Dup_Click(object sender, EventArgs e)
         {
             GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton2Dup.BackgroundImage = Resources.TwitchLogo;
+            Click_kaart(GridButton2Dup);
+            Check_kaart();
         }
 
         private void GridButton3_Click(object sender, EventArgs e)
         {
             GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton3.BackgroundImage = Resources.fb;
+            Click_kaart(GridButton3);
+            Check_kaart();
         }
 
         private void GridButton3Dup_Click(object sender, EventArgs e)
         {
             GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton3Dup.BackgroundImage = Resources.fb;
+            Click_kaart(GridButton3Dup);
+            Check_kaart();
         }
 
         private void GridButton4_Click(object sender, EventArgs e)
         {
             GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton4.BackgroundImage = Resources.Reddit;
+            Click_kaart(GridButton4);
+            Check_kaart();
         }
 
         private void GridButton4Dup_Click(object sender, EventArgs e)
         {
             GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton4Dup.BackgroundImage = Resources.Reddit;
+            Click_kaart(GridButton4Dup);
+            Check_kaart();
         }
 
         private void GridButton5_Click(object sender, EventArgs e)
         {
             GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton5.BackgroundImage = Resources._9gag;
+            Click_kaart(GridButton5);
+            Check_kaart();
         }
 
         private void GridButton5Dup_Click(object sender, EventArgs e)
         {
             GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton5Dup.BackgroundImage = Resources._9gag;
+            Click_kaart(GridButton5Dup);
+            Check_kaart();
         }
 
         private void GridButton6_Click(object sender, EventArgs e)
         {
             GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton6.BackgroundImage = Resources.Twitter;
+            Click_kaart(GridButton6);
+            Check_kaart();
         }
 
         private void GridButton6Dup_Click(object sender, EventArgs e)
         {
             GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton6Dup.BackgroundImage = Resources.Twitter;
+            Click_kaart(GridButton6Dup);
+            Check_kaart();
         }
 
         private void GridButton7_Click(object sender, EventArgs e)
         {
             GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton7.BackgroundImage = Resources.Youtube;
+            Click_kaart(GridButton7);
+            Check_kaart();
         }
 
         private void GridButton7Dup_Click(object sender, EventArgs e)
         {
             GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton7Dup.BackgroundImage = Resources.Youtube;
+            Click_kaart(GridButton7Dup);
+            Check_kaart();
         }
 
         private void GridButton8_Click(object sender, EventArgs e)
         {
             GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton8.BackgroundImage = Resources.Google;
+            Click_kaart(GridButton8);
+            Check_kaart();
         }
 
         private void GridButton8Dup_Click(object sender, EventArgs e)
         {
             GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             GridButton8Dup.BackgroundImage = Resources.Google;
+            Click_kaart(GridButton8Dup);
+            Check_kaart();
         }
-#endregion
+        #endregion
 
-        private void HostButton_Click(object sender, EventArgs e)
-        {
-            ServerHost.tempGridbutton.Location = GridButton1.Location;
-            SetupGame();
-            ServerHost.StartServer();
-            host = true;
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             if (host == true)
             {
@@ -403,6 +428,20 @@ namespace Memory
             }
         }
 
+        private void HostButton_Click(object sender, EventArgs e)
+        {
+            ServerHost.tempGridbutton.Location = GridButton1.Location;
+            SetupGame();
+            ServerHost.StartServer();
+            host = true;
+
+            do
+            {
+
+            } while (Connectie == false);
+
+        }
+
         private void ClientButton_Click(object sender, EventArgs e)
         {
             ServerClient.StartClient();
@@ -418,13 +457,8 @@ namespace Memory
             HostButton.Visible = true;
             ClientButton.Visible = true;
             ConLabel.Visible = true;
-
-            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
-            foreach (Button x in ButtonGrid)
-            {
-                x.Visible = true;
-            }
         }
+
         void ChangeCursor()
         {
             Bitmap bmp = new Bitmap(Resources.cur1031);

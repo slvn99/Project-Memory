@@ -22,7 +22,16 @@ namespace Memory
 
         public static void StartClient()
         {
-            Client = new TcpClient(HostIP, 8984);
+            try
+            {
+                Client = new TcpClient("141.252.225.185", 8984);
+            }
+            catch
+            {
+                MessageBox.Show("Error, het was niet mogenlijk om connectie te maken.", "ERROR!", MessageBoxButtons.OK);
+            }
+            
+
         }
 
         public static void RecieveGamaData()
