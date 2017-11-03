@@ -170,6 +170,10 @@ namespace Memory
                     {
                         x.Visible = true;
                     }
+                    foreach (Button x in ButtonGrid)
+                    {
+                        x.Enabled = false;
+                    }
                 }
             }
         }
