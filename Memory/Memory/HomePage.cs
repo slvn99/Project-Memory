@@ -114,10 +114,18 @@ namespace Memory
             }
         }
 
-        //??
+        //reset method Standardgamemode
         public void Form1reset()
         {
             WindowsFormsApp1.Form1 f = new WindowsFormsApp1.Form1();
+            f.Show();
+            Sluiten();
+        }
+
+        //reset method Runninginthe90s
+        public void runningreset()
+        {
+            RunningInThe90s f = new RunningInThe90s();
             f.Show();
             Sluiten();
         }

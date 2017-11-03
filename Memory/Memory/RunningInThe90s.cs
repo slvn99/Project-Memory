@@ -252,19 +252,11 @@ namespace Memory
             TotaalMatches++;
             Points1.Text = Convert.ToString(PuntenPlayer1);
             EndGame_Check();
-
-        }
-
-        public void runningreset()
-        {
-            RunningInThe90s f = new RunningInThe90s();
-            f.Show();
-            Sluiten();
         }
 
         private void Reset_Function()
         {
-            Memory.RunningInThe90s f2 = new Memory.RunningInThe90s();
+            Memory.HomePage f2 = new Memory.HomePage();
             f2.runningreset();
             Dispose();
             GC.Collect();
@@ -279,8 +271,6 @@ namespace Memory
                 string buf2 = bufferstring.Split(':')[1];
                 bufferstring = buf1 + "," + buf2;
                 double score = double.Parse(bufferstring);
-                MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + score + " seconde!", "Einde Spel", MessageBoxButtons.OK);
-                Memory.RunningSave.SaveData(player1,score);
                 player.SoundLocation = "tada.wav";
                 player.Play();
                 MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen in " + RunningLabel.Text + " seconde!", "Einde Spel", MessageBoxButtons.OK);

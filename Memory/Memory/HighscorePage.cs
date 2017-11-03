@@ -210,7 +210,7 @@ namespace Memory
             this.Close();
         }
 
-        //wat is dit?
+        //Het tonen van de Highscorepage aangepast op de gamemode
         private void Listswitchbutton_Click(object sender, EventArgs e)
         {
             if (Gamemodelabel.Text == "Standard Gamemode")
