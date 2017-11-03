@@ -31,6 +31,20 @@ namespace Memory
             CatGif.Controls.Add(tableLayoutPanel2);
             tableLayoutPanel2.BackColor = Color.Transparent;
 
+            CatGif.Controls.Add(label1);
+            label1.BackColor = Color.Transparent;
+
+            CatGif.Controls.Add(label2);
+            label1.BackColor = Color.Transparent;
+
+            CatGif.Controls.Add(label3);
+            label1.BackColor = Color.Transparent;
+
+            label1.Font = new Font("Arial", 16, FontStyle.Bold);
+            label2.Font = new Font("Arial", 16, FontStyle.Bold);
+            label3.Font = new Font("Arial", 16, FontStyle.Bold);
+
+
             timer1.Start();
 
             ChangeCursor();
@@ -128,7 +142,9 @@ namespace Memory
         // Het tonen van de speelbare gamemodes
         private async void PlayButton_Click(object sender, EventArgs e)
         {
-
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
             player.SoundLocation = "click.wav";
             player.Play();
             pictureBox2.Visible = false;
@@ -214,6 +230,9 @@ namespace Memory
         // Het teruggaan naar het standaard Hoofdmenu
         private async void Backbutton_Click_1(object sender, EventArgs e)
         {
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
             player.SoundLocation = "click.wav";
             player.Play();
             pictureBox2.Visible = true;
@@ -236,5 +255,10 @@ namespace Memory
             await Task.Delay(100);
             player.Stop();
         }
-	}
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

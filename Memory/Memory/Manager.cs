@@ -49,9 +49,9 @@ namespace Memory
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            var HomePage = new HomePage();
-            HomePage.Show();
-            timer2.Stop();
+            //var HomePage = new HomePage();
+            //HomePage.Show();
+            //timer2.Stop();
         }
 
         private void timer3_Tick(object sender, EventArgs e)
@@ -79,6 +79,13 @@ namespace Memory
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             timer5.Stop();
             
+        }
+
+        private void timer6_Tick(object sender, EventArgs e)
+        {
+            var intro = new intro();
+            intro.Show();
+            timer6.Stop();
         }
     }
 }
