@@ -156,15 +156,6 @@ namespace Memory
                             break;
                     }
 
-                    ServerClient.SendName();
-                    ServerClient.RecieveName();
-                    OtherPlayer = ServerClient.HostName;
-                    OtherPlayerLabel.Text = OtherPlayer;
-
-                    GeefIpLabel.Visible = false;
-                    IpTextBox.Visible = false;
-                    ConnectButton.Visible = false;
-
                     Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
                     foreach (Button x in ButtonGrid)
                     {
@@ -174,6 +165,15 @@ namespace Memory
                     {
                         x.Enabled = false;
                     }
+
+                    ServerClient.SendName();
+                    ServerClient.RecieveName();
+                    OtherPlayer = ServerClient.HostName;
+                    OtherPlayerLabel.Text = OtherPlayer;
+
+                    GeefIpLabel.Visible = false;
+                    IpTextBox.Visible = false;
+                    ConnectButton.Visible = false;
                 }
             }
         }
