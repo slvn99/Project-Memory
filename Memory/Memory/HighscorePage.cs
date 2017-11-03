@@ -106,11 +106,8 @@ namespace Memory
             if (ExitGame == DialogResult.Yes)
             {
                 Highscores_save.Reset();
-<<<<<<< HEAD
                 RunningSave.Reset();
-=======
                 this.Close();
->>>>>>> eebc490e5daf30628d3077ef7dcb885666ab0a7b
             }
 
             await Task.Delay(1000);
