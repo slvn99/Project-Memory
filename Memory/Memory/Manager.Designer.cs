@@ -36,6 +36,7 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
+            this.timer6 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 1;
+            this.timer2.Interval = 3550;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // timer3
@@ -72,6 +73,11 @@
             // timer5
             // 
             this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
+            // 
+            // timer6
+            // 
+            this.timer6.Interval = 1;
+            this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
             // Manager
             // 
@@ -95,5 +101,6 @@
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Timer timer5;
+        private System.Windows.Forms.Timer timer6;
     }
 }

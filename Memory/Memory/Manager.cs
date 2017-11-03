@@ -37,6 +37,8 @@ namespace Memory
 
             timer5.Start();
 
+            timer6.Start();
+
             player.SoundLocation = "intro_audio.wav";
             player.Play();
 
@@ -79,6 +81,13 @@ namespace Memory
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             timer5.Stop();
             
+        }
+
+        private void timer6_Tick(object sender, EventArgs e)
+        {
+            var intro = new intro();
+            intro.Show();
+            timer6.Stop();
         }
     }
 }
