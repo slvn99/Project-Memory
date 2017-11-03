@@ -182,10 +182,6 @@ namespace Memory
                 }
 
                 backgroundWorker.RunWorkerAsync();
-                
-
-                //MessageBox.Show("ERROR, je moet een naam invullen.", "Naam Invullen!", MessageBoxButtons.OK);
-
             }
         }
 
@@ -561,7 +557,14 @@ namespace Memory
 
         private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e) //backgroundworker medemogenlijk gemaakt door Jonathan :D danku voor de tip!
         {
-            ServerClient.RecieveTurn();
+            if (host == true)
+            {
+                ServerHost.RecieveTurn();
+            }
+            else
+            {
+                ServerClient.RecieveTurn();
+            }
         }
 
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -572,7 +575,14 @@ namespace Memory
             }
             else
             {
-                TurnArray = ServerClient.TurnArray;
+                if (host == true)
+                {
+                    TurnArray = ServerHost.TurnArray;
+                }
+                else
+                {
+                    TurnArray = ServerClient.TurnArray;
+                }
                 TurnPlayBack();
             }
         }
