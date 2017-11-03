@@ -19,7 +19,7 @@ namespace Memory
         public static TcpListener Listener;
         public static TcpClient Client; //client die geconnect is
         public static List<Point> TempRandomButLocation = new List<Point>();
-        public static string[] TurnArray = new string[1];
+        public static string[] TurnArray = new string[2];
 
         public static void StartServer()
         {

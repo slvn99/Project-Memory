@@ -479,7 +479,7 @@ namespace Memory
             }
             else
             {
-                TurnArray = ServerHost.TurnArray;
+                TurnArray = ServerClient.TurnArray;
                 TurnPlayBack();
             }
         }
