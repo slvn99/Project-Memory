@@ -22,6 +22,9 @@ namespace Memory
             RunningGamemode.Visible = false;
             Backbutton.Visible = false;
 
+            pictureBox1.Controls.Add(Backbutton);
+            Backbutton.BackColor = Color.Transparent;
+
             pictureBox1.Controls.Add(tableLayoutPanel1);
             tableLayoutPanel1.BackColor = Color.Transparent;
 
@@ -39,8 +42,7 @@ namespace Memory
             Cursor c = new Cursor(bmp.GetHicon());
             this.Cursor = c;
         }
-
-       
+      
         //openen settingspagina
         private async void SettingButton_Click(object sender, EventArgs e)
         {
@@ -55,7 +57,7 @@ namespace Memory
             Sluiten();
         }
 
-        //openen rankedpagina
+        //openen Highscorepagina
         private async void RankButton_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -89,6 +91,7 @@ namespace Memory
             GC.Collect();
             Close();
         }
+
         //onnodig?
         public void Tonen()
         {
@@ -96,7 +99,7 @@ namespace Memory
             Visible = true;
         }
 
-        //klopt deze code?
+
         private void HomePage_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(e.CloseReason == CloseReason.UserClosing)
@@ -104,6 +107,7 @@ namespace Memory
                 Application.Exit();
                 Manager.ManagerInstance.Close();
             }
+            //klopt deze code?
             else
             {
 
@@ -140,31 +144,6 @@ namespace Memory
             StandardGamemode.Visible = true;
             RunningGamemode.Visible = true;
             Backbutton.Visible = true;
-            await Task.Delay(100);
-            player.Stop();
-        }
-
-        //Het teruggaan naar het standaard Hoofdmenu
-        private async void Backbutton_Click(object sender, EventArgs e)
-        {
-            player.SoundLocation = "click.wav";
-            player.Play();
-            pictureBox2.Visible = true;
-            pictureBox3.Visible = true;
-            pictureBox4.Visible = true;
-            pictureBox6.Visible = true;
-            pictureBox7.Visible = true;
-            pictureBox8.Visible = true;
-            RankButton.Visible = true;
-            PlayButton.Visible = true;
-            SettingButton.Visible = true;
-            tableLayoutPanel1.Visible = true;
-            tableLayoutPanel3.Visible = true;
-            tableLayoutPanel4.Visible = true;
-            tableLayoutPanel5.Visible = true;
-            StandardGamemode.Visible = false;
-            RunningGamemode.Visible = false;
-            Backbutton.Visible = false;
             await Task.Delay(100);
             player.Stop();
         }
@@ -209,6 +188,31 @@ namespace Memory
         {
             intro.SendToBack();
             timer1.Stop();
+        }
+
+        //Het teruggaan naar het standaard Hoofdmenu
+        private async void Backbutton_Click_1(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            pictureBox2.Visible = true;
+            pictureBox3.Visible = true;
+            pictureBox4.Visible = true;
+            pictureBox6.Visible = true;
+            pictureBox7.Visible = true;
+            pictureBox8.Visible = true;
+            RankButton.Visible = true;
+            PlayButton.Visible = true;
+            SettingButton.Visible = true;
+            tableLayoutPanel1.Visible = true;
+            tableLayoutPanel3.Visible = true;
+            tableLayoutPanel4.Visible = true;
+            tableLayoutPanel5.Visible = true;
+            StandardGamemode.Visible = false;
+            RunningGamemode.Visible = false;
+            Backbutton.Visible = false;
+            await Task.Delay(100);
+            player.Stop();
         }
     }
 

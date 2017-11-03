@@ -43,19 +43,6 @@ namespace Memory
             this.Cursor = c;
         }
 
-        //Het teruggaan naar het Hoofdmenu
-		private async void HomeButton_Click_1(object sender, EventArgs e)
-		{
-			player.SoundLocation = "click.wav";
-			player.Play();
-			await Task.Delay(300);
-			player.Stop();
-			this.ShowInTaskbar = false;
-            this.Close();
-            this.Dispose();
-            GC.Collect();
-        }
-
         //Toepassen van het gekozen thema uit de combobox
 		public async void Apply_Click(object sender, EventArgs e)
 		{
@@ -105,14 +92,17 @@ namespace Memory
                 (IntPtr)APPCOMMAND_VOLUME_UP);
         }
 
-        //Het terugkeren naar het Hoofdmenu. alweer?
+        //Het terugkeren naar het Hoofdmenu
         private async void Home_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
             player.Play();
             await Task.Delay(300);
             player.Stop();
+            this.ShowInTaskbar = false;
             this.Close();
+            this.Dispose();
+            GC.Collect();
         }
 
         //volume dempen
