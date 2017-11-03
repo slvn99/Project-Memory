@@ -289,6 +289,7 @@ namespace Memory
                     {
                         x.Enabled = false;
                     }
+                    backgroundWorker.RunWorkerAsync();
                 }
             }
         }
@@ -659,7 +660,6 @@ namespace Memory
                     {
                         x.Enabled = true;
                     }
-                    backgroundWorker.RunWorkerAsync();
                 }
             }
         }
