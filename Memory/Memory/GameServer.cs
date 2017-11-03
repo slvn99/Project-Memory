@@ -227,7 +227,16 @@ namespace Memory
                         Kaart2Select.Visible = false;
                         TurnArray[0] = Kaart1Select.Name;
                         TurnArray[1] = Kaart2Select.Name;
-                        ServerHost.SendTurn();
+
+                        if (host == true)
+                        {
+                            ServerHost.SendTurn();
+                        }
+                        else
+                        {
+                            ServerClient.SendTurn();
+                        }
+
                         Kaart1Select = null;
                         Kaart2Select = null;
                         Point_Add();
@@ -262,14 +271,27 @@ namespace Memory
                             Kaart2Select.BackgroundImage = Resources.controller_cardback;
                             break;
                     }
+
+                    TurnArray[0] = Kaart1Select.Name;
+                    TurnArray[1] = Kaart2Select.Name;
+
+                    if (host == true)
+                    {
+                        ServerHost.SendTurn();
+                    }
+                    else
+                    {
+                        ServerClient.SendTurn();
+                    }
+
                     Kaart1Select = null;
                     Kaart2Select = null;
                     Change_Beurt();
                     GC.Collect();
 
-                    foreach (var x in ButtonGrid)
+                    foreach(var x in ButtonGrid)
                     {
-                        x.Enabled = true;
+                        x.Enabled = false;
                     }
                 }
             }
@@ -336,6 +358,7 @@ namespace Memory
                 }
             }
         }
+
         #region TurnKaart
         private void TurnKaart(Button x)
         {
@@ -588,28 +611,20 @@ namespace Memory
                             x.Enabled = false;
                         }
 
-                        await Task.Delay(1000);
+                        await Task.Delay(3000);
                         Kaart1Select.Visible = false;
                         Kaart2Select.Visible = false;
                         Kaart1Select = null;
                         Kaart2Select = null;
                         Point_Add();
                         GC.Collect();
-
-                        foreach (var x in ButtonGrid)
-                        {
-                            x.Enabled = true;
-                        }
                     }
                 }
                 else
                 {
-                    foreach (var x in ButtonGrid)
-                    {
-                        x.Enabled = false;
-                    }
-
-                    await Task.Delay(1000);
+                    TurnKaart(Kaart1Select);
+                    TurnKaart(Kaart2Select);
+                    await Task.Delay(3000);
                     switch (thema)
                     {
                         case "Media":
