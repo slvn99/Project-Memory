@@ -13,7 +13,7 @@ namespace Memory
 {
 	public partial class SettingsPage : Form
 	{
-        //commands voor het aanpassen van systeemgeluid
+        // Commands voor het aanpassen van systeemgeluid
         private const int APPCOMMAND_VOLUME_MUTE = 0x80000;
         private const int APPCOMMAND_VOLUME_UP = 0xA0000;
 		private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
@@ -35,7 +35,7 @@ namespace Memory
             ChangeCursor();
 		}
         
-        //Veranderen van de Mousecursor
+        // Veranderen van de Mousecursor
         void ChangeCursor()
         {
             Bitmap bmp = new Bitmap(Properties.Resources.cur1031);
@@ -43,7 +43,7 @@ namespace Memory
             this.Cursor = c;
         }
 
-        //Toepassen van het gekozen thema uit de combobox
+        // Toepassen van het gekozen thema uit de combobox
 		public async void Apply_Click(object sender, EventArgs e)
 		{
             player.SoundLocation = "click.wav";
@@ -55,7 +55,7 @@ namespace Memory
             player.Stop();
 		}
 
-        //magische code
+		// Magische code die de flikkering in de form fixt
 		protected override CreateParams CreateParams
 		{
 			get
@@ -66,7 +66,7 @@ namespace Memory
 			}
 		}
 
-        //event die de HomePage herstart bij het afluiten van de Settingspage
+        // Event die de HomePage herstart bij het afluiten van de Settingspage
 		private async void SettingsPage_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			Memory.HomePage f13 = new Memory.HomePage();
@@ -77,7 +77,7 @@ namespace Memory
             GC.Collect();
         }
 
-        //volume verlagen
+        // Volume verlagen
 		private void VolumeDown_Click(object sender, EventArgs e)
 		{
             SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
@@ -85,14 +85,14 @@ namespace Memory
 
         }
 
-        //volume verhogen
+        // Volume verhogen
         private void VolumeUp_Click(object sender, EventArgs e)
 		{
             SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
                 (IntPtr)APPCOMMAND_VOLUME_UP);
         }
 
-        //Het terugkeren naar het Hoofdmenu
+        // Het terugkeren naar het Hoofdmenu
         private async void Home_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -105,32 +105,35 @@ namespace Memory
             GC.Collect();
         }
 
-        //volume dempen
+        // Volume dempen
         private void MuteButton_Click(object sender, EventArgs e)
         {
             SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
                 (IntPtr)APPCOMMAND_VOLUME_MUTE);
         }
 
+		// Worden verwijderd
         private void ServerDebug_Click(object sender, EventArgs e)
         {
             Memory.GameServer g1 = new Memory.GameServer();
             g1.Show();
         }
 
-        private void RunningInThe90sButton_Click(object sender, EventArgs e)
+		// Worden verwijderd
+		private void RunningInThe90sButton_Click(object sender, EventArgs e)
         {
             Memory.RunningInThe90s inThe90S = new Memory.RunningInThe90s();
             inThe90S.Show();
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+		// Worden verwijderd
+		private void Button2_Click(object sender, EventArgs e)
         {
             Memory.intro intro = new Memory.intro();
             intro.Show();
         }
 
-        //geluiden uitschakelen
+        // Geluiden uitschakelen
 		private void StopMusicButton_Click(object sender, EventArgs e)
 		{
 			SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,

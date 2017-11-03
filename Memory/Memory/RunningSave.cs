@@ -41,10 +41,8 @@ namespace Memory
             }
 
             //lengte +1 ivm 1 extra entry
-            if (lengte < 11)
-            {
                 lengte = lengte + 1;
-            }
+            
 
             //koppelen van score en naam, score vooraan ivm sorteren
             string koppel =  score + " seconden gehaald door: " + naam;
@@ -78,13 +76,12 @@ namespace Memory
             }
             scorelist.CopyTo(scorearray);
             namelist.CopyTo(namearray);
-            i = 0;
-            int y = 0;
+           
             double temp = 0;
             string temp2 = "";
-            while (i< lengte)
+            for (int x = 0; x < lengte; x++)
             {
-                while (y< lengte-1)
+                for(int y = 0; y <lengte-1; y++)
                 {
                     if (scorearray[y] > scorearray[y + 1])
                     {
@@ -95,13 +92,15 @@ namespace Memory
                         temp2 = namearray[y + 1];
                         namearray[y + 1] = namearray[y];
                         namearray[y] = temp2;
-
-                    }
-                    y++;
-                }
-                i++;
+                    }                    
+                }               
             }
             i = 0;
+            //lengte +1 ivm 1 extra entry
+            if (lengte == 11)
+            {
+                lengte = 10;
+            }
             List<string> savelist = new List<string>();
             while (i< lengte)
             {

@@ -30,117 +30,20 @@ namespace Memory
                 //save string wordt gesplit op \n en in string array gezet
                 string[] savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
                 //toekennen van waarden uit array aan variabelen
-                try
+
+                for(int i = 0;i<savearray.Length;i++)
                 {
-                    if (savearray[0] != null)
+                    if (savearray[i] != null)
                     {
-                        label1.Text = savearray[0];
+                        var position = i +1;
+                        var labels = Controls.Find("label" + position, true);
+                        if(labels.Length > 0)
+                        {
+                            var label = (Label)labels[0];
+                            label.Text = savearray[i];
+                        }
                     }
                 }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[1] != null)
-                    {
-                        label2.Text = savearray[1];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[2] != null)
-                    {
-                        label3.Text = savearray[2];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-                try
-                {
-                    if (savearray[3] != null)
-                    {
-                        label4.Text = savearray[3];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[4] != null)
-                    {
-                        label5.Text = savearray[4];
-                    }
-                }
-
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[5] != null)
-                    {
-                        label6.Text = savearray[5];
-                    }
-                }
-
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[6] != null)
-                    {
-                        label7.Text = savearray[6];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[7] != null)
-                    {
-                        label8.Text = savearray[7];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[8] != null)
-                    {
-                        label9.Text = savearray[8];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[9] != null)
-                    {
-                        label10.Text = savearray[9];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
                 ChangeCursor();
             }
 
@@ -203,256 +106,139 @@ namespace Memory
             if (ExitGame == DialogResult.Yes)
             {
                 Highscores_save.Reset();
+                RunningSave.Reset();
+                this.Close();
             }
 
             await Task.Delay(1000);
             player.Stop();
-            this.Close();
         }
 
-        //wat is dit?
+        //Het tonen van de Highscorepage aangepast op de gamemode
         private void Listswitchbutton_Click(object sender, EventArgs e)
         {
             if (Gamemodelabel.Text == "Standard Gamemode")
             {
+                string save = RunningSave.LoadData();
                 Gamemodelabel.Text = "Running Gamemode";
-                string save = Highscores_save.LoadData();
-                string runningsave = RunningSave.LoadData();
 
-                //save string wordt gesplit op \n en in string array gezet
-                string[] savearray = runningsave.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
-                //toekennen van waarden uit array aan variabelen
-                try
+                if (save == "Er is nog geen\nsave file\naanwezig")
                 {
-                    if (savearray[0] != null)
+                    for (int i = 0; i < 10; i++)
                     {
-                        label1.Text = savearray[0];
-                    }
-                }
-                catch (Exception)
-                {
-                }
+                        try
+                        {
+                            var position = i + 1;
+                            var labels = Controls.Find("label" + position, true);
+                            if (labels.Length > 0)
+                            {
+                                var label = (Label)labels[0];
+                                label.Text = "";
+                            }
+                        }
+                        catch
+                        {
 
-                try
-                {
-                    if (savearray[1] != null)
-                    {
-                        label2.Text = savearray[1];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[2] != null)
-                    {
-                        label3.Text = savearray[2];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-                try
-                {
-                    if (savearray[3] != null)
-                    {
-                        label4.Text = savearray[3];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[4] != null)
-                    {
-                        label5.Text = savearray[4];
+                        }
                     }
                 }
 
-                catch (Exception)
+                else
                 {
-                }
 
-                try
-                {
-                    if (savearray[5] != null)
+                    //save string wordt gesplit op \n en in string array gezet
+                    string[] savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+                    //toekennen van waarden uit array aan variabelen
+
+                    for (int i = 0; i < 10; i++)
                     {
-                        label6.Text = savearray[5];
+                        try
+                        {
+                            if (savearray[i] != null)
+                            {
+                                var position = i + 1;
+                                var labels = Controls.Find("label" + position, true);
+                                if (labels.Length > 0)
+                                {
+                                    var label = (Label)labels[0];
+                                    label.Text = savearray[i];
+                                }
+                            }
+                        }
+                        catch
+                        {
+                            var position = i + 1;
+                            var labels = Controls.Find("label" + position, true);
+                            if (labels.Length > 0)
+                            {
+                                var label = (Label)labels[0];
+                                label.Text = "";
+                            }
+                        }
                     }
-                }
-
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[6] != null)
-                    {
-                        label7.Text = savearray[6];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[7] != null)
-                    {
-                        label8.Text = savearray[7];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[8] != null)
-                    {
-                        label9.Text = savearray[8];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[9] != null)
-                    {
-                        label10.Text = savearray[9];
-                    }
-                }
-                catch (Exception)
-                {
                 }
             }
 
             else if (Gamemodelabel.Text == "Running Gamemode")
             {
-                Gamemodelabel.Text = "Standard Gamemode";
                 string save = Highscores_save.LoadData();
-                string runningsave = RunningSave.LoadData();
+                Gamemodelabel.Text = "Standard Gamemode";
 
-                //save string wordt gesplit op \n en in string array gezet
-                string[] savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
-                //toekennen van waarden uit array aan variabelen
-                try
+                if (save == "Er is nog geen\nsave file\naanwezig")
                 {
-                    if (savearray[0] != null)
+                    for (int i = 0; i < 10; i++)
                     {
-                        label1.Text = savearray[0];
-                    }
-                }
-                catch (Exception)
-                {
-                }
+                        try
+                        {
+                            var position = i + 1;
+                            var labels = Controls.Find("label" + position, true);
+                            if (labels.Length > 0)
+                            {
+                                var label = (Label)labels[0];
+                                label.Text = "";
+                            }
+                        }
+                        catch
+                        {
 
-                try
-                {
-                    if (savearray[1] != null)
-                    {
-                        label2.Text = savearray[1];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[2] != null)
-                    {
-                        label3.Text = savearray[2];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-                try
-                {
-                    if (savearray[3] != null)
-                    {
-                        label4.Text = savearray[3];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[4] != null)
-                    {
-                        label5.Text = savearray[4];
+                        }
                     }
                 }
 
-                catch (Exception)
+                else
                 {
-                }
 
-                try
-                {
-                    if (savearray[5] != null)
+                    //save string wordt gesplit op \n en in string array gezet
+                    string[] savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+                    //toekennen van waarden uit array aan variabelen
+
+                    for (int i = 0; i<10; i++)
                     {
-                        label6.Text = savearray[5];
+                        try
+                        {
+                            if (savearray[i] != null)
+                            {
+                                var position = i + 1;
+                                var labels = Controls.Find("label" + position, true);
+                                if (labels.Length > 0)
+                                {
+                                    var label = (Label)labels[0];
+                                    label.Text = savearray[i];
+                                }
+                            }
+                        }
+                        catch
+                        {
+                            var position = i + 1;
+                            var labels = Controls.Find("label" + position, true);
+                            if (labels.Length > 0)
+                            {
+                                var label = (Label)labels[0];
+                                label.Text = "";
+                            }
+                        }                      
                     }
-                }
-
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[6] != null)
-                    {
-                        label7.Text = savearray[6];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[7] != null)
-                    {
-                        label8.Text = savearray[7];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[8] != null)
-                    {
-                        label9.Text = savearray[8];
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                try
-                {
-                    if (savearray[9] != null)
-                    {
-                        label10.Text = savearray[9];
-                    }
-                }
-                catch (Exception)
-                {
-                }
+                }              
             }
         }
     }
