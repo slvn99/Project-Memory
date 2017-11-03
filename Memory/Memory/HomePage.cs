@@ -220,13 +220,6 @@ namespace Memory
 		//	f.Show();
 		}
 
-		// Het Verstoppen van Intro nadat hij klaar is
-		private void Timer1_Tick(object sender, EventArgs e)
-        {
-            intro.SendToBack();
-            timer1.Stop();
-        }
-
         // Het teruggaan naar het standaard Hoofdmenu
         private async void Backbutton_Click_1(object sender, EventArgs e)
         {

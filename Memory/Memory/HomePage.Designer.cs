@@ -49,7 +49,6 @@
             this.RunningGamemode = new System.Windows.Forms.PictureBox();
             this.StandardGamemode = new System.Windows.Forms.PictureBox();
             this.CatGif = new System.Windows.Forms.PictureBox();
-            this.intro = new System.Windows.Forms.PictureBox();
             this.Multiplayer = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -73,7 +72,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.RunningGamemode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StandardGamemode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CatGif)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.intro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Multiplayer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -278,11 +276,6 @@
             this.PlayButton.TabStop = false;
             this.PlayButton.Click += new System.EventHandler(this.PlayButton_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 3700;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
             // Backbutton
             // 
             this.Backbutton.BackColor = System.Drawing.Color.Transparent;
@@ -329,15 +322,6 @@
             this.CatGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CatGif.TabIndex = 0;
             this.CatGif.TabStop = false;
-            // 
-            // intro
-            // 
-            this.intro.Image = global::Memory.Properties.Resources.intro;
-            this.intro.Location = new System.Drawing.Point(0, 0);
-            this.intro.Name = "intro";
-            this.intro.Size = new System.Drawing.Size(1155, 655);
-            this.intro.TabIndex = 7;
-            this.intro.TabStop = false;
             // 
             // Multiplayer
             // 
@@ -403,7 +387,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.CatGif);
-            this.Controls.Add(this.intro);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
@@ -427,7 +410,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.RunningGamemode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StandardGamemode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CatGif)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.intro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Multiplayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -454,7 +436,6 @@
         private System.Windows.Forms.PictureBox RankButton;
         private System.Windows.Forms.PictureBox StandardGamemode;
         private System.Windows.Forms.PictureBox RunningGamemode;
-        private System.Windows.Forms.PictureBox intro;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox Backbutton;
 		private System.Windows.Forms.PictureBox Multiplayer;

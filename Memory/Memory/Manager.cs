@@ -37,6 +37,8 @@ namespace Memory
 
             timer5.Start();
 
+            timer6.Start();
+
             player.SoundLocation = "intro_audio.wav";
             player.Play();
 

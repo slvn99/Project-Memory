@@ -14,14 +14,9 @@ namespace Memory
     {
         public intro()
         {
-            //this.Default();
-
             InitializeComponent();
 
             timer1.Start();
-
-            //axWindowsMediaPlayer1.URL = "intro.mp4";
-            //axWindowsMediaPlayer1.Ctlcontrols.play();
         }
         public void Sluiten()
         {

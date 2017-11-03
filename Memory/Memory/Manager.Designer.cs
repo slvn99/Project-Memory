@@ -57,7 +57,7 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 1;
+            this.timer2.Interval = 3550;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // timer3
@@ -76,7 +76,7 @@
             // 
             // timer6
             // 
-            this.timer6.Interval = 2;
+            this.timer6.Interval = 1;
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
             // Manager
