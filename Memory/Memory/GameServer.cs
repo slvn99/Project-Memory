@@ -55,31 +55,50 @@ namespace Memory
             }
         }
 
+        void RandomizeButtons()
+        {
+            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+            foreach (Button x in ButtonGrid)
+            {
+                PointLocation.Add(x.Location);
+            }
+
+            Random ButtonLocatie = new Random();
+            foreach (Button button in ButtonGrid)
+            {
+                int next = ButtonLocatie.Next(PointLocation.Count);
+                Point p = PointLocation[next];
+                button.Location = p;
+                PointLocation.Remove(p);
+            }
+
+            foreach (Button x in ButtonGrid)
+            {
+                RandomButLocation.Add(x.Location);
+            }
+        }
+
         void SetupGame()
         {
             if (host == true)
             {
+                ServerHost.SendGameState();
+                ServerHost.RecieveName();
+                OtherPlayer = ServerHost.ClientName;
+                OtherPlayerLabel.Text = OtherPlayer;
+                ServerHost.SendName();
+
+                HC_Label.Visible = false;
+                HostButton.Visible = false;
+                ClientButton.Visible = false;
+
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
                 foreach (Button x in ButtonGrid)
                 {
-                    PointLocation.Add(x.Location);
-                }
-
-                Random ButtonLocatie = new Random();
-                foreach (Button button in ButtonGrid)
-                {
-                    int next = ButtonLocatie.Next(PointLocation.Count);
-                    Point p = PointLocation[next];
-                    button.Location = p;
-                    PointLocation.Remove(p);
-                }
-
-                foreach (Button x in ButtonGrid)
-                {
-                    RandomButLocation.Add(x.Location);
+                    x.Visible = true;
                 }
             }
-            else if(host == false)
+            else
             {
                 ServerClient.RecieveGamaData();
                 Point[] ButtonGridLocation = ServerClient.TempRandomButLocation.ToArray();
@@ -141,6 +160,10 @@ namespace Memory
                     ServerClient.RecieveName();
                     OtherPlayer = ServerClient.HostName;
                     OtherPlayerLabel.Text = OtherPlayer;
+
+                    GeefIpLabel.Visible = false;
+                    IpTextBox.Visible = false;
+                    ConnectButton.Visible = false;
 
                     Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
                     foreach (Button x in ButtonGrid)
@@ -458,7 +481,8 @@ namespace Memory
         private void HostButton_Click(object sender, EventArgs e)
         {
             host = true;
-            SetupGame();
+            ClientButton.Enabled = false;
+            RandomizeButtons();
             ServerHost.StartServer();
             CheckConnect();
         }
@@ -474,11 +498,7 @@ namespace Memory
             }
             else
             {
-                ServerHost.SendGameState();
-                ServerHost.RecieveName();
-                OtherPlayer = ServerHost.ClientName;
-                OtherPlayerLabel.Text = OtherPlayer;
-                ServerHost.SendName();
+                SetupGame();
             }
         }
 
