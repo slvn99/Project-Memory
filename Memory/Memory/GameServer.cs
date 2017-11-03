@@ -227,6 +227,7 @@ namespace Memory
                         Kaart2Select.Visible = false;
                         TurnArray[0] = Kaart1Select.Name;
                         TurnArray[1] = Kaart2Select.Name;
+                        ServerHost.SendTurn();
                         Kaart1Select = null;
                         Kaart2Select = null;
                         Point_Add();
