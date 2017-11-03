@@ -231,6 +231,7 @@ namespace Memory
             tableLayoutPanel5.Visible = true;
             StandardGamemode.Visible = false;
             RunningGamemode.Visible = false;
+			Multiplayer.Visible = false;
             Backbutton.Visible = false;
             await Task.Delay(100);
             player.Stop();
