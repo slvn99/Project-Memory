@@ -13,7 +13,8 @@ namespace Memory
 {
     public partial class GameServer : Form
     {
-        public static string PlayerBeurt, LocalPlayer, OtherPlayer;
+        public static string PlayerBeurt, LocalPlayer, OtherPlayer, player1, player2;
+        public static Button[] TurnArray;
         int PuntenLocalPlayer, PuntenOtherPlayer, TotaalMatches;
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         public static Label TempConLabel = new Label();
@@ -39,7 +40,6 @@ namespace Memory
             HC_Label.Visible = false;
             HostButton.Visible = false;
             ClientButton.Visible = false;
-            ConLabel.Visible = false;
             GeefIpLabel.Visible = false;
             IpTextBox.Visible = false;
             ConnectButton.Visible = false;
@@ -82,10 +82,14 @@ namespace Memory
         {
             if (host == true)
             {
+                player1 = LocalPlayer;
                 ServerHost.SendGameState();
                 ServerHost.RecieveName();
                 OtherPlayer = ServerHost.ClientName;
                 OtherPlayerLabel.Text = OtherPlayer;
+                player2 = OtherPlayer;
+                PlayerBeurt = player1;
+                BeurtLabel.Text = PlayerBeurt;
                 ServerHost.SendName();
 
                 HC_Label.Visible = false;
@@ -100,6 +104,7 @@ namespace Memory
             }
             else
             {
+                player2 = LocalPlayer;
                 ServerClient.RecieveGamaData();
                 Point[] ButtonGridLocation = ServerClient.TempRandomButLocation.ToArray();
                 for (int i = 0; i < ButtonGridLocation.Length; i++)
@@ -156,11 +161,14 @@ namespace Memory
                             break;
                     }
                 }
-                
+
                 ServerClient.SendName();
                 ServerClient.RecieveName();
                 OtherPlayer = ServerClient.HostName;
                 OtherPlayerLabel.Text = OtherPlayer;
+                player1 = OtherPlayer;
+                PlayerBeurt = player1;
+                BeurtLabel.Text = PlayerBeurt;
 
                 GeefIpLabel.Visible = false;
                 IpTextBox.Visible = false;
@@ -172,9 +180,16 @@ namespace Memory
                     x.Visible = true;
                     x.Enabled = false;
                 }
+
+                backgroundWorker.RunWorkerAsync();
+                
+
+                //MessageBox.Show("ERROR, je moet een naam invullen.", "Naam Invullen!", MessageBoxButtons.OK);
+
             }
         }
 
+        
         private void Click_kaart(Button Buttonclick)
         {
             if (Kaart1Select == null)
@@ -210,6 +225,8 @@ namespace Memory
                         await Task.Delay(1000);
                         Kaart1Select.Visible = false;
                         Kaart2Select.Visible = false;
+                        TurnArray[0] = Kaart1Select;
+                        TurnArray[1] = Kaart2Select;
                         Kaart1Select = null;
                         Kaart2Select = null;
                         Point_Add();
@@ -253,10 +270,6 @@ namespace Memory
                     {
                         x.Enabled = true;
                     }
-                    foreach (var x in ButtonGrid)
-                    {
-                        x.Text = "";
-                    }
                 }
             }
         }
@@ -281,13 +294,13 @@ namespace Memory
 
         private void Change_Beurt()
         {
-            if (PlayerBeurt == LocalPlayer)
+            if (PlayerBeurt == player1)
             {
-               // PlayerBeurt = player2;
+                PlayerBeurt = player2;
             }
             else
             {
-               // PlayerBeurt = player1;
+                PlayerBeurt = player1;
             }
             BeurtLabel.Text = PlayerBeurt;
         }
@@ -453,6 +466,38 @@ namespace Memory
         }
         #endregion
 
+        private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e) //backgroundworker medemogenlijk gemaakt door Jonathan :D danku voor de tip!
+        {
+            ServerClient.RecieveTurn();
+        }
+
+        private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (backgroundWorker.CancellationPending == true)
+            {
+                MessageBox.Show("ERROR, connectie verloren.", "Connection Lost!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                TurnArray = ServerClient.TurnArray;
+                TurnPlayBack();
+            }
+        }
+
+        private void TurnPlayBack()
+        {
+            foreach (var x in TurnArray)
+            {
+
+            }
+
+            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+            foreach (Button x in ButtonGrid)
+            {
+                //if ()
+            }
+        }
+
         private void ConnectButton_Click(object sender, EventArgs e)
         {
             ServerClient.HostIP = IpTextBox.Text;
@@ -504,16 +549,23 @@ namespace Memory
 
         private void NaamButton_Click(object sender, EventArgs e)
         {
-            LocalPlayer = NaamTextBox.Text;
-            LocalPlayerLabel.Text = LocalPlayer;
+            if (NaamTextBox.Text != "")
+            {
+                LocalPlayer = NaamTextBox.Text;
+                LocalPlayerLabel.Text = LocalPlayer;
 
-            NaamLabel.Visible = false;
-            NaamTextBox.Visible = false;
-            NaamButton.Visible = false;
-            HC_Label.Visible = true;
-            HostButton.Visible = true;
-            ClientButton.Visible = true;
-            ConLabel.Visible = true;
+                NaamLabel.Visible = false;
+                NaamTextBox.Visible = false;
+                NaamButton.Visible = false;
+                HC_Label.Visible = true;
+                HostButton.Visible = true;
+                ClientButton.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("ERROR, je moet een naam invullen.", "Naam Invullen!", MessageBoxButtons.OK);
+            }
+            
         }
 
         void ChangeCursor()

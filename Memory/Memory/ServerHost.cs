@@ -19,6 +19,7 @@ namespace Memory
         public static TcpListener Listener;
         public static TcpClient Client; //client die geconnect is
         public static List<Point> TempRandomButLocation = new List<Point>();
+        public static Button[] TurnArray = new Button[1];
 
         public static void StartServer()
         {
@@ -65,6 +66,20 @@ namespace Memory
             var bin = new BinaryFormatter();
             ClientName = (string)bin.Deserialize(Client.GetStream());
         }
+
+        public static void SendTurn()
+        {
+            var bin = new BinaryFormatter();
+            bin.Serialize(Client.GetStream(), TurnArray);
+        }
+
+        public static void RecieveTurn()
+        {
+            var bin = new BinaryFormatter();
+            ClientName = (string)bin.Deserialize(Client.GetStream());
+        }
+
+        
 
         public static bool SendMessage(string message)
         {

@@ -14,12 +14,12 @@ namespace Memory
 {
     class ServerClient
     {
-        public static string HostIP, ClientName, HostName;
+        public static string HostIP, HostName;
         public static bool ClientConnection;
         static int PacketSize = 1024 * 1024;
         public static TcpClient Client;
         public static List<Point> TempRandomButLocation = new List<Point>();
-        public static Array[] TurnArray = new Array[1];
+        public static Button[] TurnArray = new Button[1];
 
         public static void StartClient()
         {
@@ -44,6 +44,7 @@ namespace Memory
 
         public static void SendTurn()
         {
+            TurnArray = GameServer.TurnArray;
             var bin = new BinaryFormatter();
             bin.Serialize(Client.GetStream(), TurnArray);
         }
@@ -51,7 +52,7 @@ namespace Memory
         public static void RecieveTurn()
         {
             var bin = new BinaryFormatter();
-            var turnRes = bin.Deserialize(Client.GetStream());
+            TurnArray =(Button[])bin.Deserialize(Client.GetStream());
         }
 
         public static void SendName()
