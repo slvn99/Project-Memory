@@ -330,7 +330,7 @@
 			// intro
 			// 
 			this.intro.Image = global::Memory.Properties.Resources.intro;
-			this.intro.Location = new System.Drawing.Point(-76, -62);
+			this.intro.Location = new System.Drawing.Point(0, 0);
 			this.intro.Name = "intro";
 			this.intro.Size = new System.Drawing.Size(1155, 655);
 			this.intro.TabIndex = 7;
@@ -338,7 +338,7 @@
 			// 
 			// Multiplayer
 			// 
-			this.Multiplayer.BackgroundImage = global::Memory.Properties.Resources.hotseat;
+			this.Multiplayer.BackgroundImage = global::Memory.Properties.Resources.multiplayer;
 			this.Multiplayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.Multiplayer.Location = new System.Drawing.Point(426, 178);
 			this.Multiplayer.Name = "Multiplayer";
@@ -353,7 +353,6 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1063, 593);
-			this.Controls.Add(this.intro);
 			this.Controls.Add(this.Multiplayer);
 			this.Controls.Add(this.Backbutton);
 			this.Controls.Add(this.RunningGamemode);
@@ -361,6 +360,7 @@
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.tableLayoutPanel2);
 			this.Controls.Add(this.CatGif);
+			this.Controls.Add(this.intro);
 			this.Name = "HomePage";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "HomePage";
