@@ -77,7 +77,7 @@ namespace Memory
         public static void RecieveTurn()
         {
             var bin = new BinaryFormatter();
-            ClientName = (string)bin.Deserialize(Client.GetStream());
+            TurnArray = (string[])bin.Deserialize(Client.GetStream());
         }
 
         
