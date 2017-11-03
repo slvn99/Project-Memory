@@ -218,7 +218,7 @@ namespace Memory
                             x.Enabled = false;
                         }
 
-                        await Task.Delay(1000);
+                        await Task.Delay(3000);
                         Kaart1Select.Visible = false;
                         Kaart2Select.Visible = false;
                         TurnArray[0] = Kaart1Select.Name;
@@ -251,7 +251,7 @@ namespace Memory
                         x.Enabled = false;
                     }
 
-                    await Task.Delay(1000);
+                    await Task.Delay(3000);
                     switch (thema)
                     {
                         case "Media":
@@ -508,7 +508,7 @@ namespace Memory
 
         private void GridButton5Dup_Click(object sender, EventArgs e)
         {
-            TurnKaart(GridButton5);
+            TurnKaart(GridButton5Dup);
             Click_kaart(GridButton5Dup);
             Check_kaart();
         }
@@ -628,6 +628,7 @@ namespace Memory
                         Kaart1Select = null;
                         Kaart2Select = null;
                         Point_Add();
+                        backgroundWorker.RunWorkerAsync();
                         GC.Collect();
                     }
                 }
