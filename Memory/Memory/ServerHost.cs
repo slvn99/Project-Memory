@@ -15,10 +15,10 @@ namespace Memory
     class ServerHost
     {
         static int PacketSize = 1024 * 1024;
+        public static string ClientName;
         public static TcpListener Listener;
         public static TcpClient Client; //client die geconnect is
         public static List<Point> TempRandomButLocation = new List<Point>();
-        public static Button tempGridbutton = new Button();
 
         public static void StartServer()
         {
@@ -36,8 +36,15 @@ namespace Memory
 
         public static void ClientConnected(IAsyncResult ar)
         {
-            Client = Listener.EndAcceptTcpClient(ar);
-            GameServer.Connectie = true;
+            try
+            {
+                Client = Listener.EndAcceptTcpClient(ar);
+                GameServer.Connectie = true;
+            }
+            catch
+            {
+
+            }
         }
 
         public static void SendGameState()
@@ -45,6 +52,18 @@ namespace Memory
             TempRandomButLocation = GameServer.RandomButLocation;
             var bin = new BinaryFormatter();
             bin.Serialize(Client.GetStream(), TempRandomButLocation);
+        }
+
+        public static void SendName()
+        {
+            var bin = new BinaryFormatter();
+            bin.Serialize(Client.GetStream(), GameServer.LocalPlayer);
+        }
+
+        public static void RecieveName()
+        {
+            var bin = new BinaryFormatter();
+            ClientName = (string)bin.Deserialize(Client.GetStream());
         }
 
         public static bool SendMessage(string message)

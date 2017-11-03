@@ -13,8 +13,8 @@ namespace Memory
 {
     public partial class GameServer : Form
     {
-        string PlayerBeurt, player1, player2;
-        int PuntenPlayer1, PuntenPlayer2, TotaalMatches;
+        public static string PlayerBeurt, LocalPlayer, OtherPlayer;
+        int PuntenLocalPlayer, PuntenOtherPlayer, TotaalMatches;
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         public static Label TempConLabel = new Label();
         Button Kaart1Select, Kaart2Select;
@@ -40,6 +40,9 @@ namespace Memory
             HostButton.Visible = false;
             ClientButton.Visible = false;
             ConLabel.Visible = false;
+            GeefIpLabel.Visible = false;
+            IpTextBox.Visible = false;
+            ConnectButton.Visible = false;
         }
 
         protected override CreateParams CreateParams //THE MAGIC CODE "It Just Works™"
@@ -51,27 +54,101 @@ namespace Memory
                 return cp;
             }
         }
-        
+
         void SetupGame()
         {
-            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
-            foreach (Button x in ButtonGrid)
+            if (host == true)
             {
-                PointLocation.Add(x.Location);
-            }
+                Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+                foreach (Button x in ButtonGrid)
+                {
+                    PointLocation.Add(x.Location);
+                }
 
-            Random ButtonLocatie = new Random();
-            foreach (Button button in ButtonGrid)
-            {
-                int next = ButtonLocatie.Next(PointLocation.Count);
-                Point p = PointLocation[next];
-                button.Location = p;
-                PointLocation.Remove(p);
-            }
+                Random ButtonLocatie = new Random();
+                foreach (Button button in ButtonGrid)
+                {
+                    int next = ButtonLocatie.Next(PointLocation.Count);
+                    Point p = PointLocation[next];
+                    button.Location = p;
+                    PointLocation.Remove(p);
+                }
 
-            foreach (Button x in ButtonGrid)
+                foreach (Button x in ButtonGrid)
+                {
+                    RandomButLocation.Add(x.Location);
+                }
+            }
+            else if(host == false)
             {
-                RandomButLocation.Add(x.Location);
+                ServerClient.RecieveGamaData();
+                Point[] ButtonGridLocation = ServerClient.TempRandomButLocation.ToArray();
+                for (int i = 0; i < ButtonGridLocation.Length; i++)
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            GridButton1.Location = ButtonGridLocation[i];
+                            break;
+                        case 1:
+                            GridButton1Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 2:
+                            GridButton2.Location = ButtonGridLocation[i];
+                            break;
+                        case 3:
+                            GridButton2Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 4:
+                            GridButton3.Location = ButtonGridLocation[i];
+                            break;
+                        case 5:
+                            GridButton3Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 6:
+                            GridButton4.Location = ButtonGridLocation[i];
+                            break;
+                        case 7:
+                            GridButton4Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 8:
+                            GridButton5.Location = ButtonGridLocation[i];
+                            break;
+                        case 9:
+                            GridButton5Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 10:
+                            GridButton6.Location = ButtonGridLocation[i];
+                            break;
+                        case 11:
+                            GridButton6Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 12:
+                            GridButton7.Location = ButtonGridLocation[i];
+                            break;
+                        case 13:
+                            GridButton7Dup.Location = ButtonGridLocation[i];
+                            break;
+                        case 14:
+                            GridButton8.Location = ButtonGridLocation[i];
+                            break;
+                        case 15:
+                            GridButton8Dup.Location = ButtonGridLocation[i];
+                            break;
+                    }
+
+                    ServerClient.SendName();
+                    ServerClient.RecieveName();
+                    OtherPlayer = ServerClient.HostName;
+                    OtherPlayerLabel.Text = OtherPlayer;
+
+                    Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+                    foreach (Button x in ButtonGrid)
+                    {
+                        x.Visible = true;
+                        x.Enabled = false;
+                    }
+                }
             }
         }
 
@@ -163,31 +240,31 @@ namespace Memory
 
         private void Point_Add()
         {
-            if (PlayerBeurt == player1)
+            if (PlayerBeurt == LocalPlayer)
             {
-                PuntenPlayer1++;
+                PuntenLocalPlayer++;
                 TotaalMatches++;
-                Points1.Text = Convert.ToString(PuntenPlayer1);
+                LocalPlayerLabel.Text = Convert.ToString(PuntenLocalPlayer);
                 EndGame_Check();
             }
             else
             {
-                PuntenPlayer2++;
+                PuntenOtherPlayer++;
                 TotaalMatches++;
-                Points2.Text = Convert.ToString(PuntenPlayer2);
+                OtherPlayerLabel.Text = Convert.ToString(OtherPlayer);
                 EndGame_Check();
             }
         }
 
         private void Change_Beurt()
         {
-            if (PlayerBeurt == player1)
+            if (PlayerBeurt == LocalPlayer)
             {
-                PlayerBeurt = player2;
+               // PlayerBeurt = player2;
             }
             else
             {
-                PlayerBeurt = player1;
+               // PlayerBeurt = player1;
             }
             BeurtLabel.Text = PlayerBeurt;
         }
@@ -196,20 +273,19 @@ namespace Memory
         {
             if (TotaalMatches == 8)
             {
-                if (PuntenPlayer1 > PuntenPlayer2)
+                if (PuntenLocalPlayer > PuntenOtherPlayer)
                 {
                     player.SoundLocation = "tada.wav";
                     player.Play();
-                    MessageBox.Show("Gefeliciteerd " + player1 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
-                    //Memory.Highscores_save.SaveData(player1, PuntenPlayer1);
+                    MessageBox.Show("Gefeliciteerd " + LocalPlayer + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
                     await Task.Delay(2000);
                     player.Stop();
                 }
-                else if (PuntenPlayer1 == PuntenPlayer2)
+                else if (PuntenLocalPlayer == PuntenOtherPlayer)
                 {
                     player.SoundLocation = "wow.wav";
                     player.Play();
-                    MessageBox.Show("WOW, " + player1 + " heeft gelijk gespeeld met " + player2 + "!", "Einde Spel", MessageBoxButtons.OK);
+                    MessageBox.Show("WOW, " + LocalPlayer + " heeft gelijk gespeeld met " + OtherPlayer + "!", "Einde Spel", MessageBoxButtons.OK);
                     await Task.Delay(2000);
                     player.Stop();
                 }
@@ -217,17 +293,11 @@ namespace Memory
                 {
                     player.SoundLocation = "tada.wav";
                     player.Play();
-                    MessageBox.Show("Gefeliciteerd " + player2 + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
-                    //Memory.Highscores_save.SaveData(player2, PuntenPlayer2);
+                    MessageBox.Show("Gefeliciteerd " + OtherPlayer + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
                     await Task.Delay(2000);
                     player.Stop();
                 }
             }
-        }
-
-        private void Play_Game()
-        {
-            
         }
 
         #region kaarten
@@ -360,97 +430,64 @@ namespace Memory
         }
         #endregion
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void ConnectButton_Click(object sender, EventArgs e)
         {
-            if (host == true)
+            ServerClient.HostIP = IpTextBox.Text;
+            ServerClient.StartClient();
+            if (ServerClient.ClientConnection == true)
             {
-                ServerHost.SendGameState();
-            }
-            else
-            {
-                //ConLabel.Text = ServerClient.ReceiveMessage();
-                ServerClient.RecieveGamaData();
-                Point[] ButtonGridLocation = ServerClient.TempRandomButLocation.ToArray();
-                for (int i = 0; i < ButtonGridLocation.Length; i++)
-                {
-                    switch (i)
-                    {
-                        case 0:
-                            GridButton1.Location = ButtonGridLocation[i];
-                            break;
-                        case 1:
-                            GridButton1Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 2:
-                            GridButton2.Location = ButtonGridLocation[i];
-                            break;
-                        case 3:
-                            GridButton2Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 4:
-                            GridButton3.Location = ButtonGridLocation[i];
-                            break;
-                        case 5:
-                            GridButton3Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 6:
-                            GridButton4.Location = ButtonGridLocation[i];
-                            break;
-                        case 7:
-                            GridButton4Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 8:
-                            GridButton5.Location = ButtonGridLocation[i];
-                            break;
-                        case 9:
-                            GridButton5Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 10:
-                            GridButton6.Location = ButtonGridLocation[i];
-                            break;
-                        case 11:
-                            GridButton6Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 12:
-                            GridButton7.Location = ButtonGridLocation[i];
-                            break;
-                        case 13:
-                            GridButton7Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 14:
-                            GridButton8.Location = ButtonGridLocation[i];
-                            break;
-                        case 15:
-                            GridButton8Dup.Location = ButtonGridLocation[i];
-                            break;
-                    }
-                }
+                SetupGame();
             }
         }
 
-        private void HostButton_Click(object sender, EventArgs e)
+        private void IpTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ServerHost.tempGridbutton.Location = GridButton1.Location;
-            SetupGame();
-            ServerHost.StartServer();
-            host = true;
-
-            do
-            {
-
-            } while (Connectie == false);
-
+            e.Handled = char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
         }
 
         private void ClientButton_Click(object sender, EventArgs e)
         {
-            ServerClient.StartClient();
+            GeefIpLabel.Visible = true;
+            IpTextBox.Visible = true;
+            ConnectButton.Visible = true;
+            HC_Label.Visible = false;
+            HostButton.Visible = false;
+            ClientButton.Visible = false;
+        }
+
+        private void HostButton_Click(object sender, EventArgs e)
+        {
+            host = true;
+            SetupGame();
+            ServerHost.StartServer();
+            CheckConnect();
+        }
+
+        private async void CheckConnect()
+        {
+            await Task.Delay(10000);
+
+            if (Connectie == false)
+            {
+                MessageBox.Show("ERROR, Connectie timed out", "Time Out", MessageBoxButtons.OK);
+                ServerHost.Listener.Stop();
+            }
+            else
+            {
+                ServerHost.SendGameState();
+                ServerHost.RecieveName();
+                OtherPlayer = ServerHost.ClientName;
+                OtherPlayerLabel.Text = OtherPlayer;
+                ServerHost.SendName();
+            }
         }
 
         private void NaamButton_Click(object sender, EventArgs e)
         {
-            NaamLabel.Text = "Naam: " + NaamTextBox.Text;
-            player1 = NaamTextBox.Text;
+            LocalPlayer = NaamTextBox.Text;
+            LocalPlayerLabel.Text = LocalPlayer;
+
+            NaamLabel.Visible = false;
             NaamTextBox.Visible = false;
             NaamButton.Visible = false;
             HC_Label.Visible = true;
