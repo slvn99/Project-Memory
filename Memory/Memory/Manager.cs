@@ -49,9 +49,9 @@ namespace Memory
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            //var HomePage = new HomePage();
-            //HomePage.Show();
-            //timer2.Stop();
+            var HomePage = new HomePage();
+            HomePage.Show();
+            timer2.Stop();
         }
 
         private void timer3_Tick(object sender, EventArgs e)
