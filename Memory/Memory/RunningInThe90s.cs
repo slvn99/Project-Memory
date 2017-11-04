@@ -324,24 +324,6 @@ namespace Memory
             }
         }
 
-        //Dit event zorgt ervoor dat het hoofdmenu verschijnt, wanneer deze form gesloten is
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Memory.HomePage f2 = new Memory.HomePage();
-            f2.Show();
-        }
-
-        //Button_click event voor de exitbutton
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            DialogResult ExitGame = MessageBox.Show("Weet u zeker dat u het spel wil verlaten? Onopgeslagen progressie zal verloren gaan! ", "Exit", MessageBoxButtons.YesNo);
-
-            if (ExitGame == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
         //Button_click event voor de play_button, die tevens de timer laat verschijnen
         private void play_Click(object sender, EventArgs e)
         {
@@ -688,22 +670,9 @@ namespace Memory
         private void timer1_Tick(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
+            timer1.Stop();
         }
 
-        //nog een exit_button??
-        private async void pictureBox3_Click_1(object sender, EventArgs e)
-        {
-            player.SoundLocation = "click.wav";
-            player.Play();
-            await Task.Delay(300);
-            player.Stop();
-            DialogResult ExitGame = MessageBox.Show("Weet u zeker dat u het spel wil verlaten? Onopgeslagen progressie zal verloren gaan! ", "Exit", MessageBoxButtons.YesNo);
-
-            if (ExitGame == DialogResult.Yes)
-            {
-                Sluiten();
-            }
-        }
         private void Reset_Click_1(object sender, EventArgs e)
         {
             {
@@ -717,7 +686,7 @@ namespace Memory
             }
         }
 
-        //nog een keer muziek afspelen??
+        //Deze timer zorgt ervoor dat de achtergrondmuziek herhaalt wordt nadat het is afgelopen
         private void timer2_Tick(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
