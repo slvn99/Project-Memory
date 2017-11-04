@@ -58,7 +58,7 @@ namespace Memory
             Points1.ForeColor = System.Drawing.Color.White;
             ChangeCursor();
 
-
+        //deze method veranderd de mouse cursor
         void ChangeCursor()
             {
                 Bitmap bmp = new Bitmap(Resources.cur1031);
@@ -67,6 +67,7 @@ namespace Memory
             }
         }
 
+        //magische code
         protected override CreateParams CreateParams
         {
             get
@@ -76,7 +77,7 @@ namespace Memory
                 return cp;
             }
         }
-
+        //Deze method geeft het speelbord weer na het invullen van een naam
         private void PlayRunningInthe90s()
         {
             if (Player1Textbox.Text == "")
@@ -156,6 +157,7 @@ namespace Memory
             }
         }
 
+        
         private void Click_kaart(Button Buttonclick)
         {
             if (Kaart1Select == null)
@@ -168,6 +170,7 @@ namespace Memory
             }
         }
 
+        //Deze methode checkt of er sprake is van een match bij het aanklikken van 2 kaarten
         public async void Check_kaart()
         {
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
@@ -247,7 +250,7 @@ namespace Memory
             }
         }
 
-
+        //Deze vorm houd het aantal behaalde punten bij de de spelers en checkt een eventueel einde van het spel
         private void Point_Add()
         {
             PuntenPlayer1++;
@@ -256,6 +259,7 @@ namespace Memory
             EndGame_Check();
         }
 
+        //Deze methode reset de gam, mits dit is aangevraagd
         private void Reset_Function()
         {
             Memory.HomePage f2 = new Memory.HomePage();
@@ -263,6 +267,8 @@ namespace Memory
             Dispose();
             GC.Collect();
         }
+        
+        //Deze methode checkt of het spel beeindigd is en geeft hierbij een geluidseffect en message indien nodig
 		private void EndGame_Check()
         {
             if (TotaalMatches == 8)
@@ -291,7 +297,7 @@ namespace Memory
             }    
         }
 
-
+        //Button_click event voor de resetmethode
         private void Reset_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -302,6 +308,8 @@ namespace Memory
                 Reset_Function();
             }
         }
+
+        //Button_click event voor de exitbutton
         private async void pictureBox3_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -316,20 +324,14 @@ namespace Memory
             }
         }
 
-		private async void HistoryofMemory()
-		{
-			player.SoundLocation = "no1.wav";
-			player.Play();
-			await Task.Delay(5000);
-			player.Stop();
-		}
-
+        //Dit event zorgt ervoor dat het hoofdmenu verschijnt, wanneer deze form gesloten is
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Memory.HomePage f2 = new Memory.HomePage();
             f2.Show();
         }
 
+        //Button_click event voor de exitbutton
         private void ExitButton_Click(object sender, EventArgs e)
         {
             DialogResult ExitGame = MessageBox.Show("Weet u zeker dat u het spel wil verlaten? Onopgeslagen progressie zal verloren gaan! ", "Exit", MessageBoxButtons.YesNo);
@@ -340,6 +342,7 @@ namespace Memory
             }
         }
 
+        //Button_click event voor de play_button, die tevens de timer laat verschijnen
         private void play_Click(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -658,6 +661,8 @@ namespace Memory
 
         int seconde = 0;
         int tijds = -1;
+
+        //Timer
         private void RunningTimer_Tick(object sender, EventArgs e)
         {
             tijds++;
@@ -670,6 +675,7 @@ namespace Memory
             }
         }
 
+        //Dit event zorgt ervoor dat het hoofdmenu verschijnt, wanneer deze form sluit
         private void RunningInThe90s_FormClosing(object sender, FormClosingEventArgs e)
         {
             Memory.HomePage f2 = new Memory.HomePage();
@@ -678,11 +684,13 @@ namespace Memory
             GC.Collect();
         }
 
+        //zorgt ervoor dat de achtergrondmuziek afspeelt wanneer de timer op de timerinterval tickt
         private void timer1_Tick(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
         }
 
+        //nog een exit_button??
         private async void pictureBox3_Click_1(object sender, EventArgs e)
         {
             player.SoundLocation = "click.wav";
@@ -709,6 +717,7 @@ namespace Memory
             }
         }
 
+        //nog een keer muziek afspelen??
         private void timer2_Tick(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
@@ -720,6 +729,8 @@ namespace Memory
             matchlist.CopyTo(matcharray);
             //click van deze button saved alle huidige data in .sav
         }
+
+        //methode voor het sluiten van de form
         public void Sluiten()
         {
             Close();

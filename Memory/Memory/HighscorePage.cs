@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//op deze pagina zijn de behaalde highscores van verschillende gamemodes te terug te vinden.
 namespace Memory
 {
     public partial class HighscorePage : Form

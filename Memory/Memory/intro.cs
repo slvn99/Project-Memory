@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Deze vorm fungeert als form die een intro video afspeelt, waarin te zien is dat onze groep verantwoordelijk is voor dit memory spel.
 namespace Memory
 {
     public partial class intro : Form

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+
+//In deze pagina is het mogelijk het volume en thema's aan te passen.
 namespace Memory
 {
 	public partial class SettingsPage : Form
@@ -29,6 +31,8 @@ namespace Memory
 		public SettingsPage()
 		{
 			InitializeComponent();
+
+            this.ShowInTaskbar = true;
 
             ThemaBox.SelectedIndex = 0;
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//De HomePage fungeert als centrale form van waaruit genavigeerd kan worden naar de verschillende gamemodes, de highscorepagina en het settingsmenu.
 namespace Memory
 {
     public partial class HomePage : Form // Home screen
