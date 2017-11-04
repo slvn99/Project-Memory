@@ -32,7 +32,6 @@
             this.HC_Label = new System.Windows.Forms.Label();
             this.HostButton = new System.Windows.Forms.Button();
             this.ClientButton = new System.Windows.Forms.Button();
-            this.ConLabel = new System.Windows.Forms.Label();
             this.NaamTextBox = new System.Windows.Forms.TextBox();
             this.NaamLabel = new System.Windows.Forms.Label();
             this.NaamButton = new System.Windows.Forms.Button();
@@ -58,6 +57,7 @@
             this.GeefIpLabel = new System.Windows.Forms.Label();
             this.IpTextBox = new System.Windows.Forms.TextBox();
             this.ConnectButton = new System.Windows.Forms.Button();
+            this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // HC_Label
@@ -89,16 +89,6 @@
             this.ClientButton.Text = "Client";
             this.ClientButton.UseVisualStyleBackColor = true;
             this.ClientButton.Click += new System.EventHandler(this.ClientButton_Click);
-            // 
-            // ConLabel
-            // 
-            this.ConLabel.AutoSize = true;
-            this.ConLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConLabel.Location = new System.Drawing.Point(12, 163);
-            this.ConLabel.Name = "ConLabel";
-            this.ConLabel.Size = new System.Drawing.Size(101, 25);
-            this.ConLabel.TabIndex = 3;
-            this.ConLabel.Text = "Connectie";
             // 
             // NaamTextBox
             // 
@@ -340,11 +330,11 @@
             // BeurtLabel
             // 
             this.BeurtLabel.AutoSize = true;
-            this.BeurtLabel.Location = new System.Drawing.Point(864, 71);
+            this.BeurtLabel.Location = new System.Drawing.Point(934, 33);
             this.BeurtLabel.Name = "BeurtLabel";
-            this.BeurtLabel.Size = new System.Drawing.Size(35, 13);
+            this.BeurtLabel.Size = new System.Drawing.Size(32, 13);
             this.BeurtLabel.TabIndex = 26;
-            this.BeurtLabel.Text = "label1";
+            this.BeurtLabel.Text = "Beurt";
             // 
             // GeefIpLabel
             // 
@@ -373,6 +363,12 @@
             this.ConnectButton.Text = "Connect";
             this.ConnectButton.UseVisualStyleBackColor = true;
             this.ConnectButton.Click += new System.EventHandler(this.ConnectButton_Click);
+            // 
+            // backgroundWorker
+            // 
+            this.backgroundWorker.WorkerSupportsCancellation = true;
+            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
+            this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
             // 
             // GameServer
             // 
@@ -407,7 +403,6 @@
             this.Controls.Add(this.GridButton2);
             this.Controls.Add(this.GridButton1Dup);
             this.Controls.Add(this.GridButton1);
-            this.Controls.Add(this.ConLabel);
             this.Name = "GameServer";
             this.Text = "GameServer";
             this.ResumeLayout(false);
@@ -437,7 +432,6 @@
         private System.Windows.Forms.Button GridButton7Dup;
         private System.Windows.Forms.Button GridButton8;
         private System.Windows.Forms.Button GridButton8Dup;
-        public System.Windows.Forms.Label ConLabel;
         private System.Windows.Forms.Button GridButton1;
         private System.Windows.Forms.Label LocalPlayerLabel;
         private System.Windows.Forms.Label OtherPlayerLabel;
@@ -445,5 +439,6 @@
         private System.Windows.Forms.Label GeefIpLabel;
         private System.Windows.Forms.TextBox IpTextBox;
         private System.Windows.Forms.Button ConnectButton;
+        private System.ComponentModel.BackgroundWorker backgroundWorker;
     }
 }

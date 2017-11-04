@@ -13,11 +13,12 @@ namespace Memory
 {
     public partial class GameServer : Form
     {
-        public static string PlayerBeurt, LocalPlayer, OtherPlayer;
+        public static string PlayerBeurt, LocalPlayer, OtherPlayer, player1, player2;
+        public static string[] TurnArray = new string[2];
         int PuntenLocalPlayer, PuntenOtherPlayer, TotaalMatches;
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         public static Label TempConLabel = new Label();
-        Button Kaart1Select, Kaart2Select;
+        Button Kaart1Select, Kaart2Select, TempKaart1Select, TempKaart2Select;
         bool host = false;
         List<Point> PointLocation = new List<Point>();
         public static List<Point> RandomButLocation = new List<Point>();
@@ -39,7 +40,6 @@ namespace Memory
             HC_Label.Visible = false;
             HostButton.Visible = false;
             ClientButton.Visible = false;
-            ConLabel.Visible = false;
             GeefIpLabel.Visible = false;
             IpTextBox.Visible = false;
             ConnectButton.Visible = false;
@@ -82,10 +82,14 @@ namespace Memory
         {
             if (host == true)
             {
+                player1 = LocalPlayer;
                 ServerHost.SendGameState();
                 ServerHost.RecieveName();
                 OtherPlayer = ServerHost.ClientName;
                 OtherPlayerLabel.Text = OtherPlayer;
+                player2 = OtherPlayer;
+                PlayerBeurt = player1;
+                BeurtLabel.Text = PlayerBeurt;
                 ServerHost.SendName();
 
                 HC_Label.Visible = false;
@@ -100,6 +104,7 @@ namespace Memory
             }
             else
             {
+                player2 = LocalPlayer;
                 ServerClient.RecieveGamaData();
                 Point[] ButtonGridLocation = ServerClient.TempRandomButLocation.ToArray();
                 for (int i = 0; i < ButtonGridLocation.Length; i++)
@@ -156,11 +161,14 @@ namespace Memory
                             break;
                     }
                 }
-                
+
                 ServerClient.SendName();
                 ServerClient.RecieveName();
                 OtherPlayer = ServerClient.HostName;
                 OtherPlayerLabel.Text = OtherPlayer;
+                player1 = OtherPlayer;
+                PlayerBeurt = player1;
+                BeurtLabel.Text = PlayerBeurt;
 
                 GeefIpLabel.Visible = false;
                 IpTextBox.Visible = false;
@@ -170,14 +178,14 @@ namespace Memory
                 foreach (Button x in ButtonGrid)
                 {
                     x.Visible = true;
-                }
-                foreach (Button x in ButtonGrid)
-                {
                     x.Enabled = false;
                 }
+
+                backgroundWorker.RunWorkerAsync();
             }
         }
 
+        
         private void Click_kaart(Button Buttonclick)
         {
             if (Kaart1Select == null)
@@ -201,7 +209,7 @@ namespace Memory
                     {
                         Kaart2Select = null;
                     }
-                    else
+                    else if(Kaart1Select.Name != Kaart2Select.Name)
                     {
                         player.SoundLocation = "ping.wav";
                         player.Play();
@@ -210,9 +218,21 @@ namespace Memory
                             x.Enabled = false;
                         }
 
-                        await Task.Delay(1000);
+                        await Task.Delay(3000);
                         Kaart1Select.Visible = false;
                         Kaart2Select.Visible = false;
+                        TurnArray[0] = Kaart1Select.Name;
+                        TurnArray[1] = Kaart2Select.Name;
+
+                        if (host == true)
+                        {
+                            ServerHost.SendTurn();
+                        }
+                        else
+                        {
+                            ServerClient.SendTurn();
+                        }
+
                         Kaart1Select = null;
                         Kaart2Select = null;
                         Point_Add();
@@ -231,7 +251,7 @@ namespace Memory
                         x.Enabled = false;
                     }
 
-                    await Task.Delay(1000);
+                    await Task.Delay(3000);
                     switch (thema)
                     {
                         case "Media":
@@ -247,19 +267,29 @@ namespace Memory
                             Kaart2Select.BackgroundImage = Resources.controller_cardback;
                             break;
                     }
+
+                    TurnArray[0] = Kaart1Select.Name;
+                    TurnArray[1] = Kaart2Select.Name;
+
+                    if (host == true)
+                    {
+                        ServerHost.SendTurn();
+                    }
+                    else
+                    {
+                        ServerClient.SendTurn();
+                    }
+
                     Kaart1Select = null;
                     Kaart2Select = null;
                     Change_Beurt();
                     GC.Collect();
 
-                    foreach (var x in ButtonGrid)
+                    foreach(var x in ButtonGrid)
                     {
-                        x.Enabled = true;
+                        x.Enabled = false;
                     }
-                    foreach (var x in ButtonGrid)
-                    {
-                        x.Text = "";
-                    }
+                    backgroundWorker.RunWorkerAsync();
                 }
             }
         }
@@ -284,13 +314,13 @@ namespace Memory
 
         private void Change_Beurt()
         {
-            if (PlayerBeurt == LocalPlayer)
+            if (PlayerBeurt == player1)
             {
-               // PlayerBeurt = player2;
+                PlayerBeurt = player2;
             }
             else
             {
-               // PlayerBeurt = player1;
+                PlayerBeurt = player1;
             }
             BeurtLabel.Text = PlayerBeurt;
         }
@@ -326,135 +356,314 @@ namespace Memory
             }
         }
 
+        #region TurnKaart
+        private void TurnKaart(Button x)
+        {
+            if (x == GridButton1)
+            {
+                GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton1.BackgroundImage = Resources.Steam;
+            }
+            if (x == GridButton1Dup)
+            {
+                GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton1Dup.BackgroundImage = Resources.Steam;
+            }
+            if (x == GridButton2)
+            {
+                GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton2.BackgroundImage = Resources.TwitchLogo;
+            }
+            if (x == GridButton2Dup)
+            {
+                GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton2Dup.BackgroundImage = Resources.TwitchLogo;
+            }
+            if (x == GridButton3)
+            {
+                GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton3.BackgroundImage = Resources.fb;
+            }
+            if (x == GridButton3Dup)
+            {
+                GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton3Dup.BackgroundImage = Resources.fb;
+            }
+            if (x == GridButton4)
+            {
+                GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton4.BackgroundImage = Resources.Reddit;
+            }
+            if (x == GridButton4Dup)
+            {
+                GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton4Dup.BackgroundImage = Resources.Reddit;
+            }
+            if (x == GridButton5)
+            {
+                GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton5.BackgroundImage = Resources._9gag;
+            }
+            if (x == GridButton5Dup)
+            {
+                GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton5Dup.BackgroundImage = Resources._9gag;
+            }
+            if (x == GridButton6)
+            {
+                GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton6.BackgroundImage = Resources.Twitter;
+            }
+            if (x == GridButton6Dup)
+            {
+                GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton6Dup.BackgroundImage = Resources.Twitter;
+            }
+            if (x == GridButton7)
+            {
+                GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton7.BackgroundImage = Resources.Youtube;
+            }
+            if (x == GridButton7Dup)
+            {
+                GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton7Dup.BackgroundImage = Resources.Youtube;
+            }
+            if (x == GridButton8)
+            {
+                GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton8.BackgroundImage = Resources.Google;
+            }
+            if (x == GridButton8Dup)
+            {
+                GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                GridButton8Dup.BackgroundImage = Resources.Google;
+            }
+        }
+        #endregion
+
         #region kaarten
         private void GridButton1_Click(object sender, EventArgs e)
         {
-			GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			GridButton1.BackgroundImage = Resources.Steam;
+            TurnKaart(GridButton1);
             Click_kaart(GridButton1);
             Check_kaart();
         }
 
         private void GridButton1Dup_Click(object sender, EventArgs e)
         {
-            GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton1Dup.BackgroundImage = Resources.Steam;
+            TurnKaart(GridButton1Dup);
             Click_kaart(GridButton1Dup);
             Check_kaart();
         }
 
         private void GridButton2_Click(object sender, EventArgs e)
         {
-            GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton2.BackgroundImage = Resources.TwitchLogo;
+            TurnKaart(GridButton2);
             Click_kaart(GridButton2);
             Check_kaart();
         }
 
         private void GridButton2Dup_Click(object sender, EventArgs e)
         {
-            GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton2Dup.BackgroundImage = Resources.TwitchLogo;
+            TurnKaart(GridButton2Dup);
             Click_kaart(GridButton2Dup);
             Check_kaart();
         }
 
         private void GridButton3_Click(object sender, EventArgs e)
         {
-            GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton3.BackgroundImage = Resources.fb;
+            TurnKaart(GridButton3);
             Click_kaart(GridButton3);
             Check_kaart();
         }
 
         private void GridButton3Dup_Click(object sender, EventArgs e)
         {
-            GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton3Dup.BackgroundImage = Resources.fb;
+            TurnKaart(GridButton3Dup);
             Click_kaart(GridButton3Dup);
             Check_kaart();
         }
 
         private void GridButton4_Click(object sender, EventArgs e)
         {
-            GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton4.BackgroundImage = Resources.Reddit;
+            TurnKaart(GridButton4);
             Click_kaart(GridButton4);
             Check_kaart();
         }
 
         private void GridButton4Dup_Click(object sender, EventArgs e)
         {
-            GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton4Dup.BackgroundImage = Resources.Reddit;
+            TurnKaart(GridButton4Dup);
             Click_kaart(GridButton4Dup);
             Check_kaart();
         }
 
         private void GridButton5_Click(object sender, EventArgs e)
         {
-            GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton5.BackgroundImage = Resources._9gag;
+            TurnKaart(GridButton5);
             Click_kaart(GridButton5);
             Check_kaart();
         }
 
         private void GridButton5Dup_Click(object sender, EventArgs e)
         {
-            GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton5Dup.BackgroundImage = Resources._9gag;
+            TurnKaart(GridButton5Dup);
             Click_kaart(GridButton5Dup);
             Check_kaart();
         }
 
         private void GridButton6_Click(object sender, EventArgs e)
         {
-            GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton6.BackgroundImage = Resources.Twitter;
+            TurnKaart(GridButton6);
             Click_kaart(GridButton6);
             Check_kaart();
         }
 
         private void GridButton6Dup_Click(object sender, EventArgs e)
         {
-            GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton6Dup.BackgroundImage = Resources.Twitter;
+            TurnKaart(GridButton6Dup);
             Click_kaart(GridButton6Dup);
             Check_kaart();
         }
 
         private void GridButton7_Click(object sender, EventArgs e)
         {
-            GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton7.BackgroundImage = Resources.Youtube;
+            TurnKaart(GridButton7);
             Click_kaart(GridButton7);
             Check_kaart();
         }
 
         private void GridButton7Dup_Click(object sender, EventArgs e)
         {
-            GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton7Dup.BackgroundImage = Resources.Youtube;
+            TurnKaart(GridButton7Dup);
             Click_kaart(GridButton7Dup);
             Check_kaart();
         }
 
         private void GridButton8_Click(object sender, EventArgs e)
         {
-            GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton8.BackgroundImage = Resources.Google;
+            TurnKaart(GridButton8);
             Click_kaart(GridButton8);
             Check_kaart();
         }
 
         private void GridButton8Dup_Click(object sender, EventArgs e)
         {
-            GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            GridButton8Dup.BackgroundImage = Resources.Google;
+            TurnKaart(GridButton8Dup);
             Click_kaart(GridButton8Dup);
             Check_kaart();
         }
         #endregion
+
+        private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e) //backgroundworker medemogenlijk gemaakt door Jonathan :D danku voor de tip!
+        {
+            if (host == true)
+            {
+                ServerHost.RecieveTurn();
+            }
+            else
+            {
+                ServerClient.RecieveTurn();
+            }
+        }
+
+        private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (backgroundWorker.CancellationPending == true)
+            {
+                MessageBox.Show("ERROR, connectie verloren.", "Connection Lost!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                if (host == true)
+                {
+                    TurnArray = ServerHost.TurnArray;
+                }
+                else
+                {
+                    TurnArray = ServerClient.TurnArray;
+                }
+                TurnPlayBack();
+            }
+        }
+
+        private async void TurnPlayBack()
+        {
+            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+            foreach(Button x in ButtonGrid)
+            {
+                if (x.Name == TurnArray[0])
+                {
+                    Kaart1Select = x;
+                }
+                if (x.Name == TurnArray[1])
+                {
+                    Kaart2Select = x;
+                }
+            }
+
+            if (Kaart1Select != null && Kaart2Select != null)
+            {
+                if (Kaart1Select.Tag == Kaart2Select.Tag)
+                {
+                    if (Kaart1Select.Name == Kaart2Select.Name)
+                    {
+                        Kaart2Select = null;
+                    }
+                    else
+                    {
+                        TurnKaart(Kaart1Select);
+                        TurnKaart(Kaart2Select);
+                        player.SoundLocation = "ping.wav";
+                        player.Play();
+                        foreach (var x in ButtonGrid)
+                        {
+                            x.Enabled = false;
+                        }
+
+                        await Task.Delay(3000);
+                        Kaart1Select.Visible = false;
+                        Kaart2Select.Visible = false;
+                        Kaart1Select = null;
+                        Kaart2Select = null;
+                        Point_Add();
+                        backgroundWorker.RunWorkerAsync();
+                        GC.Collect();
+                    }
+                }
+                else
+                {
+                    TurnKaart(Kaart1Select);
+                    TurnKaart(Kaart2Select);
+                    await Task.Delay(3000);
+                    switch (thema)
+                    {
+                        case "Media":
+                            Kaart1Select.BackgroundImage = Resources.cardback;
+                            Kaart2Select.BackgroundImage = Resources.cardback;
+                            break;
+                        case "Films":
+                            Kaart1Select.BackgroundImage = Resources.clapperboard;
+                            Kaart2Select.BackgroundImage = Resources.clapperboard;
+                            break;
+                        case "Games":
+                            Kaart1Select.BackgroundImage = Resources.controller_cardback;
+                            Kaart2Select.BackgroundImage = Resources.controller_cardback;
+                            break;
+                    }
+                    Kaart1Select = null;
+                    Kaart2Select = null;
+                    Change_Beurt();
+                    GC.Collect();
+
+                    foreach (var x in ButtonGrid)
+                    {
+                        x.Enabled = true;
+                    }
+                }
+            }
+        }
 
         private void ConnectButton_Click(object sender, EventArgs e)
         {
@@ -507,16 +716,23 @@ namespace Memory
 
         private void NaamButton_Click(object sender, EventArgs e)
         {
-            LocalPlayer = NaamTextBox.Text;
-            LocalPlayerLabel.Text = LocalPlayer;
+            if (NaamTextBox.Text != "")
+            {
+                LocalPlayer = NaamTextBox.Text;
+                LocalPlayerLabel.Text = LocalPlayer;
 
-            NaamLabel.Visible = false;
-            NaamTextBox.Visible = false;
-            NaamButton.Visible = false;
-            HC_Label.Visible = true;
-            HostButton.Visible = true;
-            ClientButton.Visible = true;
-            ConLabel.Visible = true;
+                NaamLabel.Visible = false;
+                NaamTextBox.Visible = false;
+                NaamButton.Visible = false;
+                HC_Label.Visible = true;
+                HostButton.Visible = true;
+                ClientButton.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("ERROR, je moet een naam invullen.", "Naam Invullen!", MessageBoxButtons.OK);
+            }
+            
         }
 
         void ChangeCursor()
