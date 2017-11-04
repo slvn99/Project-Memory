@@ -55,7 +55,9 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.hsreset = new System.Windows.Forms.PictureBox();
             this.Gamemodelabel = new System.Windows.Forms.Label();
-            this.Listswitchbutton = new System.Windows.Forms.Button();
+            this.Standaard_gamemode = new System.Windows.Forms.PictureBox();
+            this.Running_gamemode = new System.Windows.Forms.PictureBox();
+            this.switch_gamemode = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Bronze)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -72,6 +74,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hsreset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Standaard_gamemode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Running_gamemode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.switch_gamemode)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -180,7 +185,7 @@
             this.Bronze.BackgroundImage = global::Memory.Properties.Resources.Bronze_trophy;
             this.Bronze.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Bronze.Location = new System.Drawing.Point(96, 231);
-            this.Bronze.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Bronze.Margin = new System.Windows.Forms.Padding(2);
             this.Bronze.Name = "Bronze";
             this.Bronze.Size = new System.Drawing.Size(41, 57);
             this.Bronze.TabIndex = 21;
@@ -192,7 +197,7 @@
             this.pictureBox1.BackgroundImage = global::Memory.Properties.Resources.Silver_trophy;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(96, 169);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(41, 57);
             this.pictureBox1.TabIndex = 22;
@@ -204,7 +209,7 @@
             this.pictureBox2.BackgroundImage = global::Memory.Properties.Resources.Gold_trophy;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(96, 108);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(39, 57);
             this.pictureBox2.TabIndex = 23;
@@ -216,7 +221,7 @@
             this.Highscores.BackgroundImage = global::Memory.Properties.Resources.highscores;
             this.Highscores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Highscores.Location = new System.Drawing.Point(338, 17);
-            this.Highscores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Highscores.Margin = new System.Windows.Forms.Padding(2);
             this.Highscores.Name = "Highscores";
             this.Highscores.Size = new System.Drawing.Size(428, 89);
             this.Highscores.TabIndex = 24;
@@ -228,7 +233,7 @@
             this.HomeButton.BackgroundImage = global::Memory.Properties.Resources.HomeButton;
             this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.HomeButton.Location = new System.Drawing.Point(987, 510);
-            this.HomeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HomeButton.Margin = new System.Windows.Forms.Padding(2);
             this.HomeButton.Name = "HomeButton";
             this.HomeButton.Size = new System.Drawing.Size(75, 81);
             this.HomeButton.TabIndex = 25;
@@ -351,7 +356,7 @@
             this.hsreset.BackgroundImage = global::Memory.Properties.Resources.Reset_highscore;
             this.hsreset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.hsreset.Location = new System.Drawing.Point(794, 510);
-            this.hsreset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.hsreset.Margin = new System.Windows.Forms.Padding(2);
             this.hsreset.Name = "hsreset";
             this.hsreset.Size = new System.Drawing.Size(176, 81);
             this.hsreset.TabIndex = 37;
@@ -369,15 +374,39 @@
             this.Gamemodelabel.TabIndex = 38;
             this.Gamemodelabel.Text = "Standard Gamemode";
             // 
-            // Listswitchbutton
+            // Standaard_gamemode
             // 
-            this.Listswitchbutton.Location = new System.Drawing.Point(847, 448);
-            this.Listswitchbutton.Name = "Listswitchbutton";
-            this.Listswitchbutton.Size = new System.Drawing.Size(123, 45);
-            this.Listswitchbutton.TabIndex = 39;
-            this.Listswitchbutton.Text = "Switch Gamemode";
-            this.Listswitchbutton.UseVisualStyleBackColor = true;
-            this.Listswitchbutton.Click += new System.EventHandler(this.Listswitchbutton_Click);
+            this.Standaard_gamemode.BackColor = System.Drawing.Color.Transparent;
+            this.Standaard_gamemode.BackgroundImage = global::Memory.Properties.Resources.Standaard_gamemode;
+            this.Standaard_gamemode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Standaard_gamemode.Location = new System.Drawing.Point(12, 42);
+            this.Standaard_gamemode.Name = "Standaard_gamemode";
+            this.Standaard_gamemode.Size = new System.Drawing.Size(297, 48);
+            this.Standaard_gamemode.TabIndex = 40;
+            this.Standaard_gamemode.TabStop = false;
+            // 
+            // Running_gamemode
+            // 
+            this.Running_gamemode.BackColor = System.Drawing.Color.Transparent;
+            this.Running_gamemode.BackgroundImage = global::Memory.Properties.Resources.Running_gamemode;
+            this.Running_gamemode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Running_gamemode.Location = new System.Drawing.Point(12, 42);
+            this.Running_gamemode.Name = "Running_gamemode";
+            this.Running_gamemode.Size = new System.Drawing.Size(297, 50);
+            this.Running_gamemode.TabIndex = 41;
+            this.Running_gamemode.TabStop = false;
+            // 
+            // switch_gamemode
+            // 
+            this.switch_gamemode.BackColor = System.Drawing.Color.Transparent;
+            this.switch_gamemode.BackgroundImage = global::Memory.Properties.Resources.switch_gamemode;
+            this.switch_gamemode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.switch_gamemode.Location = new System.Drawing.Point(794, 420);
+            this.switch_gamemode.Name = "switch_gamemode";
+            this.switch_gamemode.Size = new System.Drawing.Size(268, 90);
+            this.switch_gamemode.TabIndex = 42;
+            this.switch_gamemode.TabStop = false;
+            this.switch_gamemode.Click += new System.EventHandler(this.switch_gamemode_Click);
             // 
             // HighscorePage
             // 
@@ -386,7 +415,9 @@
             this.BackgroundImage = global::Memory.Properties.Resources.background_game;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1063, 593);
-            this.Controls.Add(this.Listswitchbutton);
+            this.Controls.Add(this.switch_gamemode);
+            this.Controls.Add(this.Running_gamemode);
+            this.Controls.Add(this.Standaard_gamemode);
             this.Controls.Add(this.Gamemodelabel);
             this.Controls.Add(this.hsreset);
             this.Controls.Add(this.pictureBox12);
@@ -435,6 +466,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hsreset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Standaard_gamemode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Running_gamemode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.switch_gamemode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,6 +503,8 @@
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox hsreset;
         private System.Windows.Forms.Label Gamemodelabel;
-        private System.Windows.Forms.Button Listswitchbutton;
+        private System.Windows.Forms.PictureBox Standaard_gamemode;
+        private System.Windows.Forms.PictureBox Running_gamemode;
+        private System.Windows.Forms.PictureBox switch_gamemode;
     }
 }

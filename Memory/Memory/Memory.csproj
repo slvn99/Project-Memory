@@ -166,6 +166,9 @@
     <Content Include="bin\Debug\no1.wav" />
     <Content Include="bin\Debug\Run90s.wav" />
     <Content Include="bin\Debug\Skra.wav" />
+    <None Include="Resources\switch gamemode.png" />
+    <None Include="Resources\Standaard gamemode.png" />
+    <None Include="Resources\Running gamemode.png" />
     <None Include="Resources\multiplayer.png" />
     <None Include="Resources\hotseat.png" />
     <None Include="Resources\Run90s.wav" />

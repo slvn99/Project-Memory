@@ -822,6 +822,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Running_gamemode {
+            get {
+                object obj = ResourceManager.GetObject("Running_gamemode", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap SaveButton {
             get {
                 object obj = ResourceManager.GetObject("SaveButton", resourceCulture);
@@ -912,6 +922,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Standaard_gamemode {
+            get {
+                object obj = ResourceManager.GetObject("Standaard_gamemode", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap star_trek130 {
             get {
                 object obj = ResourceManager.GetObject("star_trek130", resourceCulture);
@@ -945,6 +965,16 @@ namespace Memory.Properties {
         public static System.Drawing.Bitmap StopMusicButton {
             get {
                 object obj = ResourceManager.GetObject("StopMusicButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap switch_gamemode {
+            get {
+                object obj = ResourceManager.GetObject("switch_gamemode", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

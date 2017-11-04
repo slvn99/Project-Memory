@@ -19,6 +19,8 @@ namespace Memory
             string save = Highscores_save.LoadData();
             string runningsave = RunningSave.LoadData();
             Gamemodelabel.Text = "Standard Gamemode";
+            Standaard_gamemode.Visible = true;
+            Running_gamemode.Visible = false;
 
             if (save == "Er is nog geen\nsave file\naanwezig")
             {
@@ -115,12 +117,18 @@ namespace Memory
         }
 
         //Het tonen van de Highscorepage aangepast op de gamemode
-        private void Listswitchbutton_Click(object sender, EventArgs e)
+        private async void switch_gamemode_Click(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
             if (Gamemodelabel.Text == "Standard Gamemode")
             {
                 string save = RunningSave.LoadData();
                 Gamemodelabel.Text = "Running Gamemode";
+                Standaard_gamemode.Visible = true;
+                Running_gamemode.Visible = false;
 
                 if (save == "Er is nog geen\nsave file\naanwezig")
                 {
@@ -183,6 +191,8 @@ namespace Memory
             {
                 string save = Highscores_save.LoadData();
                 Gamemodelabel.Text = "Standard Gamemode";
+                Standaard_gamemode.Visible = false;
+                Running_gamemode.Visible = true;
 
                 if (save == "Er is nog geen\nsave file\naanwezig")
                 {
@@ -212,7 +222,7 @@ namespace Memory
                     string[] savearray = save.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
                     //toekennen van waarden uit array aan variabelen
 
-                    for (int i = 0; i<10; i++)
+                    for (int i = 0; i < 10; i++)
                     {
                         try
                         {
@@ -236,9 +246,9 @@ namespace Memory
                                 var label = (Label)labels[0];
                                 label.Text = "";
                             }
-                        }                      
+                        }
                     }
-                }              
+                }
             }
         }
     }

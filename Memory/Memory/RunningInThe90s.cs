@@ -288,11 +288,7 @@ namespace Memory
                 {
                     Sluiten();
                 }
-            }
-
-            
-
-            
+            }    
         }
 
 
@@ -350,6 +346,8 @@ namespace Memory
             player.Play();
             PlayRunningInthe90s();
             RunningTimer.Enabled = true;
+            RunningLabel.Visible = true;
+            label1.Visible = true;
         }
 
         #region kaarten

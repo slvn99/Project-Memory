@@ -435,6 +435,7 @@
             this.RunningLabel.Size = new System.Drawing.Size(22, 13);
             this.RunningLabel.TabIndex = 83;
             this.RunningLabel.Text = "0:0";
+            this.RunningLabel.Visible = false;
             // 
             // label1
             // 
@@ -447,6 +448,7 @@
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 84;
             this.label1.Text = "seconde";
+            this.label1.Visible = false;
             // 
             // axWindowsMediaPlayer1
             // 
