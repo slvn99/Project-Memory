@@ -30,6 +30,9 @@ namespace Memory
         {
             InitializeComponent();
 
+            RunningLabel.Font = new Font("Arial", 16, FontStyle.Bold);
+            label1.Font = new Font("Arial", 16, FontStyle.Bold);
+
             axWindowsMediaPlayer1.URL = "Run90s.wav";
             axWindowsMediaPlayer1.Ctlcontrols.play();
 
@@ -97,7 +100,6 @@ namespace Memory
                 Player1Textbox.Visible = false;
                 Player1LabelInvoer.Visible = true;
                 Points1.Visible = true;
-                Saveclass.Visible = true;
                 Speler1.Visible = true;
                 pictureBox1.Visible = false;
                 Speler1.Visible = true;
@@ -718,17 +720,7 @@ namespace Memory
         {
             string[] matcharray = new string[20];
             matchlist.CopyTo(matcharray);
-
             //click van deze button saved alle huidige data in .sav
-
-        }
-
-
-        private void Loadclass_MouseLeave(object sender, EventArgs e)
-        {
-            //idem
-            Variablen_save.Visible = false;
-            value.Text = "";
         }
         public void Sluiten()
         {

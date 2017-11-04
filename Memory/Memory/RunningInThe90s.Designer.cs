@@ -31,11 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RunningInThe90s));
             this.Exceptionbox = new System.Windows.Forms.Label();
-            this.Variablen_save = new System.Windows.Forms.Label();
-            this.Loadclass = new System.Windows.Forms.Button();
             this.Points1 = new System.Windows.Forms.Label();
             this.BeurtLabel = new System.Windows.Forms.Label();
-            this.Saveclass = new System.Windows.Forms.Button();
             this.Player1LabelInvoer = new System.Windows.Forms.Label();
             this.value = new System.Windows.Forms.Label();
             this.Player1Textbox = new System.Windows.Forms.TextBox();
@@ -86,28 +83,6 @@
             this.Exceptionbox.TabIndex = 74;
             this.Exceptionbox.Visible = false;
             // 
-            // Variablen_save
-            // 
-            this.Variablen_save.AutoSize = true;
-            this.Variablen_save.BackColor = System.Drawing.Color.Transparent;
-            this.Variablen_save.Location = new System.Drawing.Point(808, 337);
-            this.Variablen_save.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Variablen_save.Name = "Variablen_save";
-            this.Variablen_save.Size = new System.Drawing.Size(47, 65);
-            this.Variablen_save.TabIndex = 73;
-            this.Variablen_save.Text = "Player1:\r\nPlayer2:\r\nScore1:\r\nScore2: \r\nBeurt:";
-            this.Variablen_save.Visible = false;
-            // 
-            // Loadclass
-            // 
-            this.Loadclass.Location = new System.Drawing.Point(838, 316);
-            this.Loadclass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Loadclass.Name = "Loadclass";
-            this.Loadclass.Size = new System.Drawing.Size(97, 19);
-            this.Loadclass.TabIndex = 72;
-            this.Loadclass.Text = "Laden";
-            this.Loadclass.UseVisualStyleBackColor = true;
-            // 
             // Points1
             // 
             this.Points1.AutoSize = true;
@@ -129,15 +104,6 @@
             this.BeurtLabel.TabIndex = 69;
             this.BeurtLabel.Text = "Naam";
             this.BeurtLabel.Visible = false;
-            // 
-            // Saveclass
-            // 
-            this.Saveclass.Location = new System.Drawing.Point(838, 405);
-            this.Saveclass.Name = "Saveclass";
-            this.Saveclass.Size = new System.Drawing.Size(97, 23);
-            this.Saveclass.TabIndex = 66;
-            this.Saveclass.Text = "Opslaan";
-            this.Saveclass.UseVisualStyleBackColor = true;
             // 
             // Player1LabelInvoer
             // 
@@ -162,7 +128,7 @@
             // Player1Textbox
             // 
             this.Player1Textbox.Location = new System.Drawing.Point(340, 245);
-            this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Player1Textbox.Name = "Player1Textbox";
             this.Player1Textbox.Size = new System.Drawing.Size(104, 20);
             this.Player1Textbox.TabIndex = 64;
@@ -186,7 +152,7 @@
             this.pictureBox3.BackgroundImage = global::Memory.Properties.Resources.HomeButton;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(930, 501);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(75, 81);
             this.pictureBox3.TabIndex = 82;
@@ -199,7 +165,7 @@
             this.Reset.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG322222;
             this.Reset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Reset.Location = new System.Drawing.Point(811, 206);
-            this.Reset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Reset.Margin = new System.Windows.Forms.Padding(2);
             this.Reset.Name = "Reset";
             this.Reset.Size = new System.Drawing.Size(123, 44);
             this.Reset.TabIndex = 76;
@@ -213,7 +179,7 @@
             this.play.BackgroundImage = global::Memory.Properties.Resources.buttons_PNG321;
             this.play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.play.Location = new System.Drawing.Point(811, 147);
-            this.play.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.play.Margin = new System.Windows.Forms.Padding(2);
             this.play.Name = "play";
             this.play.Size = new System.Drawing.Size(124, 67);
             this.play.TabIndex = 75;
@@ -226,7 +192,7 @@
             this.Speler1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Speler1.BackgroundImage")));
             this.Speler1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Speler1.Location = new System.Drawing.Point(781, 1);
-            this.Speler1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Speler1.Margin = new System.Windows.Forms.Padding(2);
             this.Speler1.Name = "Speler1";
             this.Speler1.Size = new System.Drawing.Size(75, 29);
             this.Speler1.TabIndex = 79;
@@ -239,7 +205,7 @@
             this.Beurt.BackgroundImage = global::Memory.Properties.Resources.Beurt1;
             this.Beurt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Beurt.Location = new System.Drawing.Point(773, 63);
-            this.Beurt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Beurt.Margin = new System.Windows.Forms.Padding(2);
             this.Beurt.Name = "Beurt";
             this.Beurt.Size = new System.Drawing.Size(91, 40);
             this.Beurt.TabIndex = 78;
@@ -252,7 +218,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(340, 213);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(108, 30);
             this.pictureBox1.TabIndex = 77;
@@ -445,7 +411,7 @@
             this.GridButton1.BackgroundImage = global::Memory.Properties.Resources.cardback;
             this.GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GridButton1.Location = new System.Drawing.Point(26, 11);
-            this.GridButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GridButton1.Margin = new System.Windows.Forms.Padding(4);
             this.GridButton1.Name = "GridButton1";
             this.GridButton1.Size = new System.Drawing.Size(130, 130);
             this.GridButton1.TabIndex = 47;
@@ -462,6 +428,7 @@
             // 
             this.RunningLabel.AutoSize = true;
             this.RunningLabel.BackColor = System.Drawing.Color.Transparent;
+            this.RunningLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.RunningLabel.Location = new System.Drawing.Point(808, 271);
             this.RunningLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RunningLabel.Name = "RunningLabel";
@@ -473,7 +440,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(856, 271);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(904, 271);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
@@ -484,7 +452,7 @@
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(1274, 170);
-            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(75, 23);
@@ -518,11 +486,8 @@
             this.Controls.Add(this.Beurt);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Exceptionbox);
-            this.Controls.Add(this.Variablen_save);
-            this.Controls.Add(this.Loadclass);
             this.Controls.Add(this.Points1);
             this.Controls.Add(this.BeurtLabel);
-            this.Controls.Add(this.Saveclass);
             this.Controls.Add(this.Player1LabelInvoer);
             this.Controls.Add(this.value);
             this.Controls.Add(this.Player1Textbox);
@@ -541,7 +506,7 @@
             this.Controls.Add(this.GridButton2Dup);
             this.Controls.Add(this.GridButton2);
             this.Controls.Add(this.GridButton1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RunningInThe90s";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RunningInThe90s";
@@ -568,11 +533,8 @@
         private System.Windows.Forms.PictureBox Beurt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Exceptionbox;
-        private System.Windows.Forms.Label Variablen_save;
-        public System.Windows.Forms.Button Loadclass;
         private System.Windows.Forms.Label Points1;
         private System.Windows.Forms.Label BeurtLabel;
-        private System.Windows.Forms.Button Saveclass;
         private System.Windows.Forms.Label Player1LabelInvoer;
         public System.Windows.Forms.Label value;
         private System.Windows.Forms.TextBox Player1Textbox;
