@@ -77,10 +77,11 @@ namespace Memory
         {
             player.SoundLocation = "click.wav";
             player.Play();
-            await Task.Delay(300);
             Memory.HighscorePage f7 = new Memory.HighscorePage();
             f7.Show();
+            await Task.Delay(300);
             player.Stop();
+            this.WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false;
             Sluiten();
         }

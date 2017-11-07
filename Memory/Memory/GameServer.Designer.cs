@@ -58,6 +58,8 @@
             this.IpTextBox = new System.Windows.Forms.TextBox();
             this.ConnectButton = new System.Windows.Forms.Button();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // HC_Label
@@ -370,11 +372,23 @@
             this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
             this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Memory.Properties.Resources.HomeButton;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(951, 481);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // GameServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 593);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ConnectButton);
             this.Controls.Add(this.IpTextBox);
             this.Controls.Add(this.GeefIpLabel);
@@ -405,6 +419,8 @@
             this.Controls.Add(this.GridButton1);
             this.Name = "GameServer";
             this.Text = "GameServer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameServer_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,5 +456,6 @@
         private System.Windows.Forms.TextBox IpTextBox;
         private System.Windows.Forms.Button ConnectButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
