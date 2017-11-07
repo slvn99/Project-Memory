@@ -59,6 +59,8 @@
             this.ConnectButton = new System.Windows.Forms.Button();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PuntenLocal = new System.Windows.Forms.Label();
+            this.PuntenOther = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -332,7 +334,7 @@
             // BeurtLabel
             // 
             this.BeurtLabel.AutoSize = true;
-            this.BeurtLabel.Location = new System.Drawing.Point(934, 33);
+            this.BeurtLabel.Location = new System.Drawing.Point(80, 71);
             this.BeurtLabel.Name = "BeurtLabel";
             this.BeurtLabel.Size = new System.Drawing.Size(32, 13);
             this.BeurtLabel.TabIndex = 26;
@@ -383,11 +385,31 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // PuntenLocal
+            // 
+            this.PuntenLocal.AutoSize = true;
+            this.PuntenLocal.Location = new System.Drawing.Point(80, 9);
+            this.PuntenLocal.Name = "PuntenLocal";
+            this.PuntenLocal.Size = new System.Drawing.Size(67, 13);
+            this.PuntenLocal.TabIndex = 31;
+            this.PuntenLocal.Text = "PuntenLocal";
+            // 
+            // PuntenOther
+            // 
+            this.PuntenOther.AutoSize = true;
+            this.PuntenOther.Location = new System.Drawing.Point(80, 33);
+            this.PuntenOther.Name = "PuntenOther";
+            this.PuntenOther.Size = new System.Drawing.Size(67, 13);
+            this.PuntenOther.TabIndex = 32;
+            this.PuntenOther.Text = "PuntenOther";
+            // 
             // GameServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 593);
+            this.Controls.Add(this.PuntenOther);
+            this.Controls.Add(this.PuntenLocal);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ConnectButton);
             this.Controls.Add(this.IpTextBox);
@@ -457,5 +479,7 @@
         private System.Windows.Forms.Button ConnectButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label PuntenLocal;
+        private System.Windows.Forms.Label PuntenOther;
     }
 }
