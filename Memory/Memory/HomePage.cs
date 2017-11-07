@@ -170,8 +170,11 @@ namespace Memory
         }
 
         // Openen van het Loadingscreen dat doorverwijst naar de Runninginthe90s gamemode
-        private void RunningGamemode_Click(object sender, EventArgs e)
+        private async void RunningGamemode_Click(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
             Memory.LoadingScreen f = new Memory.LoadingScreen();
             f.Show();
             Sluiten();
@@ -180,8 +183,11 @@ namespace Memory
         }
 
         // Openen van het Loadingscreen dat doorverwijst naar de 2 player hotseat
-        private void StandardGamemode_Click_1(object sender, EventArgs e)
+        private async  void StandardGamemode_Click_1(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
             Memory.LoadingScreen f = new Memory.LoadingScreen();
             f.Show();
             Sluiten();
@@ -189,9 +195,12 @@ namespace Memory
         }
 
 		// Openen van het Loadingscreen dat doorverwijst naar de multiplayer gamemode
-		private void Multiplayer_Click(object sender, EventArgs e)
+		private async void Multiplayer_Click(object sender, EventArgs e)
 		{
-			Memory.LoadingScreen f = new Memory.LoadingScreen();
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            Memory.LoadingScreen f = new Memory.LoadingScreen();
 			f.Show();
 			Sluiten();
 			MG();

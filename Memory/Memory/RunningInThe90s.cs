@@ -84,14 +84,9 @@ namespace Memory
         //Deze method geeft het speelbord weer na het invullen van een naam
         private void PlayRunningInthe90s()
         {
-            if (Player1Textbox.Text == "")
-            {
-                MessageBox.Show("Je moet een naam invullen!");
-            }
-
-            else
-            {
-                RunningTimer.Start();
+            RunningTimer.Start();
+                
+                RunningLabel.Visible = true;
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
                 foreach (var x in ButtonGrid)
@@ -159,7 +154,7 @@ namespace Memory
                         break;
                 }
             }
-        }
+        
 
         
         private void Click_kaart(Button Buttonclick)
@@ -331,12 +326,19 @@ namespace Memory
         //Button_click event voor de play_button, die tevens de timer laat verschijnen
         private void play_Click(object sender, EventArgs e)
         {
-            player.SoundLocation = "click.wav";
-            player.Play();
-            PlayRunningInthe90s();
-            RunningTimer.Enabled = true;
-            RunningLabel.Visible = true;
-            label1.Visible = true;
+            if (Player1Textbox.Text == "")
+                {
+                MessageBox.Show("Je moet een naam invullen!");
+                }
+            else
+            {
+                player.SoundLocation = "click.wav";
+                player.Play();
+                PlayRunningInthe90s();
+                RunningTimer.Enabled = true;
+                RunningLabel.Visible = true;
+                label1.Visible = true;
+            }
         }
 
         #region kaarten

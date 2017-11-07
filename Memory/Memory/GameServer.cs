@@ -724,6 +724,7 @@ namespace Memory
         private void HostButton_Click(object sender, EventArgs e)
         {
             host = true;
+            HostButton.Enabled = false;
             ClientButton.Enabled = false;
             RandomizeButtons();
             ServerHost.StartServer();
@@ -738,6 +739,7 @@ namespace Memory
             {
                 MessageBox.Show("ERROR, Connectie timed out", "Time Out", MessageBoxButtons.OK);
                 ServerHost.Listener.Stop();
+                HostButton.Enabled = false;
                 ClientButton.Enabled = true;
             }
             else
@@ -764,7 +766,6 @@ namespace Memory
             {
                 MessageBox.Show("ERROR, je moet een naam invullen.", "Naam Invullen!", MessageBoxButtons.OK);
             }
-            
         }
 
         void ChangeCursor()
