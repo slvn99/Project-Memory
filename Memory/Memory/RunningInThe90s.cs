@@ -329,11 +329,6 @@ namespace Memory
             if (Player1Textbox.Text == "")
                 {
                 MessageBox.Show("Je moet een naam invullen!");
-                RunningLabel.Visible = false;
-                label1.Visible = false;
-                RunningTimer.Enabled = false;
-                label1.Enabled = false;
-                RunningTimer.Stop();
                 }
             else
             {
