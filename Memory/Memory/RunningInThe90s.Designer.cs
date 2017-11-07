@@ -508,6 +508,7 @@
             this.Controls.Add(this.GridButton2Dup);
             this.Controls.Add(this.GridButton2);
             this.Controls.Add(this.GridButton1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RunningInThe90s";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
