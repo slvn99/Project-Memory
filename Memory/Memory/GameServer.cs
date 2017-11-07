@@ -22,7 +22,7 @@ namespace Memory
         int PuntenLocalPlayer, PuntenOtherPlayer, TotaalMatches;
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         public static Label TempConLabel = new Label();
-        Button Kaart1Select, Kaart2Select, TempKaart1Select, TempKaart2Select;
+        Button Kaart1Select, Kaart2Select;
         bool host = false;
         List<Point> PointLocation = new List<Point>();
         public static List<Point> RandomButLocation = new List<Point>();
@@ -57,6 +57,11 @@ namespace Memory
                 cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
                 return cp;
             }
+        }
+
+        internal static void CloseApplication()
+        {
+            GameServer.CloseApplication();
         }
 
         void RandomizeButtons()
@@ -711,6 +716,7 @@ namespace Memory
             {
                 MessageBox.Show("ERROR, Connectie timed out", "Time Out", MessageBoxButtons.OK);
                 ServerHost.Listener.Stop();
+                ClientButton.Enabled = true;
             }
             else
             {
