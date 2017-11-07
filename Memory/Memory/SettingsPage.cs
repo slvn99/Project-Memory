@@ -19,7 +19,7 @@ namespace Memory
         private const int APPCOMMAND_VOLUME_MUTE = 0x80000;
         private const int APPCOMMAND_VOLUME_UP = 0xA0000;
 		private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
-		private const int APPCOMMAND_MEDIA_PLAY_PAUSE = 0xE0000;
+		private const int APPCOMMAND_MEDIA_PLAY_PAUSE = 0x14000;
 		private const int WM_APPCOMMAND = 0x319;
 
         [DllImport("user32.dll")]
@@ -108,33 +108,5 @@ namespace Memory
             SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
                 (IntPtr)APPCOMMAND_VOLUME_MUTE);
         }
-
-		// Worden verwijderd
-        private void ServerDebug_Click(object sender, EventArgs e)
-        {
-            Memory.GameServer g1 = new Memory.GameServer();
-            g1.Show();
-        }
-
-		// Worden verwijderd
-		private void RunningInThe90sButton_Click(object sender, EventArgs e)
-        {
-            Memory.RunningInThe90s inThe90S = new Memory.RunningInThe90s();
-            inThe90S.Show();
-        }
-
-		// Worden verwijderd
-		private void Button2_Click(object sender, EventArgs e)
-        {
-            Memory.intro intro = new Memory.intro();
-            intro.Show();
-        }
-
-        // Geluiden uitschakelen
-		private void StopMusicButton_Click(object sender, EventArgs e)
-		{
-			SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
-				(IntPtr)APPCOMMAND_MEDIA_PLAY_PAUSE);
-		}
 	}
 }

@@ -70,8 +70,8 @@ namespace Memory
             }
         }
 
-        //magische code
-        protected override CreateParams CreateParams
+		// Magische code die de flickering in de form fixt
+		protected override CreateParams CreateParams
         {
             get
             {

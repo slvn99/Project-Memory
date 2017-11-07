@@ -47,21 +47,9 @@ namespace Memory
 
         public static void SendGameState()
         {
-            try
-            {
-                TempRandomButLocation = GameServer.RandomButLocation;
-                var bin = new BinaryFormatter();
-                bin.Serialize(Client.GetStream(), TempRandomButLocation);
-            }
-            catch
-            {
-                MessageBox.Show("Error, Er is een fout opgetreden!", "ERROR!", MessageBoxButtons.OK);
-                Listener.Stop();
-                Client.Close();
-                GameServer.CloseApplication();
-                Memory.HomePage h = new Memory.HomePage();
-                h.Show();
-            }
+            TempRandomButLocation = GameServer.RandomButLocation;
+            var bin = new BinaryFormatter();
+            bin.Serialize(Client.GetStream(), TempRandomButLocation);
         }
 
         public static void SendName()
@@ -80,6 +68,7 @@ namespace Memory
                 Memory.HomePage h = new Memory.HomePage();
                 h.Show();
             }
+
         }
 
         public static void RecieveName()

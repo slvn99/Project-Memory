@@ -38,7 +38,6 @@
 			this.Volume = new System.Windows.Forms.PictureBox();
 			this.Themas = new System.Windows.Forms.PictureBox();
 			this.button1 = new System.Windows.Forms.Button();
-			this.StopMusicButton = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.VolumeUp)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.VolumeDown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.MuteButton)).BeginInit();
@@ -46,7 +45,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.Home)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Volume)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Themas)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.StopMusicButton)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// ThemaBox
@@ -168,18 +166,6 @@
 			this.button1.Text = "button1";
 			this.button1.UseVisualStyleBackColor = true;
 			// 
-			// StopMusicButton
-			// 
-			this.StopMusicButton.BackColor = System.Drawing.Color.Transparent;
-			this.StopMusicButton.BackgroundImage = global::Memory.Properties.Resources.PauseMusicButton;
-			this.StopMusicButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.StopMusicButton.Location = new System.Drawing.Point(718, 159);
-			this.StopMusicButton.Name = "StopMusicButton";
-			this.StopMusicButton.Size = new System.Drawing.Size(88, 88);
-			this.StopMusicButton.TabIndex = 16;
-			this.StopMusicButton.TabStop = false;
-			this.StopMusicButton.Click += new System.EventHandler(this.StopMusicButton_Click);
-			// 
 			// SettingsPage
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,7 +173,6 @@
 			this.BackgroundImage = global::Memory.Properties.Resources.background_game;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1063, 593);
-			this.Controls.Add(this.StopMusicButton);
 			this.Controls.Add(this.Themas);
 			this.Controls.Add(this.Volume);
 			this.Controls.Add(this.Home);
@@ -209,9 +194,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.Home)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Volume)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Themas)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.StopMusicButton)).EndInit();
 			this.ResumeLayout(false);
-
 		}
 
 		#endregion
@@ -225,6 +208,5 @@
         private System.Windows.Forms.PictureBox Volume;
         private System.Windows.Forms.PictureBox Themas;
         private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.PictureBox StopMusicButton;
 	}
 }

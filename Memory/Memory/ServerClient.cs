@@ -65,6 +65,8 @@ namespace Memory
                 MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
                 Client.Close();
                 GameServer.CloseApplication();
+                Memory.HomePage h = new Memory.HomePage();
+                h.Show();
             }
         }
 
@@ -97,6 +99,8 @@ namespace Memory
                 MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
                 Client.Close();
                 GameServer.CloseApplication();
+                Memory.HomePage h = new Memory.HomePage();
+                h.Show();
             }
         }
 
@@ -104,14 +108,18 @@ namespace Memory
         {
             try
             {
-                TurnArray = GameServer.TurnArray;
                 var bin = new BinaryFormatter();
-                bin.Serialize(Client.GetStream(), TurnArray);
+                HostName = (string)bin.Deserialize(Client.GetStream());
             }
             catch
             {
                 var bin = new BinaryFormatter();
                 HostName = (string)bin.Deserialize(Client.GetStream());
+                MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
+                Client.Close();
+                GameServer.CloseApplication();
+                Memory.HomePage h = new Memory.HomePage();
+                h.Show();
             }
         }
     }
