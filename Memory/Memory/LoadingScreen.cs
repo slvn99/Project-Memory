@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// een "loading" screen die draait op timers om de animatie te doen, en een random quote weergeeft
+/// </summary>
 namespace Memory
 {
 

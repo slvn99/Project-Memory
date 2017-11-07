@@ -214,11 +214,11 @@ namespace Memory
         }
 
 		// Het openen van de game na het LoadingScreen (Doen we wel als we een duidelijke MP form hebben)
-		private /*async*/ void MG()
+		private async void MG()
 		{
-		//	await Task.Delay(4000);
-		//	WindowsFormsApp1.? Multiplayer ? f = new WindowsFormsApp1.?Multiplayer ? ();
-		//	f.Show();
+		await Task.Delay(4000);
+		Memory.GameServer f = new Memory.GameServer();
+		f.Show();
 		}
 
         // Het teruggaan naar het standaard Hoofdmenu

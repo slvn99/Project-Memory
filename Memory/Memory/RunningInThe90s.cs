@@ -11,8 +11,10 @@ using System.Windows.Forms;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
+/// <summary>
+/// De getimede Gamemode, met alle code lokaal in deze class
+/// </summary>
 namespace Memory
-
 {
     public partial class RunningInThe90s : Form
     {
