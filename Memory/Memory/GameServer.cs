@@ -47,8 +47,8 @@ namespace Memory
             GeefIpLabel.Visible = false;
             IpTextBox.Visible = false;
             ConnectButton.Visible = false;
-            PuntenLocal.Visible = true;
-            PuntenOther.Visible = true;
+            PuntenLocal.Visible = false;
+            PuntenOther.Visible = false;
 
             switch (thema)
             {
@@ -109,9 +109,10 @@ namespace Memory
             }
         }
 
-        internal static void CloseApplication()
+        public static void CloseApplication()
         {
-            GameServer.CloseApplication();
+            GameServer gameServer = new GameServer();
+            gameServer.Close();
         }
 
         void RandomizeButtons()
@@ -151,8 +152,8 @@ namespace Memory
                 BeurtLabel.Text = PlayerBeurt;
                 ServerHost.SendName();
 
-                PuntenLocalPlayer = 0;
-                PuntenOtherPlayer = 0;
+                PuntenLocal.Text = "0";
+                PuntenOther.Text = "0";
                 PuntenLocal.Visible = true;
                 PuntenOther.Visible = true;
                 HC_Label.Visible = false;
@@ -233,8 +234,8 @@ namespace Memory
                 PlayerBeurt = player1;
                 BeurtLabel.Text = PlayerBeurt;
 
-                PuntenLocalPlayer = 0;
-                PuntenOtherPlayer = 0;
+                PuntenLocal.Text = "0";
+                PuntenOther.Text = "0";
                 PuntenLocal.Visible = true;
                 PuntenOther.Visible = true;
                 GeefIpLabel.Visible = false;
@@ -557,16 +558,16 @@ namespace Memory
                 switch (thema)
                 {
                     default:
-                        GridButton4.BackgroundImage = Resources.Youtube;
+                        GridButton4Dup.BackgroundImage = Resources.Youtube;
                         break;
                     case "Media":
-                        GridButton4.BackgroundImage = Resources.Youtube;
+                        GridButton4Dup.BackgroundImage = Resources.Youtube;
                         break;
                     case "Films":
-                        GridButton4.BackgroundImage = Resources.indiana130;
+                        GridButton4Dup.BackgroundImage = Resources.indiana130;
                         break;
                     case "Games":
-                        GridButton4.BackgroundImage = Resources.fifa130;
+                        GridButton4Dup.BackgroundImage = Resources.fifa130;
                         break;
                 }
             }
