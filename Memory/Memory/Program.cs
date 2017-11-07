@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    /// start de manager, de rest wordt vanuit manager gerunt
+    /// </summary>
     static class Program
     {
         
