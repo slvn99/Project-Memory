@@ -68,6 +68,7 @@ namespace Memory
                 Memory.HomePage h = new Memory.HomePage();
                 h.Show();
             }
+
         }
 
         public static void RecieveName()
