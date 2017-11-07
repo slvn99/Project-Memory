@@ -46,7 +46,8 @@ namespace Memory
             {
                 MessageBox.Show("Error, Er is een fout opgetreden!", "ERROR!", MessageBoxButtons.OK);
                 Client.Close();
-                GameServer.CloseApplication();
+                GameServer gameServer = new GameServer();
+                gameServer.CloseApplication();
                 Memory.HomePage h = new Memory.HomePage();
                 h.Show();
             }
@@ -64,7 +65,8 @@ namespace Memory
             {
                 MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
                 Client.Close();
-                GameServer.CloseApplication();
+                GameServer gameServer = new GameServer();
+                gameServer.CloseApplication();
                 Memory.HomePage h = new Memory.HomePage();
                 h.Show();
             }
@@ -81,7 +83,8 @@ namespace Memory
             {
                 MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
                 Client.Close();
-                GameServer.CloseApplication();
+                GameServer gameServer = new GameServer();
+                gameServer.CloseApplication();
                 Memory.HomePage h = new Memory.HomePage();
                 h.Show();
             }
@@ -98,7 +101,8 @@ namespace Memory
             {
                 MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
                 Client.Close();
-                GameServer.CloseApplication();
+                GameServer gameServer = new GameServer();
+                gameServer.CloseApplication();
                 Memory.HomePage h = new Memory.HomePage();
                 h.Show();
             }
@@ -117,7 +121,8 @@ namespace Memory
                 HostName = (string)bin.Deserialize(Client.GetStream());
                 MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
                 Client.Close();
-                GameServer.CloseApplication();
+                GameServer gameServer = new GameServer();
+                gameServer.CloseApplication();
                 Memory.HomePage h = new Memory.HomePage();
                 h.Show();
             }

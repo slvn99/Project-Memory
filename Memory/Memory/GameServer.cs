@@ -109,10 +109,9 @@ namespace Memory
             }
         }
 
-        public static void CloseApplication()
-        {
-            GameServer gameServer = new GameServer();
-            gameServer.Close();
+        public void CloseApplication()
+        { 
+            this.Close();
         }
 
         void RandomizeButtons()
