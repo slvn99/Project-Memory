@@ -739,7 +739,7 @@ namespace Memory
             {
                 MessageBox.Show("ERROR, Connectie timed out", "Time Out", MessageBoxButtons.OK);
                 ServerHost.Listener.Stop();
-                HostButton.Enabled = false;
+                HostButton.Enabled = true;
                 ClientButton.Enabled = true;
             }
             else

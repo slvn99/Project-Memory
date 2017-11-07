@@ -36,20 +36,9 @@ namespace Memory
 
         public static void RecieveGamaData()
         {
-            try
-            {
-                var bin = new BinaryFormatter();
-                var list = (List<Point>)bin.Deserialize(Client.GetStream());
-                TempRandomButLocation = list;
-            }
-            catch
-            {
-                MessageBox.Show("Error, Er is een fout opgetreden!", "ERROR!", MessageBoxButtons.OK);
-                Client.Close();
-                GameServer.CloseApplication();
-                Memory.HomePage h = new Memory.HomePage();
-                h.Show();
-            }
+            var bin = new BinaryFormatter();
+            var list = (List<Point>)bin.Deserialize(Client.GetStream());
+            TempRandomButLocation = list;
         }
 
         public static void SendTurn()
