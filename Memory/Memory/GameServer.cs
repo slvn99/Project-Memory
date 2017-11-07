@@ -674,6 +674,20 @@ namespace Memory
             }
         }
 
+        private async void pictureBox1_Click(object sender, EventArgs e)
+        {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
+            DialogResult ExitGame = MessageBox.Show("Weet je zeker dat je terug naar het hoofdmenu wilt gaan? ", "Home", MessageBoxButtons.YesNo);
+
+            if (ExitGame == DialogResult.Yes)
+            {
+                Sluiten();
+            }
+        }
+
         private void ConnectButton_Click(object sender, EventArgs e)
         {
             ServerClient.HostIP = IpTextBox.Text;
@@ -682,6 +696,14 @@ namespace Memory
             {
                 SetupGame();
             }
+        }
+
+        private void GameServer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Memory.HomePage f2 = new Memory.HomePage();
+            f2.Tonen();
+            Dispose();
+            GC.Collect();
         }
 
         private void IpTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -750,6 +772,13 @@ namespace Memory
             Bitmap bmp = new Bitmap(Resources.cur1031);
             Cursor c = new Cursor(bmp.GetHicon());
             this.Cursor = c;
+        }
+
+        public void Sluiten()
+        {
+            Close();
+            Dispose();
+            GC.Collect();
         }
     }
 }
