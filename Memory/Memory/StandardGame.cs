@@ -14,6 +14,11 @@ using Memory.Properties;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    ///  standard gamemode, wordt geladen onder de button 'local hotseat'
+    ///  2 spelers spelen tegen elkaar op het lokale apparaat, waarna de winnaar zijn score wordt opgeslagen als highscore
+    ///  alle code om te checken etc. is lokaal in deze class
+    /// </summary>
     public partial class Form1 : Form // Standard game 
     {
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();

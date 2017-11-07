@@ -8,6 +8,10 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Memory
 {
+    /// <summary>
+    /// het opslaan van welk thema er is geselecteerd, zodat deze bij elke game ingeladen kan worden
+    /// het slaat 1 string op, zonder encryptie
+    /// </summary>
     class SettingsPage_Save
     {
         public static void SaveData(string thema)
@@ -35,6 +39,10 @@ namespace Memory
             string opslag = Deserialize(bytes);
 
             //variabelen teruggeven aan button die een label aanpast
+            if (opslag == "Er is nog geen\nsave file\naanwezig")
+            {
+                opslag = "media";
+            }
             return (opslag);
         }
 
