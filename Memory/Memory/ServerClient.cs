@@ -16,7 +16,6 @@ namespace Memory
     {
         public static string HostIP, HostName;
         public static bool ClientConnection;
-        static int PacketSize = 1024 * 1024;
         public static TcpClient Client;
         public static List<Point> TempRandomButLocation = new List<Point>();
         public static string[] TurnArray = new string[2];
@@ -37,9 +36,20 @@ namespace Memory
 
         public static void RecieveGamaData()
         {
-            var bin = new BinaryFormatter();
-            var list = (List<Point>)bin.Deserialize(Client.GetStream());
-            TempRandomButLocation = list;
+            try
+            {
+                var bin = new BinaryFormatter();
+                var list = (List<Point>)bin.Deserialize(Client.GetStream());
+                TempRandomButLocation = list;
+            }
+            catch
+            {
+                MessageBox.Show("Error, Er is een fout opgetreden!", "ERROR!", MessageBoxButtons.OK);
+                Client.Close();
+                GameServer.CloseApplication();
+                Memory.HomePage h = new Memory.HomePage();
+                h.Show();
+            }
         }
 
         public static void SendTurn()
@@ -70,27 +80,39 @@ namespace Memory
                 MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
                 Client.Close();
                 GameServer.CloseApplication();
+                Memory.HomePage h = new Memory.HomePage();
+                h.Show();
             }
         }
 
         public static void SendName()
         {
-            var bin = new BinaryFormatter();
-            bin.Serialize(Client.GetStream(), GameServer.LocalPlayer);
+            try
+            {
+                var bin = new BinaryFormatter();
+                bin.Serialize(Client.GetStream(), GameServer.LocalPlayer);
+            }
+            catch
+            {
+                MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
+                Client.Close();
+                GameServer.CloseApplication();
+            }
         }
 
         public static void RecieveName()
         {
-            var bin = new BinaryFormatter();
-            HostName = (string) bin.Deserialize(Client.GetStream());
-        }
-
-        public static void SendMessage(string message)
-        {
-            //Send message
-            byte[] bytes = Encoding.UTF8.GetBytes(message);
-            NetworkStream stream = Client.GetStream();
-            stream.Write(bytes, 0, bytes.Length);
+            try
+            {
+                TurnArray = GameServer.TurnArray;
+                var bin = new BinaryFormatter();
+                bin.Serialize(Client.GetStream(), TurnArray);
+            }
+            catch
+            {
+                var bin = new BinaryFormatter();
+                HostName = (string)bin.Deserialize(Client.GetStream());
+            }
         }
     }
 }
