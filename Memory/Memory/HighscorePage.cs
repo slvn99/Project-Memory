@@ -128,8 +128,8 @@ namespace Memory
             {
                 string save = RunningSave.LoadData();
                 Gamemodelabel.Text = "Running Gamemode";
-                Standaard_gamemode.Visible = true;
-                Running_gamemode.Visible = false;
+                Standaard_gamemode.Visible = false;
+                Running_gamemode.Visible = true;
 
                 if (save == "Er is nog geen\nsave file\naanwezig")
                 {
@@ -192,8 +192,8 @@ namespace Memory
             {
                 string save = Highscores_save.LoadData();
                 Gamemodelabel.Text = "Standard Gamemode";
-                Standaard_gamemode.Visible = false;
-                Running_gamemode.Visible = true;
+                Standaard_gamemode.Visible = true;
+                Running_gamemode.Visible = false;
 
                 if (save == "Er is nog geen\nsave file\naanwezig")
                 {

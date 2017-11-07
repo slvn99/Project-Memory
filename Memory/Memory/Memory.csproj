@@ -166,6 +166,13 @@
     <Content Include="bin\Debug\no1.wav" />
     <Content Include="bin\Debug\Run90s.wav" />
     <Content Include="bin\Debug\Skra.wav" />
+    <None Include="Resources\type uw naam.png" />
+    <None Include="Resources\host_button.png" />
+    <None Include="Resources\connect_button.png" />
+    <None Include="Resources\client_button.png" />
+    <None Include="Resources\host.png" />
+    <None Include="Resources\connect.png" />
+    <None Include="Resources\client.png" />
     <None Include="Resources\switch gamemode.png" />
     <None Include="Resources\Standaard gamemode.png" />
     <None Include="Resources\Running gamemode.png" />
@@ -213,6 +220,8 @@
     <Content Include="bin\Debug\wow.wav" />
     <None Include="Resources\avengers130.png" />
     <None Include="Resources\ac130.png" />
+    <None Include="Resources\bevestig.png" />
+    <None Include="Resources\bevestig_button.png" />
     <Content Include="Resources\button laden.png" />
     <Content Include="Resources\button opslaan.png" />
     <None Include="Resources\Thema%27s.png" />
