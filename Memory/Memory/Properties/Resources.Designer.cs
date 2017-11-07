@@ -233,6 +233,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap bevestig_button {
+            get {
+                object obj = ResourceManager.GetObject("bevestig_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap blue_wallpaper_7 {
             get {
                 object obj = ResourceManager.GetObject("blue_wallpaper_7", resourceCulture);
@@ -336,6 +346,26 @@ namespace Memory.Properties {
         public static System.Drawing.Bitmap clapperboard {
             get {
                 object obj = ResourceManager.GetObject("clapperboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap client_button {
+            get {
+                object obj = ResourceManager.GetObject("client_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap connect_button {
+            get {
+                object obj = ResourceManager.GetObject("connect_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -506,6 +536,16 @@ namespace Memory.Properties {
         public static System.Drawing.Bitmap HomeButton {
             get {
                 object obj = ResourceManager.GetObject("HomeButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap host_button {
+            get {
+                object obj = ResourceManager.GetObject("host_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1044,6 +1084,16 @@ namespace Memory.Properties {
         public static System.Drawing.Bitmap Tyfusding {
             get {
                 object obj = ResourceManager.GetObject("Tyfusding", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap type_uw_naam {
+            get {
+                object obj = ResourceManager.GetObject("type_uw_naam", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
