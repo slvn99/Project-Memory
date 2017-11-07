@@ -24,6 +24,7 @@ namespace Memory
         public static Label TempConLabel = new Label();
         Button Kaart1Select, Kaart2Select;
         bool host = false;
+        public static bool Connectionfail = false;
         List<Point> PointLocation = new List<Point>();
         public static List<Point> RandomButLocation = new List<Point>();
         string thema = Memory.SettingsPage_Save.LoadData();
@@ -145,124 +146,150 @@ namespace Memory
             if (host == true)
             {
                 player1 = LocalPlayer;
+
                 ServerHost.SendGameState();
-                ServerHost.RecieveName();
-                OtherPlayer = ServerHost.ClientName;
-                OtherPlayerLabel.Text = OtherPlayer;
-                player2 = OtherPlayer;
-                PlayerBeurt = player1;
-                BeurtLabel.Text = PlayerBeurt;
-                ServerHost.SendName();
 
-                PuntenLocal.Text = "0";
-                PuntenOther.Text = "0";
-                PuntenLocal.Visible = true;
-                PuntenOther.Visible = true;
-                hostofclient.Visible = false;
-                host_button.Visible = false;
-                client_button.Visible = false;
-
-                Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
-                foreach (Button x in ButtonGrid)
+                if (Connectionfail != true)
                 {
-                    x.Visible = true;
+                    ServerHost.RecieveName();
+                }
+
+                if (Connectionfail != true)
+                {
+                    OtherPlayer = ServerHost.ClientName;
+                    OtherPlayerLabel.Text = OtherPlayer;
+                    player2 = OtherPlayer;
+                    PlayerBeurt = player1;
+                    BeurtLabel.Text = PlayerBeurt;
+                    ServerHost.SendName();
+                }
+
+                if (Connectionfail != true)
+                {
+                    PuntenLocal.Text = "0";
+                    PuntenOther.Text = "0";
+                    PuntenLocal.Visible = true;
+                    PuntenOther.Visible = true;
+                    hostofclient.Visible = false;
+                    host_button.Visible = false;
+                    client_button.Visible = false;
+
+                    Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+                    foreach (Button x in ButtonGrid)
+                    {
+                        x.Visible = true;
+                    }
                 }
             }
             else
             {
                 player2 = LocalPlayer;
                 ServerClient.RecieveGamaData();
-                Point[] ButtonGridLocation = ServerClient.TempRandomButLocation.ToArray();
-                for (int i = 0; i < ButtonGridLocation.Length; i++)
+
+                if (Connectionfail != true) // zorgt ervoor dat deze code niet meer verwerkt word als er een connection error is opgetreden.
                 {
-                    switch (i)
+                    Point[] ButtonGridLocation = ServerClient.TempRandomButLocation.ToArray();
+                    for (int i = 0; i < ButtonGridLocation.Length; i++)
                     {
-                        case 0:
-                            GridButton1.Location = ButtonGridLocation[i];
-                            break;
-                        case 1:
-                            GridButton1Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 2:
-                            GridButton2.Location = ButtonGridLocation[i];
-                            break;
-                        case 3:
-                            GridButton2Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 4:
-                            GridButton3.Location = ButtonGridLocation[i];
-                            break;
-                        case 5:
-                            GridButton3Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 6:
-                            GridButton4.Location = ButtonGridLocation[i];
-                            break;
-                        case 7:
-                            GridButton4Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 8:
-                            GridButton5.Location = ButtonGridLocation[i];
-                            break;
-                        case 9:
-                            GridButton5Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 10:
-                            GridButton6.Location = ButtonGridLocation[i];
-                            break;
-                        case 11:
-                            GridButton6Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 12:
-                            GridButton7.Location = ButtonGridLocation[i];
-                            break;
-                        case 13:
-                            GridButton7Dup.Location = ButtonGridLocation[i];
-                            break;
-                        case 14:
-                            GridButton8.Location = ButtonGridLocation[i];
-                            break;
-                        case 15:
-                            GridButton8Dup.Location = ButtonGridLocation[i];
-                            break;
+                        switch (i)
+                        {
+                            case 0:
+                                GridButton1.Location = ButtonGridLocation[i];
+                                break;
+                            case 1:
+                                GridButton1Dup.Location = ButtonGridLocation[i];
+                                break;
+                            case 2:
+                                GridButton2.Location = ButtonGridLocation[i];
+                                break;
+                            case 3:
+                                GridButton2Dup.Location = ButtonGridLocation[i];
+                                break;
+                            case 4:
+                                GridButton3.Location = ButtonGridLocation[i];
+                                break;
+                            case 5:
+                                GridButton3Dup.Location = ButtonGridLocation[i];
+                                break;
+                            case 6:
+                                GridButton4.Location = ButtonGridLocation[i];
+                                break;
+                            case 7:
+                                GridButton4Dup.Location = ButtonGridLocation[i];
+                                break;
+                            case 8:
+                                GridButton5.Location = ButtonGridLocation[i];
+                                break;
+                            case 9:
+                                GridButton5Dup.Location = ButtonGridLocation[i];
+                                break;
+                            case 10:
+                                GridButton6.Location = ButtonGridLocation[i];
+                                break;
+                            case 11:
+                                GridButton6Dup.Location = ButtonGridLocation[i];
+                                break;
+                            case 12:
+                                GridButton7.Location = ButtonGridLocation[i];
+                                break;
+                            case 13:
+                                GridButton7Dup.Location = ButtonGridLocation[i];
+                                break;
+                            case 14:
+                                GridButton8.Location = ButtonGridLocation[i];
+                                break;
+                            case 15:
+                                GridButton8Dup.Location = ButtonGridLocation[i];
+                                break;
+                        }
                     }
                 }
 
-                ServerClient.SendName();
-                ServerClient.RecieveName();
-                OtherPlayer = ServerClient.HostName;
-                OtherPlayerLabel.Text = OtherPlayer;
-                player1 = OtherPlayer;
-                PlayerBeurt = player1;
-                BeurtLabel.Text = PlayerBeurt;
-
-                PuntenLocal.Text = "0";
-                PuntenOther.Text = "0";
-                PuntenLocal.Visible = true;
-                PuntenOther.Visible = true;
-                ip.Visible = false;
-                IpTextBox.Visible = false;
-                connect_button.Visible = false;
-
-                Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
-                foreach (Button x in ButtonGrid)
+                if (Connectionfail != true) // zorgt ervoor dat deze code niet meer verwerkt word als er een connection error is opgetreden.
                 {
-                    x.Visible = true;
-                    x.Enabled = false;
+                    ServerClient.SendName();
                 }
 
-                backgroundWorker.RunWorkerAsync();
+                if (Connectionfail != true) // zorgt ervoor dat deze code niet meer verwerkt word als er een connection error is opgetreden.
+                {
+                    ServerClient.RecieveName();
+                }
+
+                if (Connectionfail != true) // zorgt ervoor dat deze code niet meer verwerkt word als er een connection error is opgetreden.
+                {
+                    OtherPlayer = ServerClient.HostName;
+                    OtherPlayerLabel.Text = OtherPlayer;
+                    player1 = OtherPlayer;
+                    PlayerBeurt = player1;
+                    BeurtLabel.Text = PlayerBeurt;
+
+                    PuntenLocal.Text = "0";
+                    PuntenOther.Text = "0";
+                    PuntenLocal.Visible = true;
+                    PuntenOther.Visible = true;
+                    ip.Visible = false;
+                    IpTextBox.Visible = false;
+                    connect_button.Visible = false;
+
+                    Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+                    foreach (Button x in ButtonGrid)
+                    {
+                        x.Visible = true;
+                        x.Enabled = false;
+                    }
+
+                    backgroundWorker.RunWorkerAsync();
+                }
             }
         }
 
-        
         private void Click_kaart(Button Buttonclick)
         {
-            if (Kaart1Select == null)
+            if(Kaart1Select == null)
             {
                 Kaart1Select = Buttonclick;
             }
-            else if (Kaart1Select != null && Kaart2Select == null)
+            else if(Kaart1Select != null && Kaart2Select == null)
             {
                 Kaart2Select = Buttonclick;
             }
@@ -279,7 +306,7 @@ namespace Memory
                     {
                         Kaart2Select = null;
                     }
-                    else if(Kaart1Select.Name != Kaart2Select.Name)
+                    else if (Kaart1Select.Name != Kaart2Select.Name)
                     {
                         player.SoundLocation = "ping.wav";
                         player.Play();
@@ -303,14 +330,17 @@ namespace Memory
                             ServerClient.SendTurn();
                         }
 
-                        Kaart1Select = null;
-                        Kaart2Select = null;
-                        Point_Add();
-                        GC.Collect();
-
-                        foreach (var x in ButtonGrid)
+                        if (Connectionfail != true) // zorgt ervoor dat deze code niet meer verwerkt word als er een connection error is opgetreden.
                         {
-                            x.Enabled = true;
+                            Kaart1Select = null;
+                            Kaart2Select = null;
+                            Point_Add();
+                            GC.Collect();
+
+                            foreach (var x in ButtonGrid)
+                            {
+                                x.Enabled = true;
+                            }
                         }
                     }
                 }
@@ -350,16 +380,19 @@ namespace Memory
                         ServerClient.SendTurn();
                     }
 
-                    Kaart1Select = null;
-                    Kaart2Select = null;
-                    Change_Beurt();
-                    GC.Collect();
-
-                    foreach(var x in ButtonGrid)
+                    if (Connectionfail != true)// zorgt ervoor dat deze code niet meer verwerkt word als er een connection error is opgetreden.
                     {
-                        x.Enabled = false;
+                        Kaart1Select = null;
+                        Kaart2Select = null;
+                        Change_Beurt();
+                        GC.Collect();
+
+                        foreach (var x in ButtonGrid)
+                        {
+                            x.Enabled = false;
+                        }
+                        backgroundWorker.RunWorkerAsync();
                     }
-                    backgroundWorker.RunWorkerAsync();
                 }
             }
         }

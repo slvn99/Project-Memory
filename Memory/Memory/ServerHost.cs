@@ -47,9 +47,21 @@ namespace Memory
 
         public static void SendGameState()
         {
-            TempRandomButLocation = GameServer.RandomButLocation;
-            var bin = new BinaryFormatter();
-            bin.Serialize(Client.GetStream(), TempRandomButLocation);
+            try
+            {
+                TempRandomButLocation = GameServer.RandomButLocation;
+                var bin = new BinaryFormatter();
+                bin.Serialize(Client.GetStream(), TempRandomButLocation);
+            }
+            catch
+            {
+                MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
+                Listener.Stop();
+                Client.Close();
+                GameServer obj = (GameServer)Application.OpenForms["GameServer"];
+                obj.Close();
+                GameServer.Connectionfail = true;
+            }
         }
 
         public static void SendName()
@@ -61,15 +73,13 @@ namespace Memory
             }
             catch
             {
-                MessageBox.Show("Error, Er is een fout opgetreden!", "ERROR!", MessageBoxButtons.OK);
+                MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
                 Listener.Stop();
                 Client.Close();
-                GameServer gameServer = new GameServer();
-                gameServer.CloseApplication();
-                Memory.HomePage h = new Memory.HomePage();
-                h.Show();
+                GameServer obj = (GameServer)Application.OpenForms["GameServer"];
+                obj.Close();
+                GameServer.Connectionfail = true;
             }
-
         }
 
         public static void RecieveName()
@@ -81,13 +91,12 @@ namespace Memory
             }
             catch
             {
-                MessageBox.Show("Error, Er is een fout opgetreden!", "ERROR!", MessageBoxButtons.OK);
+                MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
                 Listener.Stop();
                 Client.Close();
-                GameServer gameServer = new GameServer();
-                gameServer.CloseApplication();
-                Memory.HomePage h = new Memory.HomePage();
-                h.Show();
+                GameServer obj = (GameServer)Application.OpenForms["GameServer"];
+                obj.Close();
+                GameServer.Connectionfail = true;
             }
         }
 
@@ -101,13 +110,12 @@ namespace Memory
             }
             catch
             {
-                MessageBox.Show("Error, Er is een fout opgetreden!", "ERROR!", MessageBoxButtons.OK);
+                MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
                 Listener.Stop();
                 Client.Close();
-                GameServer gameServer = new GameServer();
-                gameServer.CloseApplication();
-                Memory.HomePage h = new Memory.HomePage();
-                h.Show();
+                GameServer obj = (GameServer)Application.OpenForms["GameServer"];
+                obj.Close();
+                GameServer.Connectionfail = true;
             }
         }
 
@@ -120,13 +128,12 @@ namespace Memory
             }
             catch
             {
-                MessageBox.Show("Error, Er is een fout opgetreden!", "ERROR!", MessageBoxButtons.OK);
+                MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
                 Listener.Stop();
                 Client.Close();
-                GameServer gameServer = new GameServer();
-                gameServer.CloseApplication();
-                Memory.HomePage h = new Memory.HomePage();
-                h.Show();
+                GameServer obj = (GameServer)Application.OpenForms["GameServer"];
+                obj.Close();
+                GameServer.Connectionfail = true;
             }
         }
     }
