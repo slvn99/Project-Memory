@@ -309,14 +309,14 @@ namespace Memory
             {
                 PuntenLocalPlayer++;
                 TotaalMatches++;
-                LocalPlayerLabel.Text = Convert.ToString(PuntenLocalPlayer);
+                PuntenLocal.Text = Convert.ToString(PuntenLocalPlayer);
                 EndGame_Check();
             }
             else
             {
                 PuntenOtherPlayer++;
                 TotaalMatches++;
-                OtherPlayerLabel.Text = Convert.ToString(OtherPlayer);
+                PuntenOther.Text = Convert.ToString(OtherPlayer);
                 EndGame_Check();
             }
         }
