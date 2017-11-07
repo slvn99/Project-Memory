@@ -14,7 +14,6 @@ namespace Memory
 {
     class ServerHost
     {
-        static int PacketSize = 1024 * 1024;
         public static string ClientName;
         public static TcpListener Listener;
         public static TcpClient Client; //client die geconnect is
@@ -32,7 +31,6 @@ namespace Memory
         public static void AcceptClient()
         {
             Listener.BeginAcceptTcpClient(ClientConnected, null);
-            GameServer.TempConLabel.Text = "connecting";
         }
 
         public static void ClientConnected(IAsyncResult ar)
@@ -44,54 +42,98 @@ namespace Memory
             }
             catch
             {
-
             }
         }
 
         public static void SendGameState()
         {
-            TempRandomButLocation = GameServer.RandomButLocation;
-            var bin = new BinaryFormatter();
-            bin.Serialize(Client.GetStream(), TempRandomButLocation);
+            try
+            {
+                TempRandomButLocation = GameServer.RandomButLocation;
+                var bin = new BinaryFormatter();
+                bin.Serialize(Client.GetStream(), TempRandomButLocation);
+            }
+            catch
+            {
+                MessageBox.Show("Error, Er is een fout opgetreden!", "ERROR!", MessageBoxButtons.OK);
+                Listener.Stop();
+                Client.Close();
+                GameServer.CloseApplication();
+                Memory.HomePage h = new Memory.HomePage();
+                h.Show();
+            }
         }
 
         public static void SendName()
         {
-            var bin = new BinaryFormatter();
-            bin.Serialize(Client.GetStream(), GameServer.LocalPlayer);
+            try
+            {
+                var bin = new BinaryFormatter();
+                bin.Serialize(Client.GetStream(), GameServer.LocalPlayer);
+            }
+            catch
+            {
+                MessageBox.Show("Error, Er is een fout opgetreden!", "ERROR!", MessageBoxButtons.OK);
+                Listener.Stop();
+                Client.Close();
+                GameServer.CloseApplication();
+                Memory.HomePage h = new Memory.HomePage();
+                h.Show();
+            }
         }
 
         public static void RecieveName()
         {
-            var bin = new BinaryFormatter();
-            ClientName = (string)bin.Deserialize(Client.GetStream());
+            try
+            {
+                var bin = new BinaryFormatter();
+                ClientName = (string)bin.Deserialize(Client.GetStream());
+            }
+            catch
+            {
+                MessageBox.Show("Error, Er is een fout opgetreden!", "ERROR!", MessageBoxButtons.OK);
+                Listener.Stop();
+                Client.Close();
+                GameServer.CloseApplication();
+                Memory.HomePage h = new Memory.HomePage();
+                h.Show();
+            }
         }
 
         public static void SendTurn()
         {
-            TurnArray = GameServer.TurnArray;
-            var bin = new BinaryFormatter();
-            bin.Serialize(Client.GetStream(), TurnArray);
+            try
+            {
+                TurnArray = GameServer.TurnArray;
+                var bin = new BinaryFormatter();
+                bin.Serialize(Client.GetStream(), TurnArray);
+            }
+            catch
+            {
+                MessageBox.Show("Error, Er is een fout opgetreden!", "ERROR!", MessageBoxButtons.OK);
+                Listener.Stop();
+                Client.Close();
+                GameServer.CloseApplication();
+                Memory.HomePage h = new Memory.HomePage();
+                h.Show();
+            }
         }
 
         public static void RecieveTurn()
         {
-            var bin = new BinaryFormatter();
-            TurnArray = (string[])bin.Deserialize(Client.GetStream());
-        }
-
-        public static bool SendMessage(string message)
-        {
             try
             {
-                byte[] bytes = Encoding.UTF8.GetBytes(message);
-                Client.GetStream().Write(bytes, 0, bytes.Length); // Send the response
-                return true;
+                var bin = new BinaryFormatter();
+                TurnArray = (string[])bin.Deserialize(Client.GetStream());
             }
-            catch (Exception)
+            catch
             {
+                MessageBox.Show("Error, Er is een fout opgetreden!", "ERROR!", MessageBoxButtons.OK);
+                Listener.Stop();
                 Client.Close();
-                return false;
+                GameServer.CloseApplication();
+                Memory.HomePage h = new Memory.HomePage();
+                h.Show();
             }
         }
     }
