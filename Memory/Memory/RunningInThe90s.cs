@@ -45,7 +45,6 @@ namespace Memory
             {
                 x.Visible = false;
                 punten.Add(x.Location);
-                x.Text = "";
             }
             Random ButtonLocatie = new Random();
             foreach (Button Button in ButtonGrid)
@@ -84,9 +83,14 @@ namespace Memory
         //Deze method geeft het speelbord weer na het invullen van een naam
         private void PlayRunningInthe90s()
         {
-            RunningTimer.Start();
-                
-                RunningLabel.Visible = true;
+            if (Player1Textbox.Text == "")
+            {
+                MessageBox.Show("Je moet een naam invullen!");
+            }
+
+            else
+            {
+                RunningTimer.Start();
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 
                 foreach (var x in ButtonGrid)
@@ -154,7 +158,7 @@ namespace Memory
                         break;
                 }
             }
-        
+        }
 
         
         private void Click_kaart(Button Buttonclick)
@@ -241,10 +245,6 @@ namespace Memory
                     {
                         x.Enabled = true;
                     }
-                    foreach (var x in ButtonGrid)
-                    {
-                        x.Text = "";
-                    }
                 }
             }
         }
@@ -326,19 +326,12 @@ namespace Memory
         //Button_click event voor de play_button, die tevens de timer laat verschijnen
         private void play_Click(object sender, EventArgs e)
         {
-            if (Player1Textbox.Text == "")
-                {
-                MessageBox.Show("Je moet een naam invullen!");
-                }
-            else
-            {
-                player.SoundLocation = "click.wav";
-                player.Play();
-                PlayRunningInthe90s();
-                RunningTimer.Enabled = true;
-                RunningLabel.Visible = true;
-                label1.Visible = true;
-            }
+            player.SoundLocation = "click.wav";
+            player.Play();
+            PlayRunningInthe90s();
+            RunningTimer.Enabled = true;
+            RunningLabel.Visible = true;
+            label1.Visible = true;
         }
 
         #region kaarten
@@ -346,7 +339,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton1.BackgroundImage = Resources.Steam;
+					break;
+				case "Media":
                     GridButton1.BackgroundImage = Resources.Steam;
                     break;
                 case "Films":
@@ -356,7 +352,6 @@ namespace Memory
                     GridButton1.BackgroundImage = Resources.ac130;
                     break;
             }
-            GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton1);
             Check_kaart();
         }
@@ -365,7 +360,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton1Dup.BackgroundImage = Resources.Steam;
+					break;
+				case "Media":
                     GridButton1Dup.BackgroundImage = Resources.Steam;
                     break;
                 case "Films":
@@ -375,7 +373,6 @@ namespace Memory
                     GridButton1Dup.BackgroundImage = Resources.ac130;
                     break;
             }
-            GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton1Dup);
             Check_kaart();
         }
@@ -384,7 +381,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton2.BackgroundImage = Resources.fb;
+					break;
+				case "Media":
                     GridButton2.BackgroundImage = Resources.fb;
                     break;
                 case "Films":
@@ -394,7 +394,6 @@ namespace Memory
                     GridButton2.BackgroundImage = Resources.zelda130;
                     break;
             }
-            GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton2);
             Check_kaart();
         }
@@ -403,7 +402,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton2Dup.BackgroundImage = Resources.fb;
+					break;
+				case "Media":
                     GridButton2Dup.BackgroundImage = Resources.fb;
                     break;
                 case "Films":
@@ -413,7 +415,6 @@ namespace Memory
                     GridButton2Dup.BackgroundImage = Resources.zelda130;
                     break;
             }
-            GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton2Dup);
             Check_kaart();
         }
@@ -422,7 +423,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton3.BackgroundImage = Resources.Google;
+					break;
+				case "Media":
                     GridButton3.BackgroundImage = Resources.Google;
                     break;
                 case "Films":
@@ -432,7 +436,6 @@ namespace Memory
                     GridButton3.BackgroundImage = Resources.witcher130;
                     break;
             }
-            GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton3);
             Check_kaart();
         }
@@ -441,7 +444,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton3Dup.BackgroundImage = Resources.Google;
+					break;
+				case "Media":
                     GridButton3Dup.BackgroundImage = Resources.Google;
                     break;
                 case "Films":
@@ -451,7 +457,6 @@ namespace Memory
                     GridButton3Dup.BackgroundImage = Resources.witcher130;
                     break;
             }
-            GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton3Dup);
             Check_kaart();
         }
@@ -460,7 +465,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton4.BackgroundImage = Resources.Youtube;
+					break;
+				case "Media":
                     GridButton4.BackgroundImage = Resources.Youtube;
                     break;
                 case "Films":
@@ -470,7 +478,6 @@ namespace Memory
                     GridButton4.BackgroundImage = Resources.fifa130;
                     break;
             }
-            GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton4);
             Check_kaart();
         }
@@ -479,7 +486,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton4Dup.BackgroundImage = Resources.Youtube;
+					break;
+				case "Media":
                     GridButton4Dup.BackgroundImage = Resources.Youtube;
                     break;
                 case "Films":
@@ -489,7 +499,6 @@ namespace Memory
                     GridButton4Dup.BackgroundImage = Resources.fifa130;
                     break;
             }
-            GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton4Dup);
             Check_kaart();
         }
@@ -498,7 +507,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton5.BackgroundImage = Resources.Twitter;
+					break;
+				case "Media":
                     GridButton5.BackgroundImage = Resources.Twitter;
                     break;
                 case "Films":
@@ -508,7 +520,6 @@ namespace Memory
                     GridButton5.BackgroundImage = Resources.need_for_speed130;
                     break;
             }
-            GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton5);
             Check_kaart();
         }
@@ -517,7 +528,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton5Dup.BackgroundImage = Resources.Twitter;
+					break;
+				case "Media":
                     GridButton5Dup.BackgroundImage = Resources.Twitter;
                     break;
                 case "Films":
@@ -527,27 +541,7 @@ namespace Memory
                     GridButton5Dup.BackgroundImage = Resources.need_for_speed130;
                     break;
             }
-            GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton5Dup);
-            Check_kaart();
-        }
-
-        private void GridButton6Dup_Click(object sender, EventArgs e)
-        {
-            switch (thema)
-            {
-                case "Media":
-                    GridButton6Dup.BackgroundImage = Resources._9gag;
-                    break;
-                case "Films":
-                    GridButton6Dup.BackgroundImage = Resources.avengers130;
-                    break;
-                case "Games":
-                    GridButton6Dup.BackgroundImage = Resources.gta130;
-                    break;
-            }
-            GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            Click_kaart(GridButton6Dup);
             Check_kaart();
         }
 
@@ -555,7 +549,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton6.BackgroundImage = Resources._9gag;
+					break;
+				case "Media":
                     GridButton6.BackgroundImage = Resources._9gag;
                     break;
                 case "Films":
@@ -565,8 +562,28 @@ namespace Memory
                     GridButton6.BackgroundImage = Resources.gta130;
                     break;
             }
-            GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton6);
+            Check_kaart();
+        }
+
+        private void GridButton6Dup_Click(object sender, EventArgs e)
+        {
+            switch (thema)
+            {
+				default:
+					GridButton6Dup.BackgroundImage = Resources._9gag;
+					break;
+				case "Media":
+                    GridButton6Dup.BackgroundImage = Resources._9gag;
+                    break;
+                case "Films":
+                    GridButton6Dup.BackgroundImage = Resources.avengers130;
+                    break;
+                case "Games":
+                    GridButton6Dup.BackgroundImage = Resources.gta130;
+                    break;
+            }
+            Click_kaart(GridButton6Dup);
             Check_kaart();
         }
 
@@ -574,7 +591,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton7.BackgroundImage = Resources.TwitchLogo;
+					break;
+				case "Media":
                     GridButton7.BackgroundImage = Resources.TwitchLogo;
                     break;
                 case "Films":
@@ -584,7 +604,6 @@ namespace Memory
                     GridButton7.BackgroundImage = Resources.portal130;
                     break;
             }
-            GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton7);
             Check_kaart();
         }
@@ -593,7 +612,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton7Dup.BackgroundImage = Resources.TwitchLogo;
+					break;
+				case "Media":
                     GridButton7Dup.BackgroundImage = Resources.TwitchLogo;
                     break;
                 case "Films":
@@ -603,7 +625,6 @@ namespace Memory
                     GridButton7Dup.BackgroundImage = Resources.portal130;
                     break;
             }
-            GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton7Dup);
             Check_kaart();
         }
@@ -612,7 +633,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton8.BackgroundImage = Resources.Reddit;
+					break;
+				case "Media":
                     GridButton8.BackgroundImage = Resources.Reddit;
                     break;
                 case "Films":
@@ -622,7 +646,6 @@ namespace Memory
                     GridButton8.BackgroundImage = Resources.halo130;
                     break;
             }
-            GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton8);
             Check_kaart();
         }
@@ -631,7 +654,10 @@ namespace Memory
         {
             switch (thema)
             {
-                case "Media":
+				default:
+					GridButton8Dup.BackgroundImage = Resources.Reddit;
+					break;
+				case "Media":
                     GridButton8Dup.BackgroundImage = Resources.Reddit;
                     break;
                 case "Films":
@@ -641,7 +667,6 @@ namespace Memory
                     GridButton8Dup.BackgroundImage = Resources.halo130;
                     break;
             }
-            GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             Click_kaart(GridButton8Dup);
             Check_kaart();
         }
