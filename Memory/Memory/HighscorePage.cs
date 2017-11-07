@@ -71,12 +71,12 @@ namespace Memory
 
         }
 
-        //event die je terugstuurt naar de Homepage wanneer de highscore form gesloten is
-		private void HighscorePage_FormClosed(object sender, FormClosedEventArgs e)
-		{
-			Memory.HomePage f2 = new Memory.HomePage();
-			f2.Show();
-		}
+        private void HighscorePage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Memory.HomePage f2 = new Memory.HomePage();
+            f2.Show();
+            GC.Collect();
+        }
 
         //Het terugsturen naar het hoofdmenu vanuit de highscorepage
         private async void HomeButton_Click(object sender, EventArgs e)
@@ -86,6 +86,7 @@ namespace Memory
             await Task.Delay(300);
             player.Stop();
             this.Close();
+            this.Dispose();
         }
 
         //magische code
@@ -252,5 +253,7 @@ namespace Memory
                 }
             }
         }
+
+       
     }
 }

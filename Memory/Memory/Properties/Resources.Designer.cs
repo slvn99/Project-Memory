@@ -203,16 +203,6 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap back_of_memory_cards {
-            get {
-                object obj = ResourceManager.GetObject("back_of_memory_cards", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap background_game {
             get {
                 object obj = ResourceManager.GetObject("background_game", resourceCulture);
@@ -283,29 +273,9 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap buttons_PNG32 {
-            get {
-                object obj = ResourceManager.GetObject("buttons_PNG32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap buttons_PNG321 {
             get {
                 object obj = ResourceManager.GetObject("buttons_PNG321", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap buttons_PNG322 {
-            get {
-                object obj = ResourceManager.GetObject("buttons_PNG322", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -473,16 +443,6 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap giphy {
-            get {
-                object obj = ResourceManager.GetObject("giphy", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap Gold_trophy {
             get {
                 object obj = ResourceManager.GetObject("Gold_trophy", resourceCulture);
@@ -613,26 +573,6 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap maximize_window1600 {
-            get {
-                object obj = ResourceManager.GetObject("maximize_window1600", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap maximize_window1600_2 {
-            get {
-                object obj = ResourceManager.GetObject("maximize_window1600_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap media_achtergrond {
             get {
                 object obj = ResourceManager.GetObject("media_achtergrond", resourceCulture);
@@ -646,16 +586,6 @@ namespace Memory.Properties {
         public static System.Drawing.Bitmap Memory {
             get {
                 object obj = ResourceManager.GetObject("Memory", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap minimize_window1600 {
-            get {
-                object obj = ResourceManager.GetObject("minimize_window1600", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -942,26 +872,6 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap speler_1 {
-            get {
-                object obj = ResourceManager.GetObject("speler_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap speler_2 {
-            get {
-                object obj = ResourceManager.GetObject("speler_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap Standaard_gamemode {
             get {
                 object obj = ResourceManager.GetObject("Standaard_gamemode", resourceCulture);
@@ -1041,6 +951,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Timericon {
+            get {
+                object obj = ResourceManager.GetObject("Timericon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap toepassen {
             get {
                 object obj = ResourceManager.GetObject("toepassen", resourceCulture);
@@ -1074,16 +994,6 @@ namespace Memory.Properties {
         public static System.Drawing.Bitmap Twitter {
             get {
                 object obj = ResourceManager.GetObject("Twitter", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Tyfusding {
-            get {
-                object obj = ResourceManager.GetObject("Tyfusding", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

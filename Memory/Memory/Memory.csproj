@@ -166,6 +166,7 @@
     <Content Include="bin\Debug\no1.wav" />
     <Content Include="bin\Debug\Run90s.wav" />
     <Content Include="bin\Debug\Skra.wav" />
+    <None Include="Resources\Timericon.png" />
     <None Include="Resources\type uw naam.png" />
     <None Include="Resources\host_button.png" />
     <None Include="Resources\connect_button.png" />

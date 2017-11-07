@@ -69,13 +69,10 @@ namespace Memory
 		}
 
         // Event die de HomePage herstart bij het afluiten van de Settingspage
-		private async void SettingsPage_FormClosed(object sender, FormClosedEventArgs e)
+		private void SettingsPage_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			Memory.HomePage f13 = new Memory.HomePage();
-			f13.Show();
-			await Task.Delay(100);
-            this.Close();
-            this.Dispose();
+            Memory.HomePage f2 = new Memory.HomePage();
+            f2.Show();
             GC.Collect();
         }
 
@@ -101,10 +98,8 @@ namespace Memory
             player.Play();
             await Task.Delay(300);
             player.Stop();
-            this.ShowInTaskbar = false;
             this.Close();
             this.Dispose();
-            GC.Collect();
         }
 
         // Volume dempen
