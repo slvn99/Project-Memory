@@ -369,7 +369,7 @@ namespace WindowsFormsApp1
                     Reset.Visible = false;
                     player.SoundLocation = "wow.wav";
                     player.Play();
-                    MessageBox.Show("WOW, " + player1 + " heeft gelijk gespeeld met " + player2 + "!" , "Einde Spel", MessageBoxButtons.OK);
+                    MessageBox.Show("WOW, " + player1 + " heeft gelijk gespeeld tegen " + player2 + "!" , "Einde Spel", MessageBoxButtons.OK);
                     await Task.Delay(2000);
                     player.Stop();
                 }
