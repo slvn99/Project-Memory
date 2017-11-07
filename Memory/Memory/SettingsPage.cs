@@ -34,8 +34,6 @@ namespace Memory
 
             this.ShowInTaskbar = true;
 
-            ThemaBox.SelectedIndex = 0;
-
             ChangeCursor();
 		}
         

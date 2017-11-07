@@ -104,7 +104,7 @@ namespace Memory
             List<string> savelist = new List<string>();
             while (i< lengte)
             {
-                koppel = scorearray[i] + " seconden gehaald door: " + namearray[i];               
+                koppel = scorearray[i] + " seconden gehaald door: " + namearray[i];
                 savelist.Add(koppel);
                 i++;
             }
