@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Memory.Properties;
 
+/// <summary>
+/// de form om de multiplayer te spelen, deze roept de correcte methodes aan voor host of client class
+/// en displayed alles, dit is het hart van de multiplayer
+/// </summary>
 namespace Memory
 {
     public partial class GameServer : Form

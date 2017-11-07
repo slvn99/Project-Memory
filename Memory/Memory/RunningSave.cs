@@ -14,6 +14,9 @@ namespace Memory
     [Serializable]
     class RunningSave
     {
+        /// <summary>
+        /// het opslaan van de highscore behaald wanneer het spel uitgespeeld is.
+        /// </summary>
         public static int lengte = 0;
         //-------------------------------------------------------------------------------//
         //Caller write
@@ -104,7 +107,7 @@ namespace Memory
             List<string> savelist = new List<string>();
             while (i< lengte)
             {
-                koppel = scorearray[i] + " seconden gehaald door: " + namearray[i];               
+                koppel = scorearray[i] + " seconden gehaald door: " + namearray[i];
                 savelist.Add(koppel);
                 i++;
             }

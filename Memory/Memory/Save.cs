@@ -9,7 +9,9 @@ using System.Text;
 
 namespace WindowsFormsApp1
 {
-
+    /// <summary>
+    /// het opslaan van de gamestate, samen met encryptie
+    /// </summary>
     [Serializable]
     public class Save
     {

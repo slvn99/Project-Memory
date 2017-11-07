@@ -14,6 +14,11 @@ using Memory.Properties;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    ///  standard gamemode, wordt geladen onder de button 'local hotseat'
+    ///  2 spelers spelen tegen elkaar op het lokale apparaat, waarna de winnaar zijn score wordt opgeslagen als highscore
+    ///  alle code om te checken etc. is lokaal in deze class
+    /// </summary>
     public partial class Form1 : Form // Standard game 
     {
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
@@ -369,7 +374,7 @@ namespace WindowsFormsApp1
                     Reset.Visible = false;
                     player.SoundLocation = "wow.wav";
                     player.Play();
-                    MessageBox.Show("WOW, " + player1 + " heeft gelijk gespeeld met " + player2 + "!" , "Einde Spel", MessageBoxButtons.OK);
+                    MessageBox.Show("WOW, " + player1 + " heeft gelijk gespeeld tegen " + player2 + "!" , "Einde Spel", MessageBoxButtons.OK);
                     await Task.Delay(2000);
                     player.Stop();
                 }

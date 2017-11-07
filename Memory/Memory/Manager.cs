@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
 
+/// <summary>
+/// achtergrond proces zodat muziek door blijft spelen, en taken buiten de forms uitgevoerd kunnen worden
+/// </summary>
 namespace Memory
 {
     public partial class Manager : Form
