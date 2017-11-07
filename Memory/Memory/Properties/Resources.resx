@@ -418,4 +418,10 @@
   <data name="Timericon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Timericon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hostofclient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hostofclient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

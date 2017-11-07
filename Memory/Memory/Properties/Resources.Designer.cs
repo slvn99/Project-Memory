@@ -513,6 +513,16 @@ namespace Memory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap hostofclient {
+            get {
+                object obj = ResourceManager.GetObject("hostofclient", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap hotseat {
             get {
                 object obj = ResourceManager.GetObject("hotseat", resourceCulture);
@@ -556,6 +566,16 @@ namespace Memory.Properties {
         public static System.Drawing.Bitmap intro {
             get {
                 object obj = ResourceManager.GetObject("intro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ip {
+            get {
+                object obj = ResourceManager.GetObject("ip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

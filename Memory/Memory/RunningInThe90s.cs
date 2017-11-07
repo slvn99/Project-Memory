@@ -39,8 +39,6 @@ namespace Memory
             RunningLabel.Font = new Font("Arial", 16, FontStyle.Bold);
             label1.Font = new Font("Arial", 16, FontStyle.Bold);
 
-            axWindowsMediaPlayer1.URL = "Run90s.wav";
-            axWindowsMediaPlayer1.Ctlcontrols.play();
 
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
             foreach (var x in ButtonGrid)
@@ -92,6 +90,8 @@ namespace Memory
 
             else
             {
+                axWindowsMediaPlayer1.URL = "Run90s.wav";
+                axWindowsMediaPlayer1.Ctlcontrols.play();
                 RunningTimer.Start();
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
 

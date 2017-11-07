@@ -33,6 +33,9 @@ namespace Memory
         {
             InitializeComponent();
 
+            //connect_button.Controls.Add(home_button);
+            //home_button.BackColor = Color.Transparent;
+
             ChangeCursor();
 
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
@@ -41,12 +44,12 @@ namespace Memory
                 x.Visible = false;
             }
 
-            HC_Label.Visible = false;
-            HostButton.Visible = false;
-            ClientButton.Visible = false;
-            GeefIpLabel.Visible = false;
+            hostofclient.Visible = false;
+            host_button.Visible = false;
+            client_button.Visible = false;
+            ip.Visible = false;
             IpTextBox.Visible = false;
-            ConnectButton.Visible = false;
+            connect_button.Visible = false;
             PuntenLocal.Visible = false;
             PuntenOther.Visible = false;
 
@@ -155,9 +158,9 @@ namespace Memory
                 PuntenOther.Text = "0";
                 PuntenLocal.Visible = true;
                 PuntenOther.Visible = true;
-                HC_Label.Visible = false;
-                HostButton.Visible = false;
-                ClientButton.Visible = false;
+                hostofclient.Visible = false;
+                host_button.Visible = false;
+                client_button.Visible = false;
 
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
                 foreach (Button x in ButtonGrid)
@@ -237,9 +240,9 @@ namespace Memory
                 PuntenOther.Text = "0";
                 PuntenLocal.Visible = true;
                 PuntenOther.Visible = true;
-                GeefIpLabel.Visible = false;
+                ip.Visible = false;
                 IpTextBox.Visible = false;
-                ConnectButton.Visible = false;
+                connect_button.Visible = false;
 
                 Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
                 foreach (Button x in ButtonGrid)
@@ -972,6 +975,56 @@ namespace Memory
             GC.Collect();
         }
 
+        private void client_button_Click(object sender, EventArgs e)
+        {
+            ip.Visible = true;
+            IpTextBox.Visible = true;
+            connect_button.Visible = true;
+            hostofclient.Visible = false;
+            host_button.Visible = false;
+            client_button.Visible = false;
+        }
+
+        private void host_button_Click(object sender, EventArgs e)
+        {
+            host = true;
+            host_button.Enabled = false;
+            client_button.Enabled = false;
+            RandomizeButtons();
+            ServerHost.StartServer();
+            CheckConnect();
+        }
+
+        private void connect_button_Click(object sender, EventArgs e)
+        {
+            ServerClient.HostIP = IpTextBox.Text;
+            ServerClient.StartClient();
+            if (ServerClient.ClientConnection == true)
+            {
+                SetupGame();
+            }
+        }
+
+        private void bevestig_button_Click(object sender, EventArgs e)
+        {
+            if (NaamTextBox.Text != "")
+            {
+                LocalPlayer = NaamTextBox.Text;
+                LocalPlayerLabel.Text = LocalPlayer;
+
+                type_uw_naam.Visible = false;
+                NaamTextBox.Visible = false;
+                bevestig_button.Visible = false;
+                hostofclient.Visible = true;
+                host_button.Visible = true;
+                client_button.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("ERROR, je moet een naam invullen.", "Naam Invullen!", MessageBoxButtons.OK);
+            }
+        }
+
         private void IpTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
@@ -979,19 +1032,19 @@ namespace Memory
 
         private void ClientButton_Click(object sender, EventArgs e)
         {
-            GeefIpLabel.Visible = true;
+            ip.Visible = true;
             IpTextBox.Visible = true;
-            ConnectButton.Visible = true;
-            HC_Label.Visible = false;
-            HostButton.Visible = false;
-            ClientButton.Visible = false;
+            connect_button.Visible = true;
+            hostofclient.Visible = false;
+            host_button.Visible = false;
+            client_button.Visible = false;
         }
 
         private void HostButton_Click(object sender, EventArgs e)
         {
             host = true;
-            HostButton.Enabled = false;
-            ClientButton.Enabled = false;
+            host_button.Enabled = false;
+            client_button.Enabled = false;
             RandomizeButtons();
             ServerHost.StartServer();
             CheckConnect();
@@ -1005,8 +1058,8 @@ namespace Memory
             {
                 MessageBox.Show("ERROR, Connectie timed out", "Time Out", MessageBoxButtons.OK);
                 ServerHost.Listener.Stop();
-                HostButton.Enabled = true;
-                ClientButton.Enabled = true;
+                host_button.Enabled = true;
+                client_button.Enabled = true;
             }
             else
             {
@@ -1021,12 +1074,12 @@ namespace Memory
                 LocalPlayer = NaamTextBox.Text;
                 LocalPlayerLabel.Text = LocalPlayer;
 
-                NaamLabel.Visible = false;
+                type_uw_naam.Visible = false;
                 NaamTextBox.Visible = false;
-                NaamButton.Visible = false;
-                HC_Label.Visible = true;
-                HostButton.Visible = true;
-                ClientButton.Visible = true;
+                bevestig_button.Visible = false;
+                hostofclient.Visible = true;
+                host_button.Visible = true;
+                client_button.Visible = true;
             }
             else
             {
