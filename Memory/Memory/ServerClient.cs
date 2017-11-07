@@ -44,15 +44,33 @@ namespace Memory
 
         public static void SendTurn()
         {
-            TurnArray = GameServer.TurnArray;
-            var bin = new BinaryFormatter();
-            bin.Serialize(Client.GetStream(), TurnArray);
+            try
+            {
+                TurnArray = GameServer.TurnArray;
+                var bin = new BinaryFormatter();
+                bin.Serialize(Client.GetStream(), TurnArray);
+            }
+            catch
+            {
+                MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
+                Client.Close();
+                GameServer.CloseApplication();
+            }
         }
 
         public static void RecieveTurn()
         {
-            var bin = new BinaryFormatter();
-            TurnArray =(string[])bin.Deserialize(Client.GetStream());
+            try
+            {
+                var bin = new BinaryFormatter();
+                TurnArray = (string[])bin.Deserialize(Client.GetStream());
+            }
+            catch
+            {
+                MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
+                Client.Close();
+                GameServer.CloseApplication();
+            }
         }
 
         public static void SendName()
@@ -73,28 +91,6 @@ namespace Memory
             byte[] bytes = Encoding.UTF8.GetBytes(message);
             NetworkStream stream = Client.GetStream();
             stream.Write(bytes, 0, bytes.Length);
-        }
-
-        public static string ReceiveMessage()
-        {
-            byte[] bytes = new byte[PacketSize];
-            NetworkStream stream = Client.GetStream();
-            stream.Read(bytes, 0, PacketSize);
-            return cleanMessage(bytes);
-        }
-        private static string cleanMessage(byte[] bytes)
-        {
-            string message = Encoding.UTF8.GetString(bytes);
-
-            string messageToPrint = null;
-            foreach (var nullChar in message)
-            {
-                if (nullChar != '\0')
-                {
-                    messageToPrint += nullChar;
-                }
-            }
-            return messageToPrint;
         }
     }
 }
