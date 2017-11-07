@@ -195,7 +195,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.Volume)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Themas)).EndInit();
 			this.ResumeLayout(false);
-
 		}
 
 		#endregion

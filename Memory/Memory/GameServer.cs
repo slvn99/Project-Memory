@@ -309,14 +309,14 @@ namespace Memory
             {
                 PuntenLocalPlayer++;
                 TotaalMatches++;
-                LocalPlayerLabel.Text = Convert.ToString(PuntenLocalPlayer);
+                PuntenLocal.Text = Convert.ToString(PuntenLocalPlayer);
                 EndGame_Check();
             }
             else
             {
                 PuntenOtherPlayer++;
                 TotaalMatches++;
-                OtherPlayerLabel.Text = Convert.ToString(OtherPlayer);
+                PuntenOther.Text = Convert.ToString(OtherPlayer);
                 EndGame_Check();
             }
         }
@@ -739,7 +739,7 @@ namespace Memory
             {
                 MessageBox.Show("ERROR, Connectie timed out", "Time Out", MessageBoxButtons.OK);
                 ServerHost.Listener.Stop();
-                HostButton.Enabled = false;
+                HostButton.Enabled = true;
                 ClientButton.Enabled = true;
             }
             else
