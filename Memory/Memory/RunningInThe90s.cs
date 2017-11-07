@@ -30,6 +30,8 @@ namespace Memory
         {
             InitializeComponent();
 
+            axWindowsMediaPlayer1.Visible = false;
+
             RunningLabel.Font = new Font("Arial", 16, FontStyle.Bold);
             label1.Font = new Font("Arial", 16, FontStyle.Bold);
 
