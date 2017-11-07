@@ -80,8 +80,6 @@ namespace Memory
             TurnArray = (string[])bin.Deserialize(Client.GetStream());
         }
 
-        
-
         public static bool SendMessage(string message)
         {
             try
@@ -95,42 +93,6 @@ namespace Memory
                 Client.Close();
                 return false;
             }
-        }
-
-        public static string ReceiveMessage()
-        {
-            try
-            {
-                byte[] buffer = new byte[PacketSize];
-                Client.GetStream().Read(buffer, 0, PacketSize);
-                string message = cleanMessage(buffer);
-                if (message == null)
-                {
-                    Client.Close();
-                    return null;
-                }
-                return message;
-            }
-            catch (Exception)
-            {
-                Client.Close();
-                return null;
-            }
-        }
-
-        private static string cleanMessage(byte[] bytes)
-        {
-            string message = Encoding.UTF8.GetString(bytes);
-
-            string messageToPrint = null;
-            foreach (var nullChar in message)
-            {
-                if (nullChar != '\0')
-                {
-                    messageToPrint += nullChar;
-                }
-            }
-            return messageToPrint;
         }
     }
 }

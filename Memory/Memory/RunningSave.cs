@@ -14,6 +14,9 @@ namespace Memory
     [Serializable]
     class RunningSave
     {
+        /// <summary>
+        /// het opslaan van de highscore behaald wanneer het spel uitgespeeld is.
+        /// </summary>
         public static int lengte = 0;
         //-------------------------------------------------------------------------------//
         //Caller write

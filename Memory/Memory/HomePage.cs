@@ -170,8 +170,11 @@ namespace Memory
         }
 
         // Openen van het Loadingscreen dat doorverwijst naar de Runninginthe90s gamemode
-        private void RunningGamemode_Click(object sender, EventArgs e)
+        private async void RunningGamemode_Click(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
             Memory.LoadingScreen f = new Memory.LoadingScreen();
             f.Show();
             Sluiten();
@@ -180,8 +183,11 @@ namespace Memory
         }
 
         // Openen van het Loadingscreen dat doorverwijst naar de 2 player hotseat
-        private void StandardGamemode_Click_1(object sender, EventArgs e)
+        private async  void StandardGamemode_Click_1(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
             Memory.LoadingScreen f = new Memory.LoadingScreen();
             f.Show();
             Sluiten();
@@ -189,9 +195,12 @@ namespace Memory
         }
 
 		// Openen van het Loadingscreen dat doorverwijst naar de multiplayer gamemode
-		private void Multiplayer_Click(object sender, EventArgs e)
+		private async void Multiplayer_Click(object sender, EventArgs e)
 		{
-			Memory.LoadingScreen f = new Memory.LoadingScreen();
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            Memory.LoadingScreen f = new Memory.LoadingScreen();
 			f.Show();
 			Sluiten();
 			MG();
@@ -214,11 +223,11 @@ namespace Memory
         }
 
 		// Het openen van de game na het LoadingScreen (Doen we wel als we een duidelijke MP form hebben)
-		private /*async*/ void MG()
+		private async void MG()
 		{
-		//	await Task.Delay(4000);
-		//	WindowsFormsApp1.? Multiplayer ? f = new WindowsFormsApp1.?Multiplayer ? ();
-		//	f.Show();
+		await Task.Delay(4000);
+		Memory.GameServer f = new Memory.GameServer();
+		f.Show();
 		}
 
         // Het teruggaan naar het standaard Hoofdmenu

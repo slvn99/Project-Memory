@@ -7,6 +7,9 @@ using Memory.Properties;
 using System.Security.Cryptography;
 using System.Collections.Generic;
 using System.Collections;
+/// <summary>
+/// hier worden de highscores van de standardgame mode opgeslagen, met encryptie
+/// </summary>
 namespace Memory
 {
     [Serializable]
