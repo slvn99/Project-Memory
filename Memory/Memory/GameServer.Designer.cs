@@ -440,6 +440,7 @@
             this.Controls.Add(this.GridButton1Dup);
             this.Controls.Add(this.GridButton1);
             this.Name = "GameServer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameServer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameServer_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

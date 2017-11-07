@@ -47,6 +47,56 @@ namespace Memory
             GeefIpLabel.Visible = false;
             IpTextBox.Visible = false;
             ConnectButton.Visible = false;
+            PuntenLocal.Visible = true;
+            PuntenOther.Visible = true;
+
+            switch (thema)
+            {
+                default:
+                    this.BackgroundImage = Resources.media_achtergrond;
+                    break;
+                case "Media":
+                    this.BackgroundImage = Resources.media_achtergrond;
+                    break;
+                case "Films":
+                    this.BackgroundImage = Resources.popcorn_background;
+                    GridButton1.BackgroundImage = Resources.clapperboard;
+                    GridButton1Dup.BackgroundImage = Resources.clapperboard;
+                    GridButton2.BackgroundImage = Resources.clapperboard;
+                    GridButton2Dup.BackgroundImage = Resources.clapperboard;
+                    GridButton3.BackgroundImage = Resources.clapperboard;
+                    GridButton3Dup.BackgroundImage = Resources.clapperboard;
+                    GridButton4.BackgroundImage = Resources.clapperboard;
+                    GridButton4Dup.BackgroundImage = Resources.clapperboard;
+                    GridButton5.BackgroundImage = Resources.clapperboard;
+                    GridButton5Dup.BackgroundImage = Resources.clapperboard;
+                    GridButton6.BackgroundImage = Resources.clapperboard;
+                    GridButton6Dup.BackgroundImage = Resources.clapperboard;
+                    GridButton7.BackgroundImage = Resources.clapperboard;
+                    GridButton7Dup.BackgroundImage = Resources.clapperboard;
+                    GridButton8.BackgroundImage = Resources.clapperboard;
+                    GridButton8Dup.BackgroundImage = Resources.clapperboard;
+                    break;
+                case "Games":
+                    this.BackgroundImage = Resources.controller;
+                    GridButton1.BackgroundImage = Resources.controller_cardback;
+                    GridButton1Dup.BackgroundImage = Resources.controller_cardback;
+                    GridButton2.BackgroundImage = Resources.controller_cardback;
+                    GridButton2Dup.BackgroundImage = Resources.controller_cardback;
+                    GridButton3.BackgroundImage = Resources.controller_cardback;
+                    GridButton3Dup.BackgroundImage = Resources.controller_cardback;
+                    GridButton4.BackgroundImage = Resources.controller_cardback;
+                    GridButton4Dup.BackgroundImage = Resources.controller_cardback;
+                    GridButton5.BackgroundImage = Resources.controller_cardback;
+                    GridButton5Dup.BackgroundImage = Resources.controller_cardback;
+                    GridButton6.BackgroundImage = Resources.controller_cardback;
+                    GridButton6Dup.BackgroundImage = Resources.controller_cardback;
+                    GridButton7.BackgroundImage = Resources.controller_cardback;
+                    GridButton7Dup.BackgroundImage = Resources.controller_cardback;
+                    GridButton8.BackgroundImage = Resources.controller_cardback;
+                    GridButton8Dup.BackgroundImage = Resources.controller_cardback;
+                    break;
+            }
         }
 
         protected override CreateParams CreateParams //THE MAGIC CODE "It Just Works™"
@@ -101,6 +151,10 @@ namespace Memory
                 BeurtLabel.Text = PlayerBeurt;
                 ServerHost.SendName();
 
+                PuntenLocalPlayer = 0;
+                PuntenOtherPlayer = 0;
+                PuntenLocal.Visible = true;
+                PuntenOther.Visible = true;
                 HC_Label.Visible = false;
                 HostButton.Visible = false;
                 ClientButton.Visible = false;
@@ -179,6 +233,10 @@ namespace Memory
                 PlayerBeurt = player1;
                 BeurtLabel.Text = PlayerBeurt;
 
+                PuntenLocalPlayer = 0;
+                PuntenOtherPlayer = 0;
+                PuntenLocal.Visible = true;
+                PuntenOther.Visible = true;
                 GeefIpLabel.Visible = false;
                 IpTextBox.Visible = false;
                 ConnectButton.Visible = false;
@@ -316,7 +374,7 @@ namespace Memory
             {
                 PuntenOtherPlayer++;
                 TotaalMatches++;
-                PuntenOther.Text = Convert.ToString(OtherPlayer);
+                PuntenOther.Text = Convert.ToString(PuntenOtherPlayer);
                 EndGame_Check();
             }
         }
@@ -370,83 +428,291 @@ namespace Memory
         {
             if (x == GridButton1)
             {
-                GridButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton1.BackgroundImage = Resources.Steam;
+                switch (thema)
+                {
+                    default:
+                        GridButton1.BackgroundImage = Resources.Steam;
+                        break;
+                    case "Media":
+                        GridButton1.BackgroundImage = Resources.Steam;
+                        break;
+                    case "Films":
+                        GridButton1.BackgroundImage = Resources.ff130;
+                        break;
+                    case "Games":
+                        GridButton1.BackgroundImage = Resources.ac130;
+                        break;
+                }
             }
             if (x == GridButton1Dup)
             {
-                GridButton1Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton1Dup.BackgroundImage = Resources.Steam;
+                switch (thema)
+                {
+                    default:
+                        GridButton1Dup.BackgroundImage = Resources.Steam;
+                        break;
+                    case "Media":
+                        GridButton1Dup.BackgroundImage = Resources.Steam;
+                        break;
+                    case "Films":
+                        GridButton1Dup.BackgroundImage = Resources.ff130;
+                        break;
+                    case "Games":
+                        GridButton1Dup.BackgroundImage = Resources.ac130;
+                        break;
+                }
             }
             if (x == GridButton2)
             {
-                GridButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton2.BackgroundImage = Resources.TwitchLogo;
+                switch (thema)
+                {
+                    default:
+                        GridButton2.BackgroundImage = Resources.fb;
+                        break;
+                    case "Media":
+                        GridButton2.BackgroundImage = Resources.fb;
+                        break;
+                    case "Films":
+                        GridButton2.BackgroundImage = Resources.hp130;
+                        break;
+                    case "Games":
+                        GridButton2.BackgroundImage = Resources.zelda130;
+                        break;
+                }
             }
             if (x == GridButton2Dup)
             {
-                GridButton2Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton2Dup.BackgroundImage = Resources.TwitchLogo;
+                switch (thema)
+                {
+                    default:
+                        GridButton2Dup.BackgroundImage = Resources.fb;
+                        break;
+                    case "Media":
+                        GridButton2Dup.BackgroundImage = Resources.fb;
+                        break;
+                    case "Films":
+                        GridButton2Dup.BackgroundImage = Resources.hp130;
+                        break;
+                    case "Games":
+                        GridButton2Dup.BackgroundImage = Resources.zelda130;
+                        break;
+                }
             }
             if (x == GridButton3)
             {
-                GridButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton3.BackgroundImage = Resources.fb;
+                switch (thema)
+                {
+                    default:
+                        GridButton3.BackgroundImage = Resources.Google;
+                        break;
+                    case "Media":
+                        GridButton3.BackgroundImage = Resources.Google;
+                        break;
+                    case "Films":
+                        GridButton3.BackgroundImage = Resources.shrek130;
+                        break;
+                    case "Games":
+                        GridButton3.BackgroundImage = Resources.witcher130;
+                        break;
+                }
             }
             if (x == GridButton3Dup)
             {
-                GridButton3Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton3Dup.BackgroundImage = Resources.fb;
+                switch (thema)
+                {
+                    default:
+                        GridButton3Dup.BackgroundImage = Resources.Google;
+                        break;
+                    case "Media":
+                        GridButton3Dup.BackgroundImage = Resources.Google;
+                        break;
+                    case "Films":
+                        GridButton3Dup.BackgroundImage = Resources.shrek130;
+                        break;
+                    case "Games":
+                        GridButton3Dup.BackgroundImage = Resources.witcher130;
+                        break;
+                }
             }
             if (x == GridButton4)
             {
-                GridButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton4.BackgroundImage = Resources.Reddit;
+                switch (thema)
+                {
+                    default:
+                        GridButton4.BackgroundImage = Resources.Youtube;
+                        break;
+                    case "Media":
+                        GridButton4.BackgroundImage = Resources.Youtube;
+                        break;
+                    case "Films":
+                        GridButton4.BackgroundImage = Resources.indiana130;
+                        break;
+                    case "Games":
+                        GridButton4.BackgroundImage = Resources.fifa130;
+                        break;
+                }
             }
             if (x == GridButton4Dup)
             {
-                GridButton4Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton4Dup.BackgroundImage = Resources.Reddit;
+                switch (thema)
+                {
+                    default:
+                        GridButton4.BackgroundImage = Resources.Youtube;
+                        break;
+                    case "Media":
+                        GridButton4.BackgroundImage = Resources.Youtube;
+                        break;
+                    case "Films":
+                        GridButton4.BackgroundImage = Resources.indiana130;
+                        break;
+                    case "Games":
+                        GridButton4.BackgroundImage = Resources.fifa130;
+                        break;
+                }
             }
             if (x == GridButton5)
             {
-                GridButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton5.BackgroundImage = Resources._9gag;
+                switch (thema)
+                {
+                    default:
+                        GridButton5.BackgroundImage = Resources.Twitter;
+                        break;
+                    case "Media":
+                        GridButton5.BackgroundImage = Resources.Twitter;
+                        break;
+                    case "Films":
+                        GridButton5.BackgroundImage = Resources.lotr_130;
+                        break;
+                    case "Games":
+                        GridButton5.BackgroundImage = Resources.need_for_speed130;
+                        break;
+                }
             }
             if (x == GridButton5Dup)
             {
-                GridButton5Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton5Dup.BackgroundImage = Resources._9gag;
+                switch (thema)
+                {
+                    default:
+                        GridButton5Dup.BackgroundImage = Resources.Twitter;
+                        break;
+                    case "Media":
+                        GridButton5Dup.BackgroundImage = Resources.Twitter;
+                        break;
+                    case "Films":
+                        GridButton5Dup.BackgroundImage = Resources.lotr_130;
+                        break;
+                    case "Games":
+                        GridButton5Dup.BackgroundImage = Resources.need_for_speed130;
+                        break;
+                }
             }
             if (x == GridButton6)
             {
-                GridButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton6.BackgroundImage = Resources.Twitter;
+                switch (thema)
+                {
+                    default:
+                        GridButton6.BackgroundImage = Resources._9gag;
+                        break;
+                    case "Media":
+                        GridButton6.BackgroundImage = Resources._9gag;
+                        break;
+                    case "Films":
+                        GridButton6.BackgroundImage = Resources.avengers130;
+                        break;
+                    case "Games":
+                        GridButton6.BackgroundImage = Resources.gta130;
+                        break;
+                }
             }
             if (x == GridButton6Dup)
             {
-                GridButton6Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton6Dup.BackgroundImage = Resources.Twitter;
+                switch (thema)
+                {
+                    default:
+                        GridButton6Dup.BackgroundImage = Resources._9gag;
+                        break;
+                    case "Media":
+                        GridButton6Dup.BackgroundImage = Resources._9gag;
+                        break;
+                    case "Films":
+                        GridButton6Dup.BackgroundImage = Resources.avengers130;
+                        break;
+                    case "Games":
+                        GridButton6Dup.BackgroundImage = Resources.gta130;
+                        break;
+                }
             }
             if (x == GridButton7)
             {
-                GridButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton7.BackgroundImage = Resources.Youtube;
+                switch (thema)
+                {
+                    default:
+                        GridButton7.BackgroundImage = Resources.TwitchLogo;
+                        break;
+                    case "Media":
+                        GridButton7.BackgroundImage = Resources.TwitchLogo;
+                        break;
+                    case "Films":
+                        GridButton7.BackgroundImage = Resources.star_trek130;
+                        break;
+                    case "Games":
+                        GridButton7.BackgroundImage = Resources.portal130;
+                        break;
+                }
             }
             if (x == GridButton7Dup)
             {
-                GridButton7Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton7Dup.BackgroundImage = Resources.Youtube;
+                switch (thema)
+                {
+                    default:
+                        GridButton7Dup.BackgroundImage = Resources.TwitchLogo;
+                        break;
+                    case "Media":
+                        GridButton7Dup.BackgroundImage = Resources.TwitchLogo;
+                        break;
+                    case "Films":
+                        GridButton7Dup.BackgroundImage = Resources.star_trek130;
+                        break;
+                    case "Games":
+                        GridButton7Dup.BackgroundImage = Resources.portal130;
+                        break;
+                }
             }
             if (x == GridButton8)
             {
-                GridButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton8.BackgroundImage = Resources.Google;
+                switch (thema)
+                {
+                    default:
+                        GridButton8.BackgroundImage = Resources.Reddit;
+                        break;
+                    case "Media":
+                        GridButton8.BackgroundImage = Resources.Reddit;
+                        break;
+                    case "Films":
+                        GridButton8.BackgroundImage = Resources.starwars130;
+                        break;
+                    case "Games":
+                        GridButton8.BackgroundImage = Resources.halo130;
+                        break;
+                }
             }
             if (x == GridButton8Dup)
             {
-                GridButton8Dup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                GridButton8Dup.BackgroundImage = Resources.Google;
+                switch (thema)
+                {
+                    default:
+                        GridButton8Dup.BackgroundImage = Resources.Reddit;
+                        break;
+                    case "Media":
+                        GridButton8Dup.BackgroundImage = Resources.Reddit;
+                        break;
+                    case "Films":
+                        GridButton8Dup.BackgroundImage = Resources.starwars130;
+                        break;
+                    case "Games":
+                        GridButton8Dup.BackgroundImage = Resources.halo130;
+                        break;
+                }
             }
         }
         #endregion
