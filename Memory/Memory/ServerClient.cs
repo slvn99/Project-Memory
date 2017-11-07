@@ -109,7 +109,7 @@ namespace Memory
             try
             {
                 var bin = new BinaryFormatter();
-                HostName = (string)bin.Deserialize(Client.GetStream())
+                HostName = (string)bin.Deserialize(Client.GetStream());
             }
             catch
             {
