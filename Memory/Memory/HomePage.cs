@@ -65,11 +65,9 @@ namespace Memory
             player.Play();
             Memory.SettingsPage f6 = new Memory.SettingsPage();
             f6.Show();
+            Sluiten();
             await Task.Delay(300);
             player.Stop();
-            this.WindowState = FormWindowState.Minimized;
-            this.ShowInTaskbar = false;
-            Sluiten();
         }
 
         // Opent Highscorepagina
@@ -79,10 +77,9 @@ namespace Memory
             player.Play();
             Memory.HighscorePage f7 = new Memory.HighscorePage();
             f7.Show();
+            Sluiten();
             await Task.Delay(300);
             player.Stop();
-            this.WindowState = FormWindowState.Minimized;
-            this.ShowInTaskbar = false;
             Sluiten();
         }
 

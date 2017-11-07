@@ -450,7 +450,7 @@
             this.Name = "HighscorePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HighscorePage";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HighscorePage_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HighscorePage_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.Bronze)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
