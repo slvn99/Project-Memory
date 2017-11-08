@@ -701,15 +701,6 @@ namespace Memory.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream Run90s {
-            get {
-                return ResourceManager.GetStream("Run90s", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap Running_gamemode {
@@ -816,15 +807,6 @@ namespace Memory.Properties {
             get {
                 object obj = ResourceManager.GetObject("switch_gamemode", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream THE_TING_GO_SKRRA {
-            get {
-                return ResourceManager.GetStream("THE_TING_GO_SKRRA", resourceCulture);
             }
         }
         
