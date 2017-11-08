@@ -87,9 +87,15 @@
             // 
             this.Points1.AutoSize = true;
             this.Points1.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
+            this.Points1.Location = new System.Drawing.Point(1010, 9);
+            this.Points1.Name = "Points1";
+            this.Points1.Size = new System.Drawing.Size(41, 13);
+=======
             this.Points1.Location = new System.Drawing.Point(963, 11);
             this.Points1.Name = "Points1";
             this.Points1.Size = new System.Drawing.Size(48, 13);
+>>>>>>> 52c655516b3f61bece87ad5e91de119b15def431
             this.Points1.TabIndex = 70;
             this.Points1.Text = "Matches";
             this.Points1.Visible = false;
@@ -129,6 +135,10 @@
             // 
             this.Player1Textbox.Location = new System.Drawing.Point(340, 245);
             this.Player1Textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+<<<<<<< HEAD
+            this.Player1Textbox.MaxLength = 12;
+=======
+>>>>>>> 52c655516b3f61bece87ad5e91de119b15def431
             this.Player1Textbox.Name = "Player1Textbox";
             this.Player1Textbox.Size = new System.Drawing.Size(104, 20);
             this.Player1Textbox.TabIndex = 64;

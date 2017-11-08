@@ -267,6 +267,7 @@ namespace WindowsFormsApp1
             // 
             this.Player2Textbox.Location = new System.Drawing.Point(366, 296);
             this.Player2Textbox.Margin = new System.Windows.Forms.Padding(2);
+            this.Player2Textbox.MaxLength = 12;
             this.Player2Textbox.Name = "Player2Textbox";
             this.Player2Textbox.Size = new System.Drawing.Size(104, 20);
             this.Player2Textbox.TabIndex = 21;
