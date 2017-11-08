@@ -878,9 +878,9 @@ namespace Memory
 
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (backgroundWorker.CancellationPending == true)
+            if (Connectionfail == true)
             {
-                MessageBox.Show("ERROR, connectie verloren.", "Connection Lost!", MessageBoxButtons.OK);
+                Sluiten();
             }
             else
             {
