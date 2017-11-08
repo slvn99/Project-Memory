@@ -283,9 +283,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Location = new System.Drawing.Point(199, 381);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.Size = new System.Drawing.Size(96, 13);
             this.label1.TabIndex = 10;
-            this.label1.Text = "hotseat multiplayer";
+            this.label1.Text = "Hotseat multiplayer";
             this.label1.Visible = false;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -294,11 +294,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(438, 381);
+            this.label2.Location = new System.Drawing.Point(466, 381);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
+            this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 11;
-            this.label2.Text = "local multiplayer";
+            this.label2.Text = "Multiplayer";
             this.label2.Visible = false;
             // 
             // label3
@@ -308,9 +308,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label3.Location = new System.Drawing.Point(644, 381);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 13);
+            this.label3.Size = new System.Drawing.Size(95, 13);
             this.label3.TabIndex = 12;
-            this.label3.Text = "player versus timer";
+            this.label3.Text = "Player versus timer";
             this.label3.Visible = false;
             // 
             // Multiplayer
