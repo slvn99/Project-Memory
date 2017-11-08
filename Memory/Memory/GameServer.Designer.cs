@@ -589,7 +589,6 @@
         private System.Windows.Forms.PictureBox type_uw_naam;
         private System.Windows.Forms.PictureBox bevestig_button;
         private System.Windows.Forms.PictureBox connect_button;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox hostofclient;
         private System.Windows.Forms.PictureBox ip;
         private System.Windows.Forms.PictureBox BeurtBox;
