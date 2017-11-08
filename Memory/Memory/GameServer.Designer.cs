@@ -111,7 +111,7 @@
             // 
             // IpTextBox
             // 
-            this.IpTextBox.Location = new System.Drawing.Point(464, 269);
+            this.IpTextBox.Location = new System.Drawing.Point(464, 239);
             this.IpTextBox.Name = "IpTextBox";
             this.IpTextBox.Size = new System.Drawing.Size(150, 20);
             this.IpTextBox.TabIndex = 28;
@@ -154,9 +154,9 @@
             this.connect_button.BackColor = System.Drawing.Color.Transparent;
             this.connect_button.BackgroundImage = global::Memory.Properties.Resources.connect_button;
             this.connect_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.connect_button.Location = new System.Drawing.Point(487, 295);
+            this.connect_button.Location = new System.Drawing.Point(464, 314);
             this.connect_button.Name = "connect_button";
-            this.connect_button.Size = new System.Drawing.Size(100, 34);
+            this.connect_button.Size = new System.Drawing.Size(100, 33);
             this.connect_button.TabIndex = 38;
             this.connect_button.TabStop = false;
             this.connect_button.Click += new System.EventHandler(this.connect_button_Click);
@@ -166,7 +166,7 @@
             this.bevestig_button.BackColor = System.Drawing.Color.Transparent;
             this.bevestig_button.BackgroundImage = global::Memory.Properties.Resources.bevestig_button;
             this.bevestig_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bevestig_button.Location = new System.Drawing.Point(487, 148);
+            this.bevestig_button.Location = new System.Drawing.Point(487, 142);
             this.bevestig_button.Name = "bevestig_button";
             this.bevestig_button.Size = new System.Drawing.Size(100, 23);
             this.bevestig_button.TabIndex = 37;
@@ -197,7 +197,7 @@
             this.client_button.BackColor = System.Drawing.Color.Transparent;
             this.client_button.BackgroundImage = global::Memory.Properties.Resources.client_button;
             this.client_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.client_button.Location = new System.Drawing.Point(540, 207);
+            this.client_button.Location = new System.Drawing.Point(541, 189);
             this.client_button.Name = "client_button";
             this.client_button.Size = new System.Drawing.Size(90, 33);
             this.client_button.TabIndex = 34;
@@ -209,7 +209,7 @@
             this.host_button.BackColor = System.Drawing.Color.Transparent;
             this.host_button.BackgroundImage = global::Memory.Properties.Resources.host_button;
             this.host_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.host_button.Location = new System.Drawing.Point(449, 207);
+            this.host_button.Location = new System.Drawing.Point(449, 189);
             this.host_button.Name = "host_button";
             this.host_button.Size = new System.Drawing.Size(90, 33);
             this.host_button.TabIndex = 33;
@@ -426,7 +426,7 @@
             this.hostofclient.BackColor = System.Drawing.Color.Transparent;
             this.hostofclient.BackgroundImage = global::Memory.Properties.Resources.hostofclient;
             this.hostofclient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.hostofclient.Location = new System.Drawing.Point(437, 171);
+            this.hostofclient.Location = new System.Drawing.Point(435, 159);
             this.hostofclient.Name = "hostofclient";
             this.hostofclient.Size = new System.Drawing.Size(207, 33);
             this.hostofclient.TabIndex = 40;
@@ -437,7 +437,7 @@
             this.ip.BackColor = System.Drawing.Color.Transparent;
             this.ip.BackgroundImage = global::Memory.Properties.Resources.ip;
             this.ip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ip.Location = new System.Drawing.Point(449, 239);
+            this.ip.Location = new System.Drawing.Point(449, 216);
             this.ip.Name = "ip";
             this.ip.Size = new System.Drawing.Size(182, 27);
             this.ip.TabIndex = 41;
