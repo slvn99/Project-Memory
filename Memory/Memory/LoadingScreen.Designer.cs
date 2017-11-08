@@ -60,7 +60,7 @@
             // 
             // timer3
             // 
-            this.timer3.Interval = 2500;
+            this.timer3.Interval = 2000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // Loading_bar
@@ -76,7 +76,7 @@
             this.Loading_bar.TabIndex = 0;
             this.Loading_bar.TabStop = false;
             // 
-            // Form4
+            // LoadingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -85,7 +85,7 @@
             this.Controls.Add(this.Loading_bar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form4";
+            this.Name = "LoadingScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";
             ((System.ComponentModel.ISupportInitialize)(this.Loading_bar)).EndInit();
