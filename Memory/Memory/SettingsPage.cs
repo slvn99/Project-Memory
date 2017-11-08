@@ -35,6 +35,7 @@ namespace Memory
             this.ShowInTaskbar = true;
 
             ChangeCursor();
+			ThemaBox.SelectedIndex = 0;
 		}
         
         // Veranderen van de Mousecursor
@@ -48,10 +49,10 @@ namespace Memory
         // Toepassen van het gekozen thema uit de combobox
 		public async void Apply_Click(object sender, EventArgs e)
 		{
-            player.SoundLocation = "click.wav";
+			player.SoundLocation = "click.wav";
 			player.Play();
-            string thema = ThemaBox.SelectedItem.ToString();      
-            Memory.SettingsPage_Save.SaveData(thema);
+			string thema = ThemaBox.SelectedItem.ToString();
+			Memory.SettingsPage_Save.SaveData(thema);
             MessageBox.Show("Thema is succesvol toegepast");
             await Task.Delay(300);
             player.Stop();
