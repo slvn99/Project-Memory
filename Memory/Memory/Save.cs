@@ -216,8 +216,6 @@ namespace WindowsFormsApp1
             }
             catch (Exception)
             {
-                //Inform the user that an exception was raised.  
-                Console.WriteLine("Encrypten is mislukt.");
             }
         }
 
@@ -257,9 +255,7 @@ namespace WindowsFormsApp1
                 }
             }
             catch (Exception)
-            {
-                //Inform the user that an exception was raised.  
-                Console.WriteLine("Decrypten is mislukt.");
+            {              
             }
         }
 

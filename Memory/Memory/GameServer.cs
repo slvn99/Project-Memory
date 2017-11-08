@@ -1121,6 +1121,7 @@ namespace Memory
                 host_button.Enabled = true;
                 client_button.Enabled = true;
                 Connecting1Label.Visible = false;
+                ServerHost.counter = 0;
             }
             else
             {

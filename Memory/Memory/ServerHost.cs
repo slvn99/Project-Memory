@@ -10,10 +10,14 @@ using System.Windows.Forms;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
+/// <summary>
+/// Class die alle Game elementen uitvoert wanneer in gameserver.cs "Host" wordt geselecteerd
+/// </summary>
 namespace Memory
 {
     class ServerHost
     {
+        public static int counter = 0;
         public static string ClientName;
         public static TcpListener Listener;
         public static TcpClient Client; //client die geconnect is
@@ -22,10 +26,14 @@ namespace Memory
 
         public static void StartServer()
         {
-            IPEndPoint ip = new IPEndPoint(IPAddress.Any, 8984);
-            Listener = new TcpListener(ip);
-            Listener.Start();
-            AcceptClient();
+            if (counter == 0)
+            {
+                counter++;
+                IPEndPoint ip = new IPEndPoint(IPAddress.Any, 8984);
+                Listener = new TcpListener(ip);
+                Listener.Start();
+                AcceptClient();
+            }
         }
 
         public static void AcceptClient()
