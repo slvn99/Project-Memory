@@ -154,7 +154,7 @@
             this.connect_button.BackColor = System.Drawing.Color.Transparent;
             this.connect_button.BackgroundImage = global::Memory.Properties.Resources.connect_button;
             this.connect_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.connect_button.Location = new System.Drawing.Point(464, 314);
+            this.connect_button.Location = new System.Drawing.Point(487, 259);
             this.connect_button.Name = "connect_button";
             this.connect_button.Size = new System.Drawing.Size(100, 33);
             this.connect_button.TabIndex = 38;
