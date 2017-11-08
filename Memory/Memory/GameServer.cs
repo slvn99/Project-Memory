@@ -33,9 +33,6 @@ namespace Memory
         {
             InitializeComponent();
 
-            //connect_button.Controls.Add(home_button);
-            //home_button.BackColor = Color.Transparent;
-
             ChangeCursor();
 
             Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
