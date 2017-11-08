@@ -89,6 +89,7 @@
             // BeurtLabel
             // 
             this.BeurtLabel.AutoSize = true;
+            this.BeurtLabel.BackColor = System.Drawing.Color.Transparent;
             this.BeurtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BeurtLabel.Location = new System.Drawing.Point(107, 92);
             this.BeurtLabel.Name = "BeurtLabel";
@@ -113,6 +114,7 @@
             // PuntenLocal
             // 
             this.PuntenLocal.AutoSize = true;
+            this.PuntenLocal.BackColor = System.Drawing.Color.Transparent;
             this.PuntenLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PuntenLocal.Location = new System.Drawing.Point(195, 12);
             this.PuntenLocal.Name = "PuntenLocal";
@@ -123,6 +125,7 @@
             // PuntenOther
             // 
             this.PuntenOther.AutoSize = true;
+            this.PuntenOther.BackColor = System.Drawing.Color.Transparent;
             this.PuntenOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PuntenOther.Location = new System.Drawing.Point(195, 47);
             this.PuntenOther.Name = "PuntenOther";
@@ -458,6 +461,7 @@
             // OtherPlayerLabel
             // 
             this.OtherPlayerLabel.AutoSize = true;
+            this.OtherPlayerLabel.BackColor = System.Drawing.Color.Transparent;
             this.OtherPlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OtherPlayerLabel.Location = new System.Drawing.Point(91, 47);
             this.OtherPlayerLabel.Name = "OtherPlayerLabel";
@@ -468,6 +472,7 @@
             // LocalPlayerLabel
             // 
             this.LocalPlayerLabel.AutoSize = true;
+            this.LocalPlayerLabel.BackColor = System.Drawing.Color.Transparent;
             this.LocalPlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LocalPlayerLabel.Location = new System.Drawing.Point(91, 12);
             this.LocalPlayerLabel.Name = "LocalPlayerLabel";

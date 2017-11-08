@@ -1054,9 +1054,10 @@ namespace Memory
             CheckConnect();
         }
 
-        private void connect_button_Click(object sender, EventArgs e)
+        private async void connect_button_Click(object sender, EventArgs e)
         {
             ConnectingLabel.Visible = true;
+            await Task.Delay(100);
             ServerClient.HostIP = IpTextBox.Text;
             ServerClient.StartClient();
             if (ServerClient.ClientConnection == true)
