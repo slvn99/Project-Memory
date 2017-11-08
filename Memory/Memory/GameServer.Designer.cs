@@ -37,10 +37,8 @@
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.PuntenLocal = new System.Windows.Forms.Label();
             this.PuntenOther = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.connect_button = new System.Windows.Forms.PictureBox();
             this.bevestig_button = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.type_uw_naam = new System.Windows.Forms.PictureBox();
             this.client_button = new System.Windows.Forms.PictureBox();
             this.host_button = new System.Windows.Forms.PictureBox();
@@ -63,10 +61,8 @@
             this.GridButton1 = new System.Windows.Forms.Button();
             this.hostofclient = new System.Windows.Forms.PictureBox();
             this.ip = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.connect_button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bevestig_button)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.type_uw_naam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.client_button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.host_button)).BeginInit();
@@ -141,14 +137,6 @@
             this.PuntenOther.TabIndex = 32;
             this.PuntenOther.Text = "PuntenOther";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 39;
-            this.pictureBox2.TabStop = false;
-            // 
             // connect_button
             // 
             this.connect_button.BackColor = System.Drawing.Color.Transparent;
@@ -172,14 +160,6 @@
             this.bevestig_button.TabIndex = 37;
             this.bevestig_button.TabStop = false;
             this.bevestig_button.Click += new System.EventHandler(this.bevestig_button_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox3.TabIndex = 36;
-            this.pictureBox3.TabStop = false;
             // 
             // type_uw_naam
             // 
@@ -450,10 +430,8 @@
             this.ClientSize = new System.Drawing.Size(1063, 593);
             this.Controls.Add(this.ip);
             this.Controls.Add(this.hostofclient);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.connect_button);
             this.Controls.Add(this.bevestig_button);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.type_uw_naam);
             this.Controls.Add(this.client_button);
             this.Controls.Add(this.host_button);
@@ -485,10 +463,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameServer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameServer_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.connect_button)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bevestig_button)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.type_uw_naam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.client_button)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.host_button)).EndInit();
@@ -529,7 +505,6 @@
         private System.Windows.Forms.PictureBox host_button;
         private System.Windows.Forms.PictureBox client_button;
         private System.Windows.Forms.PictureBox type_uw_naam;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox bevestig_button;
         private System.Windows.Forms.PictureBox connect_button;
         private System.Windows.Forms.PictureBox pictureBox2;
