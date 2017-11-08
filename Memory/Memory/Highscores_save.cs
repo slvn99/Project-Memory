@@ -249,7 +249,6 @@ namespace Memory
             }
             catch (Exception)
             {
-                //Inform the user that an exception was raised.  
             }
         }
 
@@ -288,7 +287,8 @@ namespace Memory
             }
             catch (Exception)
             {
-                //Inform the user that an exception was raised.  
+                //Inform the user that an exception was raised. 
+                //message voor makkelijk debuggen
                 string message = ("Decrypten is mislukt.");
                 return message; 
             }

@@ -41,7 +41,22 @@ namespace WindowsFormsApp1
             ChangeCursor();
 
 			//
-            Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
+			switch (thema)
+			{
+				default:
+					this.BackgroundImage = Resources.media_achtergrond;
+					break;
+				case "Media":
+					this.BackgroundImage = Resources.media_achtergrond;
+					break;
+				case "Films":
+					this.BackgroundImage = Resources.popcorn_background;
+					break;
+				case "Games":
+					this.BackgroundImage = Resources.controller;
+					break;
+			}
+					Button[] ButtonGrid = { GridButton1, GridButton1Dup, GridButton2, GridButton2Dup, GridButton3, GridButton3Dup, GridButton4, GridButton4Dup, GridButton5, GridButton5Dup, GridButton6, GridButton6Dup, GridButton7, GridButton7Dup, GridButton8, GridButton8Dup };
             foreach (var x in ButtonGrid)
             {
                 x.Visible = false;
@@ -150,13 +165,10 @@ namespace WindowsFormsApp1
 				switch (thema)
 				{
 					default:
-						this.BackgroundImage = Resources.media_achtergrond;
 						break;
 					case "Media":
-						this.BackgroundImage = Resources.media_achtergrond;
 						break;
 					case "Films":
-						this.BackgroundImage = Resources.popcorn_background;
 						GridButton1.BackgroundImage = Resources.clapperboard;
 						GridButton1Dup.BackgroundImage = Resources.clapperboard;
 						GridButton2.BackgroundImage = Resources.clapperboard;
@@ -175,7 +187,6 @@ namespace WindowsFormsApp1
 						GridButton8Dup.BackgroundImage = Resources.clapperboard;
 						break;
 					case "Games":
-						this.BackgroundImage = Resources.controller;
 						GridButton1.BackgroundImage = Resources.controller_cardback;
 						GridButton1Dup.BackgroundImage = Resources.controller_cardback;
 						GridButton2.BackgroundImage = Resources.controller_cardback;
