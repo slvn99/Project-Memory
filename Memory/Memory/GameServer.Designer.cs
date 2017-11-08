@@ -99,7 +99,7 @@
             // 
             // IpTextBox
             // 
-            this.IpTextBox.Location = new System.Drawing.Point(464, 243);
+            this.IpTextBox.Location = new System.Drawing.Point(464, 247);
             this.IpTextBox.Name = "IpTextBox";
             this.IpTextBox.Size = new System.Drawing.Size(150, 20);
             this.IpTextBox.TabIndex = 28;
@@ -138,7 +138,7 @@
             this.connect_button.BackColor = System.Drawing.Color.Transparent;
             this.connect_button.BackgroundImage = global::Memory.Properties.Resources.connect_button;
             this.connect_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.connect_button.Location = new System.Drawing.Point(487, 263);
+            this.connect_button.Location = new System.Drawing.Point(487, 266);
             this.connect_button.Name = "connect_button";
             this.connect_button.Size = new System.Drawing.Size(100, 33);
             this.connect_button.TabIndex = 38;
@@ -463,7 +463,7 @@
             this.OtherPlayerLabel.AutoSize = true;
             this.OtherPlayerLabel.BackColor = System.Drawing.Color.Transparent;
             this.OtherPlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OtherPlayerLabel.Location = new System.Drawing.Point(91, 47);
+            this.OtherPlayerLabel.Location = new System.Drawing.Point(107, 47);
             this.OtherPlayerLabel.Name = "OtherPlayerLabel";
             this.OtherPlayerLabel.Size = new System.Drawing.Size(92, 20);
             this.OtherPlayerLabel.TabIndex = 25;
@@ -474,7 +474,7 @@
             this.LocalPlayerLabel.AutoSize = true;
             this.LocalPlayerLabel.BackColor = System.Drawing.Color.Transparent;
             this.LocalPlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LocalPlayerLabel.Location = new System.Drawing.Point(91, 12);
+            this.LocalPlayerLabel.Location = new System.Drawing.Point(107, 12);
             this.LocalPlayerLabel.Name = "LocalPlayerLabel";
             this.LocalPlayerLabel.Size = new System.Drawing.Size(90, 20);
             this.LocalPlayerLabel.TabIndex = 24;
