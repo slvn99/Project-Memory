@@ -10,6 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Class die alle Game elementen uitvoert wanneer in gameserver.cs "client" wordt geselecteerd
+/// </summary>
 namespace Memory
 {
     class ServerClient

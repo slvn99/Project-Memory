@@ -327,6 +327,7 @@ namespace Memory
             catch (Exception)
             {
                 //Inform the user that an exception was raised.  
+                //message voor debuggen
                 string message = ("Decrypten is mislukt.");
                 return message;
             }
