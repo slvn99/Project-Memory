@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameServer));
             this.NaamTextBox = new System.Windows.Forms.TextBox();
-            this.LocalPlayerLabel = new System.Windows.Forms.Label();
-            this.OtherPlayerLabel = new System.Windows.Forms.Label();
             this.BeurtLabel = new System.Windows.Forms.Label();
             this.IpTextBox = new System.Windows.Forms.TextBox();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
@@ -61,6 +59,13 @@
             this.GridButton1 = new System.Windows.Forms.Button();
             this.hostofclient = new System.Windows.Forms.PictureBox();
             this.ip = new System.Windows.Forms.PictureBox();
+            this.BeurtBox = new System.Windows.Forms.PictureBox();
+            this.Speler1Box = new System.Windows.Forms.PictureBox();
+            this.Speler2Box = new System.Windows.Forms.PictureBox();
+            this.OtherPlayerLabel = new System.Windows.Forms.Label();
+            this.LocalPlayerLabel = new System.Windows.Forms.Label();
+            this.ConnectingLabel = new System.Windows.Forms.Label();
+            this.Connecting1Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.connect_button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bevestig_button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.type_uw_naam)).BeginInit();
@@ -69,6 +74,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.home_button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hostofclient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BeurtBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Speler1Box)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Speler2Box)).BeginInit();
             this.SuspendLayout();
             // 
             // NaamTextBox
@@ -78,36 +86,19 @@
             this.NaamTextBox.Size = new System.Drawing.Size(100, 20);
             this.NaamTextBox.TabIndex = 4;
             // 
-            // LocalPlayerLabel
-            // 
-            this.LocalPlayerLabel.AutoSize = true;
-            this.LocalPlayerLabel.Location = new System.Drawing.Point(12, 9);
-            this.LocalPlayerLabel.Name = "LocalPlayerLabel";
-            this.LocalPlayerLabel.Size = new System.Drawing.Size(62, 13);
-            this.LocalPlayerLabel.TabIndex = 24;
-            this.LocalPlayerLabel.Text = "LocalPlayer";
-            // 
-            // OtherPlayerLabel
-            // 
-            this.OtherPlayerLabel.AutoSize = true;
-            this.OtherPlayerLabel.Location = new System.Drawing.Point(12, 33);
-            this.OtherPlayerLabel.Name = "OtherPlayerLabel";
-            this.OtherPlayerLabel.Size = new System.Drawing.Size(62, 13);
-            this.OtherPlayerLabel.TabIndex = 25;
-            this.OtherPlayerLabel.Text = "OtherPlayer";
-            // 
             // BeurtLabel
             // 
             this.BeurtLabel.AutoSize = true;
-            this.BeurtLabel.Location = new System.Drawing.Point(80, 71);
+            this.BeurtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BeurtLabel.Location = new System.Drawing.Point(107, 92);
             this.BeurtLabel.Name = "BeurtLabel";
-            this.BeurtLabel.Size = new System.Drawing.Size(32, 13);
+            this.BeurtLabel.Size = new System.Drawing.Size(48, 20);
             this.BeurtLabel.TabIndex = 26;
             this.BeurtLabel.Text = "Beurt";
             // 
             // IpTextBox
             // 
-            this.IpTextBox.Location = new System.Drawing.Point(464, 239);
+            this.IpTextBox.Location = new System.Drawing.Point(464, 243);
             this.IpTextBox.Name = "IpTextBox";
             this.IpTextBox.Size = new System.Drawing.Size(150, 20);
             this.IpTextBox.TabIndex = 28;
@@ -122,27 +113,29 @@
             // PuntenLocal
             // 
             this.PuntenLocal.AutoSize = true;
-            this.PuntenLocal.Location = new System.Drawing.Point(80, 9);
+            this.PuntenLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PuntenLocal.Location = new System.Drawing.Point(195, 12);
             this.PuntenLocal.Name = "PuntenLocal";
-            this.PuntenLocal.Size = new System.Drawing.Size(67, 13);
+            this.PuntenLocal.Size = new System.Drawing.Size(69, 20);
             this.PuntenLocal.TabIndex = 31;
-            this.PuntenLocal.Text = "PuntenLocal";
+            this.PuntenLocal.Text = "PuntenL";
             // 
             // PuntenOther
             // 
             this.PuntenOther.AutoSize = true;
-            this.PuntenOther.Location = new System.Drawing.Point(80, 33);
+            this.PuntenOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PuntenOther.Location = new System.Drawing.Point(195, 47);
             this.PuntenOther.Name = "PuntenOther";
-            this.PuntenOther.Size = new System.Drawing.Size(67, 13);
+            this.PuntenOther.Size = new System.Drawing.Size(72, 20);
             this.PuntenOther.TabIndex = 32;
-            this.PuntenOther.Text = "PuntenOther";
+            this.PuntenOther.Text = "PuntenO";
             // 
             // connect_button
             // 
             this.connect_button.BackColor = System.Drawing.Color.Transparent;
             this.connect_button.BackgroundImage = global::Memory.Properties.Resources.connect_button;
             this.connect_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.connect_button.Location = new System.Drawing.Point(487, 259);
+            this.connect_button.Location = new System.Drawing.Point(487, 263);
             this.connect_button.Name = "connect_button";
             this.connect_button.Size = new System.Drawing.Size(100, 33);
             this.connect_button.TabIndex = 38;
@@ -156,7 +149,7 @@
             this.bevestig_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bevestig_button.Location = new System.Drawing.Point(487, 142);
             this.bevestig_button.Name = "bevestig_button";
-            this.bevestig_button.Size = new System.Drawing.Size(100, 23);
+            this.bevestig_button.Size = new System.Drawing.Size(100, 32);
             this.bevestig_button.TabIndex = 37;
             this.bevestig_button.TabStop = false;
             this.bevestig_button.Click += new System.EventHandler(this.bevestig_button_Click);
@@ -417,17 +410,105 @@
             this.ip.BackColor = System.Drawing.Color.Transparent;
             this.ip.BackgroundImage = global::Memory.Properties.Resources.ip;
             this.ip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ip.Location = new System.Drawing.Point(449, 216);
+            this.ip.Location = new System.Drawing.Point(449, 220);
             this.ip.Name = "ip";
             this.ip.Size = new System.Drawing.Size(182, 27);
             this.ip.TabIndex = 41;
             this.ip.TabStop = false;
+            // 
+            // BeurtBox
+            // 
+            this.BeurtBox.BackColor = System.Drawing.Color.Transparent;
+            this.BeurtBox.BackgroundImage = global::Memory.Properties.Resources.Beurt1;
+            this.BeurtBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BeurtBox.Location = new System.Drawing.Point(11, 81);
+            this.BeurtBox.Margin = new System.Windows.Forms.Padding(2);
+            this.BeurtBox.Name = "BeurtBox";
+            this.BeurtBox.Size = new System.Drawing.Size(91, 40);
+            this.BeurtBox.TabIndex = 43;
+            this.BeurtBox.TabStop = false;
+            this.BeurtBox.Visible = false;
+            // 
+            // Speler1Box
+            // 
+            this.Speler1Box.BackColor = System.Drawing.Color.Transparent;
+            this.Speler1Box.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Speler1Box.BackgroundImage")));
+            this.Speler1Box.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Speler1Box.Location = new System.Drawing.Point(11, 9);
+            this.Speler1Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Speler1Box.Name = "Speler1Box";
+            this.Speler1Box.Size = new System.Drawing.Size(75, 29);
+            this.Speler1Box.TabIndex = 44;
+            this.Speler1Box.TabStop = false;
+            this.Speler1Box.Visible = false;
+            // 
+            // Speler2Box
+            // 
+            this.Speler2Box.BackColor = System.Drawing.Color.Transparent;
+            this.Speler2Box.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Speler2Box.BackgroundImage")));
+            this.Speler2Box.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Speler2Box.Location = new System.Drawing.Point(11, 42);
+            this.Speler2Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Speler2Box.Name = "Speler2Box";
+            this.Speler2Box.Size = new System.Drawing.Size(75, 30);
+            this.Speler2Box.TabIndex = 45;
+            this.Speler2Box.TabStop = false;
+            this.Speler2Box.Visible = false;
+            // 
+            // OtherPlayerLabel
+            // 
+            this.OtherPlayerLabel.AutoSize = true;
+            this.OtherPlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OtherPlayerLabel.Location = new System.Drawing.Point(91, 47);
+            this.OtherPlayerLabel.Name = "OtherPlayerLabel";
+            this.OtherPlayerLabel.Size = new System.Drawing.Size(92, 20);
+            this.OtherPlayerLabel.TabIndex = 25;
+            this.OtherPlayerLabel.Text = "OtherPlayer";
+            // 
+            // LocalPlayerLabel
+            // 
+            this.LocalPlayerLabel.AutoSize = true;
+            this.LocalPlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LocalPlayerLabel.Location = new System.Drawing.Point(91, 12);
+            this.LocalPlayerLabel.Name = "LocalPlayerLabel";
+            this.LocalPlayerLabel.Size = new System.Drawing.Size(90, 20);
+            this.LocalPlayerLabel.TabIndex = 24;
+            this.LocalPlayerLabel.Text = "LocalPlayer";
+            // 
+            // ConnectingLabel
+            // 
+            this.ConnectingLabel.AutoSize = true;
+            this.ConnectingLabel.BackColor = System.Drawing.Color.White;
+            this.ConnectingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConnectingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ConnectingLabel.Location = new System.Drawing.Point(474, 299);
+            this.ConnectingLabel.Name = "ConnectingLabel";
+            this.ConnectingLabel.Size = new System.Drawing.Size(127, 25);
+            this.ConnectingLabel.TabIndex = 46;
+            this.ConnectingLabel.Text = "Connecting...";
+            // 
+            // Connecting1Label
+            // 
+            this.Connecting1Label.AutoSize = true;
+            this.Connecting1Label.BackColor = System.Drawing.Color.White;
+            this.Connecting1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Connecting1Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Connecting1Label.Location = new System.Drawing.Point(474, 220);
+            this.Connecting1Label.Name = "Connecting1Label";
+            this.Connecting1Label.Size = new System.Drawing.Size(127, 25);
+            this.Connecting1Label.TabIndex = 47;
+            this.Connecting1Label.Text = "Connecting...";
             // 
             // GameServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 593);
+            this.Controls.Add(this.Connecting1Label);
+            this.Controls.Add(this.ConnectingLabel);
+            this.Controls.Add(this.Speler2Box);
+            this.Controls.Add(this.Speler1Box);
+            this.Controls.Add(this.BeurtBox);
             this.Controls.Add(this.ip);
             this.Controls.Add(this.hostofclient);
             this.Controls.Add(this.connect_button);
@@ -471,6 +552,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.home_button)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hostofclient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ip)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BeurtBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Speler1Box)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Speler2Box)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,8 +578,6 @@
         private System.Windows.Forms.Button GridButton8;
         private System.Windows.Forms.Button GridButton8Dup;
         private System.Windows.Forms.Button GridButton1;
-        private System.Windows.Forms.Label LocalPlayerLabel;
-        private System.Windows.Forms.Label OtherPlayerLabel;
         private System.Windows.Forms.Label BeurtLabel;
         private System.Windows.Forms.TextBox IpTextBox;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
@@ -510,5 +592,12 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox hostofclient;
         private System.Windows.Forms.PictureBox ip;
+        private System.Windows.Forms.PictureBox BeurtBox;
+        private System.Windows.Forms.PictureBox Speler1Box;
+        private System.Windows.Forms.PictureBox Speler2Box;
+        private System.Windows.Forms.Label OtherPlayerLabel;
+        private System.Windows.Forms.Label LocalPlayerLabel;
+        private System.Windows.Forms.Label ConnectingLabel;
+        private System.Windows.Forms.Label Connecting1Label;
     }
 }

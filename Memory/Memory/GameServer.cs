@@ -42,12 +42,20 @@ namespace Memory
                 x.Visible = false;
             }
 
+            Connecting1Label.Visible = false;
+            ConnectingLabel.Visible = false;
             hostofclient.Visible = false;
             host_button.Visible = false;
             client_button.Visible = false;
             ip.Visible = false;
             IpTextBox.Visible = false;
             connect_button.Visible = false;
+            Speler1Box.Visible = false;
+            Speler2Box.Visible = false;
+            BeurtBox.Visible = false;
+            LocalPlayerLabel.Visible = false;
+            OtherPlayerLabel.Visible = false;
+            BeurtLabel.Visible = false;
             PuntenLocal.Visible = false;
             PuntenOther.Visible = false;
 
@@ -163,6 +171,12 @@ namespace Memory
 
                 if (Connectionfail != true)
                 {
+                    Speler1Box.Visible = true;
+                    Speler2Box.Visible = true;
+                    BeurtBox.Visible = true;
+                    LocalPlayerLabel.Visible = true;
+                    OtherPlayerLabel.Visible = true;
+                    BeurtLabel.Visible = true;
                     PuntenLocal.Text = "0";
                     PuntenOther.Text = "0";
                     PuntenLocal.Visible = true;
@@ -260,6 +274,12 @@ namespace Memory
                     PlayerBeurt = player1;
                     BeurtLabel.Text = PlayerBeurt;
 
+                    Speler1Box.Visible = true;
+                    Speler2Box.Visible = true;
+                    BeurtBox.Visible = true;
+                    LocalPlayerLabel.Visible = true;
+                    OtherPlayerLabel.Visible = true;
+                    BeurtLabel.Visible = true;
                     PuntenLocal.Text = "0";
                     PuntenOther.Text = "0";
                     PuntenLocal.Visible = true;
@@ -433,7 +453,7 @@ namespace Memory
                 {
                     player.SoundLocation = "tada.wav";
                     player.Play();
-                    MessageBox.Show("Gefeliciteerd " + LocalPlayer + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
+                    MessageBox.Show(LocalPlayer + " heeft gewonnen!", "Einde Spel", MessageBoxButtons.OK);
                     await Task.Delay(2000);
                     player.Stop();
                 }
@@ -441,7 +461,7 @@ namespace Memory
                 {
                     player.SoundLocation = "wow.wav";
                     player.Play();
-                    MessageBox.Show("WOW, " + LocalPlayer + " heeft gelijk gespeeld met " + OtherPlayer + "!", "Einde Spel", MessageBoxButtons.OK);
+                    MessageBox.Show("WOW, " + LocalPlayer + " en " + OtherPlayer + " hebben gelijk gespeeld!", "Einde Spel", MessageBoxButtons.OK);
                     await Task.Delay(2000);
                     player.Stop();
                 }
@@ -449,7 +469,7 @@ namespace Memory
                 {
                     player.SoundLocation = "tada.wav";
                     player.Play();
-                    MessageBox.Show("Gefeliciteerd " + OtherPlayer + " je hebt gewonnen!", "Einde Spel", MessageBoxButtons.OK);
+                    MessageBox.Show(OtherPlayer + " heeft gewonnen!", "Einde Spel", MessageBoxButtons.OK);
                     await Task.Delay(2000);
                     player.Stop();
                 }
@@ -987,22 +1007,30 @@ namespace Memory
             }
         }
 
-        private void ConnectButton_Click(object sender, EventArgs e)
-        {
-            ServerClient.HostIP = IpTextBox.Text;
-            ServerClient.StartClient();
-            if (ServerClient.ClientConnection == true)
-            {
-                SetupGame();
-            }
-        }
-
         private void GameServer_FormClosing(object sender, FormClosingEventArgs e)
         {
             Memory.HomePage f2 = new Memory.HomePage();
             f2.Tonen();
             Dispose();
             GC.Collect();
+
+            try
+            {
+                ServerHost.Listener.Stop();
+            }
+            catch { }
+
+            try
+            {
+                ServerHost.Client.Close();
+            }
+            catch { }
+
+            try
+            {
+                ServerClient.Client.Close();
+            }
+            catch { }
         }
 
         private void client_button_Click(object sender, EventArgs e)
@@ -1018,6 +1046,7 @@ namespace Memory
         private void host_button_Click(object sender, EventArgs e)
         {
             host = true;
+            Connecting1Label.Visible = true;
             host_button.Enabled = false;
             client_button.Enabled = false;
             RandomizeButtons();
@@ -1027,11 +1056,16 @@ namespace Memory
 
         private void connect_button_Click(object sender, EventArgs e)
         {
+            ConnectingLabel.Visible = true;
             ServerClient.HostIP = IpTextBox.Text;
             ServerClient.StartClient();
             if (ServerClient.ClientConnection == true)
             {
                 SetupGame();
+            }
+            else
+            {
+                ConnectingLabel.Visible = false;
             }
         }
 
@@ -1060,26 +1094,6 @@ namespace Memory
             e.Handled = char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
         }
 
-        private void ClientButton_Click(object sender, EventArgs e)
-        {
-            ip.Visible = true;
-            IpTextBox.Visible = true;
-            connect_button.Visible = true;
-            hostofclient.Visible = false;
-            host_button.Visible = false;
-            client_button.Visible = false;
-        }
-
-        private void HostButton_Click(object sender, EventArgs e)
-        {
-            host = true;
-            host_button.Enabled = false;
-            client_button.Enabled = false;
-            RandomizeButtons();
-            ServerHost.StartServer();
-            CheckConnect();
-        }
-
         private async void CheckConnect()
         {
             await Task.Delay(10000);
@@ -1090,30 +1104,11 @@ namespace Memory
                 ServerHost.Listener.Stop();
                 host_button.Enabled = true;
                 client_button.Enabled = true;
+                Connecting1Label.Visible = false;
             }
             else
             {
                 SetupGame();
-            }
-        }
-
-        private void NaamButton_Click(object sender, EventArgs e)
-        {
-            if (NaamTextBox.Text != "")
-            {
-                LocalPlayer = NaamTextBox.Text;
-                LocalPlayerLabel.Text = LocalPlayer;
-
-                type_uw_naam.Visible = false;
-                NaamTextBox.Visible = false;
-                bevestig_button.Visible = false;
-                hostofclient.Visible = true;
-                host_button.Visible = true;
-                client_button.Visible = true;
-            }
-            else
-            {
-                MessageBox.Show("ERROR, je moet een naam invullen.", "Naam Invullen!", MessageBoxButtons.OK);
             }
         }
 
