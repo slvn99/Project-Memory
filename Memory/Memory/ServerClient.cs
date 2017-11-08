@@ -81,8 +81,8 @@ namespace Memory
             {
                 MessageBox.Show("Error, Connectie verloren!", "ERROR!", MessageBoxButtons.OK);
                 Client.Close();
-                GameServer obj = (GameServer)Application.OpenForms["GameServer"];
-                obj.Close();
+                //GameServer obj = (GameServer)Application.OpenForms["GameServer"];
+                //obj.Close();
                 GameServer.Connectionfail = true;
             }
         }
