@@ -1033,8 +1033,12 @@ namespace Memory
             catch { }
         }
 
-        private void client_button_Click(object sender, EventArgs e)
+        private async void client_button_Click(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
             ip.Visible = true;
             IpTextBox.Visible = true;
             connect_button.Visible = true;
@@ -1043,8 +1047,12 @@ namespace Memory
             client_button.Visible = false;
         }
 
-        private void host_button_Click(object sender, EventArgs e)
+        private async void host_button_Click(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
             host = true;
             Connecting1Label.Visible = true;
             host_button.Enabled = false;
@@ -1056,13 +1064,15 @@ namespace Memory
 
         private async void connect_button_Click(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
             ConnectingLabel.Visible = true;
-            await Task.Delay(100);
             ServerClient.HostIP = IpTextBox.Text;
             ServerClient.StartClient();
             if (ServerClient.ClientConnection == true)
             {
-                ConnectingLabel.Visible = false;
                 SetupGame();
             }
             else
@@ -1071,8 +1081,12 @@ namespace Memory
             }
         }
 
-        private void bevestig_button_Click(object sender, EventArgs e)
+        private async void bevestig_button_Click(object sender, EventArgs e)
         {
+            player.SoundLocation = "click.wav";
+            player.Play();
+            await Task.Delay(300);
+            player.Stop();
             if (NaamTextBox.Text != "")
             {
                 LocalPlayer = NaamTextBox.Text;
@@ -1110,7 +1124,6 @@ namespace Memory
             }
             else
             {
-                Connecting1Label.Visible = false;
                 SetupGame();
             }
         }
