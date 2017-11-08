@@ -17,10 +17,13 @@ namespace Memory
         {
             InitializeComponent();
 
+            Cursor.Hide();
+
             timer1.Start();
         }
         public void Sluiten()
         {
+            Cursor.Show();
             Memory.HomePage  H1 = new Memory.HomePage();
             H1.Show();
             this.Close();
