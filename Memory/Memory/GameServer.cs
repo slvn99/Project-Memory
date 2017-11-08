@@ -1061,6 +1061,7 @@ namespace Memory
             ServerClient.StartClient();
             if (ServerClient.ClientConnection == true)
             {
+                ConnectingLabel.Visible = false;
                 SetupGame();
             }
             else
@@ -1108,6 +1109,7 @@ namespace Memory
             }
             else
             {
+                Connecting1Label.Visible = false;
                 SetupGame();
             }
         }
