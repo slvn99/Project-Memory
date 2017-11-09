@@ -1066,9 +1066,9 @@ namespace Memory
         {
             player.SoundLocation = "click.wav";
             player.Play();
+            ConnectingLabel.Visible = true;
             await Task.Delay(300);
             player.Stop();
-            ConnectingLabel.Visible = true;
             ServerClient.HostIP = IpTextBox.Text;
             ServerClient.StartClient();
             if (ServerClient.ClientConnection == true)
